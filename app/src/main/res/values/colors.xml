@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1F1F1F</color>
+    <color name="colorPrimaryDark">#1F1F1F</color>
+    <color name="colorAccent">#4AFFE0</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <color name="back_bengaltiger">#F9C428</color>
+    <color name="back_guanicoe">#ECDED1</color>
+    <color name="back_illipika">#2C5578</color>
+    <color name="back_harpseal">#C3CE4B</color>
+    <color name="back_java">#FFD395</color>
+
+    <color name="stroke_bengaltiger">#AB2220</color>
+    <color name="stroke_guanicoe">#222D41</color>
+    <color name="stroke_illipika">#FFC5BB</color>
+    <color name="stroke_harpseal">#035874</color>
+    <color name="stroke_java">#61448E</color>
+
+    <color name="complete_bengaltiger">#5F8031</color>
+    <color name="complete_guanicoe">#B43941</color>
+    <color name="complete_illipika">#C3CE4B</color>
+    <color name="complete_harpseal">#61448E</color>
+    <color name="complete_java">#E8771C</color>
+
+    <color name="teal_200">#1F1F1F</color>
+    <color name="purple_700">#1F1F1F</color>
+    <color name="purple_200">#1F1F1F</color>
+
+</resources>

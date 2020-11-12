@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="255dp"
+    android:layout_height="409dp"
+    android:id="@+id/ecoCard_view"
+    android:layout_margin="5dp"
+    card_view:cardBackgroundColor="@color/back_harpseal"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="3dp"
+    card_view:contentPadding="4dp">
+
+<RelativeLayout
+android:layout_width="255dp"
+android:layout_height="409dp"
+android:padding="10dp">
+
+<ImageView
+    android:id="@+id/item_image"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="10dp"
+    card_view:srcCompat="@drawable/ic_add_card_harpseal" />
+
+<TextView
+    android:id="@+id/tv_animal_name"
+    android:layout_width="158dp"
+    android:layout_height="106dp"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="0dp"
+    android:fontFamily="@font/notosanskr_bold"
+    android:includeFontPadding="false"
+    android:text="하프물범"
+    android:textColor="@color/stroke_harpseal"
+    android:textSize="36sp" />
+
+<TextView
+    android:id="@+id/tv_animal_name_eng"
+    android:layout_width="148dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="60dp"
+    android:fontFamily="@font/notosanskr_medium"
+    android:includeFontPadding="false"
+    android:text="Harp seal"
+    android:textColor="@color/stroke_harpseal"
+    android:textSize="12sp" />
+
+<TextView
+    android:id="@+id/tv_animal_content"
+    android:layout_width="224dp"
+    android:layout_height="211dp"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="95dp"
+    android:fontFamily="@font/notosanskr_medium"
+    android:includeFontPadding="false"
+    android:lineSpacingExtra="6sp"
+    android:text="하프 물범은 번식과 털갈이에 있어서 얼음에 의존하기 때문에 숨구멍이 있는 두꺼운 얼음을 선호하기 때문에 빙하의 감소는 하프 물범의 서식지를 위협하고 있습니다. 또한, 최근 오메가3와 털가죽 채취를 위한 잔인한 하프 물법 사냥으로 인해 큰 문제가 되고 있습니다."
+    android:textColor="@color/stroke_harpseal"
+    android:textSize="12sp" />
+
+</RelativeLayout>
+
+</androidx.cardview.widget.CardView>

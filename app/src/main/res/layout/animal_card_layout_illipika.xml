@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="255dp"
+    android:layout_height="409dp"
+    android:id="@+id/ecoCard_view"
+    android:layout_margin="5dp"
+    card_view:cardBackgroundColor="@color/back_illipika"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="3dp"
+    card_view:contentPadding="4dp">
+
+<RelativeLayout
+android:layout_width="255dp"
+android:layout_height="409dp"
+android:padding="10dp">
+
+<ImageView
+    android:id="@+id/item_image"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="10dp"
+    card_view:srcCompat="@drawable/ic_add_card_illipika" />
+
+<TextView
+    android:id="@+id/tv_animal_name"
+    android:layout_width="158dp"
+    android:layout_height="106dp"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="0dp"
+    android:fontFamily="@font/notosanskr_bold"
+    android:includeFontPadding="false"
+    android:text="일리피카"
+    android:textColor="@color/stroke_illipika"
+    android:textSize="36sp" />
+
+<TextView
+    android:id="@+id/tv_animal_name_eng"
+    android:layout_width="148dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="60dp"
+    android:fontFamily="@font/notosanskr_medium"
+    android:includeFontPadding="false"
+    android:text="IIli pika"
+    android:textColor="@color/stroke_illipika"
+    android:textSize="12sp" />
+
+<TextView
+    android:id="@+id/tv_animal_content"
+    android:layout_width="224dp"
+    android:layout_height="211dp"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="95dp"
+    android:fontFamily="@font/notosanskr_medium"
+    android:includeFontPadding="false"
+    android:lineSpacingExtra="6sp"
+    android:text="일리 피카는 1983년 최초 발견 당시 2천여 마리정도가 생존했던 것으로 추정했으나 가축의 방목 압력과 대기 오염으로 1000마리 미만으로 줄어들었습니다. 현재, 약 20년 전에 일리피카가 서식했던 장소 중 57%에서 일리 피카들이 전혀 발견되지 않고 있습니다."
+    android:textColor="@color/stroke_illipika"
+    android:textSize="12sp" />
+
+</RelativeLayout>
+
+</androidx.cardview.widget.CardView>

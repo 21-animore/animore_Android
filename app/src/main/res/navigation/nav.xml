@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/home_fragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="org.techtown.animore.HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_fragment_to_add_fragment"
+            app:destination="@id/add_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_past_fragment"
+            app:destination="@id/past_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_fragment"
+        android:name="org.techtown.animore.AddFragment"
+        tools:layout="@layout/fragment_add">
+        <action
+            android:id="@+id/action_add_fragment_to_add_animal_guanicoe"
+            app:destination="@id/add_animal_guanicoe" />
+        <action
+            android:id="@+id/action_add_fragment_to_add_animal_bengal"
+            app:destination="@id/add_animal_bengal" />
+        <action
+            android:id="@+id/action_add_fragment_to_add_animal_java"
+            app:destination="@id/add_animal_java" />
+        <action
+            android:id="@+id/action_add_fragment_to_add_animal_illipika"
+            app:destination="@id/add_animal_illipika" />
+        <action
+            android:id="@+id/action_add_fragment_to_add_animal_harpseal"
+            app:destination="@id/add_animal_harpseal" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_animal_guanicoe"
+        android:name="org.techtown.animore.AddFragementAnimalGuanicoe"
+        tools:layout="@layout/fragment_add_animal_guanicoe">
+        <action
+            android:id="@+id/action_add_animal_guanicoe_to_add_random_guanicoe"
+            app:destination="@id/add_random_guanicoe" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_animal_bengal"
+        android:name="org.techtown.animore.AddFragementAnimalBengal"
+        tools:layout="@layout/fragment_add_animal_bengal">
+        <action
+            android:id="@+id/action_add_animal_bengal_to_add_random_bengal"
+            app:destination="@id/add_random_bengal" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_animal_java"
+        android:name="org.techtown.animore.AddFragementAnimalJava"
+        tools:layout="@layout/fragment_add_animal_java">
+        <action
+            android:id="@+id/action_add_animal_java_to_add_random_java"
+            app:destination="@id/add_random_java" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_animal_illipika"
+        android:name="org.techtown.animore.AddFragementAnimalIllipika"
+        tools:layout="@layout/fragment_add_animal_illipika">
+        <action
+            android:id="@+id/action_add_animal_illipika_to_add_random_illipika"
+            app:destination="@id/add_random_illipika" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_animal_harpseal"
+        android:name="org.techtown.animore.AddFragementAnimalHarpseal"
+        tools:layout="@layout/fragment_add_animal_harpseal">
+        <action
+            android:id="@+id/action_add_animal_harpseal_to_add_random_harpseal"
+            app:destination="@id/add_random_harpseal" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_random_guanicoe"
+        android:name="org.techtown.animore.AddFragementMissionGuanicoe"
+        tools:layout="@layout/fragment_add_random_guanicoe"></fragment>
+
+    <fragment
+        android:id="@+id/add_random_bengal"
+        android:name="org.techtown.animore.AddFragementMissionBengal"
+        tools:layout="@layout/fragment_add_random_bengal"></fragment>
+
+    <fragment
+        android:id="@+id/add_random_harpseal"
+        android:name="org.techtown.animore.AddFragementMissionHarpseal"
+        tools:layout="@layout/fragment_add_random_harpseal"></fragment>
+
+    <fragment
+        android:id="@+id/add_random_illipika"
+        android:name="org.techtown.animore.AddFragementMissionIllipika"
+        tools:layout="@layout/fragment_add_random_illipika"></fragment>
+
+    <fragment
+        android:id="@+id/add_random_java"
+        android:name="org.techtown.animore.AddFragementMissionJava"
+        tools:layout="@layout/fragment_add_random_java"></fragment>
+
+    <fragment
+        android:id="@+id/past_fragment"
+        android:name="org.techtown.animore.PastFragment"
+        tools:layout="@layout/fragment_past">
+        <action
+            android:id="@+id/action_past_fragment_to_past_card_fragment"
+            app:destination="@id/past_card_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/past_card_fragment"
+        android:name="org.techtown.animore.PastFragmentMore"
+        tools:layout="@layout/fragment_past_card"></fragment>
+
+</navigation>

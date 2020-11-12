@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="105dp"
+    android:layout_height="158dp"
+    android:id="@+id/card_view"
+    android:layout_margin="8dp"
+    card_view:cardBackgroundColor="@color/back_bengaltiger"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="3dp"
+    card_view:contentPadding="4dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="105dp"
+        android:layout_height="158dp"
+        android:padding="10dp">
+
+<!--여기 나중에 selector로 빼기-->
+  <TextView
+    android:id="@+id/tv_successFlag"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginLeft="0dp"
+    android:fontFamily="@font/montserrat_bold"
+    android:text="COMPELETE"
+    android:textColor="@color/complete_bengaltiger"
+    android:textSize="10sp" />
+
+
+        <TextView
+            android:id="@+id/tv_cardName"
+            android:layout_width="59dp"
+            android:layout_height="55dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            android:text="동영상 덜 보기"
+            android:textColor="@color/stroke_bengaltiger"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/img_card_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="50dp"
+            card_view:srcCompat="@drawable/ic_past_card_bengaltiger" />
+
+        <TextView
+            android:id="@+id/tv_achieveCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="18dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:includeFontPadding="false"
+            android:text="3"
+            android:textColor="@color/stroke_bengaltiger"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_totalCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="7.5dp"
+            android:layout_marginBottom="18dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:includeFontPadding="false"
+            android:text="/21"
+            android:textColor="@color/stroke_bengaltiger"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_period"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:fontFamily="@font/montserrat_medium"
+            android:includeFontPadding="false"
+            android:text="10/1~10/21"
+            android:textColor="@color/stroke_bengaltiger"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="255dp"
+    android:layout_height="409dp"
+    android:id="@+id/ecoCard_view"
+    android:layout_margin="5dp"
+    card_view:cardBackgroundColor="@color/back_guanicoe"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="3dp"
+    card_view:contentPadding="4dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="255dp"
+        android:layout_height="409dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            card_view:srcCompat="@drawable/ic_add_card_guanicoe_random" />
+
+        <TextView
+            android:id="@+id/tv_mission_name"
+            android:layout_width="158dp"
+            android:layout_height="106dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="-10dp"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            android:text="중고마켓 이용하기"
+            android:textColor="@color/stroke_guanicoe"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/tv_mission_category"
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="105dp"
+            android:fontFamily="@font/notosanskr_black"
+            android:includeFontPadding="false"
+            android:text="소비 습관 챌린지"
+            android:textColor="@color/stroke_guanicoe"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_mission_content"
+            android:layout_width="224dp"
+            android:layout_height="211dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="135dp"
+            android:fontFamily="@font/notosanskr_medium"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="4sp"
+            android:text="중고거래 앱 '당근마켓'이 전국 1000만 사용자와 함께 누적 약 19만t에 달하는 온실가스 감소 시켰습니다. 이는 서울 남산 숲 식수 효과의 1400배에 달하는 온실가스 저감 효과와 맞먹어요. 대한민국 국민 20%가 한 달에 한 번 이상 당근마켓에서 중고 거래를 통해 자원 재사용에 동참하고 있는데 소중한 나눔을 통해 환경보호 실천에 참여해보는 건 어떨까요?"
+            android:textColor="@color/stroke_guanicoe"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
