@@ -14,9 +14,9 @@ class NormalCardViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) 
 
     fun bind(NormalCardData: NormalCardData) {
         mission_name.text = NormalCardData.mission_name;
-        achieve_count.text = NormalCardData.achieve_count.toString();
-        count_num.text = NormalCardData.count_num.toString();
-        start_date.text = NormalCardData.start_date.toString();
-        end_date.text = NormalCardData.end_date.toString();
+    //    achieve_count.text = NormalCardData.achieve_count.toString();
+    //    count_num.text = NormalCardData.count_num.toString();
+     //   start_date.text = NormalCardData.start_date.toString();
+   //     end_date.text = NormalCardData.end_date.toString();
     }
 }

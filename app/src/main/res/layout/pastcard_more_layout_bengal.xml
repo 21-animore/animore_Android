@@ -8,8 +8,7 @@
     android:layout_margin="5dp"
     card_view:cardBackgroundColor="#F9C428"
     card_view:cardCornerRadius="12dp"
-    card_view:cardElevation="3dp"
-    card_view:contentPadding="4dp">
+    card_view:cardElevation="3dp">
 
 <RelativeLayout
 android:layout_width="349dp"

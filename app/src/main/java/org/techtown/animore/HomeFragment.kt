@@ -8,7 +8,11 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.fragment_home.*
+import java.util.*
 
+
+var MyData:MutableList<NormalCardData> = mutableListOf<NormalCardData>(NormalCardData("ddd"))
 class HomeFragment : Fragment() {
 
     override fun onCreateView(
@@ -25,5 +29,13 @@ class HomeFragment : Fragment() {
         }
 */
         return view
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+
+        var No = NormalCardAdapter(requireContext(), MyData)
+        normal_card_list.adapter = No
     }
 }

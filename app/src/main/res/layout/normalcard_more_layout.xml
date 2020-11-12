@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="349dp"
+    android:layout_height="502dp"
+    android:id="@+id/ecoCard_view"
+    android:layout_margin="5dp"
+    card_view:cardBackgroundColor="#F9C428"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="3dp">
+
+    <RelativeLayout
+        android:layout_width="349dp"
+        android:layout_height="502dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/stroke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="2dp"
+            card_view:srcCompat="@drawable/ic_pastcard_stroke_bengaltiger" />
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            card_view:srcCompat="@drawable/ic_past_card_more_bengaltiger" />
+
+        <TextView
+            android:id="@+id/tv_count_num_behind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="115dp"
+            android:layout_marginTop="272dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:includeFontPadding="false"
+            android:text="21"
+            android:textColor="#22AB2220"
+            android:textSize="96sp" />
+
+        <TextView
+            android:id="@+id/tv_mission_name"
+            android:layout_width="129dp"
+            android:layout_height="113dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            android:text="동영상 덜 보기"
+            android:textColor="#AB2220"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/tv_mission_total_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="63dp"
+            android:layout_marginRight="52dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:includeFontPadding="false"
+            android:text="21"
+            android:textColor="#F9C428"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_mission_category_eng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:includeFontPadding="false"
+            android:text="Living Habit"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_mission_category_kor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="120dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:includeFontPadding="false"
+            android:text="생활습관개선"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_achieve_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="145dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            android:text="횟수"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_start_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="145dp"
+            android:layout_marginLeft="110dp"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            android:text="시작"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_end_date_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="145dp"
+            android:layout_marginLeft="200dp"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            android:text="끝"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_achieve_count_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="170dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:includeFontPadding="false"
+            android:text="10 times"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_start_date_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="170dp"
+            android:layout_marginLeft="110dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:includeFontPadding="false"
+            android:text="10/1"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_end_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="170dp"
+            android:layout_marginLeft="200dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:includeFontPadding="false"
+            android:text="10/21"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_process"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="195dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            android:text="진행 사항"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_process_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="195dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            android:text="10/21"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_mission_content"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/notosanskr_medium"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="2sp"
+            android:text="온라인에서 영상을 30분 재생할 때 무려 1.6kg의 이산화탄소가 발생한다고 합니다. 차로 6.3km로 운전했을 때 발생하는 이산화탄소와 같은 양입니다. 온라인 상에서 데이터를 전송하고 저장하는 시설에서 전력이 소비되면서 냉방에도 사용이 되고 있습니다. 21일 동안, 동영상의 시청을 줄이고 주위에 관심을 가져보는 건 어떨까요?"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_bottom_sentence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:includeFontPadding="false"
+            android:text="you&amp;I"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

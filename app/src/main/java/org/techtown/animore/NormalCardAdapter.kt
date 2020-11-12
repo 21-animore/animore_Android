@@ -5,11 +5,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class NormalCardAdapter(private val context : Context) : RecyclerView.Adapter<NormalCardViewHolder>() {
-    var datas:MutableList<NormalCardData> = mutableListOf<NormalCardData>()
+class NormalCardAdapter(private val context : Context,var datas:MutableList<NormalCardData> )
+    : RecyclerView.Adapter<NormalCardViewHolder>() {
+  //  var datas:MutableList<NormalCardData> = mutableListOf<NormalCardData>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NormalCardViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.normal_card_layout, parent,false)
+        val view = LayoutInflater.from(context).inflate(R.layout.normalcard_layout, parent,false)
         return NormalCardViewHolder(view)
     }
 
@@ -18,6 +19,7 @@ class NormalCardAdapter(private val context : Context) : RecyclerView.Adapter<No
     }
 
     override fun onBindViewHolder(holder: NormalCardViewHolder, position: Int) {
+
         holder.bind(datas[position])
     }
 
