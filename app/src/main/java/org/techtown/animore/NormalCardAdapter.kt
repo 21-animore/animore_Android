@@ -10,7 +10,7 @@ class NormalCardAdapter(private val context : Context,var datas:MutableList<Norm
   //  var datas:MutableList<NormalCardData> = mutableListOf<NormalCardData>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NormalCardViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.normalcard_layout, parent,false)
+        val view = LayoutInflater.from(context).inflate(R.layout.normalcard_layout_bengal, parent,false)
         return NormalCardViewHolder(view)
     }
 

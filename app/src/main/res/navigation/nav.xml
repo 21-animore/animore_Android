@@ -86,7 +86,11 @@
     <fragment
         android:id="@+id/add_random_guanicoe"
         android:name="org.techtown.animore.AddFragementMissionGuanicoe"
-        tools:layout="@layout/fragment_add_random_guanicoe"></fragment>
+        tools:layout="@layout/fragment_add_random_guanicoe">
+        <action
+            android:id="@+id/action_add_random_guanicoe_to_add_final_normal_guanicoe_fragment"
+            app:destination="@id/add_final_normal_guanicoe_fragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/add_random_bengal"
@@ -115,6 +119,15 @@
         <action
             android:id="@+id/action_past_fragment_to_past_card_fragment"
             app:destination="@id/past_card_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_final_normal_guanicoe_fragment"
+        android:name="org.techtown.animore.AddFragmentFinalNormalGuanicoe"
+        tools:layout="@layout/fragment_final_add_normal_guanicoe">
+        <action
+            android:id="@+id/action_add_final_normal_guanicoe_fragment_to_home_fragment"
+            app:destination="@id/home_fragment" />
     </fragment>
 
     <fragment

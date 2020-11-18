@@ -41,7 +41,7 @@
 
     <include
         android:id="@+id/maincard"
-        layout="@layout/normalcard_more_layout"
+        layout="@layout/normalcard_more_layout_bengal"
         android:layout_width="349dp"
         android:layout_height="502dp"
         android:layout_marginTop="100dp"

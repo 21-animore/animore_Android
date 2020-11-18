@@ -78,7 +78,7 @@
         app:strokeWidth="1dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_to_select_mode_guanicoe"
         android:layout_width="90dp"
         android:layout_height="100dp"
         android:layout_marginStart="25dp"
@@ -118,9 +118,9 @@
         android:textColor="@color/colorPrimary"
         android:textSize="16sp"
         android:translationZ="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="@+id/button2"/>
+        app:layout_constraintBottom_toBottomOf="@+id/btn_to_select_mode_guanicoe"
+        app:layout_constraintEnd_toEndOf="@+id/btn_to_select_mode_guanicoe"
+        app:layout_constraintStart_toStartOf="@+id/btn_to_select_mode_guanicoe"
+        app:layout_constraintTop_toTopOf="@+id/btn_to_select_mode_guanicoe"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
