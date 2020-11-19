@@ -47,10 +47,12 @@ class HomeFragment : Fragment() {
         //bundle에 담겨온 데이터를 title이라는 변수에 넣어준다
         val title = arguments?.getString("title").toString()
 
-        val MyData:MutableList<NormalCardData> = mutableListOf<NormalCardData>(NormalCardData(title))
+        var dump1 = NormalCardData("test1",0)
+        var dump2 = NormalCardData("test2",1)
+        //val MyData:MutableList<NormalCardData> = mutableListOf<NormalCardData>(NormalCardData(title,))
+        val MyData:MutableList<NormalCardData> = mutableListOf<NormalCardData>(dump1,dump2)
 
         val No = NormalCardAdapter(requireContext(), MyData)
         normal_card_list.adapter = No
-
     }
 }

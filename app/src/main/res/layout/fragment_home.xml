@@ -51,7 +51,7 @@
 
     <Button
         android:id="@+id/button_all"
-        style="@style/main_button_style"
+        android:background="@drawable/main_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -63,7 +63,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+    <Button
+        android:id="@+id/button_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/main_button"
+        android:includeFontPadding="false"
+        android:text="일반"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/button_all"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/button_continous"
+        android:background="@drawable/main_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:includeFontPadding="false"
+        android:text="연속"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/button_normal"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
     <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
@@ -87,9 +116,9 @@
 
             <include
                 android:id="@+id/default_card"
+                layout="@layout/default_card"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                layout="@layout/normalcard_layout_guanicoe"/>
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
 
