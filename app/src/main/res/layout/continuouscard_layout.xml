@@ -80,7 +80,7 @@
             android:layout_toStartOf="@+id/tv_totalCount"
             android:fontFamily="@font/montserrat_medium"
             android:includeFontPadding="false"
-            android:text="0"
+            android:text="1"
             android:textColor="@color/stroke_bengaltiger"
             android:textSize="24sp" />
 
@@ -104,6 +104,7 @@
             android:layout_height="wrap_content"
             card_view:srcCompat="@drawable/ic_normal_index_bengaltiger"
             android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="150dp" />
 
         <TextView
@@ -119,7 +120,7 @@
             android:layout_marginEnd="0dp"
             android:layout_marginBottom="1dp"
             android:fontFamily="@font/montserrat_bold"
-            android:text="0"
+            android:text="1"
             android:textAlignment="center"
             android:textColor="@color/back_bengaltiger"
             android:textSize="12sp" />

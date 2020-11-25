@@ -1,6 +1,7 @@
 package org.techtown.animore
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,21 +12,21 @@ import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 
-class NormalCardAdapter(private val context : Context,var datas:MutableList<NormalCardData>)
-    : RecyclerView.Adapter<NormalCardAdapter.Holder>() {
+class NormalCardAdapter(private val context : Context,var datas:MutableList<NormalCardData>) : RecyclerView.Adapter<NormalCardAdapter.Holder>() {
+
+    override fun getItemCount(): Int {
+        //Log.w("태그", datas.size.toString())
+        return datas.size
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val view = LayoutInflater.from(context).inflate(R.layout.normalcard_layout, parent,false)
         return Holder(view)
     }
 
-    override fun getItemCount(): Int {
-        return datas.size
-    }
-
     override fun onBindViewHolder(holder: Holder, position: Int) {
-
         holder?.bind(datas[position],context)
+        Log.e("태그", position.toString())
     }
 
     inner class Holder(itemView: View):RecyclerView.ViewHolder(itemView) {
@@ -140,7 +141,7 @@ class NormalCardAdapter(private val context : Context,var datas:MutableList<Norm
                 bottom_img.setImageResource(R.drawable.ic_main_card_bengaltiger)
             }
 
-            mission_name.text = NormalCardData.mission_name;
+            //mission_name.text = NormalCardData.mission_name;
             //mission_category_eng.text = NormalCardData.mission_category_eng;
 
         /*

@@ -22,6 +22,10 @@ class AddFragmentFinalNormalBengal : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_final_add_normal_bengal, container, false)
 
+        view.findViewById<Button>(R.id.btn_to_get_randomcard_bengal).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_add_final_normal_bengal_fragment_to_home_fragment)
+        }
+
         return view;
     }
 }

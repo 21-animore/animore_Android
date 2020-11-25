@@ -23,7 +23,11 @@
         tools:layout="@layout/fragment_add">
         <action
             android:id="@+id/action_add_fragment_to_add_animal_guanicoe"
-            app:destination="@id/add_animal_guanicoe" />
+            app:destination="@id/add_animal_guanicoe"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
         <action
             android:id="@+id/action_add_fragment_to_add_animal_bengal"
             app:destination="@id/add_animal_bengal" />
@@ -44,7 +48,11 @@
         tools:layout="@layout/fragment_add_animal_guanicoe">
         <action
             android:id="@+id/action_add_animal_guanicoe_to_add_random_guanicoe"
-            app:destination="@id/add_random_guanicoe" />
+            app:destination="@id/add_random_guanicoe"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"/>
     </fragment>
 
     <fragment
@@ -88,45 +96,78 @@
         android:name="org.techtown.animore.AddFragementMissionGuanicoe"
         tools:layout="@layout/fragment_add_random_guanicoe">
         <action
-            android:id="@+id/action_add_random_guanicoe_to_add_final_normal_guanicoe_fragment"
-            app:destination="@id/add_final_normal_guanicoe_fragment" />
+            android:id="@+id/action_add_random_guanicoe_to_add_choose_normal_guanicoe"
+            app:destination="@id/add_choose_normal_guanicoe"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"/>
     </fragment>
 
     <fragment
         android:id="@+id/add_random_bengal"
         android:name="org.techtown.animore.AddFragementMissionBengal"
-        tools:layout="@layout/fragment_add_random_bengal">
-        <action
-            android:id="@+id/action_add_random_bengal_to_add_final_normal_bengal_fragment"
-            app:destination="@id/add_final_normal_bengal_fragment" />
-    </fragment>
+        tools:layout="@layout/fragment_add_random_bengal"/>
 
     <fragment
         android:id="@+id/add_random_harpseal"
         android:name="org.techtown.animore.AddFragementMissionHarpseal"
-        tools:layout="@layout/fragment_add_random_harpseal">
-        <action
-            android:id="@+id/action_add_random_harpseal_to_add_final_normal_harpseal_fragment"
-            app:destination="@id/add_final_normal_harpseal_fragment" />
-    </fragment>
+        tools:layout="@layout/fragment_add_random_harpseal"/>
 
     <fragment
         android:id="@+id/add_random_illipika"
         android:name="org.techtown.animore.AddFragementMissionIllipika"
-        tools:layout="@layout/fragment_add_random_illipika">
-        <action
-            android:id="@+id/action_add_random_illipika_to_add_final_normal_illipika_fragment"
-            app:destination="@id/add_final_normal_illipika_fragment" />
-    </fragment>
+        tools:layout="@layout/fragment_add_random_illipika"/>
 
     <fragment
         android:id="@+id/add_random_java"
         android:name="org.techtown.animore.AddFragementMissionJava"
-        tools:layout="@layout/fragment_add_random_java">
+        tools:layout="@layout/fragment_add_random_java"/>
+
+    <fragment
+        android:id="@+id/add_choose_normal_guanicoe"
+        android:name="org.techtown.animore.AddFragmentChooseNormalGuanicoe"
+        tools:layout="@layout/fragment_choose_option_normal_guanicoe">
         <action
-            android:id="@+id/action_add_random_java_to_add_final_normal_java_fragment"
-            app:destination="@id/add_final_normal_java_fragment" />
+            android:id="@+id/action_add_choose_normal_guanicoe_to_add_choose_continuous_guanicoe"
+            app:destination="@id/add_choose_continuous_guanicoe" />
+        <action
+            android:id="@+id/action_add_choose_normal_guanicoe_to_add_final_normal_guanicoe_fragment"
+            app:destination="@id/add_final_normal_guanicoe_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"/>
     </fragment>
+
+    <fragment
+        android:id="@+id/add_choose_continuous_guanicoe"
+        android:name="org.techtown.animore.AddFragmentChooseContinuousGuanicoe"
+        tools:layout="@layout/fragment_choose_option_continuous_guanicoe">
+        <action
+            android:id="@+id/action_add_choose_continuous_guanicoe_to_add_choose_normal_guanicoe"
+            app:destination="@id/add_choose_normal_guanicoe" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_choose_continuous_bengal"
+        android:name="org.techtown.animore.AddFragmentChooseContinuousBengal"
+        tools:layout="@layout/fragment_choose_option_continuous_bengal"/>
+
+    <fragment
+        android:id="@+id/add_choose_continuous_java"
+        android:name="org.techtown.animore.AddFragmentChooseContinuousJava"
+        tools:layout="@layout/fragment_choose_option_continuous_java"/>
+
+    <fragment
+        android:id="@+id/add_choose_continuous_illipika"
+        android:name="org.techtown.animore.AddFragmentChooseContinuousIllipika"
+        tools:layout="@layout/fragment_choose_option_continuous_illipika"/>
+
+    <fragment
+        android:id="@+id/add_choose_continuous_harpseal"
+        android:name="org.techtown.animore.AddFragmentChooseContinuousHarpseal"
+        tools:layout="@layout/fragment_choose_option_continuous_harpseal"/>
 
     <fragment
         android:id="@+id/past_fragment"
@@ -143,24 +184,44 @@
         tools:layout="@layout/fragment_final_add_normal_guanicoe">
         <action
             android:id="@+id/action_add_final_normal_guanicoe_fragment_to_home_fragment"
-            app:destination="@id/home_fragment" />
+            app:destination="@id/home_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"/>
     </fragment>
 
     <fragment
         android:id="@+id/add_final_normal_bengal_fragment"
-        android:name="org.techtown.animore.AddFragmentFinalNormalBengal"></fragment>
+        android:name="org.techtown.animore.AddFragmentFinalNormalBengal">
+        <action
+            android:id="@+id/action_add_final_normal_bengal_fragment_to_home_fragment"
+            app:destination="@id/home_fragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/add_final_normal_java_fragment"
-        android:name="org.techtown.animore.AddFragmentFinalNormalJava"></fragment>
+        android:name="org.techtown.animore.AddFragmentFinalNormalJava">
+        <action
+            android:id="@+id/action_add_final_normal_java_fragment_to_home_fragment"
+            app:destination="@id/home_fragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/add_final_normal_illipika_fragment"
-        android:name="org.techtown.animore.AddFragmentFinalNormalIllipika"></fragment>
+        android:name="org.techtown.animore.AddFragmentFinalNormalIllipika">
+        <action
+            android:id="@+id/action_add_final_normal_illipika_fragment_to_home_fragment"
+            app:destination="@id/home_fragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/add_final_normal_harpseal_fragment"
-        android:name="org.techtown.animore.AddFragmentFinalNormalHarpseal"></fragment>
+        android:name="org.techtown.animore.AddFragmentFinalNormalHarpseal">
+        <action
+            android:id="@+id/action_add_final_normal_harpseal_fragment_to_home_fragment"
+            app:destination="@id/home_fragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/past_card_fragment"

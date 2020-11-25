@@ -16,9 +16,7 @@ class AddFragementMissionBengal : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_add_random_bengal, container, false)
 
-        view.findViewById<Button>(R.id.btn_to_select_mode_bengal).setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_add_random_bengal_to_add_final_normal_bengal_fragment)
-        }
+
 
         return view;
     }
