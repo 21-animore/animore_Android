@@ -21,48 +21,51 @@ android:padding="10dp">
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_alignParentTop="true"
-    android:layout_alignParentBottom="true"
     android:layout_alignParentRight="true"
     android:layout_marginRight="5dp"
     card_view:srcCompat="@drawable/ic_add_card_guanicoe" />
 
 <TextView
     android:id="@+id/tv_animal_name"
-    android:layout_width="158dp"
-    android:layout_height="106dp"
+    android:layout_width="170dp"
+    android:layout_height="72dp"
+    android:layout_marginLeft="2dp"
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:layout_marginTop="0dp"
     android:fontFamily="@font/notosanskr_bold"
     android:includeFontPadding="false"
     android:text="구아나코"
-    android:textColor="#222D41"
-    android:textSize="36sp" />
+
+    android:textColor="@color/stroke_guanicoe"
+    android:textSize="40sp" />
 
 <TextView
     android:id="@+id/tv_animal_name_eng"
     android:layout_width="148dp"
     android:layout_height="wrap_content"
     android:layout_alignParentTop="true"
-    android:layout_marginTop="60dp"
-    android:fontFamily="@font/notosanskr_medium"
+    android:layout_marginTop="54dp"
+    android:layout_marginLeft="2dp"
+    android:fontFamily="@font/montserrat_medium"
     android:includeFontPadding="false"
     android:text="Guanicoe"
-    android:textColor="#222D41"
-    android:textSize="12sp" />
+    android:textColor="@color/stroke_guanicoe"
+    android:textSize="14sp" />
 
 <TextView
     android:id="@+id/tv_animal_content"
-    android:layout_width="224dp"
+    android:layout_width="228dp"
     android:layout_height="211dp"
     android:layout_alignParentTop="true"
-    android:layout_marginTop="95dp"
+    android:layout_marginTop="80dp"
+    android:layout_marginLeft="2dp"
     android:fontFamily="@font/notosanskr_medium"
     android:includeFontPadding="false"
-    android:lineSpacingExtra="6sp"
+    android:lineSpacingExtra="2sp"
     android:text="기후가 따뜻해지면서 구아나코가 살고있는 건조하고 산이 많은 초원 서식지가 사막으로 변화하고 있습니다. 먹을 풀을 구하기 위해 가축 목초지로 내려 가야합니다. 이로 인해 목장주들은 가축 보호를 위해 구아나코 사냥 허용을 주장하고 구아나코와 인간 간의 갈등이 발생합니다."
-    android:textColor="#222D41"
-    android:textSize="12sp" />
+    android:textColor="@color/stroke_guanicoe"
+    android:textSize="14sp" />
 
 </RelativeLayout>
 

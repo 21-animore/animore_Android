@@ -16,28 +16,28 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_top_bar_harpseal" />
 
-    <ImageButton
-        android:id="@+id/back_btn_to_add_animal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="18dp"
-        android:background="@null"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:srcCompat="@drawable/ic_back_btn_harpseal" />
-
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/tv_mission_name_harpseal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/notosanskr_bold"
         android:text="중고마켓 이용하기"
         android:textColor="@color/stroke_harpseal"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView" />
+
+    <ImageButton
+        android:id="@+id/back_btn_to_add_frag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginBottom="18dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:srcCompat="@drawable/ic_back_btn_harpseal" />
 
 
     <include
@@ -45,7 +45,7 @@
         layout="@layout/eco_card_layout_harpseal"
         android:layout_width="255dp"
         android:layout_height="409dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"/>
@@ -56,42 +56,43 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/notosanskr_bold"
         android:text="지금부터 함께 환경보호를 실천해볼까요?"
+        android:layout_marginTop="5dp"
+        android:textSize="14dp"
         android:textColor="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/animal_card" />
 
     <Button
-        android:id="@+id/button1"
-        android:layout_width="90dp"
+        android:id="@+id/btn_to_select_guanicoe_card_again"
+        style="@null"
+        android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="35dp"
-        android:backgroundTint="@color/colorPrimary"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_btn_circle_empty"
         android:fontFamily="@font/notosanskr_black"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:cornerRadius="1000dp"
+        android:layout_marginLeft="91dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/animal_card"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         app:strokeColor="@color/colorAccent"
         app:strokeWidth="1dp" />
 
     <Button
         android:id="@+id/btn_to_select_mode_guanicoe"
-        android:layout_width="90dp"
+        style="@null"
+        android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="35dp"
-        android:backgroundTint="@color/colorAccent"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_btn_circle_full"
         android:fontFamily="@font/notosanskr_black"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:cornerRadius="1000dp"
+        android:layout_marginRight="91dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/button1"
-        app:layout_constraintTop_toBottomOf="@+id/animal_card" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView2"
@@ -101,12 +102,13 @@
         android:text="카드\n다시받기"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:translationZ="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button1"
-        app:layout_constraintEnd_toEndOf="@+id/button1"
-        app:layout_constraintStart_toStartOf="@+id/button1"
-        app:layout_constraintTop_toTopOf="@+id/button1"/>
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_to_select_guanicoe_card_again"
+        app:layout_constraintEnd_toEndOf="@+id/btn_to_select_guanicoe_card_again"
+        app:layout_constraintStart_toStartOf="@+id/btn_to_select_guanicoe_card_again"
+        app:layout_constraintTop_toTopOf="@+id/btn_to_select_guanicoe_card_again"/>
 
     <TextView
         android:id="@+id/textView3"
@@ -116,8 +118,9 @@
         android:text="바로\n도전하기"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:translationZ="10dp"
+        android:layout_marginBottom="2dp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_to_select_mode_guanicoe"
         app:layout_constraintEnd_toEndOf="@+id/btn_to_select_mode_guanicoe"
         app:layout_constraintStart_toStartOf="@+id/btn_to_select_mode_guanicoe"

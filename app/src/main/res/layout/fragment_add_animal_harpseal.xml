@@ -20,7 +20,7 @@
         android:id="@+id/back_btn_to_add_frag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="26dp"
         android:layout_marginBottom="18dp"
         android:background="@null"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
@@ -34,7 +34,7 @@
         android:fontFamily="@font/notosanskr_bold"
         android:text="하프물범 구출하기"
         android:textColor="@color/stroke_harpseal"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView" />
@@ -44,7 +44,7 @@
         layout="@layout/animal_card_layout_harpseal"
         android:layout_width="255dp"
         android:layout_height="409dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -53,9 +53,10 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
         android:fontFamily="@font/notosanskr_bold"
         android:text="소비 습관 개선 챌린지"
+        android:layout_marginTop="5dp"
+        android:textSize="14dp"
         android:textColor="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -63,19 +64,19 @@
         app:layout_constraintTop_toBottomOf="@+id/animal_card" />
 
     <Button
-        android:id="@+id/btn_to_get_randomcard_guanicoe"
-        android:layout_width="90dp"
+        android:id="@+id/btn_to_get_randomcard_harpseal"
+        style="@null"
+        android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="35dp"
-        android:backgroundTint="@color/colorAccent"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_btn_circle_full"
         android:fontFamily="@font/notosanskr_black"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:cornerRadius="1000dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/animal_card" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textView3"
@@ -85,11 +86,12 @@
         android:text="랜덤카드\n받기"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:translationZ="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_to_get_randomcard_guanicoe"
-        app:layout_constraintEnd_toEndOf="@+id/btn_to_get_randomcard_guanicoe"
-        app:layout_constraintStart_toStartOf="@+id/btn_to_get_randomcard_guanicoe"
-        app:layout_constraintTop_toTopOf="@+id/btn_to_get_randomcard_guanicoe"/>
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_to_get_randomcard_harpseal"
+        app:layout_constraintEnd_toEndOf="@+id/btn_to_get_randomcard_harpseal"
+        app:layout_constraintStart_toStartOf="@+id/btn_to_get_randomcard_harpseal"
+        app:layout_constraintTop_toTopOf="@+id/btn_to_get_randomcard_harpseal"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -39,9 +39,10 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="360dp"
-        android:layout_height="100dp"
+        android:layout_height="78dp"
         android:layout_marginStart="31dp"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="120dp"
+        android:includeFontPadding="false"
         android:fontFamily="@font/notosanskr_bold"
         android:text="데이터 말고 와이파이를 사용해 온실가스를 줄여봐요!"
         android:textColor="#FFFFFF"
@@ -49,47 +50,50 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+
+    <RadioGroup
+        android:id="@+id/mainBtnGroup"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent">
+
+    <RadioButton
         android:id="@+id/button_all"
-        android:background="@drawable/main_button"
+        android:button="@null"
+        android:textAlignment="center"
+        android:checked="true"
+        android:background="@drawable/home_all_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="5dp"
         android:includeFontPadding="false"
-        android:text="All"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:textSize="18sp" />
 
-    <Button
+    <RadioButton
         android:id="@+id/button_normal"
+        android:button="@null"
+        android:textAlignment="center"
+        android:background="@drawable/home_normal_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/main_button"
         android:includeFontPadding="false"
-        android:text="일반"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/button_all"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:textSize="18sp" />
 
-    <Button
+    <RadioButton
         android:id="@+id/button_continous"
-        android:background="@drawable/main_button"
+        android:button="@null"
+        android:textAlignment="center"
+        android:background="@drawable/home_continuous_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
         android:includeFontPadding="false"
-        android:text="연속"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/button_normal"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:textSize="18sp" />
+
+    </RadioGroup>
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
@@ -99,7 +103,7 @@
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_all">
+        app:layout_constraintTop_toBottomOf="@+id/mainBtnGroup">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -112,9 +116,11 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/normalcard_layout_bengal" />
+                tools:listitem="@layout/normalcard_layout" />
 
             <include
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
                 android:id="@+id/default_card"
                 layout="@layout/default_card"
                 android:layout_width="wrap_content"

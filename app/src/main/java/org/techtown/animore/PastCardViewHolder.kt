@@ -25,23 +25,5 @@ class PastCardViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
         total_count.text = PastCardData.total_count.toString();
 
         period.text = PastCardData.start_date.toString() + "/" + PastCardData.end_date.toString();
-
-        if (PastCardData.card_category == 0) {
-            //구아나코
-            //어으억
-
-        } else if (PastCardData.card_category == 1) {
-            //일리피카
-
-        } else if (PastCardData.card_category == 2) {
-            //하프물범
-
-        } else if (PastCardData.card_category == 3) {
-            //자바뿔매
-
-        } else if (PastCardData.card_category == 4) {
-            //벵갈호랑이
-
-        }
     }
 }

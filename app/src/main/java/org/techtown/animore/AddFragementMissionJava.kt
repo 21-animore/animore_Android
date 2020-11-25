@@ -12,6 +12,9 @@ class AddFragementMissionJava : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_random_java, container, false)
+        val view = inflater.inflate(R.layout.fragment_add_random_java, container, false)
+
+
+        return view;
     }
 }

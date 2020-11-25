@@ -6,6 +6,7 @@
     android:layout_height="409dp"
     android:id="@+id/mainCard_view"
     android:layout_margin="5dp"
+    card_view:cardBackgroundColor="@color/back_bengaltiger"
     card_view:cardCornerRadius="12dp"
     card_view:cardElevation="3dp"
     >
@@ -19,15 +20,16 @@
             android:id="@+id/tv_mission_name"
             android:layout_width="158dp"
             android:layout_height="106dp"
+            android:lineSpacingExtra ="-12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="-10dp"
+            android:layout_marginTop="5dp"
             android:layout_marginLeft="5dp"
             android:fontFamily="@font/notosanskr_bold"
             android:includeFontPadding="false"
             android:text="중고마켓 이용하기"
             android:textColor="@color/stroke_bengaltiger"
-            android:textSize="36sp" />
+            android:textSize="42sp" />
 
         <TextView
             android:id="@+id/tv_normal"
@@ -35,6 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
+            android:layout_marginTop="12dp"
             android:layout_marginRight="10dp"
             android:fontFamily="@font/notosanskr_medium"
             android:includeFontPadding="false"
@@ -102,7 +105,7 @@
             android:layout_height="wrap_content"
             card_view:srcCompat="@drawable/ic_normal_index_bengaltiger"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="150dp" />
 
         <TextView
@@ -113,10 +116,13 @@
             android:layout_alignTop="@+id/normal_index"
             android:layout_alignEnd="@+id/normal_index"
             android:layout_alignBottom="@+id/normal_index"
-            android:layout_marginTop="43dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="1dp"
             android:fontFamily="@font/montserrat_bold"
-            android:textAlignment="center"
             android:text="1"
+            android:textAlignment="center"
             android:textColor="@color/back_bengaltiger"
             android:textSize="12sp" />
 
@@ -126,10 +132,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/progressbar"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="2dp"
             android:layout_marginRight="10dp"
-            android:fontFamily="@font/notosanskr_medium"
+            android:fontFamily="@font/montserrat_medium"
             android:includeFontPadding="false"
             android:text="2020. 10. 09"
             android:textColor="@color/stroke_bengaltiger"
@@ -139,10 +145,11 @@
             android:id="@+id/tv_end_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/progressbar"
+            android:layout_below="@+id/progressbar"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="10dp"
-            android:fontFamily="@font/notosanskr_medium"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/montserrat_medium"
             android:includeFontPadding="false"
             android:text="2020. 11. 09"
             android:textColor="@color/stroke_bengaltiger"
@@ -167,7 +174,7 @@
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/montserrat_bold"
             android:includeFontPadding="false"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="10dp"
             android:text="YOU&amp;I"
             android:textColor="@color/stroke_bengaltiger"
             android:textSize="12sp" />
@@ -187,13 +194,13 @@
             android:layout_width="110dp"
             android:layout_height="45dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="25dp"
             android:text="오늘 완료하기"
             android:includeFontPadding="false"
             android:textSize="12sp"
             android:layout_marginLeft="5dp"
             android:backgroundTint="@color/complete_bengaltiger"
-            android:textColor="@color/back_bengaltiger"
+            android:textColor="@color/back_guanicoe"
             android:fontFamily="@font/notosanskr_bold"/>
 
     </RelativeLayout>

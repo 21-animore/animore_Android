@@ -42,17 +42,20 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Log.d("title", arguments?.getString("title").toString())
-
-        //bundle에 담겨온 데이터를 title이라는 변수에 넣어준다
-        val title = arguments?.getString("title").toString()
-
-        var dump1 = NormalCardData("test1",0)
-        var dump2 = NormalCardData("test2",1)
+        var dump3 = NormalCardData(2, "환경 보호 하기")
+        var dump4 = NormalCardData(3, "환경 보호 하기")
+        var dump5 = NormalCardData(4, "환경 보호 하기")
+        var dump1 = NormalCardData(0,"환경 보호 하기")
+        var dump2 = NormalCardData(1, "환경 보호 하기")
         //val MyData:MutableList<NormalCardData> = mutableListOf<NormalCardData>(NormalCardData(title,))
-        val MyData:MutableList<NormalCardData> = mutableListOf<NormalCardData>(dump1,dump2)
+        val MyData:MutableList<NormalCardData> = mutableListOf<NormalCardData>(dump5,dump4,dump3,dump2,dump1)
 
         val No = NormalCardAdapter(requireContext(), MyData)
         normal_card_list.adapter = No
+
+        Log.d("title", arguments?.getString("title").toString())
+        //bundle에 담겨온 데이터를 title이라는 변수에 넣어준다
+        val title = arguments?.getString("title").toString()
+
     }
 }

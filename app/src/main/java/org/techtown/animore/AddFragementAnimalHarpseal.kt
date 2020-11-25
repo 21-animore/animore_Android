@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 
 class AddFragementAnimalHarpseal : Fragment() {
     override fun onCreateView(
@@ -12,6 +14,10 @@ class AddFragementAnimalHarpseal : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_animal_harpseal, container, false)
+        val view = inflater.inflate(R.layout.fragment_add_animal_harpseal, container, false)
+        view.findViewById<Button>(R.id.btn_to_get_randomcard_harpseal).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_add_animal_harpseal_to_add_random_harpseal)
+        }
+        return view;
     }
 }

@@ -28,7 +28,7 @@ class AddFragmentFinalNormalGuanicoe : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val title = textView_title.text.toString()
+        val title = tv_mission_name_guanicoe.text.toString()
         //bundle에 HomeFragment로 전달하고자 하는 text를 넣는다
         val bundle = bundleOf("title" to title)
 
