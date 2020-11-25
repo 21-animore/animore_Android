@@ -95,22 +95,38 @@
     <fragment
         android:id="@+id/add_random_bengal"
         android:name="org.techtown.animore.AddFragementMissionBengal"
-        tools:layout="@layout/fragment_add_random_bengal"></fragment>
+        tools:layout="@layout/fragment_add_random_bengal">
+        <action
+            android:id="@+id/action_add_random_bengal_to_add_final_normal_bengal_fragment"
+            app:destination="@id/add_final_normal_bengal_fragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/add_random_harpseal"
         android:name="org.techtown.animore.AddFragementMissionHarpseal"
-        tools:layout="@layout/fragment_add_random_harpseal"></fragment>
+        tools:layout="@layout/fragment_add_random_harpseal">
+        <action
+            android:id="@+id/action_add_random_harpseal_to_add_final_normal_harpseal_fragment"
+            app:destination="@id/add_final_normal_harpseal_fragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/add_random_illipika"
         android:name="org.techtown.animore.AddFragementMissionIllipika"
-        tools:layout="@layout/fragment_add_random_illipika"></fragment>
+        tools:layout="@layout/fragment_add_random_illipika">
+        <action
+            android:id="@+id/action_add_random_illipika_to_add_final_normal_illipika_fragment"
+            app:destination="@id/add_final_normal_illipika_fragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/add_random_java"
         android:name="org.techtown.animore.AddFragementMissionJava"
-        tools:layout="@layout/fragment_add_random_java"></fragment>
+        tools:layout="@layout/fragment_add_random_java">
+        <action
+            android:id="@+id/action_add_random_java_to_add_final_normal_java_fragment"
+            app:destination="@id/add_final_normal_java_fragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/past_fragment"
@@ -131,8 +147,26 @@
     </fragment>
 
     <fragment
+        android:id="@+id/add_final_normal_bengal_fragment"
+        android:name="org.techtown.animore.AddFragmentFinalNormalBengal"></fragment>
+
+    <fragment
+        android:id="@+id/add_final_normal_java_fragment"
+        android:name="org.techtown.animore.AddFragmentFinalNormalJava"></fragment>
+
+    <fragment
+        android:id="@+id/add_final_normal_illipika_fragment"
+        android:name="org.techtown.animore.AddFragmentFinalNormalIllipika"></fragment>
+
+    <fragment
+        android:id="@+id/add_final_normal_harpseal_fragment"
+        android:name="org.techtown.animore.AddFragmentFinalNormalHarpseal"></fragment>
+
+    <fragment
         android:id="@+id/past_card_fragment"
         android:name="org.techtown.animore.PastFragmentMore"
         tools:layout="@layout/fragment_past_card"></fragment>
+
+
 
 </navigation>
