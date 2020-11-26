@@ -25,7 +25,7 @@ import java.time.format.DateTimeFormatter
 import java.util.*
 
 class SubActivity : AppCompatActivity()  {
-/*
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.test)
@@ -167,6 +167,5 @@ class SubActivity : AppCompatActivity()  {
         var table_cell = findViewById<TextView>(diff)
         table_cell.setBackgroundColor(getColor(R.color.stroke_bengaltiger))
     }
-     */
 
 }

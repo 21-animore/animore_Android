@@ -154,7 +154,6 @@
                 android:text="Sun" />
         </TableRow>
 
-
     </TableLayout>
 
     <EditText

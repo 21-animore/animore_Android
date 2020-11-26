@@ -4,7 +4,7 @@ import java.util.*
 
 class NormalCardData (
     val index: Int,
-    val mission_name : String,
+    val mission_name : String
 /*,
     val achieve_count : Int,
     val count_num : Int,

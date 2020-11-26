@@ -6,6 +6,7 @@
     android:layout_height="409dp"
     android:id="@+id/maincard_continuous_view"
     android:layout_margin="5dp"
+    card_view:cardBackgroundColor="@color/back_guanicoe"
     card_view:cardCornerRadius="12dp"
     card_view:cardElevation="3dp"
     >
@@ -27,7 +28,7 @@
             android:fontFamily="@font/notosanskr_bold"
             android:includeFontPadding="false"
             android:text="중고마켓 이용하기"
-            android:textColor="@color/stroke_bengaltiger"
+            android:textColor="@color/stroke_guanicoe"
             android:textSize="42sp" />
 
         <TextView
@@ -40,8 +41,8 @@
             android:layout_marginRight="10dp"
             android:fontFamily="@font/notosanskr_medium"
             android:includeFontPadding="false"
-            android:text="일반"
-            android:textColor="@color/stroke_bengaltiger"
+            android:text="연속 7일"
+            android:textColor="@color/stroke_guanicoe"
             android:textSize="12sp" />
 
         <TextView
@@ -54,7 +55,7 @@
             android:fontFamily="@font/montserrat_medium"
             android:includeFontPadding="false"
             android:text="Living Habit"
-            android:textColor="@color/stroke_bengaltiger"
+            android:textColor="@color/stroke_guanicoe"
             android:textSize="12sp" />
 
         <TextView
@@ -68,100 +69,119 @@
             android:fontFamily="@font/notosanskr_medium"
             android:includeFontPadding="false"
             android:text="생활 습관 개선"
-            android:textColor="@color/stroke_bengaltiger"
+            android:textColor="@color/stroke_guanicoe"
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tv_achieve_count"
+            android:id="@+id/tv_day_mon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="125dp"
-            android:layout_toStartOf="@+id/tv_totalCount"
-            android:fontFamily="@font/montserrat_medium"
-            android:includeFontPadding="false"
-            android:text="0"
-            android:textColor="@color/stroke_bengaltiger"
-            android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/tv_totalCount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="125dp"
-            android:layout_marginRight="10dp"
-            android:fontFamily="@font/montserrat_medium"
-            android:includeFontPadding="false"
-            android:text="/21"
-            android:textColor="@color/stroke_bengaltiger"
-            android:textSize="24sp" />
-
-        <ImageView
-            android:id="@+id/normal_index"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            card_view:srcCompat="@drawable/ic_normal_index_bengaltiger"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="150dp" />
-
-        <TextView
-            android:id="@+id/tv_count_num"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/normal_index"
-            android:layout_alignTop="@+id/normal_index"
-            android:layout_alignEnd="@+id/normal_index"
-            android:layout_alignBottom="@+id/normal_index"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginBottom="1dp"
+            android:layout_below="@+id/tv_mission_category_eng"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="16dp"
             android:fontFamily="@font/montserrat_bold"
-            android:text="0"
-            android:textAlignment="center"
-            android:textColor="@color/back_bengaltiger"
-            android:textSize="12sp" />
+            android:includeFontPadding="false"
+            android:text="M"
+            android:textColor="@color/stroke_guanicoe"
+            android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/tv_start_date"
+            android:id="@+id/tv_day_tue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/progressbar"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginRight="10dp"
-            android:fontFamily="@font/montserrat_medium"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="13dp"
+            android:layout_toEndOf="@+id/tv_day_mon"
+            android:layout_below="@+id/tv_mission_category_eng"
+            android:fontFamily="@font/montserrat_bold"
             android:includeFontPadding="false"
-            android:text="2020. 10. 09"
-            android:textColor="@color/stroke_bengaltiger"
-            android:textSize="12sp" />
+            android:text="T"
+            android:textColor="@color/stroke_guanicoe"
+            android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/tv_end_date"
+            android:id="@+id/tv_day_wed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/progressbar"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="2dp"
-            android:fontFamily="@font/montserrat_medium"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="13dp"
+            android:layout_toEndOf="@+id/tv_day_tue"
+            android:layout_below="@+id/tv_mission_category_eng"
+            android:fontFamily="@font/montserrat_bold"
             android:includeFontPadding="false"
-            android:text="2020. 11. 09"
-            android:textColor="@color/stroke_bengaltiger"
-            android:textSize="12sp" />
+            android:text="W"
+            android:textColor="@color/stroke_guanicoe"
+            android:textSize="14sp" />
 
-        <ImageView
-            android:id="@+id/progressbar"
+        <TextView
+            android:id="@+id/tv_day_thu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/normal_index"
-            android:layout_marginTop="3dp"
-            android:layout_alignParentEnd="true"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="13dp"
+            android:layout_toEndOf="@+id/tv_day_wed"
+            android:layout_below="@+id/tv_mission_category_eng"
+            android:fontFamily="@font/montserrat_bold"
+            android:includeFontPadding="false"
+            android:text="T"
+            android:textColor="@color/stroke_guanicoe"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_day_fri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="13dp"
+            android:layout_toEndOf="@+id/tv_day_thu"
+            android:layout_below="@+id/tv_mission_category_eng"
+            android:fontFamily="@font/montserrat_bold"
+            android:includeFontPadding="false"
+            android:text="F"
+            android:textColor="@color/stroke_guanicoe"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_day_sat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="13dp"
+            android:layout_toEndOf="@+id/tv_day_fri"
+            android:layout_below="@+id/tv_mission_category_eng"
+            android:fontFamily="@font/montserrat_bold"
+            android:includeFontPadding="false"
+            android:text="S"
+            android:textColor="@color/stroke_guanicoe"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_day_sun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="13dp"
+            android:layout_toEndOf="@+id/tv_day_sat"
+            android:layout_below="@+id/tv_mission_category_eng"
+            android:fontFamily="@font/montserrat_bold"
+            android:includeFontPadding="false"
+            android:text="S"
+            android:textColor="@color/stroke_guanicoe"
+            android:textSize="14sp" />
+
+        <TableLayout
+            android:id="@+id/myTable"
+            android:layout_width="363dp"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tv_day_mon"
             android:layout_alignParentStart="true"
-            card_view:srcCompat="@drawable/ic_progressbar_stroke_bengaltiger" />
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="6dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></TableRow>
+        </TableLayout>
 
         <TextView
             android:id="@+id/tv_bottom"
@@ -173,8 +193,8 @@
             android:fontFamily="@font/montserrat_bold"
             android:includeFontPadding="false"
             android:layout_marginLeft="10dp"
-            android:text="YOU&amp;I"
-            android:textColor="@color/stroke_bengaltiger"
+            android:text="Think one more"
+            android:textColor="@color/stroke_guanicoe"
             android:textSize="12sp" />
 
         <ImageView
@@ -185,7 +205,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginRight="5dp"
             android:layout_marginBottom="10dp"
-            card_view:srcCompat="@drawable/ic_main_card_bengaltiger" />
+            card_view:srcCompat="@drawable/ic_continuous_img_guanicoe" />
 
         <Button
             android:id="@+id/dailyCheckBtn"
@@ -197,8 +217,8 @@
             android:includeFontPadding="false"
             android:textSize="12sp"
             android:layout_marginLeft="5dp"
-            android:backgroundTint="@color/complete_bengaltiger"
-            android:textColor="@color/back_bengaltiger"
+            android:backgroundTint="@color/complete_guanicoe"
+            android:textColor="@color/back_guanicoe"
             android:fontFamily="@font/notosanskr_bold"/>
 
     </RelativeLayout>

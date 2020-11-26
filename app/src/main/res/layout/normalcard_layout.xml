@@ -102,6 +102,7 @@
             android:id="@+id/normal_index"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
             card_view:srcCompat="@drawable/ic_normal_index_bengaltiger"
             android:layout_alignParentTop="true"
             android:layout_marginTop="150dp" />
@@ -187,19 +188,18 @@
             android:layout_marginBottom="10dp"
             card_view:srcCompat="@drawable/ic_main_card_bengaltiger" />
 
-        <Button
+        <ImageButton
             android:id="@+id/dailyCheckBtn"
-            android:layout_width="110dp"
-            android:layout_height="45dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="28dp"
             android:text="오늘 완료하기"
             android:includeFontPadding="false"
             android:textSize="12sp"
+            android:background="@drawable/ic_checkbtn_bengal"
             android:layout_marginLeft="5dp"
-            android:backgroundTint="@color/complete_bengaltiger"
-            android:textColor="@color/back_bengaltiger"
-            android:fontFamily="@font/notosanskr_bold"/>
+            android:fontFamily="@font/montserrat_bold"/>
 
     </RelativeLayout>
 

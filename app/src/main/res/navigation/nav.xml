@@ -30,16 +30,32 @@
             app:popExitAnim="@android:anim/fade_out" />
         <action
             android:id="@+id/action_add_fragment_to_add_animal_bengal"
-            app:destination="@id/add_animal_bengal" />
+            app:destination="@id/add_animal_bengal"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
         <action
             android:id="@+id/action_add_fragment_to_add_animal_java"
-            app:destination="@id/add_animal_java" />
+            app:destination="@id/add_animal_java"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
         <action
             android:id="@+id/action_add_fragment_to_add_animal_illipika"
-            app:destination="@id/add_animal_illipika" />
+            app:destination="@id/add_animal_illipika"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
         <action
             android:id="@+id/action_add_fragment_to_add_animal_harpseal"
-            app:destination="@id/add_animal_harpseal" />
+            app:destination="@id/add_animal_harpseal"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
     </fragment>
 
     <fragment
@@ -61,7 +77,11 @@
         tools:layout="@layout/fragment_add_animal_bengal">
         <action
             android:id="@+id/action_add_animal_bengal_to_add_random_bengal"
-            app:destination="@id/add_random_bengal" />
+            app:destination="@id/add_random_bengal"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
     </fragment>
 
     <fragment
@@ -70,7 +90,11 @@
         tools:layout="@layout/fragment_add_animal_java">
         <action
             android:id="@+id/action_add_animal_java_to_add_random_java"
-            app:destination="@id/add_random_java" />
+            app:destination="@id/add_random_java"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
     </fragment>
 
     <fragment
@@ -79,7 +103,11 @@
         tools:layout="@layout/fragment_add_animal_illipika">
         <action
             android:id="@+id/action_add_animal_illipika_to_add_random_illipika"
-            app:destination="@id/add_random_illipika" />
+            app:destination="@id/add_random_illipika"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
     </fragment>
 
     <fragment
@@ -88,7 +116,11 @@
         tools:layout="@layout/fragment_add_animal_harpseal">
         <action
             android:id="@+id/action_add_animal_harpseal_to_add_random_harpseal"
-            app:destination="@id/add_random_harpseal" />
+            app:destination="@id/add_random_harpseal"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
     </fragment>
 
     <fragment
@@ -147,6 +179,15 @@
         <action
             android:id="@+id/action_add_choose_continuous_guanicoe_to_add_choose_normal_guanicoe"
             app:destination="@id/add_choose_normal_guanicoe" />
+        <action
+            android:id="@+id/action_add_choose_continuous_guanicoe_to_add_final_continuous_guanicoe"
+            app:destination="@id/add_final_continuous_guanicoe" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_final_continuous_guanicoe"
+        android:name="org.techtown.animore.AddFragmentFinalContinuousGuanicoe"
+        tools:layout="@layout/fragment_final_add_continuous_guanicoe">
     </fragment>
 
     <fragment

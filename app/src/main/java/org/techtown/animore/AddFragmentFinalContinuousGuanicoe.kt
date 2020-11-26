@@ -15,17 +15,13 @@ import androidx.navigation.findNavController
 import kotlinx.android.synthetic.main.fragment_final_add_normal_guanicoe.*
 import kotlinx.android.synthetic.main.normalcard_layout_guanicoe.*
 
-class AddFragmentFinalNormalGuanicoe : Fragment() {
+class AddFragmentFinalContinuousGuanicoe : Fragment() {
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_final_add_normal_guanicoe, container, false)
-
-        view.findViewById<Button>(R.id.btn_to_get_randomcard_guanicoe).setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_add_final_normal_guanicoe_fragment_to_home_fragment)
-        }
+        val view = inflater.inflate(R.layout.fragment_final_add_continuous_guanicoe, container, false)
 
         return view;
     }
@@ -33,15 +29,6 @@ class AddFragmentFinalNormalGuanicoe : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val title = tv_mission_name.text.toString()
-        val index = 0;
-        //bundle에 HomeFragment로 전달하고자 하는 text를 넣는다
-        val bundle = bundleOf("title" to title, "index" to index)
-
-        view.findViewById<Button>(R.id.btn_to_get_randomcard_guanicoe).setOnClickListener {
-            //fragment 전환 시 bundle을 포함해서 보낸다
-            Navigation.findNavController(view).navigate(R.id.action_add_final_normal_guanicoe_fragment_to_home_fragment, bundle)
-        }
 
     }
 }

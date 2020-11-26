@@ -13,8 +13,10 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>-->
         <!-- Customize your theme here. -->
     </style>
-    <style name="main_button_style" parent="Widget.AppCompat.Button">
-        <item name="android:textColor">@color/complete_guanicoe</item>
-        <item name="android:background">@drawable/home_all_button</item>
+    <style name="NumberPicker" parent="Theme.ANIMORE">
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name = "fontFamily">@font/montserrat_bold</item>
     </style>
+
 </resources>
