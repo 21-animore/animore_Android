@@ -2,17 +2,20 @@ package org.techtown.animore
 
 import android.content.Context
 import android.util.Log
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.test.view.*
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.util.*
 
-class ContinuousCardAdapter(private val context : Context, var datas:MutableList<NormalCardData>) : RecyclerView.Adapter<ContinuousCardAdapter.Holder>() {
+class ContinuousCardAdapter(private val context : Context, var datas:MutableList<ContinuousCardData>) : RecyclerView.Adapter<ContinuousCardAdapter.Holder>() {
 
     override fun getItemCount(): Int {
         //Log.w("태그", datas.size.toString())
@@ -20,142 +23,161 @@ class ContinuousCardAdapter(private val context : Context, var datas:MutableList
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
-        val view = LayoutInflater.from(context).inflate(R.layout.normalcard_layout, parent,false)
+        val view = LayoutInflater.from(context).inflate(R.layout.continuouscard_layout, parent,false)
         return Holder(view)
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
         holder?.bind(datas[position],context)
-        Log.e("태그", position.toString())
+        //Log.e("태그", position.toString())
     }
+
+    /*
+    var view_count = 0  // 더한 tablerow 갯수 셀려는 변수
+
+    fun draw_7(view: View){   //7일
+        draw_cal(7)
+    }
+    fun draw_14(view: View){
+        draw_cal(14)
+    }
+    fun draw_21(view: View){
+        draw_cal(21)
+    }
+
+    fun draw_cal(index: Int){
+        var today = Calendar.getInstance()
+
+        /*
+        var inputday = findViewById<CardView>(R.id.maincard_continuous_view).tv_start_date.text.toString()
+        var ind = inputday.split("-")  //text 를 년/월/일 구분
+        */
+
+        val now: LocalDate = LocalDate.now()
+        val ind = now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
+
+        var year = ind[0].toInt()
+        var month = ind[1].toInt()-1
+        var date = ind[2].toInt()
+
+        today.set(year, month, date)   //날짜로 셋업
+
+        //요일 가져오기 .. 1-일, 2- 월 => 0부터 시작하는 것이 편하기 때문에 -1
+        var day = today.get(Calendar.DAY_OF_WEEK)-1
+
+        // 월요일부터 시작하게 만들기 위해 숫자 하나씩 밀어서 대입
+        day = if(day==0) 6 else day -1
+
+        // 몇주인지 계산 월요일부터 시작 안했으면 무조건 7일은 2주 / 14일은 3주 로 만들어서 줄 +1 해두기
+        var week :Int = if(day>0) (index/7) else (index/7)-1
+
+        // 월요일부터 시작안할때 구분하는 flag -날짜 시작용
+        var start=false
+
+        // 끝난 날을 체크하는 count
+        var count=0
+
+        var table_body = findViewById<TableLayout>(R.id.myTable)
+
+        if(view_count!=0){    // 버튼 누를때마다 table row 초기화
+            for(i in 1..view_count){
+                table_body.removeViewAt(1)}
+            view_count=0
+        }
+
+        // table row params
+        val rowParams = TableLayout.LayoutParams(
+                TableLayout.LayoutParams.WRAP_CONTENT,
+                TableLayout.LayoutParams.WRAP_CONTENT
+        )
+
+        for (i in 0..week) {
+            var tbrow = TableRow(this)
+            tbrow.layoutParams = rowParams
+            for (j in 0..6) {  //일주일은 7일이니...
+
+                var tv1 = TextView(this)
+
+                // 본인 textview에 해당하는 param으로 바꿀것
+                var t_par = TableRow.LayoutParams(
+                        TableRow.LayoutParams.MATCH_PARENT,
+                        TableRow.LayoutParams.WRAP_CONTENT,
+                        1f
+                )
+
+                //시작 날짜 체크
+                if(j==day){
+                    start=true
+                }
+
+                //끝나는 날짜 체크
+                if(count>=index){start=false}
+
+                if(start ==true) {
+
+                    //날짜 text
+                    tv1.text = today.get(Calendar.DATE).toString()
+                    //배경.. 실선
+                    tv1.background = getDrawable(R.drawable.draw_solid_line)
+                    //1일씩 날짜 더하기
+                    today.add(Calendar.DATE, 1)
+                    //id추가 ==> 나중에 색을 칠하기 위한 id
+                    tv1.id=count
+                    count+=1
+                }
+                else {
+                    tv1.text = ""
+                    //빈칸은 실선
+                    tv1.background = getDrawable(R.drawable.draw_dash_line)
+                }
+                tv1.layoutParams = t_par
+                tv1.gravity = Gravity.CENTER
+                tv1.setPadding(0, 30, 0, 30)
+                //textviw 추가
+                tbrow.addView(tv1)
+            }
+            //tablerow 추가
+            table_body.addView(tbrow)
+            view_count+=1
+        }
+
+    }
+
+    fun fill_color(view: View){   // 선택날짜 달력 칠하기
+
+        var startday = Calendar.getInstance()
+        var selday = Calendar.getInstance()
+
+        //var inputday1 = findViewById<CardView>(R.id.maincard_continuous_view).tv_start_date.text.toString()
+        //val now: LocalDate = LocalDate.now()
+        //val inputday2 = now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
+
+        //var ind1 = inputday1.split("-")
+        //var ind2 = inputday2.split("-")
+
+        var ind1 = "2020-11-26"
+        var ind2 = findViewById<TextView>(R.id.test).select_date.text.toString()
+
+        startday.set(ind1[0].toInt(), ind1[1].toInt() - 1, ind1[2].toInt())
+        selday.set(ind2[0].toInt(), ind2[1].toInt() - 1, ind2[2].toInt())
+
+        //시작날짜와 칠할날짜 차이 계산
+        var diff = ((selday.timeInMillis -startday.timeInMillis)/(24*60*60*1000)).toInt()
+
+        //위에서 만든 id 를 가지고 칠함 (아이디가 날짜가 있을때 마다 0부터 증가함)
+        var table_cell = findViewById<TextView>(diff)
+        table_cell.setBackgroundColor(getColor(R.color.stroke_bengaltiger))
+    }
+    */
 
     inner class Holder(itemView: View):RecyclerView.ViewHolder(itemView) {
 
         val cardview = itemView.findViewById<CardView>(R.id.mainCard_view)
 
-        val mission_name = itemView.findViewById<TextView>(R.id.tv_mission_name)
-        val tv_normal = itemView.findViewById<TextView>(R.id.tv_normal)
-        val mission_category_eng = itemView.findViewById<TextView>(R.id.tv_mission_category_eng)
-        val tv_mission_category_kor = itemView.findViewById<TextView>(R.id.tv_mission_category_kor)
-        val tv_achieve_count = itemView.findViewById<TextView>(R.id.tv_achieve_count)
-        val tv_totalCount = itemView.findViewById<TextView>(R.id.tv_totalCount)
-        val tv_count_num = itemView.findViewById<TextView>(R.id.tv_count_num)
-        val tv_start_date = itemView.findViewById<TextView>(R.id.tv_start_date)
-        val tv_end_date = itemView.findViewById<TextView>(R.id.tv_end_date)
-        val tv_bottom = itemView.findViewById<TextView>(R.id.tv_bottom)
-
-        val normal_index = itemView.findViewById<ImageView>(R.id.normal_index)
-        val progressbar = itemView.findViewById<ImageView>(R.id.progressbar)
-        val bottom_img = itemView.findViewById<ImageView>(R.id.bottom_img)
-
-        //val dailyCheckBtn = itemView.findViewById<Button>(R.id.dailyCheckBtn)
-        //            android:backgroundTint="@color/complete_bengaltiger"
-        //            android:textColor="@color/back_bengaltiger"
-
-        fun bind(NormalCardData: NormalCardData,context:Context) {
-            if (NormalCardData.index ==0) {
-                cardview.setCardBackgroundColor(ContextCompat.getColor(context, R.color.back_guanicoe))
-
-                mission_name.setTextColor(ContextCompat.getColor(context, R.color.stroke_guanicoe))
-                tv_normal.setTextColor(ContextCompat.getColor(context, R.color.stroke_guanicoe))
-                mission_category_eng.setTextColor(ContextCompat.getColor(context, R.color.stroke_guanicoe))
-                tv_mission_category_kor.setTextColor(ContextCompat.getColor(context, R.color.stroke_guanicoe))
-                tv_achieve_count.setTextColor(ContextCompat.getColor(context, R.color.stroke_guanicoe))
-                tv_totalCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_guanicoe))
-                tv_count_num.setTextColor(ContextCompat.getColor(context, R.color.back_guanicoe))
-                tv_start_date.setTextColor(ContextCompat.getColor(context, R.color.stroke_guanicoe))
-                tv_end_date.setTextColor(ContextCompat.getColor(context, R.color.stroke_guanicoe))
-                tv_bottom.setTextColor(ContextCompat.getColor(context, R.color.stroke_guanicoe))
-
-                normal_index.setImageResource(R.drawable.ic_normal_index_guanicoe)
-                progressbar.setImageResource(R.drawable.ic_progressbar_stroke_guanicoe)
-                bottom_img.setImageResource(R.drawable.ic_main_card_guanicoe)
-
-            } else if(NormalCardData.index==1){
-                cardview.setCardBackgroundColor(ContextCompat.getColor(context, R.color.back_illipika))
-
-                mission_name.setTextColor(ContextCompat.getColor(context, R.color.stroke_illipika))
-                tv_normal.setTextColor(ContextCompat.getColor(context, R.color.stroke_illipika))
-                mission_category_eng.setTextColor(ContextCompat.getColor(context, R.color.stroke_illipika))
-                tv_mission_category_kor.setTextColor(ContextCompat.getColor(context, R.color.stroke_illipika))
-                tv_achieve_count.setTextColor(ContextCompat.getColor(context, R.color.stroke_illipika))
-                tv_totalCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_illipika))
-                tv_count_num.setTextColor(ContextCompat.getColor(context, R.color.back_illipika))
-                tv_start_date.setTextColor(ContextCompat.getColor(context, R.color.stroke_illipika))
-                tv_end_date.setTextColor(ContextCompat.getColor(context, R.color.stroke_illipika))
-                tv_bottom.setTextColor(ContextCompat.getColor(context, R.color.stroke_illipika))
-
-                normal_index.setImageResource(R.drawable.ic_normal_index_illipika)
-                progressbar.setImageResource(R.drawable.ic_progressbar_stroke_illipika)
-                bottom_img.setImageResource(R.drawable.ic_main_card_illipika)
-            } else if(NormalCardData.index==2){
-                cardview.setCardBackgroundColor(ContextCompat.getColor(context, R.color.back_harpseal))
-
-                mission_name.setTextColor(ContextCompat.getColor(context, R.color.stroke_harpseal))
-                tv_normal.setTextColor(ContextCompat.getColor(context, R.color.stroke_harpseal))
-                mission_category_eng.setTextColor(ContextCompat.getColor(context, R.color.stroke_harpseal))
-                tv_mission_category_kor.setTextColor(ContextCompat.getColor(context, R.color.stroke_harpseal))
-                tv_achieve_count.setTextColor(ContextCompat.getColor(context, R.color.stroke_harpseal))
-                tv_totalCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_harpseal))
-                tv_count_num.setTextColor(ContextCompat.getColor(context, R.color.back_harpseal))
-                tv_start_date.setTextColor(ContextCompat.getColor(context, R.color.stroke_harpseal))
-                tv_end_date.setTextColor(ContextCompat.getColor(context, R.color.stroke_harpseal))
-                tv_bottom.setTextColor(ContextCompat.getColor(context, R.color.stroke_harpseal))
-
-                normal_index.setImageResource(R.drawable.ic_normal_index_harpseal)
-                progressbar.setImageResource(R.drawable.ic_progressbar_stroke_harpseal)
-                bottom_img.setImageResource(R.drawable.ic_main_card_harpseal)
-            }else if(NormalCardData.index==3){
-                cardview.setCardBackgroundColor(ContextCompat.getColor(context, R.color.back_java))
-
-                mission_name.setTextColor(ContextCompat.getColor(context, R.color.stroke_java))
-                tv_normal.setTextColor(ContextCompat.getColor(context, R.color.stroke_java))
-                mission_category_eng.setTextColor(ContextCompat.getColor(context, R.color.stroke_java))
-                tv_mission_category_kor.setTextColor(ContextCompat.getColor(context, R.color.stroke_java))
-                tv_achieve_count.setTextColor(ContextCompat.getColor(context, R.color.stroke_java))
-                tv_totalCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_java))
-                tv_count_num.setTextColor(ContextCompat.getColor(context, R.color.back_java))
-                tv_start_date.setTextColor(ContextCompat.getColor(context, R.color.stroke_java))
-                tv_end_date.setTextColor(ContextCompat.getColor(context, R.color.stroke_java))
-                tv_bottom.setTextColor(ContextCompat.getColor(context, R.color.stroke_java))
-
-                normal_index.setImageResource(R.drawable.ic_normal_index_java)
-                progressbar.setImageResource(R.drawable.ic_progressbar_stroke_java)
-                bottom_img.setImageResource(R.drawable.ic_main_card_java)
-            }else if(NormalCardData.index==4){
-                cardview.setCardBackgroundColor(ContextCompat.getColor(context, R.color.back_bengaltiger))
-
-                mission_name.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
-                tv_normal.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
-                mission_category_eng.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
-                tv_mission_category_kor.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
-                tv_achieve_count.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
-                tv_totalCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
-                tv_count_num.setTextColor(ContextCompat.getColor(context, R.color.back_bengaltiger))
-                tv_start_date.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
-                tv_end_date.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
-                tv_bottom.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
-
-                normal_index.setImageResource(R.drawable.ic_normal_index_bengaltiger)
-                progressbar.setImageResource(R.drawable.ic_progressbar_stroke_bengaltiger)
-                bottom_img.setImageResource(R.drawable.ic_main_card_bengaltiger)
-            }
-
-            //mission_name.text = NormalCardData.mission_name;
-            //mission_category_eng.text = NormalCardData.mission_category_eng;
-
-        /*
-        val achieve_count = itemView.findViewById<TextView>(R.id.tv_achieve_count)
-        val count_num = itemView.findViewById<TextView>(R.id.tv_count_num)
-        val start_date = itemView.findViewById<TextView>(R.id.tv_start_date)
-        val end_date = itemView.findViewById<TextView>(R.id.tv_end_date)
-
-        achieve_count.text = NormalCardData.achieve_count.toString();
-        count_num.text = NormalCardData.count_num.toString();
-        start_date.text = NormalCardData.start_date.toString();
-        end_date.text = NormalCardData.end_date.toString();
-        */
+        fun bind(ContinuousCardData: ContinuousCardData,context:Context) {
 
         }
+
     }
+
 }

@@ -28,7 +28,7 @@ class NormalCardAdapter(private val context: Context, var datas: MutableList<Nor
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
         holder?.bind(datas[position], context)
-        Log.e("태그", position.toString())
+        //Log.e("태그", position.toString())
     }
 
     inner class Holder(itemView: View):RecyclerView.ViewHolder(itemView) {
@@ -57,33 +57,13 @@ class NormalCardAdapter(private val context: Context, var datas: MutableList<Nor
         fun bind(NormalCardData1: NormalCardData, context: Context) {
 
             if (NormalCardData1.index ==0) {
-                cardview.setCardBackgroundColor(
-                    ContextCompat.getColor(
-                        context,
-                        R.color.back_guanicoe
-                    )
-                )
+                cardview.setCardBackgroundColor(ContextCompat.getColor(context, R.color.back_guanicoe))
 
                 mission_name.setTextColor(ContextCompat.getColor(context, R.color.stroke_guanicoe))
                 tv_normal.setTextColor(ContextCompat.getColor(context, R.color.stroke_guanicoe))
-                mission_category_eng.setTextColor(
-                    ContextCompat.getColor(
-                        context,
-                        R.color.stroke_guanicoe
-                    )
-                )
-                tv_mission_category_kor.setTextColor(
-                    ContextCompat.getColor(
-                        context,
-                        R.color.stroke_guanicoe
-                    )
-                )
-                tv_achieve_count.setTextColor(
-                    ContextCompat.getColor(
-                        context,
-                        R.color.stroke_guanicoe
-                    )
-                )
+                mission_category_eng.setTextColor(ContextCompat.getColor(context, R.color.stroke_guanicoe))
+                tv_mission_category_kor.setTextColor(ContextCompat.getColor(context, R.color.stroke_guanicoe))
+                tv_achieve_count.setTextColor(ContextCompat.getColor(context, R.color.stroke_guanicoe))
                 tv_totalCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_guanicoe))
                 tv_count_num.setTextColor(ContextCompat.getColor(context, R.color.back_guanicoe))
                 tv_start_date.setTextColor(ContextCompat.getColor(context, R.color.stroke_guanicoe))
@@ -96,33 +76,13 @@ class NormalCardAdapter(private val context: Context, var datas: MutableList<Nor
                 dailyCheckBtn.setBackgroundResource(R.drawable.ic_checkbtn_guanicoe)
 
             } else if(NormalCardData1.index==1){
-                cardview.setCardBackgroundColor(
-                    ContextCompat.getColor(
-                        context,
-                        R.color.back_illipika
-                    )
-                )
+                cardview.setCardBackgroundColor(ContextCompat.getColor(context, R.color.back_illipika))
 
                 mission_name.setTextColor(ContextCompat.getColor(context, R.color.stroke_illipika))
                 tv_normal.setTextColor(ContextCompat.getColor(context, R.color.stroke_illipika))
-                mission_category_eng.setTextColor(
-                    ContextCompat.getColor(
-                        context,
-                        R.color.stroke_illipika
-                    )
-                )
-                tv_mission_category_kor.setTextColor(
-                    ContextCompat.getColor(
-                        context,
-                        R.color.stroke_illipika
-                    )
-                )
-                tv_achieve_count.setTextColor(
-                    ContextCompat.getColor(
-                        context,
-                        R.color.stroke_illipika
-                    )
-                )
+                mission_category_eng.setTextColor(ContextCompat.getColor(context, R.color.stroke_illipika))
+                tv_mission_category_kor.setTextColor(ContextCompat.getColor(context, R.color.stroke_illipika))
+                tv_achieve_count.setTextColor(ContextCompat.getColor(context, R.color.stroke_illipika))
                 tv_totalCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_illipika))
                 tv_count_num.setTextColor(ContextCompat.getColor(context, R.color.back_illipika))
                 tv_start_date.setTextColor(ContextCompat.getColor(context, R.color.stroke_illipika))
@@ -135,33 +95,13 @@ class NormalCardAdapter(private val context: Context, var datas: MutableList<Nor
                 dailyCheckBtn.setBackgroundResource(R.drawable.ic_checkbtn_illipika)
 
             } else if(NormalCardData1.index==2){
-                cardview.setCardBackgroundColor(
-                    ContextCompat.getColor(
-                        context,
-                        R.color.back_harpseal
-                    )
-                )
+                cardview.setCardBackgroundColor(ContextCompat.getColor(context, R.color.back_harpseal))
 
                 mission_name.setTextColor(ContextCompat.getColor(context, R.color.stroke_harpseal))
                 tv_normal.setTextColor(ContextCompat.getColor(context, R.color.stroke_harpseal))
-                mission_category_eng.setTextColor(
-                    ContextCompat.getColor(
-                        context,
-                        R.color.stroke_harpseal
-                    )
-                )
-                tv_mission_category_kor.setTextColor(
-                    ContextCompat.getColor(
-                        context,
-                        R.color.stroke_harpseal
-                    )
-                )
-                tv_achieve_count.setTextColor(
-                    ContextCompat.getColor(
-                        context,
-                        R.color.stroke_harpseal
-                    )
-                )
+                mission_category_eng.setTextColor(ContextCompat.getColor(context, R.color.stroke_harpseal))
+                tv_mission_category_kor.setTextColor(ContextCompat.getColor(context, R.color.stroke_harpseal))
+                tv_achieve_count.setTextColor(ContextCompat.getColor(context, R.color.stroke_harpseal))
                 tv_totalCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_harpseal))
                 tv_count_num.setTextColor(ContextCompat.getColor(context, R.color.back_harpseal))
                 tv_start_date.setTextColor(ContextCompat.getColor(context, R.color.stroke_harpseal))
@@ -178,18 +118,8 @@ class NormalCardAdapter(private val context: Context, var datas: MutableList<Nor
 
                 mission_name.setTextColor(ContextCompat.getColor(context, R.color.stroke_java))
                 tv_normal.setTextColor(ContextCompat.getColor(context, R.color.stroke_java))
-                mission_category_eng.setTextColor(
-                    ContextCompat.getColor(
-                        context,
-                        R.color.stroke_java
-                    )
-                )
-                tv_mission_category_kor.setTextColor(
-                    ContextCompat.getColor(
-                        context,
-                        R.color.stroke_java
-                    )
-                )
+                mission_category_eng.setTextColor(ContextCompat.getColor(context, R.color.stroke_java))
+                tv_mission_category_kor.setTextColor(ContextCompat.getColor(context, R.color.stroke_java))
                 tv_achieve_count.setTextColor(ContextCompat.getColor(context, R.color.stroke_java))
                 tv_totalCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_java))
                 tv_count_num.setTextColor(ContextCompat.getColor(context, R.color.back_java))
@@ -203,57 +133,17 @@ class NormalCardAdapter(private val context: Context, var datas: MutableList<Nor
                 dailyCheckBtn.setBackgroundResource(R.drawable.ic_checkbtn_java)
 
             }else if(NormalCardData1.index==4){
-                cardview.setCardBackgroundColor(
-                    ContextCompat.getColor(
-                        context,
-                        R.color.back_bengaltiger
-                    )
-                )
+                cardview.setCardBackgroundColor(ContextCompat.getColor(context, R.color.back_bengaltiger))
 
-                mission_name.setTextColor(
-                    ContextCompat.getColor(
-                        context,
-                        R.color.stroke_bengaltiger
-                    )
-                )
+                mission_name.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
                 tv_normal.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
-                mission_category_eng.setTextColor(
-                    ContextCompat.getColor(
-                        context,
-                        R.color.stroke_bengaltiger
-                    )
-                )
-                tv_mission_category_kor.setTextColor(
-                    ContextCompat.getColor(
-                        context,
-                        R.color.stroke_bengaltiger
-                    )
-                )
-                tv_achieve_count.setTextColor(
-                    ContextCompat.getColor(
-                        context,
-                        R.color.stroke_bengaltiger
-                    )
-                )
-                tv_totalCount.setTextColor(
-                    ContextCompat.getColor(
-                        context,
-                        R.color.stroke_bengaltiger
-                    )
-                )
+                mission_category_eng.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
+                tv_mission_category_kor.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
+                tv_achieve_count.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
+                tv_totalCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
                 tv_count_num.setTextColor(ContextCompat.getColor(context, R.color.back_bengaltiger))
-                tv_start_date.setTextColor(
-                    ContextCompat.getColor(
-                        context,
-                        R.color.stroke_bengaltiger
-                    )
-                )
-                tv_end_date.setTextColor(
-                    ContextCompat.getColor(
-                        context,
-                        R.color.stroke_bengaltiger
-                    )
-                )
+                tv_start_date.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
+                tv_end_date.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
                 tv_bottom.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
 
                 normal_index.setImageResource(R.drawable.ic_normal_index_bengaltiger)

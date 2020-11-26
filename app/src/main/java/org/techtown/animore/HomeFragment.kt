@@ -59,7 +59,7 @@ class HomeFragment : Fragment() {
 
         val No = NormalCardAdapter(requireContext(), MyData)
         normal_card_list.adapter = No
-        No.notifyDataSetChanged()
+        //No.notifyDataSetChanged()
 
 /*
         Log.d("title", arguments?.getString("title").toString())

@@ -34,7 +34,7 @@
         android:layout_width="352dp"
         android:layout_height="143dp"
         android:layout_marginStart="31dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="80dp"
         android:fontFamily="@font/notosanskr_bold"
         android:text="유해영님은 10마리의 동물을 구했어요!"
         android:textColor="@color/colorAccent"
@@ -45,19 +45,26 @@
     <ScrollView
         android:layout_width="360dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/past_card_list"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             app:spanCount="3"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             tools:listitem="@layout/pastcard_layout" />
+
+        </LinearLayout>
 
     </ScrollView>
 

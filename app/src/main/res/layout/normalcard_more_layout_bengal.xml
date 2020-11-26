@@ -22,7 +22,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginTop="2dp"
-            card_view:srcCompat="@drawable/ic_pastcard_stroke_bengaltiger" />
+            card_view:srcCompat="@drawable/ic_pastcard_more_stroke_bengaltiger" />
 
         <ImageView
             android:id="@+id/img"

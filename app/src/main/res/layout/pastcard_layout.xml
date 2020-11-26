@@ -2,33 +2,61 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:layout_width="105dp"
-    android:layout_height="158dp"
-    android:id="@+id/card_view"
-    android:layout_margin="8dp"
-    card_view:cardBackgroundColor="@color/back_bengaltiger"
+    android:layout_width="115dp"
+    android:layout_height="168dp"
+    android:id="@+id/pastcard_view"
+    android:layout_margin="4dp"
     card_view:cardCornerRadius="12dp"
     card_view:cardElevation="3dp"
+    card_view:cardBackgroundColor="#00000000"
     >
+
+    <ImageView
+        android:id="@+id/success_stroke"
+        android:layout_width="115dp"
+        android:layout_height="168dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        card_view:srcCompat="@drawable/ic_pastcard_stroke_bengal" />
+
+    <ImageView
+        android:id="@+id/fail_cover"
+        android:layout_width="105dp"
+        android:layout_height="158dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        card_view:srcCompat="@drawable/ic_fail"
+        android:translationZ="10dp"/>
 
     <RelativeLayout
         android:layout_width="105dp"
         android:layout_height="158dp"
-        android:padding="10dp">
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp">
 
-<!--여기 나중에 selector로 빼기-->
-  <TextView
-    android:id="@+id/tv_successFlag"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentTop="true"
-    android:layout_marginLeft="0dp"
-    android:fontFamily="@font/montserrat_bold"
-    android:text="COMPELETE"
-    android:textColor="@color/complete_bengaltiger"
-    android:textSize="10sp" />
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="105dp"
+            android:layout_height="158dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            card_view:srcCompat="@drawable/ic_pastcard_back_bengal" />
 
+      <TextView
+        android:id="@+id/tv_successFlag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+          android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="COMPELETE"
+        android:textSize="12sp" />
 
         <TextView
             android:id="@+id/tv_cardName"
@@ -36,7 +64,8 @@
             android:layout_height="55dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginLeft="10dp"
             android:fontFamily="@font/notosanskr_bold"
             android:includeFontPadding="false"
             android:text="동영상 덜 보기"
@@ -45,13 +74,15 @@
 
         <ImageView
             android:id="@+id/img_card_category"
+            card_view:srcCompat="@drawable/ic_past_card_bengaltiger"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="7dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="50dp"
-            card_view:srcCompat="@drawable/ic_past_card_bengaltiger" />
+            android:layout_marginTop="64dp"
+             />
 
         <TextView
             android:id="@+id/tv_achieveCount"
@@ -59,7 +90,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="18dp"
+            android:layout_marginBottom="28dp"
+            android:layout_marginLeft="10dp"
             android:fontFamily="@font/montserrat_bold"
             android:includeFontPadding="false"
             android:text="3"
@@ -72,8 +104,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginLeft="7.5dp"
-            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="17.5dp"
+            android:layout_marginBottom="28dp"
             android:fontFamily="@font/montserrat_medium"
             android:includeFontPadding="false"
             android:text="/21"
@@ -86,6 +118,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
             android:fontFamily="@font/montserrat_medium"
             android:includeFontPadding="false"
             android:text="10/1~10/21"

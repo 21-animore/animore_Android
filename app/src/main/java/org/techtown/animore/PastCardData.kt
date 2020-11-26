@@ -3,6 +3,10 @@ package org.techtown.animore
 import java.util.*
 
 data class PastCardData(
+    val index: Int,
+    val success_flag : Boolean,
+    val tv_cardName : String,
+    /*
     val card_success_flag : Int,
     val card_name : String,
     val achieve_count : Int,
@@ -10,4 +14,5 @@ data class PastCardData(
     val start_date : Date,
     val end_date : Date,
     val card_category : Int
+    */
 )
