@@ -267,7 +267,7 @@
     <fragment
         android:id="@+id/past_card_fragment"
         android:name="org.techtown.animore.PastFragmentMore"
-        tools:layout="@layout/fragment_past_card"></fragment>
+        tools:layout="@layout/fragment_past_card_more"></fragment>
 
 
 

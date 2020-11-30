@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".PastFragment"
     android:background="@color/colorPrimary">
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
@@ -40,26 +41,12 @@
 
     <include
         android:id="@+id/pastcard"
-        layout="@layout/pastcard_more_layout_bengal"
+        layout="@layout/more_card_front_layout"
         android:layout_width="349dp"
-        android:layout_height="502dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.548"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="149dp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="2dp"
-        android:fontFamily="@font/notosanskr_bold"
-        android:text="성공"
-        android:textColor="@color/colorAccent"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/pastcard"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        app:layout_constraintHorizontal_bias="0.548"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
