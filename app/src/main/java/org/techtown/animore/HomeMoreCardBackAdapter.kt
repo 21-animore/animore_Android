@@ -8,28 +8,26 @@ import android.widget.ImageView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 
-class PastMoreCardAdapter(private val context : Context, var dataPasts: MutableList<PastMoreCardData>) : RecyclerView.Adapter<PastMoreCardAdapter.Holder>(){
+class HomeMoreCardBackAdapter(private val context : Context, var dataPasts: MutableList<HomeMoreCardBackData>) : RecyclerView.Adapter<HomeMoreCardBackAdapter.Holder>(){
     override fun getItemCount(): Int {
         //Log.w("태그", datas.size.toString())
         return dataPasts.size
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PastMoreCardAdapter.Holder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeMoreCardBackAdapter.Holder {
         val view = LayoutInflater.from(context).inflate(R.layout.pastcard_layout, parent, false)
         return Holder(view)
     }
 
-    override fun onBindViewHolder(holder: PastMoreCardAdapter.Holder, position: Int) {
+    override fun onBindViewHolder(holder: HomeMoreCardBackAdapter.Holder, position: Int) {
         holder?.bind(dataPasts[position], context)
         //Log.e("태그", position.toString())
     }
 
     inner class Holder(itemView: View):RecyclerView.ViewHolder(itemView) {
-        val cardview = itemView.findViewById<CardView>(R.id.past_card_more_view)
-        val fail = itemView.findViewById<ImageView>(R.id.past_card_more_fail)
-        val success = itemView.findViewById<ImageView>(R.id.past_card_more_success)
+        val cardview = itemView.findViewById<CardView>(R.id.more_card_back_view)
 
-
+        
         /*
         //색만 바뀜
         val tv_achieve_count = itemView.findViewById<TextView>(R.id.어쩌구)
@@ -55,39 +53,19 @@ class PastMoreCardAdapter(private val context : Context, var dataPasts: MutableL
          */
 
 
-        fun bind(PastMoreCardData: PastMoreCardData, context: Context) {
-            if(PastMoreCardData.success_flag === true){
-                //성공 카드일 경우
-                fail.setVisibility(View.GONE)
+        fun bind(homeMoreCardBack: HomeMoreCardBackData, context: Context) {
 
-                if(PastMoreCardData.index === 0){
+                if(homeMoreCardBack.index === 0){
 
-                }else if(PastMoreCardData.index === 1){
+                }else if(homeMoreCardBack.index === 1){
 
-                }else if(PastMoreCardData.index === 2){
+                }else if(homeMoreCardBack.index === 2){
 
-                }else if(PastMoreCardData.index === 3){
+                }else if(homeMoreCardBack.index === 3){
 
-                }else if(PastMoreCardData.index === 4){
+                }else if(homeMoreCardBack.index === 4){
 
                 }
-
-            }else{
-                //실패 카드일 경우
-                success.setVisibility(View.GONE)
-
-                if(PastMoreCardData.index === 0){
-
-                }else if(PastMoreCardData.index === 1){
-
-                }else if(PastMoreCardData.index === 2){
-
-                }else if(PastMoreCardData.index === 3){
-
-                }else if(PastMoreCardData.index === 4){
-
-                }
-            }
         }
     }
 

@@ -3,7 +3,7 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/more_card_front_view"
+    android:id="@+id/more_card_back_view"
     android:layout_width="349dp"
     android:layout_height="502dp"
     card_view:cardCornerRadius="12dp"
