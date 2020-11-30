@@ -7,38 +7,28 @@
     tools:context=".PastFragment"
     android:background="@color/colorPrimary">
 
-    <include
-        android:id="@+id/pastcard_topbar"
-        layout="@layout/more_card_topbar_layout"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/topbar"
         android:layout_width="411dp"
-        android:layout_height="wrap_content"
+        android:layout_height="86dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.548"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/more_card_topbar_layout"/>
 
-    <com.wajahatkarim3.easyflipview.EasyFlipView
-        android:id="@+id/card_flip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/more_card_front"
+        android:layout_width="349dp"
+        android:layout_height="502dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.548"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="30dp"
-        app:layout_constraintTop_toBottomOf="@+id/pastcard_topbar"
+        app:layout_constraintTop_toBottomOf="@+id/topbar"
         android:layout_marginTop="19dp"
-        app:flipOnTouch="true"
-        app:flipEnabled="true"
-        app:flipDuration="400"
-        app:flipFrom="right"
-        app:flipType="horizontal"
-        app:autoFlipBack="false">
-
-        <!-- Back Layout Goes Here -->
-        <include layout="@layout/more_card_front_layout"/>
-
-        <!-- Front Layout Goes Here -->
-        <include layout="@layout/more_card_back_layout" />
-
-    </com.wajahatkarim3.easyflipview.EasyFlipView>
+        tools:listitem="@layout/more_card_front_layout"/>
 
     <ImageButton
         android:id="@+id/btn_giveup"
@@ -48,7 +38,7 @@
         android:layout_marginEnd="19dp"
         android:background="@null"
         android:src="@drawable/ic_btn_giveup"
-        app:layout_constraintTop_toBottomOf="@+id/card_flip"
+        app:layout_constraintTop_toBottomOf="@+id/more_card_front"
         app:layout_constraintEnd_toStartOf="@+id/btn_download"/>
 
     <ImageButton
@@ -60,6 +50,7 @@
         android:background="@null"
         android:src="@drawable/ic_btn_download"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_flip" />
+        app:layout_constraintTop_toBottomOf="@+id/more_card_front" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

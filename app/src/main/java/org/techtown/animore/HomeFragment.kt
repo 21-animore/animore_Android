@@ -8,10 +8,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.LinearLayout
+import androidx.cardview.widget.CardView
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.more_card_back_layout.*
 import java.util.*
 
 class HomeFragment : Fragment() {
@@ -23,6 +26,12 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
+
+        //클릭하는 카드마다 다른 정보를 넘겨줘야 되는데 list로 받아오는게 맞는지..? 덜덜
+        view.findViewById<CardView>(R.id.normal_card_list).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_home_fragment_to_home_more_card_fragment)
+        }
+        
         return view
 
         /*

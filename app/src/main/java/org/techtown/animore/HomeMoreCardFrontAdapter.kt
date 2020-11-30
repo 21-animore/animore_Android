@@ -8,10 +8,10 @@ import android.widget.ImageView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 
-class HomeMoreCardFrontAdapter(private val context : Context, var dataPasts: MutableList<HomeMoreCardFrontData>) : RecyclerView.Adapter<HomeMoreCardFrontAdapter.Holder>(){
+class HomeMoreCardFrontAdapter(private val context : Context, var dataMore: MutableList<HomeMoreCardFrontData>) : RecyclerView.Adapter<HomeMoreCardFrontAdapter.Holder>(){
     override fun getItemCount(): Int {
         //Log.w("태그", datas.size.toString())
-        return dataPasts.size
+        return dataMore.size
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeMoreCardFrontAdapter.Holder {
@@ -20,7 +20,7 @@ class HomeMoreCardFrontAdapter(private val context : Context, var dataPasts: Mut
     }
 
     override fun onBindViewHolder(holder: HomeMoreCardFrontAdapter.Holder, position: Int) {
-        holder?.bind(dataPasts[position], context)
+        holder?.bind(dataMore[position], context)
         //Log.e("태그", position.toString())
     }
 

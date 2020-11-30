@@ -15,6 +15,18 @@
         <action
             android:id="@+id/action_home_fragment_to_past_fragment"
             app:destination="@id/past_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_home_more_card_fragment"
+            app:destination="@id/home_more_card_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/home_more_card_fragment"
+        android:name="org.techtown.animore.HomeMoreCardFragment"
+        tools:layout="@layout/fragment_home_card_more">
+        <action
+            android:id="@+id/action_home_more_card_fragment_to_home_fragment"
+            app:destination="@id/home_fragment" />
     </fragment>
 
     <fragment
