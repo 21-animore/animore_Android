@@ -12,26 +12,16 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
-import kotlinx.android.synthetic.main.fragment_final_add_bengal.*
-import kotlinx.android.synthetic.main.fragment_final_add_harpseal.*
+import kotlinx.android.synthetic.main.fragment_final_add_guanicoe.*
 
-class AddFragmentFinalHarpseal : Fragment() {
+class AddFragmentChooseNormalBengal : Fragment() {
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_final_add_harpseal, container, false)
+        val view = inflater.inflate(R.layout.fragment_choose_option_normal_bengal, container, false)
 
         return view;
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        var dump1 = MainCardData(2, "안드어린이에게", true, 7)
-        val No = MainCardAdapter()
-        No.datas.add(dump1)
-        final_add_harpseal_cardview.adapter = No
     }
 }

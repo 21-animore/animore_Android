@@ -22,14 +22,6 @@ class AddFragmentChooseNormalGuanicoe : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_choose_option_normal_guanicoe, container, false)
 
-        view.findViewById<Button>(R.id.tv_continuous).setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_add_choose_normal_guanicoe_to_add_choose_continuous_guanicoe)
-        }
-
-        view.findViewById<Button>(R.id.btn_to_get_randomcard_guanicoe).setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_add_choose_normal_guanicoe_to_add_final_normal_guanicoe_fragment)
-        }
-
         return view;
     }
 }
