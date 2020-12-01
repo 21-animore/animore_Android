@@ -49,7 +49,7 @@ class HomeFragment : Fragment() {
         var width = (MyData.size +1) * 697
         var layout = LinearLayout.LayoutParams(width,LinearLayout.LayoutParams.WRAP_CONTENT)
 
-        normal_card_list.layoutParams = layout
+        main_card_list.layoutParams = layout
 
         val No = MainCardAdapter()
         No.datas.add(dump1)

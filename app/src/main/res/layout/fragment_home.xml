@@ -37,7 +37,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/home_randomText"
         android:layout_width="360dp"
         android:layout_height="78dp"
         android:layout_marginStart="31dp"
@@ -56,7 +56,7 @@
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/home_randomText"
         app:layout_constraintStart_toStartOf="parent">
 
     <RadioButton
@@ -111,7 +111,7 @@
             android:orientation="horizontal">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/normal_card_list"
+                android:id="@+id/main_card_list"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -130,7 +130,7 @@
     </HorizontalScrollView>
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/home_btn_setting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"

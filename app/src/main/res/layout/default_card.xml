@@ -4,7 +4,7 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="255dp"
     android:layout_height="409dp"
-    android:id="@+id/mainCard_view"
+    android:id="@+id/maincard_default_view"
     android:layout_margin="5dp"
     card_view:cardBackgroundColor="#4F4F4F"
     card_view:cardCornerRadius="12dp"
@@ -17,7 +17,7 @@
         android:padding="10dp">
 
         <TextView
-            android:id="@+id/tv_mission_name"
+            android:id="@+id/maincard_default_mission_name"
             android:layout_width="158dp"
             android:layout_height="106dp"
             android:layout_alignParentLeft="true"
@@ -31,10 +31,10 @@
             android:textSize="14sp" />
 
         <ImageButton
-            android:id="@+id/plus_card_button"
+            android:id="@+id/maincard_default_plus_card_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/tv_bottom"
+            android:layout_above="@+id/maincard_default_bottom"
             android:layout_alignParentStart="true"
             android:layout_marginStart="10dp"
             android:layout_marginBottom="5dp"
@@ -42,7 +42,7 @@
             card_view:srcCompat="@drawable/ic_plus_card_btn" />
 
         <TextView
-            android:id="@+id/tv_bottom"
+            android:id="@+id/maincard_default_bottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"

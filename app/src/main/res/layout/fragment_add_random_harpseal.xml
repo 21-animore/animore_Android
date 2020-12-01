@@ -8,50 +8,50 @@
     android:background="@color/colorPrimary">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/random_animal_card_topbar_bengal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_top_bar_harpseal" />
+        app:srcCompat="@drawable/ic_top_bar_bengaltiger" />
 
     <TextView
-        android:id="@+id/tv_mission_name_harpseal"
+        android:id="@+id/random_animal_card_tv_mission_name_bengal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/notosanskr_bold"
         android:text="중고마켓 이용하기"
-        android:textColor="@color/stroke_harpseal"
+        android:textColor="@color/stroke_bengaltiger"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView" />
+        app:layout_constraintBottom_toBottomOf="@+id/random_animal_card_topbar_bengal"
+        app:layout_constraintEnd_toEndOf="@+id/random_animal_card_topbar_bengal"
+        app:layout_constraintStart_toStartOf="@+id/random_animal_card_topbar_bengal" />
 
     <ImageButton
-        android:id="@+id/back_btn_to_add_frag"
+        android:id="@+id/random_animal_card_back_btn_to_add_frag_bengal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
         android:layout_marginBottom="18dp"
         android:background="@null"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:srcCompat="@drawable/ic_back_btn_harpseal" />
+        app:layout_constraintBottom_toBottomOf="@+id/random_animal_card_topbar_bengal"
+        app:layout_constraintStart_toStartOf="@+id/random_animal_card_topbar_bengal"
+        app:srcCompat="@drawable/ic_back_btn_bengal" />
 
 
     <include
-        android:id="@+id/animal_card"
-        layout="@layout/eco_card_layout_harpseal"
+        android:id="@+id/random_animal_card_animal_card_bengal"
+        layout="@layout/eco_card_layout_bengaltiger"
         android:layout_width="255dp"
         android:layout_height="409dp"
         android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+        app:layout_constraintTop_toBottomOf="@+id/random_animal_card_topbar_bengal"/>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/random_animal_card_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/notosanskr_bold"
@@ -62,10 +62,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/animal_card" />
+        app:layout_constraintTop_toBottomOf="@+id/random_animal_card_animal_card_bengal" />
 
     <Button
-        android:id="@+id/btn_to_select_harpseal_card_again"
+        android:id="@+id/random_animal_card_btn_to_select_bengal_card_again"
         style="@null"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -76,12 +76,12 @@
         android:textSize="16sp"
         android:layout_marginLeft="91dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/random_animal_card_text"
         app:strokeColor="@color/colorAccent"
         app:strokeWidth="1dp" />
 
     <Button
-        android:id="@+id/btn_to_select_mode_harpseal"
+        android:id="@+id/random_animal_card_btn_to_select_mode_bengal"
         style="@null"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -92,10 +92,10 @@
         android:textSize="16sp"
         android:layout_marginRight="91dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/random_animal_card_text" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/random_animal_card_btnText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/notosanskr_black"
@@ -105,13 +105,13 @@
         android:textSize="20sp"
         android:translationZ="10dp"
         android:layout_marginBottom="2dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_to_select_harpseal_card_again"
-        app:layout_constraintEnd_toEndOf="@+id/btn_to_select_harpseal_card_again"
-        app:layout_constraintStart_toStartOf="@+id/btn_to_select_harpseal_card_again"
-        app:layout_constraintTop_toTopOf="@+id/btn_to_select_harpseal_card_again"/>
+        app:layout_constraintBottom_toBottomOf="@+id/random_animal_card_btn_to_select_bengal_card_again"
+        app:layout_constraintEnd_toEndOf="@+id/random_animal_card_btn_to_select_bengal_card_again"
+        app:layout_constraintStart_toStartOf="@+id/random_animal_card_btn_to_select_bengal_card_again"
+        app:layout_constraintTop_toTopOf="@+id/random_animal_card_btn_to_select_bengal_card_again"/>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/random_animal_card_btnText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/notosanskr_black"
@@ -121,9 +121,9 @@
         android:textSize="20sp"
         android:translationZ="10dp"
         android:layout_marginBottom="2dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_to_select_mode_harpseal"
-        app:layout_constraintEnd_toEndOf="@+id/btn_to_select_mode_harpseal"
-        app:layout_constraintStart_toStartOf="@+id/btn_to_select_mode_harpseal"
-        app:layout_constraintTop_toTopOf="@+id/btn_to_select_mode_harpseal"/>
+        app:layout_constraintBottom_toBottomOf="@+id/random_animal_card_btn_to_select_mode_bengal"
+        app:layout_constraintEnd_toEndOf="@+id/random_animal_card_btn_to_select_mode_bengal"
+        app:layout_constraintStart_toStartOf="@+id/random_animal_card_btn_to_select_mode_bengal"
+        app:layout_constraintTop_toTopOf="@+id/random_animal_card_btn_to_select_mode_bengal"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

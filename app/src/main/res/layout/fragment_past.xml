@@ -8,7 +8,7 @@
     android:background="@color/colorPrimary">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/past_topbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_top_bar_default"
@@ -24,9 +24,9 @@
         android:text="마이페이지"
         android:textColor="@color/colorPrimary"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView" />
+        app:layout_constraintBottom_toBottomOf="@+id/past_topbar"
+        app:layout_constraintEnd_toEndOf="@+id/past_topbar"
+        app:layout_constraintStart_toStartOf="@+id/past_topbar" />
 
     <ScrollView
         android:id="@+id/scroll"
@@ -34,7 +34,7 @@
         android:layout_height="615dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintTop_toBottomOf="@+id/past_topbar">
 
         <LinearLayout
             android:layout_width="358dp"
@@ -44,7 +44,7 @@
             >
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/past_tv_title"
                 android:layout_width="358dp"
                 android:layout_height="131dp"
                 android:includeFontPadding="false"
@@ -55,7 +55,7 @@
                 android:textColor="@color/colorAccent"
                 android:textSize="40sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+                app:layout_constraintTop_toBottomOf="@+id/past_topbar"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/past_card_list"

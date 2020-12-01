@@ -4,70 +4,69 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="255dp"
     android:layout_height="409dp"
-    android:id="@+id/ecoCard_view"
+    android:id="@+id/animal_card_bengal_view"
     android:layout_margin="5dp"
     card_view:cardBackgroundColor="@color/back_bengaltiger"
     card_view:cardCornerRadius="12dp"
     card_view:cardElevation="3dp"
     card_view:contentPadding="4dp">
 
-<RelativeLayout
-android:layout_width="255dp"
-android:layout_height="409dp"
-android:padding="10dp">
+    <RelativeLayout
+    android:layout_width="255dp"
+    android:layout_height="409dp"
+    android:padding="10dp">
 
-    <ImageView
-        android:id="@+id/item_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="12dp"
-        android:layout_marginRight="5dp"
-        card_view:srcCompat="@drawable/ic_add_card_bengal" />
+        <ImageView
+            android:id="@+id/animal_card_bengal_item_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="5dp"
+            card_view:srcCompat="@drawable/ic_add_card_bengal" />
 
-    <TextView
-        android:id="@+id/tv_animal_name"
-        android:layout_width="wrap_content"
-        android:layout_height="72dp"
-        android:layout_marginLeft="2dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="0dp"
-        android:fontFamily="@font/notosanskr_bold"
-        android:includeFontPadding="false"
-        android:text="벵갈호랑이"
+        <TextView
+            android:id="@+id/animal_card_bengal_animal_name"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:layout_marginLeft="2dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            android:text="벵갈호랑이"
 
-        android:textColor="@color/stroke_bengaltiger"
-        android:textSize="40sp" />
+            android:textColor="@color/stroke_bengaltiger"
+            android:textSize="40sp" />
 
-    <TextView
-        android:id="@+id/tv_animal_name_eng"
-        android:layout_width="148dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="54dp"
-        android:layout_marginLeft="2dp"
-        android:fontFamily="@font/montserrat_medium"
-        android:includeFontPadding="false"
-        android:text="Bengal tiger"
-        android:textColor="@color/stroke_bengaltiger"
-        android:textSize="14sp" />
+        <TextView
+            android:id="@+id/animal_card_bengal_animal_name_eng"
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="54dp"
+            android:layout_marginLeft="2dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:includeFontPadding="false"
+            android:text="Bengal tiger"
+            android:textColor="@color/stroke_bengaltiger"
+            android:textSize="14sp" />
 
-    <TextView
-        android:id="@+id/tv_animal_content"
-        android:layout_width="228dp"
-        android:layout_height="211dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="80dp"
-        android:layout_marginLeft="2dp"
-        android:fontFamily="@font/notosanskr_medium"
-        android:includeFontPadding="false"
-        android:lineSpacingExtra="2sp"
-        android:text="벵갈호랑이는 네팔·인도·방글라데시의 순다르반스 등에 분포하고 있습니다. 하지만 기후변화로 서식지의 범위가 감소하고  있으며  해수면 상승으로 벵갈호랑이의 서식지가 물에 잠길 위험에 처했습니다. 유엔은 2070년에 마지막 서식지가  물에 잠길 것이라 경고했습니다."
-        android:textColor="@color/stroke_bengaltiger"
-        android:textSize="14sp" />
-
-</RelativeLayout>
+        <TextView
+            android:id="@+id/animal_card_bengal_animal_content"
+            android:layout_width="228dp"
+            android:layout_height="211dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="2dp"
+            android:fontFamily="@font/notosanskr_medium"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="2sp"
+            android:text="벵갈호랑이는 네팔·인도·방글라데시의 순다르반스 등에 분포하고 있습니다. 하지만 기후변화로 서식지의 범위가 감소하고  있으며  해수면 상승으로 벵갈호랑이의 서식지가 물에 잠길 위험에 처했습니다. 유엔은 2070년에 마지막 서식지가  물에 잠길 것이라 경고했습니다."
+            android:textColor="@color/stroke_bengaltiger"
+            android:textSize="14sp" />
+    </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

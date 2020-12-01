@@ -4,7 +4,7 @@
     android:layout_width="255dp"
     android:layout_height="409dp"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mainCard_view"
+    android:id="@+id/maincard_view"
     android:layout_margin="5dp"
     card_view:cardCornerRadius="12dp"
     card_view:cardElevation="3dp">
@@ -15,7 +15,7 @@
         android:padding="10dp">
 
         <TextView
-            android:id="@+id/tv_mission_name"
+            android:id="@+id/maincard_tv_mission_name"
             android:layout_width="158dp"
             android:layout_height="106dp"
             android:lineSpacingExtra ="-12dp"
@@ -30,7 +30,7 @@
             android:textSize="42sp" />
 
         <TextView
-            android:id="@+id/tv_normal"
+            android:id="@+id/maincard_tv_normal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -44,7 +44,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tv_mission_category_eng"
+            android:id="@+id/maincard_tv_mission_category_eng"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -57,7 +57,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tv_mission_category_kor"
+            android:id="@+id/maincard_tv_mission_category_kor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -71,7 +71,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tv_achieve_count"
+            android:id="@+id/maincard_tv_achieve_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -84,7 +84,7 @@
             android:textSize="24sp" />
 
         <TextView
-            android:id="@+id/tv_totalCount"
+            android:id="@+id/maincard_tv_totalCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -107,7 +107,7 @@
             android:layout_marginTop="150dp" />
 
         <TextView
-            android:id="@+id/tv_count_num"
+            android:id="@+id/maincard_tv_count_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/normal_index"
@@ -125,7 +125,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tv_start_date"
+            android:id="@+id/maincard_tv_start_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/progressbar"
@@ -140,10 +140,10 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tv_end_date"
+            android:id="@+id/maincard_tv_end_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/progressbar"
+            android:layout_below="@+id/maincard_progressbar"
             android:layout_alignParentRight="true"
             android:layout_marginRight="15dp"
             android:layout_marginTop="2dp"
@@ -154,7 +154,7 @@
             android:textSize="12sp" />
 
         <ImageView
-            android:id="@+id/progressbar"
+            android:id="@+id/maincard_progressbar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/normal_index"
@@ -164,10 +164,10 @@
             card_view:srcCompat="@drawable/ic_progressbar_stroke_bengaltiger" />
 
         <TextView
-            android:id="@+id/tv_day_mon"
+            android:id="@+id/maincard_tv_day_mon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_mission_category_eng"
+            android:layout_below="@+id/maincard_tv_mission_category_eng"
             android:layout_marginTop="13dp"
             android:layout_marginLeft="16dp"
             android:fontFamily="@font/montserrat_bold"
@@ -177,13 +177,13 @@
             android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/tv_day_tue"
+            android:id="@+id/maincard_tv_day_tue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="22dp"
             android:layout_marginTop="13dp"
-            android:layout_toEndOf="@+id/tv_day_mon"
-            android:layout_below="@+id/tv_mission_category_eng"
+            android:layout_toEndOf="@+id/maincard_tv_day_mon"
+            android:layout_below="@+id/maincard_tv_mission_category_eng"
             android:fontFamily="@font/montserrat_bold"
             android:includeFontPadding="false"
             android:text="T"
@@ -191,13 +191,13 @@
             android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/tv_day_wed"
+            android:id="@+id/maincard_tv_day_wed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="22dp"
             android:layout_marginTop="13dp"
-            android:layout_toEndOf="@+id/tv_day_tue"
-            android:layout_below="@+id/tv_mission_category_eng"
+            android:layout_toEndOf="@+id/maincard_tv_day_tue"
+            android:layout_below="@+id/maincard_tv_mission_category_eng"
             android:fontFamily="@font/montserrat_bold"
             android:includeFontPadding="false"
             android:text="W"
@@ -205,13 +205,13 @@
             android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/tv_day_thu"
+            android:id="@+id/maincard_tv_day_thu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="22dp"
             android:layout_marginTop="13dp"
-            android:layout_toEndOf="@+id/tv_day_wed"
-            android:layout_below="@+id/tv_mission_category_eng"
+            android:layout_toEndOf="@+id/maincard_tv_day_wed"
+            android:layout_below="@+id/maincard_tv_mission_category_eng"
             android:fontFamily="@font/montserrat_bold"
             android:includeFontPadding="false"
             android:text="T"
@@ -219,13 +219,13 @@
             android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/tv_day_fri"
+            android:id="@+id/maincard_tv_day_fri"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="22dp"
             android:layout_marginTop="13dp"
-            android:layout_toEndOf="@+id/tv_day_thu"
-            android:layout_below="@+id/tv_mission_category_eng"
+            android:layout_toEndOf="@+id/maincard_tv_day_thu"
+            android:layout_below="@+id/maincard_tv_mission_category_eng"
             android:fontFamily="@font/montserrat_bold"
             android:includeFontPadding="false"
             android:text="F"
@@ -233,13 +233,13 @@
             android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/tv_day_sat"
+            android:id="@+id/maincard_tv_day_sat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="22dp"
             android:layout_marginTop="13dp"
-            android:layout_toEndOf="@+id/tv_day_fri"
-            android:layout_below="@+id/tv_mission_category_eng"
+            android:layout_toEndOf="@+id/maincard_tv_day_fri"
+            android:layout_below="@+id/maincard_tv_mission_category_eng"
             android:fontFamily="@font/montserrat_bold"
             android:includeFontPadding="false"
             android:text="S"
@@ -247,13 +247,13 @@
             android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/tv_day_sun"
+            android:id="@+id/maincard_tv_day_sun"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="22dp"
             android:layout_marginTop="13dp"
-            android:layout_toEndOf="@+id/tv_day_sat"
-            android:layout_below="@+id/tv_mission_category_eng"
+            android:layout_toEndOf="@+id/maincard_tv_day_sat"
+            android:layout_below="@+id/maincard_tv_mission_category_eng"
             android:fontFamily="@font/montserrat_bold"
             android:includeFontPadding="false"
             android:text="S"
@@ -261,10 +261,10 @@
             android:textSize="14sp" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/calendar_normalcard_layout"
+            android:id="@+id/maincard_calendar_normalcard_layout"
             android:layout_width="224dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_day_thu"
+            android:layout_below="@+id/maincard_tv_day_thu"
             android:layout_marginTop="6dp"
             android:layout_marginLeft="6dp"
             card_view:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
@@ -275,7 +275,7 @@
             />
 
         <TextView
-            android:id="@+id/tv_bottom"
+            android:id="@+id/maincard_tv_bottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -289,7 +289,7 @@
             android:textSize="12sp" />
 
         <ImageView
-            android:id="@+id/bottom_img"
+            android:id="@+id/maincard_bottom_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -299,7 +299,7 @@
             card_view:srcCompat="@drawable/ic_main_card_bengaltiger" />
 
         <ImageButton
-            android:id="@+id/dailyCheckBtn"
+            android:id="@+id/maincard_dailyCheckBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
