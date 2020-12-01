@@ -1,21 +1,23 @@
 package org.techtown.animore
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 
 class PastMoreCardAdapter(private val context : Context, var dataPasts: MutableList<PastMoreCardData>) : RecyclerView.Adapter<PastMoreCardAdapter.Holder>(){
     override fun getItemCount(): Int {
-        //Log.w("태그", datas.size.toString())
+        Log.e("길이", dataPasts.size.toString());
         return dataPasts.size
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PastMoreCardAdapter.Holder {
-        val view = LayoutInflater.from(context).inflate(R.layout.pastcard_layout, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.past_more_card_layout, parent, false)
         return Holder(view)
     }
 
@@ -25,10 +27,11 @@ class PastMoreCardAdapter(private val context : Context, var dataPasts: MutableL
     }
 
     inner class Holder(itemView: View):RecyclerView.ViewHolder(itemView) {
-        val cardview = itemView.findViewById<CardView>(R.id.past_card_more_view)
+        val outside = itemView.findViewById<CardView>(R.id.past_card_more_view)
         val fail = itemView.findViewById<ImageView>(R.id.past_card_more_fail)
         val success = itemView.findViewById<ImageView>(R.id.past_card_more_success)
 
+        val insdie = itemView.findViewById<CardView>(R.id.more_card_front_inside_view)
 
         /*
         //색만 바뀜
@@ -56,6 +59,7 @@ class PastMoreCardAdapter(private val context : Context, var dataPasts: MutableL
 
 
         fun bind(PastMoreCardData: PastMoreCardData, context: Context) {
+
             if(PastMoreCardData.success_flag === true){
                 //성공 카드일 경우
                 fail.setVisibility(View.GONE)

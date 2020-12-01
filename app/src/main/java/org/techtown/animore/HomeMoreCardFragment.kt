@@ -39,11 +39,8 @@ class HomeMoreCardFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         var dump1 = HomeMoreCardFrontData(4, true)
-
         val MyData:MutableList<HomeMoreCardFrontData> = mutableListOf<HomeMoreCardFrontData>(dump1)
-
         val No = HomeMoreCardFrontAdapter(requireContext(), MyData)
         more_card_front.adapter = No
-
     }
 }

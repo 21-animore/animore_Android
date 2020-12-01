@@ -40,7 +40,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="115dp"
-            android:layout_marginTop="272dp"
+            android:layout_marginTop="268dp"
             android:fontFamily="@font/montserrat_bold"
             android:includeFontPadding="false"
             android:text="21"
@@ -60,7 +60,7 @@
             android:includeFontPadding="false"
             android:text="동영상 덜 보기"
             android:textColor="#AB2220"
-            android:textSize="36sp" />
+            android:textSize="42sp" />
 
         <TextView
             android:id="@+id/tv_mission_total_count"
@@ -73,7 +73,7 @@
             android:fontFamily="@font/montserrat_bold"
             android:includeFontPadding="false"
             android:text="21"
-            android:textColor="#F9C428"
+            android:textColor="@color/back_bengaltiger"
             android:textSize="18sp" />
 
         <TextView
@@ -81,8 +81,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="110dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="114dp"
             android:fontFamily="@font/montserrat_medium"
             android:includeFontPadding="false"
             android:text="Living Habit"
@@ -95,11 +95,11 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="110dp"
+            android:layout_marginTop="114dp"
             android:layout_marginRight="20dp"
             android:fontFamily="@font/montserrat_medium"
             android:includeFontPadding="false"
-            android:text="생활습관개선"
+            android:text="생활 습관 개선"
             android:textColor="#AB2220"
             android:textSize="12sp" />
 

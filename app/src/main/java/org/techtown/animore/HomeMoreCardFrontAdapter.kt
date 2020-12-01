@@ -15,7 +15,7 @@ class HomeMoreCardFrontAdapter(private val context : Context, var dataMore: Muta
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeMoreCardFrontAdapter.Holder {
-        val view = LayoutInflater.from(context).inflate(R.layout.pastcard_layout, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.more_card_front_layout, parent, false)
         return Holder(view)
     }
 
@@ -25,7 +25,7 @@ class HomeMoreCardFrontAdapter(private val context : Context, var dataMore: Muta
     }
 
     inner class Holder(itemView: View):RecyclerView.ViewHolder(itemView) {
-        val cardview = itemView.findViewById<CardView>(R.id.more_card_front_view)
+        //val cardview = itemView.findViewById<CardView>(R.id.more_card_front_view)
         
         /*
         //색만 바뀜

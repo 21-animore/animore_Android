@@ -151,7 +151,11 @@
     <fragment
         android:id="@+id/add_random_bengal"
         android:name="org.techtown.animore.AddFragementMissionBengal"
-        tools:layout="@layout/fragment_add_random_bengal"/>
+        tools:layout="@layout/fragment_add_random_bengal">
+        <action
+            android:id="@+id/action_add_random_bengal_to_home_more_card_fragment"
+            app:destination="@id/home_more_card_fragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/add_random_harpseal"

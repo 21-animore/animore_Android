@@ -28,6 +28,10 @@ class PastFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        /*
+        잘 되는 것 확인함 이후 서버에서 종료된 카드 정보 불러와서 데이터 바인딩하기
+        */
+
         var dump1 = PastCardData(0, true, "성공카드")
         var dump2 = PastCardData(1, true, "실패카드")
         var dump3 = PastCardData(2, true, "성공카드")

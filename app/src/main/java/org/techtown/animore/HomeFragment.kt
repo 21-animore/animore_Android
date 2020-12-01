@@ -27,20 +27,14 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        //클릭하는 카드마다 다른 정보를 넘겨줘야 되는데 list로 받아오는게 맞는지..? 덜덜
+        //클릭하는 카드마다 다른 정보를 넘겨줘야 되는데 list로 받아오는게 맞는지..? 아니네 덜덜..
+        /*
         view.findViewById<CardView>(R.id.normal_card_list).setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_home_fragment_to_home_more_card_fragment)
         }
+        */
         
         return view
-
-        /*
-        view.findViewById<Button>(R.id.home_fragment).setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_home_fragment_to_add_fragment)
-        }
-        arguments!!.getString("title")?.let { Log.d("title", it) }
-        Log.d("title : ", arguments!!.getString("title").toString())
-*/
 
     }
 
@@ -51,6 +45,10 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        /*
+        잘 되는 것 확인함 이후 서버에서 현재 진행중인 카드 정보 받아와서 바인딩하기
+        */
 
         var dump1 = NormalCardData(4, "안드어린이에게")
         var dump2 = NormalCardData(3, "리사이클러뷰는")

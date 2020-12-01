@@ -5,7 +5,7 @@
     android:layout_width="349dp"
     android:layout_height="560dp"
     android:id="@+id/past_card_more_view"
-    card_view:cardBackgroundColor="null">
+    card_view:cardBackgroundColor="@color/colorPrimary">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -33,11 +33,10 @@
             android:id="@+id/more_card_front_inside_view"
             android:layout_width="349dp"
             android:layout_height="502dp"
-            android:layout_below="@+id/past_card_more_success"
-            android:layout_marginTop="26dp"
+            android:layout_marginTop="46dp"
+            android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
-            card_view:cardBackgroundColor="@color/back_bengaltiger"
             card_view:cardCornerRadius="12dp"
             card_view:cardElevation="3dp">
 
@@ -72,7 +71,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="115dp"
-                    android:layout_marginTop="272dp"
+                    android:layout_marginTop="270dp"
                     android:fontFamily="@font/montserrat_bold"
                     android:includeFontPadding="false"
                     android:text="21"
@@ -92,7 +91,7 @@
                     android:includeFontPadding="false"
                     android:text="동영상 덜 보기"
                     android:textColor="#AB2220"
-                    android:textSize="36sp" />
+                    android:textSize="42sp" />
 
                 <TextView
                     android:id="@+id/tv_mission_total_count"
@@ -131,7 +130,7 @@
                     android:layout_marginRight="20dp"
                     android:fontFamily="@font/montserrat_medium"
                     android:includeFontPadding="false"
-                    android:text="생활습관개선"
+                    android:text="생활 습관 개선"
                     android:textColor="#AB2220"
                     android:textSize="12sp" />
 
@@ -312,7 +311,7 @@
                     android:includeFontPadding="false"
                     android:text="you&amp;I"
                     android:textColor="#AB2220"
-                    android:textSize="12sp" />
+                    android:textSize="16sp" />
 
             </RelativeLayout>
         </androidx.cardview.widget.CardView>

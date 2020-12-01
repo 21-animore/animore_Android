@@ -4,9 +4,9 @@ import java.util.*
 
 data class PastMoreCardData(
     val index: Int,
-    val success_flag : Boolean,
+    val success_flag : Boolean
+        /*
     val tv_cardName : String,
-    /*
     val card_success_flag : Int,
     val card_name : String,
     val achieve_count : Int,
