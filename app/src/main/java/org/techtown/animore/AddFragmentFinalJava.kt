@@ -12,20 +12,30 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
-import kotlinx.android.synthetic.main.fragment_final_add_normal_guanicoe.*
+import kotlinx.android.synthetic.main.fragment_final_add_harpseal.*
+import kotlinx.android.synthetic.main.fragment_final_add_java.*
 
-class AddFragmentFinalNormalJava : Fragment() {
+class AddFragmentFinalJava : Fragment() {
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_final_add_normal_java, container, false)
+        val view = inflater.inflate(R.layout.fragment_final_add_java, container, false)
 
         view.findViewById<Button>(R.id.btn_to_get_randomcard_java).setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_add_final_normal_java_fragment_to_home_fragment)
         }
 
         return view;
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        var dump1 = MainCardData(3, "안드어린이에게", true, 7)
+        val No = MainCardAdapter()
+        No.datas.add(dump1)
+        final_add_java_cardview.adapter = No
     }
 }

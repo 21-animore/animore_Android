@@ -2,26 +2,15 @@ package org.techtown.animore
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Gravity
-import android.view.View
-import android.widget.TableLayout
-import android.widget.TableRow
-import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment.findNavController
 import androidx.navigation.ui.NavigationUI
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.continuouscard_layout.view.*
-import kotlinx.android.synthetic.main.test.view.*
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -33,6 +22,5 @@ class MainActivity : AppCompatActivity() {
 
         navController = Navigation.findNavController(this, R.id.nav_host)
         NavigationUI.setupWithNavController(bottomNavigationView, findNavController(R.id.nav_host)) //네비게이션바랑 메인 frag 셋 연결
-
     }
 }

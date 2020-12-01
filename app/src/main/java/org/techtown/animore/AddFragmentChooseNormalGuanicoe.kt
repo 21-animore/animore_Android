@@ -12,7 +12,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
-import kotlinx.android.synthetic.main.fragment_final_add_normal_guanicoe.*
+import kotlinx.android.synthetic.main.fragment_final_add_guanicoe.*
 
 class AddFragmentChooseNormalGuanicoe : Fragment() {
     override fun onCreateView(
