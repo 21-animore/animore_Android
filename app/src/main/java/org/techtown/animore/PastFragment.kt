@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_past.*
 
 class PastFragment : Fragment() {
@@ -27,10 +28,8 @@ class PastFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        /*
-        잘 되는 것 확인함 이후 서버에서 종료된 카드 정보 불러와서 데이터 바인딩하기
-        */
+        
+        //서버에서 과거 카드 정보 받아와서 넣기
 
         var dump1 = PastCardData(0, true, "성공카드")
         var dump2 = PastCardData(1, true, "실패카드")
@@ -43,9 +42,17 @@ class PastFragment : Fragment() {
         var dump9 = PastCardData(3, false, "실패카드")
         var dump10 = PastCardData(4, false, "실패카드")
 
-        val MyData:MutableList<PastCardData> = mutableListOf<PastCardData>(dump1, dump2, dump3, dump4, dump5, dump6, dump7, dump8, dump9, dump10)
-
-        val No = PastCardAdapter(requireContext(), MyData)
+        val No = PastCardAdapter()
+        No.datas.add(dump1)
+        No.datas.add(dump2)
+        No.datas.add(dump3)
+        No.datas.add(dump4)
+        No.datas.add(dump5)
+        No.datas.add(dump6)
+        No.datas.add(dump7)
+        No.datas.add(dump8)
+        No.datas.add(dump9)
+        No.datas.add(dump10)
         past_card_list.adapter = No
 
     }

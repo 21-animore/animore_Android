@@ -16,19 +16,21 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.pastcard_layout.view.*
 
-class PastCardAdapter(private val context : Context, var datas: MutableList<PastCardData>) : RecyclerView.Adapter<PastCardAdapter.Holder>(){
+class PastCardAdapter : RecyclerView.Adapter<PastCardAdapter.Holder>(){
+    var datas = mutableListOf<PastCardData>()
+
     override fun getItemCount(): Int {
         //Log.w("태그", datas.size.toString())
         return datas.size
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PastCardAdapter.Holder {
-        val view = LayoutInflater.from(context).inflate(R.layout.pastcard_layout, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.pastcard_layout, parent, false)
         return Holder(view)
     }
 
     override fun onBindViewHolder(holder: PastCardAdapter.Holder, position: Int) {
-        holder?.bind(datas[position], context)
+        holder?.bind(datas[position])
         //Log.e("태그", position.toString())
     }
 
@@ -45,7 +47,7 @@ class PastCardAdapter(private val context : Context, var datas: MutableList<Past
         val tv_totalCount = itemView.findViewById<TextView>(R.id.pastcard_tv_totalCount)
         val tv_period = itemView.findViewById<TextView>(R.id.pastcard_tv_period)
 
-        fun bind(PastCardData: PastCardData, context: Context) {
+        fun bind(PastCardData: PastCardData) {
             if(PastCardData.success_flag === true){
                 //성공 카드일 경우
                 successful_flag.text = "COMPLETE"
@@ -53,49 +55,49 @@ class PastCardAdapter(private val context : Context, var datas: MutableList<Past
 
                 if(PastCardData.index === 0){
                     back.setImageResource(R.drawable.ic_pastcard_back_guanicoe)
-                    successful_flag.setTextColor(ContextCompat.getColor(context, R.color.complete_guanicoe))
+                    successful_flag.setTextColor(ContextCompat.getColor(itemView.context, R.color.complete_guanicoe))
                     img.setImageResource(R.drawable.ic_past_card_guanicoe)
                     success_stroke.setImageResource(R.drawable.ic_pastcard_stroke_guanicoe)
-                    tv_cardName.setTextColor(ContextCompat.getColor(context, R.color.stroke_guanicoe))
-                    tv_achieveCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_guanicoe))
-                    tv_totalCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_guanicoe))
-                    tv_period.setTextColor(ContextCompat.getColor(context, R.color.stroke_guanicoe))
+                    tv_cardName.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
+                    tv_achieveCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
+                    tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
+                    tv_period.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                 }else if(PastCardData.index === 1){
                     back.setImageResource(R.drawable.ic_pastcard_back_illipika)
-                    successful_flag.setTextColor(ContextCompat.getColor(context, R.color.complete_illipika))
+                    successful_flag.setTextColor(ContextCompat.getColor(itemView.context, R.color.complete_illipika))
                     img.setImageResource(R.drawable.ic_past_card_illipika)
                     success_stroke.setImageResource(R.drawable.ic_pastcard_stroke_illipika)
-                    tv_cardName.setTextColor(ContextCompat.getColor(context, R.color.stroke_illipika))
-                    tv_achieveCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_illipika))
-                    tv_totalCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_illipika))
-                    tv_period.setTextColor(ContextCompat.getColor(context, R.color.stroke_illipika))
+                    tv_cardName.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    tv_achieveCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    tv_period.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
                 }else if(PastCardData.index === 2){
                     back.setImageResource(R.drawable.ic_pastcard_back_harpseal)
-                    successful_flag.setTextColor(ContextCompat.getColor(context, R.color.complete_harpseal))
+                    successful_flag.setTextColor(ContextCompat.getColor(itemView.context, R.color.complete_harpseal))
                     img.setImageResource(R.drawable.ic_past_card_harpseal)
                     success_stroke.setImageResource(R.drawable.ic_pastcard_stroke_harpseal)
-                    tv_cardName.setTextColor(ContextCompat.getColor(context, R.color.stroke_harpseal))
-                    tv_achieveCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_harpseal))
-                    tv_totalCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_harpseal))
-                    tv_period.setTextColor(ContextCompat.getColor(context, R.color.stroke_harpseal))
+                    tv_cardName.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    tv_achieveCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    tv_period.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
                 }else if(PastCardData.index === 3){
                     back.setImageResource(R.drawable.ic_pastcard_back_java)
-                    successful_flag.setTextColor(ContextCompat.getColor(context, R.color.complete_java))
+                    successful_flag.setTextColor(ContextCompat.getColor(itemView.context, R.color.complete_java))
                     img.setImageResource(R.drawable.ic_past_card_java)
                     success_stroke.setImageResource(R.drawable.ic_pastcard_stroke_java)
-                    tv_cardName.setTextColor(ContextCompat.getColor(context, R.color.stroke_java))
-                    tv_achieveCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_java))
-                    tv_totalCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_java))
-                    tv_period.setTextColor(ContextCompat.getColor(context, R.color.stroke_java))
+                    tv_cardName.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    tv_achieveCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    tv_period.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
                 }else if(PastCardData.index === 4){
                     back.setImageResource(R.drawable.ic_pastcard_back_bengal)
-                    successful_flag.setTextColor(ContextCompat.getColor(context, R.color.complete_bengaltiger))
+                    successful_flag.setTextColor(ContextCompat.getColor(itemView.context, R.color.complete_bengaltiger))
                     img.setImageResource(R.drawable.ic_past_card_bengaltiger)
                     success_stroke.setImageResource(R.drawable.ic_pastcard_stroke_bengal)
-                    tv_cardName.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
-                    tv_achieveCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
-                    tv_totalCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
-                    tv_period.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
+                    tv_cardName.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    tv_achieveCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    tv_period.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
                 }
 
             }else{
@@ -106,38 +108,38 @@ class PastCardAdapter(private val context : Context, var datas: MutableList<Past
                 if(PastCardData.index === 0){
                     back.setImageResource(R.drawable.ic_pastcard_back_guanicoe)
                     img.setImageResource(R.drawable.ic_past_card_guanicoe)
-                    tv_cardName.setTextColor(ContextCompat.getColor(context, R.color.stroke_guanicoe))
-                    tv_achieveCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_guanicoe))
-                    tv_totalCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_guanicoe))
-                    tv_period.setTextColor(ContextCompat.getColor(context, R.color.stroke_guanicoe))
+                    tv_cardName.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
+                    tv_achieveCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
+                    tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
+                    tv_period.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                 }else if(PastCardData.index === 1){
                     back.setImageResource(R.drawable.ic_pastcard_back_illipika)
                     img.setImageResource(R.drawable.ic_past_card_illipika)
-                    tv_cardName.setTextColor(ContextCompat.getColor(context, R.color.stroke_illipika))
-                    tv_achieveCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_illipika))
-                    tv_totalCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_illipika))
-                    tv_period.setTextColor(ContextCompat.getColor(context, R.color.stroke_illipika))
+                    tv_cardName.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    tv_achieveCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    tv_period.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
                 }else if(PastCardData.index === 2){
                     back.setImageResource(R.drawable.ic_pastcard_back_harpseal)
                     img.setImageResource(R.drawable.ic_past_card_harpseal)
-                    tv_cardName.setTextColor(ContextCompat.getColor(context, R.color.stroke_harpseal))
-                    tv_achieveCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_harpseal))
-                    tv_totalCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_harpseal))
-                    tv_period.setTextColor(ContextCompat.getColor(context, R.color.stroke_harpseal))
+                    tv_cardName.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    tv_achieveCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    tv_period.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
                 }else if(PastCardData.index === 3){
                     back.setImageResource(R.drawable.ic_pastcard_back_java)
                     img.setImageResource(R.drawable.ic_past_card_java)
-                    tv_cardName.setTextColor(ContextCompat.getColor(context, R.color.stroke_java))
-                    tv_achieveCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_java))
-                    tv_totalCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_java))
-                    tv_period.setTextColor(ContextCompat.getColor(context, R.color.stroke_java))
+                    tv_cardName.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    tv_achieveCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    tv_period.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
                 }else if(PastCardData.index === 4){
                     back.setImageResource(R.drawable.ic_pastcard_back_bengal)
                     img.setImageResource(R.drawable.ic_past_card_bengaltiger)
-                    tv_cardName.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
-                    tv_achieveCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
-                    tv_totalCount.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
-                    tv_period.setTextColor(ContextCompat.getColor(context, R.color.stroke_bengaltiger))
+                    tv_cardName.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    tv_achieveCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    tv_period.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
                 }
             }
         }
