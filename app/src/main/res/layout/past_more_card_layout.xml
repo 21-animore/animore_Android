@@ -62,7 +62,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
-                    card_view:srcCompat="@drawable/ic_past_card_more_bengaltiger" />
+                    card_view:srcCompat="@drawable/ic_pastcard_more_bengaltiger" />
 
                 <TextView
                     android:id="@+id/past_card_more_tv_count_num_behind"

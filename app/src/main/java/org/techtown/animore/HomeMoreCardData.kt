@@ -6,5 +6,6 @@ class HomeMoreCardData (
     val index: Int,
     val mission_name : String,
     val flag: Boolean,
-    val dayDuring: Int
+    val dayDuring: Int,
+    val success_flag : Boolean
 )

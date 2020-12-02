@@ -26,6 +26,8 @@ class HomeMoreFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //카드 유형에 맞게 상단바 색 바꿔야 함
+
         /*
         var dump1 = PastMoreCardData(4, false)
         val MyData:MutableList<PastMoreCardData> = mutableListOf<PastMoreCardData>(dump1)

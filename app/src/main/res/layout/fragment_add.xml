@@ -59,7 +59,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#00FFFFFF"
-                android:src="@drawable/ic_add_button_guanicoe2"
+                android:src="@drawable/ic_add_button_guanicoe"
                 android:layout_marginBottom="17dp"/>
 
             <ImageButton
@@ -67,7 +67,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#00FFFFFF"
-                android:src="@drawable/ic_add_button_illipika2"
+                android:src="@drawable/ic_add_button_illipika"
                 android:layout_marginBottom="17dp"/>
 
             <ImageButton
@@ -75,7 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#00FFFFFF"
-                android:src="@drawable/ic_add_button_harpseal2"
+                android:src="@drawable/ic_add_button_harpseal"
                 android:layout_marginBottom="17dp"/>
 
             <ImageButton
@@ -83,7 +83,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#00FFFFFF"
-                android:src="@drawable/ic_add_button_javahornhawk2"
+                android:src="@drawable/ic_add_button_javahornhawk"
                 android:layout_marginBottom="17dp"/>
 
             <ImageButton
@@ -91,7 +91,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#00FFFFFF"
-                android:src="@drawable/ic_add_button_bengaltiger2"
+                android:src="@drawable/ic_add_button_bengaltiger"
                 android:layout_marginBottom="17dp"/>
         </LinearLayout>
     </ScrollView>
