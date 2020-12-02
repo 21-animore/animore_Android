@@ -1,16 +1,16 @@
 package org.techtown.animore
 
+import android.animation.AnimatorInflater
+import android.animation.AnimatorSet
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.RelativeLayout
 import androidx.cardview.widget.CardView
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 
-class HomeMoreCardAdapter: RecyclerView.Adapter<HomeMoreCardAdapter.Holder>(){
+class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCardAdapter.Holder>(){
     var homemoreitems = mutableListOf<HomeMoreCardData>()
 
     override fun getItemCount(): Int {
@@ -18,17 +18,49 @@ class HomeMoreCardAdapter: RecyclerView.Adapter<HomeMoreCardAdapter.Holder>(){
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.more_card_front_layout, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.more_card_layout, parent, false)
         return Holder(view)
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-        holder.bind(homemoreitems[position])
+        holder.bind(homemoreitems[position], context)
     }
 
     inner class Holder(itemView: View):RecyclerView.ViewHolder(itemView) {
 
-        fun bind(HomeMoreCardData: HomeMoreCardData) {
+        var frontcard = itemView.findViewById<RelativeLayout>(R.id.more_card_view_front)
+        var backcard = itemView.findViewById<RelativeLayout>(R.id.more_card_view_back)
+
+        var mSetRightOut = AnimatorInflater.loadAnimator(itemView.context, R.animator.out_ani) as AnimatorSet
+        var mSetLeftIn = AnimatorInflater.loadAnimator(itemView.context, R.animator.in_ani) as AnimatorSet
+
+        fun bind(HomeMoreCardData: HomeMoreCardData, context: Context) {
+
+            backcard.visibility=View.GONE;
+
+            frontcard.setOnClickListener {
+                backcard.visibility=View.VISIBLE
+                mSetRightOut.setTarget(frontcard)
+                mSetLeftIn.setTarget(backcard)
+                mSetRightOut.start()
+                mSetLeftIn.start()
+                val distance = 8000
+                val scale: Float = context.resources.displayMetrics.density * distance
+                frontcard.setCameraDistance(scale)
+            }
+
+            backcard.setOnClickListener {
+                frontcard.visibility=View.VISIBLE
+                mSetRightOut.setTarget(backcard)
+                mSetLeftIn.setTarget(frontcard)
+                mSetRightOut.start()
+                mSetLeftIn.start()
+                val distance = 8000
+                val scale: Float = context.resources.displayMetrics.density * distance
+                backcard.setCameraDistance(scale)
+            }
+
+            /*-------------------------------------------여기까지!-------------------------------------------------*/
 
             //유형별 달라지는 부분
             if(HomeMoreCardData.index === 0){

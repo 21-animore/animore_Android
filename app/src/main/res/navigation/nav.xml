@@ -11,7 +11,7 @@
         tools:layout="@layout/fragment_home">
 
         <action
-            android:id="@+id/action_home_fragment_to_home_more_card_fragment"
+            android:id="@+id/action_home_fragment_to_home_more_card_fragment2"
             app:destination="@id/home_more_card_fragment" />
     </fragment>
 

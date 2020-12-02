@@ -24,7 +24,7 @@ class HomeFragment : Fragment() {
 
         //임시로 테스트
         view.findViewById<ImageView>(R.id.main_logo).setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_home_fragment_to_home_more_card_fragment)
+            Navigation.findNavController(view).navigate(R.id.action_home_fragment_to_home_more_card_fragment2)
         }
 
         //카드를 클릭할 때 넘어가게 하려면 어떤 아이디를 줘야되나??

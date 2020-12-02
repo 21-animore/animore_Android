@@ -7,6 +7,7 @@ import android.view.View.GONE
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home_card_more.*
 import kotlinx.android.synthetic.main.fragment_home_card_more.view.*
@@ -14,6 +15,7 @@ import kotlinx.android.synthetic.main.fragment_home_card_more.view.*
 
 
 class HomeMoreFragment : Fragment() {
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -43,6 +45,7 @@ class HomeMoreFragment : Fragment() {
             home_more_card_tv_reallydelete.visibility = GONE;
             home_more_card_reallydelete.visibility = View.VISIBLE;
             //카드 삭제하는 API 호출 후 메인 화면으로 돌아가기
+
         }
         return view;
     }
@@ -66,9 +69,17 @@ class HomeMoreFragment : Fragment() {
         //앞 화면에서 클릭된 아이템의 정보를 어떻게 받아오지?!
         
         var dump1 = HomeMoreCardData(2, "뭔디", true, 7, true)
-        val No = HomeMoreCardAdapter()
+        val No = HomeMoreCardAdapter(requireContext())
         No.homemoreitems.add(dump1)
-        home_more_card_front.adapter = No
+
+        /*---------------------------------------------------이것저것 적용중------------------------------------------------*/
+        var HorizontalLayout2 = LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL,false)
+        home_more_card.layoutManager = HorizontalLayout2
+
+        home_more_card.adapter = No
+        No.notifyDataSetChanged()
+
+        //var my_data = mutableListOf<MyDATA>((MyDATA(1,"에헷",false)),(MyDATA(2,"이런",false)),(MyDATA(3,"어머!",false)))
 
         /*---------------------------------------------------상단바 커스텀------------------------------------------------*/
         if(No.homemoreitems[0].index === 0){
