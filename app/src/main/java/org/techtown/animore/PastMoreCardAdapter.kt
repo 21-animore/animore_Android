@@ -10,19 +10,21 @@ import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 
-class PastMoreCardAdapter(private val context : Context, var dataPasts: MutableList<PastMoreCardData>) : RecyclerView.Adapter<PastMoreCardAdapter.Holder>(){
+class PastMoreCardAdapter() : RecyclerView.Adapter<PastMoreCardAdapter.Holder>(){
+    var dataPasts = mutableListOf<PastMoreCardData>()
+
     override fun getItemCount(): Int {
         Log.e("길이", dataPasts.size.toString());
         return dataPasts.size
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PastMoreCardAdapter.Holder {
-        val view = LayoutInflater.from(context).inflate(R.layout.past_more_card_layout, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.past_more_card_layout, parent, false)
         return Holder(view)
     }
 
     override fun onBindViewHolder(holder: PastMoreCardAdapter.Holder, position: Int) {
-        holder?.bind(dataPasts[position], context)
+        holder?.bind(dataPasts[position])
         //Log.e("태그", position.toString())
     }
 
@@ -58,7 +60,7 @@ class PastMoreCardAdapter(private val context : Context, var dataPasts: MutableL
          */
 
 
-        fun bind(PastMoreCardData: PastMoreCardData, context: Context) {
+        fun bind(PastMoreCardData: PastMoreCardData) {
 
             if(PastMoreCardData.success_flag === true){
                 //성공 카드일 경우

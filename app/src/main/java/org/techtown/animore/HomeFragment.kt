@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.LinearLayout
+import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
@@ -19,12 +21,13 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        //카드를 클릭할 때 넘어가게 하려면 어떤 아이디를 줘야되나??
-        /*
-        view.findViewById<CardView>(R.id.normal_card_list).setOnClickListener {
+
+        //임시로 테스트
+        view.findViewById<ImageView>(R.id.main_logo).setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_home_fragment_to_home_more_card_fragment)
         }
-        */
+
+        //카드를 클릭할 때 넘어가게 하려면 어떤 아이디를 줘야되나??
         
         return view
     }

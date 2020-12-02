@@ -11,8 +11,8 @@
         tools:layout="@layout/fragment_home">
 
         <action
-            android:id="@+id/action_home_fragment_to_add_fragment"
-            app:destination="@id/add_fragment" />
+            android:id="@+id/action_home_fragment_to_home_more_card_fragment"
+            app:destination="@id/home_more_card_fragment" />
     </fragment>
 
     <fragment
@@ -172,6 +172,9 @@
         android:name="org.techtown.animore.PastFragment"
         tools:layout="@layout/fragment_past">
 
+        <action
+            android:id="@+id/action_past_fragment_to_pastmore_fragment"
+            app:destination="@id/pastmore_fragment" />
     </fragment>
 
     <fragment

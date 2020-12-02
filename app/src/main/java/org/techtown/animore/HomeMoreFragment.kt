@@ -3,9 +3,13 @@ package org.techtown.animore
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home_card_more.*
+import kotlinx.android.synthetic.main.fragment_home_card_more.view.*
 import kotlinx.android.synthetic.main.fragment_past_card_more.*
 
 class HomeMoreFragment : Fragment() {
@@ -16,8 +20,32 @@ class HomeMoreFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home_card_more, container, false)
 
+        view.home_more_card_btn_giveup.setOnClickListener { view ->
+            home_more_card_btn_cancle.visibility = View.VISIBLE;
+            home_more_card_btn_reallygiveup.visibility = View.VISIBLE;
+            home_more_card_tv_reallydelete.visibility = View.VISIBLE;
+            home_more_card_reallydelete.visibility = View.VISIBLE;
+        }
+
+        view.home_more_card_btn_cancle.setOnClickListener { view ->
+            home_more_card_tv_deletefin.visibility = GONE;
+            home_more_card_btn_cancle.visibility = GONE;
+            home_more_card_btn_reallygiveup.visibility = GONE;
+            home_more_card_tv_reallydelete.visibility = GONE;
+            home_more_card_reallydelete.visibility = GONE;
+        }
+
+        view.home_more_card_btn_reallygiveup.setOnClickListener { view ->
+            home_more_card_tv_deletefin.visibility = View.VISIBLE;
+            home_more_card_btn_cancle.visibility = GONE;
+            home_more_card_btn_reallygiveup.visibility = GONE;
+            home_more_card_tv_reallydelete.visibility = GONE;
+            home_more_card_reallydelete.visibility = View.VISIBLE;
+            //카드 삭제하는 API 호출 후 메인 화면으로 돌아가기
+        }
         return view;
     }
+
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -27,12 +55,42 @@ class HomeMoreFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //카드 유형에 맞게 상단바 색 바꿔야 함 앞 화면에서 클릭된 아이템의 index를 어떻게 받아오지?!
+        /*처음에 안 보여야 하는 부분들*/
+        home_more_card_tv_deletefin.visibility = GONE;
+        home_more_card_btn_cancle.visibility = GONE;
+        home_more_card_btn_reallygiveup.visibility = GONE;
+        home_more_card_tv_reallydelete.visibility = GONE;
+        home_more_card_reallydelete.visibility = GONE;
 
-        var dump1 = HomeMoreCardData(4, "뭔디", true, 7, true)
-        val MyData:MutableList<HomeMoreCardData> = mutableListOf<HomeMoreCardData>(dump1)
+        //앞 화면에서 클릭된 아이템의 정보를 어떻게 받아오지?!
+        
+        var dump1 = HomeMoreCardData(2, "뭔디", true, 7, true)
         val No = HomeMoreCardAdapter()
+        No.homemoreitems.add(dump1)
         home_more_card_front.adapter = No
+
+        /*---------------------------------------------------상단바 커스텀------------------------------------------------*/
+        if(No.homemoreitems[0].index === 0){
+            home_more_card_topbar.setImageResource(R.drawable.ic_top_bar_guanicoe)
+            //home_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(context,R.color.stroke_guanicoe))
+            home_more_card_back_btn_to_add_frag.setImageResource(R.drawable.ic_back_btn_guanicoe)
+        }else if(No.homemoreitems[0].index === 1){
+            home_more_card_topbar.setImageResource(R.drawable.ic_top_bar_illipika)
+            //home_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(parent.context, R.color.stroke_illipika))
+            home_more_card_back_btn_to_add_frag.setImageResource(R.drawable.ic_back_btn_illipika)
+        }else if(No.homemoreitems[0].index === 2){
+            home_more_card_topbar.setImageResource(R.drawable.ic_top_bar_harpseal)
+            //home_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(parent.context, R.color.stroke_harpseal))
+            home_more_card_back_btn_to_add_frag.setImageResource(R.drawable.ic_back_btn_harpseal)
+        }else if(No.homemoreitems[0].index === 3){
+            home_more_card_topbar.setImageResource(R.drawable.ic_top_bar_javahornhawk)
+            //home_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(parent.context, R.color.stroke_java))
+            home_more_card_back_btn_to_add_frag.setImageResource(R.drawable.ic_back_btn_java)
+        }else{
+            home_more_card_topbar.setImageResource(R.drawable.ic_top_bar_bengaltiger)
+            //home_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(parent.context, R.color.stroke_bengaltiger))
+            home_more_card_back_btn_to_add_frag.setImageResource(R.drawable.ic_back_btn_bengal)
+        }
 
     }
 }

@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_past.*
 
@@ -18,6 +20,11 @@ class PastFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_past, container, false)
+        
+        //임시로 테스트
+        view.findViewById<TextView>(R.id.past_tv_title).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_past_fragment_to_pastmore_fragment)
+        }
 
         return view
     }

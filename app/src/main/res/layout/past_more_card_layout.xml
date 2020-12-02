@@ -71,7 +71,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="115dp"
-                    android:layout_marginTop="270dp"
+                    android:layout_marginTop="268dp"
                     android:fontFamily="@font/montserrat_bold"
                     android:includeFontPadding="false"
                     android:text="21"

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import kotlinx.android.synthetic.main.fragment_home_card_more.*
 import kotlinx.android.synthetic.main.fragment_past_card_more.*
 
 class PastMoreFragment : Fragment() {
@@ -28,9 +29,9 @@ class PastMoreFragment : Fragment() {
 
         //카드 유형에 맞게 상단바 색 바꿔야 함 앞 화면에서 클릭된 아이템의 index를 어떻게 받아오지?!
 
-        var dump1 = PastMoreCardData(4, false)
-        val MyData:MutableList<PastMoreCardData> = mutableListOf<PastMoreCardData>(dump1)
-        val No = PastMoreCardAdapter(requireContext(), MyData)
+        var dump1 = PastMoreCardData(4, true)
+        val No = PastMoreCardAdapter()
+        No.dataPasts.add(dump1)
         pastcard_more.adapter = No
     }
 }
