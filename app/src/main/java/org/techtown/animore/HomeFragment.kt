@@ -55,8 +55,7 @@ class HomeFragment : Fragment() {
         No.datas.add(dump1)
         No.datas.add(dump2)
         No.datas.add(dump3)
-
-        normal_card_list.adapter = No
+        main_card_list.adapter = No
         //No.notifyDataSetChanged()
 
 /*

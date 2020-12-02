@@ -19,25 +19,6 @@ class AddFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_add, container, false)
 
-        view.findViewById<ImageButton>(R.id.btn_to_add_animal_guanicoe).setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_add_fragment_to_add_animal_guanicoe)
-        }
-
-        view.findViewById<ImageButton>(R.id.btn_to_add_animal_illipika).setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_add_fragment_to_add_animal_illipika)
-        }
-
-        view.findViewById<ImageButton>(R.id.btn_to_add_animal_harpseal).setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_add_fragment_to_add_animal_harpseal)
-        }
-
-        view.findViewById<ImageButton>(R.id.btn_to_add_animal_java).setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_add_fragment_to_add_animal_java)
-        }
-
-        view.findViewById<ImageButton>(R.id.btn_to_add_animal_bengal).setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_add_fragment_to_add_animal_bengal)
-        }
         return view
     }
 

@@ -15,9 +15,7 @@ class AddFragementAnimalJava : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_add_animal_java, container, false)
-        view.findViewById<Button>(R.id.btn_to_get_randomcard_java).setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_add_animal_java_to_add_random_java)
-        }
+
         return view;
     }
 }

@@ -8,7 +8,7 @@
     android:background="@color/colorPrimary">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/choose_option_continuous_topbar_harpseal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,34 +17,33 @@
         app:srcCompat="@drawable/ic_top_bar_harpseal" />
 
     <ImageButton
-        android:id="@+id/back_btn_to_add_frag"
+        android:id="@+id/choose_option_continuous_back_btn_to_add_frag_harpseal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
         android:layout_marginBottom="18dp"
         android:background="@null"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/choose_option_continuous_topbar_harpseal"
+        app:layout_constraintStart_toStartOf="@+id/choose_option_continuous_topbar_harpseal"
         app:srcCompat="@drawable/ic_back_btn_harpseal" />
 
     <TextView
-        android:id="@+id/tv_mission_name_harpseal"
+        android:id="@+id/choose_option_continuous_tv_mission_name_harpseal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/notosanskr_bold"
         android:text="중고마켓 이용하기"
         android:textColor="@color/stroke_harpseal"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView" />
+        app:layout_constraintBottom_toBottomOf="@+id/choose_option_continuous_topbar_harpseal"
+        app:layout_constraintEnd_toEndOf="@+id/choose_option_continuous_topbar_harpseal"
+        app:layout_constraintStart_toStartOf="@+id/choose_option_continuous_topbar_harpseal" />
 
     <Button
-        android:id="@+id/tv_normal"
+        android:id="@+id/choose_option_continuous_tv_normal_harpseal"
         style="@null"
         android:layout_width="wrap_content"
         android:layout_height="24dp"
-
         android:layout_marginTop="2dp"
         android:background="@null"
         android:fontFamily="@font/notosanskr_medium"
@@ -52,11 +51,11 @@
         android:text="일반 챌린지"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+        app:layout_constraintStart_toStartOf="@+id/choose_option_continuous_expression_harpseal"
+        app:layout_constraintTop_toTopOf="@+id/choose_option_continuous_expression_harpseal" />
 
     <TextView
-        android:id="@+id/tv_continuous"
+        android:id="@+id/choose_option_continuous_tv_continuous_harpseal"
         android:layout_width="wrap_content"
         android:layout_height="24dp"
         android:layout_marginTop="4dp"
@@ -67,11 +66,11 @@
         android:text="연속 챌린지"
         android:textColor="@color/colorAccent"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/tv_normal"
-        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+        app:layout_constraintStart_toEndOf="@+id/choose_option_continuous_tv_normal_harpseal"
+        app:layout_constraintTop_toTopOf="@+id/choose_option_continuous_expression_harpseal" />
 
     <TextView
-        android:id="@+id/tv_normal_expression"
+        android:id="@+id/choose_option_continuous_tv_normal_expression_harpseal"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -81,11 +80,11 @@
         android:text="연속챌린지는 7번, 14번, 21번을 연속적으로 도전하여 환경을 지키는 챌린지입니다."
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintStart_toStartOf="@+id/imageView5" />
+        app:layout_constraintBottom_toBottomOf="@+id/choose_option_continuous_expression_harpseal"
+        app:layout_constraintStart_toStartOf="@+id/choose_option_continuous_expression_harpseal" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/choose_option_continuous_text1_harpseal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -96,20 +95,20 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_mission_name_harpseal" />
+        app:layout_constraintTop_toBottomOf="@+id/choose_option_continuous_tv_mission_name_harpseal" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/choose_option_continuous_expression_harpseal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="12dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1"
+        app:layout_constraintTop_toBottomOf="@+id/choose_option_continuous_text1_harpseal"
         app:srcCompat="@drawable/ic_btn_choose_card_continuous" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/choose_option_continuous_period_harpseal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
@@ -120,20 +119,20 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintTop_toBottomOf="@+id/choose_option_continuous_expression_harpseal" />
 
     <RadioGroup
-        android:id="@+id/mainBtnGroup"
+        android:id="@+id/choose_option_continuous_btn_group_harpseal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
         android:layout_marginLeft="30dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toBottomOf="@+id/choose_option_continuous_period_harpseal">
 
         <RadioButton
-            android:id="@+id/button_7"
+            android:id="@+id/choose_option_continuous_button_7_harpseal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/choose_7days_button"
@@ -142,7 +141,7 @@
             android:layout_marginRight="10dp"/>
 
         <RadioButton
-            android:id="@+id/button_14"
+            android:id="@+id/choose_option_continuous_button_14_harpseal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/choose_14days_button"
@@ -150,7 +149,7 @@
             android:layout_marginRight="10dp"/>
 
         <RadioButton
-            android:id="@+id/button_21"
+            android:id="@+id/choose_option_continuous_button_21_harpseal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/choose_21days_button"
@@ -159,7 +158,7 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/btn_to_get_randomcard_harpseal"
+        android:id="@+id/choose_option_continuous_btn_to_get_randomcard_harpseal"
         style="@null"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -174,7 +173,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/choose_option_continuous_btnText_harpseal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_bold"
@@ -184,10 +183,11 @@
         android:textSize="26sp"
         android:translationZ="10dp"
         android:layout_marginBottom="2dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_to_get_randomcard_harpseal"
-        app:layout_constraintEnd_toEndOf="@+id/btn_to_get_randomcard_harpseal"
-        app:layout_constraintStart_toStartOf="@+id/btn_to_get_randomcard_harpseal"
-        app:layout_constraintTop_toTopOf="@+id/btn_to_get_randomcard_harpseal"/>
+        app:layout_constraintBottom_toBottomOf="@+id/choose_option_continuous_btn_to_get_randomcard_harpseal"
+        app:layout_constraintEnd_toEndOf="@+id/choose_option_continuous_btn_to_get_randomcard_harpseal"
+        app:layout_constraintStart_toStartOf="@+id/choose_option_continuous_btn_to_get_randomcard_harpseal"
+        app:layout_constraintTop_toTopOf="@+id/choose_option_continuous_btn_to_get_randomcard_harpseal"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

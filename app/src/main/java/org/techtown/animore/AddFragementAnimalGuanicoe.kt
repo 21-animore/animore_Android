@@ -16,9 +16,6 @@ class AddFragementAnimalGuanicoe : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_add_animal_guanicoe, container, false)
 
-        view.findViewById<Button>(R.id.btn_to_get_randomcard_guanicoe).setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_add_animal_guanicoe_to_add_random_guanicoe)
-        }
 
         return view;
     }

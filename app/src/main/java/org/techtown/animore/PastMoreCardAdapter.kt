@@ -31,7 +31,7 @@ class PastMoreCardAdapter(private val context : Context, var dataPasts: MutableL
         val fail = itemView.findViewById<ImageView>(R.id.past_card_more_fail)
         val success = itemView.findViewById<ImageView>(R.id.past_card_more_success)
 
-        val insdie = itemView.findViewById<CardView>(R.id.more_card_front_inside_view)
+        //val insdie = itemView.findViewById<CardView>(R.id.more_card_front_inside_view)
 
         /*
         //색만 바뀜

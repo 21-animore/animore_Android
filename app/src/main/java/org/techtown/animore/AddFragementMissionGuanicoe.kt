@@ -17,9 +17,6 @@ class AddFragementMissionGuanicoe : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_add_random_guanicoe, container, false)
 
-        view.findViewById<Button>(R.id.btn_to_select_mode_guanicoe).setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_add_random_guanicoe_to_add_choose_normal_guanicoe)
-        }
         return view;
     }
 }

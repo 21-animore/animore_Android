@@ -12,7 +12,7 @@
     >
 
     <ImageView
-        android:id="@+id/success_stroke"
+        android:id="@+id/pastcard_success_stroke"
         android:layout_width="115dp"
         android:layout_height="168dp"
         android:layout_alignParentStart="true"
@@ -20,7 +20,7 @@
         card_view:srcCompat="@drawable/ic_pastcard_stroke_bengal" />
 
     <ImageView
-        android:id="@+id/fail_cover"
+        android:id="@+id/pastcard_fail_cover"
         android:layout_width="105dp"
         android:layout_height="158dp"
         android:layout_alignParentStart="true"
@@ -39,7 +39,7 @@
         android:layout_marginTop="5dp">
 
         <ImageView
-            android:id="@+id/background"
+            android:id="@+id/pastcard_background"
             android:layout_width="105dp"
             android:layout_height="158dp"
             android:layout_alignParentStart="true"
@@ -47,7 +47,7 @@
             card_view:srcCompat="@drawable/ic_pastcard_back_bengal" />
 
       <TextView
-        android:id="@+id/tv_successFlag"
+        android:id="@+id/pastcard_tv_successFlag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -59,7 +59,7 @@
         android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tv_cardName"
+            android:id="@+id/pastcard_tv_cardName"
             android:layout_width="59dp"
             android:layout_height="55dp"
             android:layout_alignParentLeft="true"
@@ -73,7 +73,7 @@
             android:textSize="18sp" />
 
         <ImageView
-            android:id="@+id/img_card_category"
+            android:id="@+id/pastcard_img_card_category"
             card_view:srcCompat="@drawable/ic_past_card_bengaltiger"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -85,7 +85,7 @@
              />
 
         <TextView
-            android:id="@+id/tv_achieveCount"
+            android:id="@+id/pastcard_tv_achieveCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -99,7 +99,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tv_totalCount"
+            android:id="@+id/pastcard_tv_totalCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -113,7 +113,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tv_period"
+            android:id="@+id/pastcard_tv_period"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"

@@ -22,9 +22,6 @@ class AddFragmentChooseContinuousHarpseal : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_choose_option_continuous_harpseal, container, false)
 
-        view.findViewById<Button>(R.id.tv_normal).setOnClickListener {
-            //Navigation.findNavController(view).navigate(R.id.action_add_choose_continuous_harpseal_to_add_choose_normal_harpseal)
-        }
 
         return view;
     }

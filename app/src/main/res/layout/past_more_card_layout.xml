@@ -30,7 +30,7 @@
             card_view:srcCompat="@drawable/ic_past_card_more_fail" />
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/more_card_front_inside_view"
+            android:id="@+id/past_card_more_insdie_view"
             android:layout_width="349dp"
             android:layout_height="502dp"
             android:layout_marginTop="46dp"
@@ -46,7 +46,7 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:id="@+id/stroke"
+                    android:id="@+id/past_card_more_stroke"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -55,7 +55,7 @@
                     card_view:srcCompat="@drawable/ic_pastcard_more_stroke_bengaltiger" />
 
                 <ImageView
-                    android:id="@+id/img"
+                    android:id="@+id/past_card_more_img"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -65,7 +65,7 @@
                     card_view:srcCompat="@drawable/ic_past_card_more_bengaltiger" />
 
                 <TextView
-                    android:id="@+id/tv_count_num_behind"
+                    android:id="@+id/past_card_more_tv_count_num_behind"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -79,7 +79,7 @@
                     android:textSize="96sp" />
 
                 <TextView
-                    android:id="@+id/tv_mission_name"
+                    android:id="@+id/past_card_more_tv_mission_name"
                     android:layout_width="129dp"
                     android:layout_height="113dp"
                     android:layout_alignParentLeft="true"
@@ -94,7 +94,7 @@
                     android:textSize="42sp" />
 
                 <TextView
-                    android:id="@+id/tv_mission_total_count"
+                    android:id="@+id/past_card_more_tv_mission_total_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -108,7 +108,7 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/tv_mission_category_eng"
+                    android:id="@+id/past_card_more_tv_mission_category_eng"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -121,7 +121,7 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/tv_mission_category_kor"
+                    android:id="@+id/past_card_more_tv_mission_category_kor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -135,7 +135,7 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/tv_achieve_count"
+                    android:id="@+id/past_card_more_tv_achieve_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -149,7 +149,7 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/tv_start_date_title"
+                    android:id="@+id/past_card_more_tv_start_date_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -163,7 +163,7 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/tv_end_date_title"
+                    android:id="@+id/past_card_more_tv_end_date_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -177,7 +177,7 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/tv_achieve_count_num"
+                    android:id="@+id/past_card_more_tv_achieve_count_num"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -191,7 +191,7 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/tv_times"
+                    android:id="@+id/past_card_more_tv_times"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -204,7 +204,7 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/tv_start_date"
+                    android:id="@+id/past_card_more_tv_start_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -218,7 +218,7 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/tv_end_date"
+                    android:id="@+id/past_card_more_tv_end_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -232,7 +232,7 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/tv_process"
+                    android:id="@+id/past_card_more_tv_process"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -246,7 +246,7 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/tv_process_count"
+                    android:id="@+id/past_card_more_tv_process_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="185dp"
@@ -259,7 +259,7 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/tv_count_slash"
+                    android:id="@+id/past_card_more_tv_count_slash"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -274,7 +274,7 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/tv_total_count"
+                    android:id="@+id/past_card_more_tv_total_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -288,7 +288,7 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/tv_mission_content"
+                    android:id="@+id/past_card_more_tv_mission_content"
                     android:layout_width="290dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -301,7 +301,7 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/tv_bottom_sentence"
+                    android:id="@+id/past_card_more_tv_bottom_sentence"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"

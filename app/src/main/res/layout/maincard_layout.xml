@@ -11,8 +11,7 @@
 
     <RelativeLayout
         android:layout_width="255dp"
-        android:layout_height="409dp"
-        android:padding="10dp">
+        android:layout_height="409dp">
 
         <TextView
             android:id="@+id/maincard_tv_mission_name"
@@ -21,8 +20,8 @@
             android:lineSpacingExtra ="-12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
             android:fontFamily="@font/notosanskr_bold"
             android:includeFontPadding="false"
             android:text="중고마켓 이용하기"
@@ -30,13 +29,13 @@
             android:textSize="42sp" />
 
         <TextView
-            android:id="@+id/maincard_tv_normal"
+            android:id="@+id/maincard_tv_top_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="12dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginRight="15dp"
             android:fontFamily="@font/notosanskr_medium"
             android:includeFontPadding="false"
             android:text="연속"
@@ -48,8 +47,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="105dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginTop="115dp"
+            android:layout_marginLeft="15dp"
             android:fontFamily="@font/montserrat_medium"
             android:includeFontPadding="false"
             android:text="Living Habit"
@@ -62,8 +61,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="105dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginTop="115dp"
+            android:layout_marginRight="15dp"
             android:fontFamily="@font/notosanskr_medium"
             android:includeFontPadding="false"
             android:text="생활 습관 개선"
@@ -75,8 +74,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="125dp"
-            android:layout_toStartOf="@+id/tv_totalCount"
+            android:layout_marginTop="135dp"
+            android:layout_toStartOf="@+id/maincard_tv_totalCount"
             android:fontFamily="@font/montserrat_medium"
             android:includeFontPadding="false"
             android:text="0"
@@ -89,8 +88,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="125dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginTop="135dp"
+            android:layout_marginRight="15dp"
             android:fontFamily="@font/montserrat_medium"
             android:includeFontPadding="false"
             android:text="/21"
@@ -98,26 +97,25 @@
             android:textSize="24sp" />
 
         <ImageView
-            android:id="@+id/normal_index"
+            android:id="@+id/maincard_normal_index"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="3dp"
+            android:layout_marginLeft="15dp"
             card_view:srcCompat="@drawable/ic_normal_index_bengaltiger"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="150dp" />
+            android:layout_marginTop="160dp" />
 
         <TextView
-            android:id="@+id/maincard_tv_count_num"
+            android:id="@+id/maincard_tv_index_count_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/normal_index"
-            android:layout_alignTop="@+id/normal_index"
-            android:layout_alignEnd="@+id/normal_index"
-            android:layout_alignBottom="@+id/normal_index"
+            android:layout_alignStart="@+id/maincard_normal_index"
+            android:layout_alignTop="@+id/maincard_normal_index"
+            android:layout_alignEnd="@+id/maincard_normal_index"
+            android:layout_alignBottom="@+id/maincard_normal_index"
             android:layout_marginStart="0dp"
             android:layout_marginTop="44dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginBottom="1dp"
+            android:layout_marginBottom="11dp"
             android:fontFamily="@font/montserrat_bold"
             android:text="0"
             android:textAlignment="center"
@@ -128,11 +126,11 @@
             android:id="@+id/maincard_tv_start_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/progressbar"
+            android:layout_below="@+id/maincard_progressbar"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="25dp"
             android:layout_marginTop="2dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="20dp"
             android:fontFamily="@font/montserrat_medium"
             android:includeFontPadding="false"
             android:text="2020. 10. 09"
@@ -145,7 +143,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/maincard_progressbar"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="15dp"
+            android:layout_marginRight="25dp"
             android:layout_marginTop="2dp"
             android:fontFamily="@font/montserrat_medium"
             android:includeFontPadding="false"
@@ -157,7 +155,7 @@
             android:id="@+id/maincard_progressbar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/normal_index"
+            android:layout_below="@+id/maincard_normal_index"
             android:layout_marginTop="3dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentStart="true"
@@ -169,7 +167,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/maincard_tv_mission_category_eng"
             android:layout_marginTop="13dp"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="26dp"
             android:fontFamily="@font/montserrat_bold"
             android:includeFontPadding="false"
             android:text="M"
@@ -266,7 +264,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/maincard_tv_day_thu"
             android:layout_marginTop="6dp"
-            android:layout_marginLeft="6dp"
+            android:layout_marginLeft="16dp"
             card_view:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             card_view:spanCount="7"
             card_view:layout_constraintHorizontal_chainStyle="packed"
@@ -280,10 +278,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="20dp"
             android:fontFamily="@font/montserrat_bold"
             android:includeFontPadding="false"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="20dp"
             android:text="YOU&amp;I"
             android:textColor="@color/stroke_bengaltiger"
             android:textSize="12sp" />
@@ -294,22 +292,30 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="10dp"
-            card_view:srcCompat="@drawable/ic_main_card_bengaltiger" />
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="20dp"
+            card_view:srcCompat="@drawable/ic_maincard_img_normal_bengal" />
 
         <ImageButton
             android:id="@+id/maincard_dailyCheckBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="28dp"
+            android:layout_marginBottom="38dp"
             android:text="오늘 완료하기"
             android:includeFontPadding="false"
             android:textSize="12sp"
             android:background="@drawable/ic_checkbtn_bengal"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="15dp"
             android:fontFamily="@font/montserrat_bold"/>
+
+        <ImageView
+            android:id="@+id/maincard_continue_21_stroke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            card_view:srcCompat="@drawable/ic_maincard_stroke_continue_21_bengal" />
 
     </RelativeLayout>
 
