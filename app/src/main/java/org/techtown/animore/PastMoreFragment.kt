@@ -27,11 +27,34 @@ class PastMoreFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //카드 유형에 맞게 상단바 색 바꿔야 함 앞 화면에서 클릭된 아이템의 index를 어떻게 받아오지?!
+        //앞 화면에서 클릭된 아이템의 정보를 어떻게 받아오지?!
 
-        var dump1 = PastMoreCardData(4, true)
+        var dump1 = PastMoreCardData(1, true)
         val No = PastMoreCardAdapter()
         No.dataPasts.add(dump1)
         pastcard_more.adapter = No
+
+        /*---------------------------------------------------상단바 커스텀------------------------------------------------*/
+        if(No.dataPasts[0].index === 0){
+            past_more_card_topbar.setImageResource(R.drawable.ic_top_bar_guanicoe)
+            //past_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(context,R.color.stroke_guanicoe))
+            past_more_card_back_btn_to_add_frag.setImageResource(R.drawable.ic_back_btn_guanicoe)
+        }else if(No.dataPasts[0].index === 1){
+            past_more_card_topbar.setImageResource(R.drawable.ic_top_bar_illipika)
+            //past_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(parent.context, R.color.stroke_illipika))
+            past_more_card_back_btn_to_add_frag.setImageResource(R.drawable.ic_back_btn_illipika)
+        }else if(No.dataPasts[0].index === 2){
+            past_more_card_topbar.setImageResource(R.drawable.ic_top_bar_harpseal)
+            //past_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(parent.context, R.color.stroke_harpseal))
+            past_more_card_back_btn_to_add_frag.setImageResource(R.drawable.ic_back_btn_harpseal)
+        }else if(No.dataPasts[0].index === 3){
+            past_more_card_topbar.setImageResource(R.drawable.ic_top_bar_javahornhawk)
+            //past_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(parent.context, R.color.stroke_java))
+            past_more_card_back_btn_to_add_frag.setImageResource(R.drawable.ic_back_btn_java)
+        }else{
+            past_more_card_topbar.setImageResource(R.drawable.ic_top_bar_bengaltiger)
+            //past_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(parent.context, R.color.stroke_bengaltiger))
+            past_more_card_back_btn_to_add_frag.setImageResource(R.drawable.ic_back_btn_bengal)
+        }
     }
 }
