@@ -29,7 +29,7 @@ class AddFragmentFinalillipika : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var dump1 = MainCardData(1, "안드어린이에게", true, 7)
+        var dump1 = MainCardData(0, true, 7, "이건 또 뭐람")
         val No = MainCardAdapter()
         No.datas.add(dump1)
         final_add_illipika_cardview.adapter = No

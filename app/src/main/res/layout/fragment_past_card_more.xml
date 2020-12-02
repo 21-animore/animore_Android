@@ -8,7 +8,7 @@
     android:background="@color/colorPrimary">
 
     <ImageView
-        android:id="@+id/past_more_card_topbar_bengal"
+        android:id="@+id/past_more_card_topbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,37 +17,37 @@
         app:srcCompat="@drawable/ic_top_bar_bengaltiger" />
 
     <TextView
-        android:id="@+id/past_more_card_tv_mission_name_bengal"
+        android:id="@+id/past_more_card_tv_mission_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/notosanskr_bold"
         android:text="중고마켓 이용하기"
         android:textColor="@color/stroke_bengaltiger"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/past_more_card_topbar_bengal"
-        app:layout_constraintEnd_toEndOf="@+id/past_more_card_topbar_bengal"
-        app:layout_constraintStart_toStartOf="@+id/past_more_card_topbar_bengal" />
+        app:layout_constraintBottom_toBottomOf="@+id/past_more_card_topbar"
+        app:layout_constraintEnd_toEndOf="@+id/past_more_card_topbar"
+        app:layout_constraintStart_toStartOf="@+id/past_more_card_topbar" />
 
     <ImageButton
-        android:id="@+id/past_more_card_back_btn_to_add_frag_bengal"
+        android:id="@+id/past_more_card_back_btn_to_add_frag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
         android:layout_marginBottom="18dp"
         android:background="@null"
-        app:layout_constraintBottom_toBottomOf="@+id/past_more_card_topbar_bengal"
-        app:layout_constraintStart_toStartOf="@+id/past_more_card_topbar_bengal"
+        app:layout_constraintBottom_toBottomOf="@+id/past_more_card_topbar"
+        app:layout_constraintStart_toStartOf="@+id/past_more_card_topbar"
         app:srcCompat="@drawable/ic_back_btn_bengal" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/pastcard_more_bengal"
+        android:id="@+id/pastcard_more"
         android:layout_width="349dp"
         android:layout_height="600dp"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="30dp"
         app:layout_constraintHorizontal_bias="0.548"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/past_more_card_topbar_bengal"
+        app:layout_constraintTop_toBottomOf="@+id/past_more_card_topbar"
         tools:listitem="@layout/past_more_card_layout"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 

@@ -143,7 +143,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     tv_bottom.text="Not yours, Ours"
 
                     //색 변경
-                    cardview.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    cardview.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.back_illipika))
                     tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))     //내용변경
                     tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
                     tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
@@ -169,7 +169,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     tv_bottom.text="Our Planet"
 
                     //색 변경
-                    cardview.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    cardview.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.back_harpseal))
                     tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))     //내용변경
                     tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
                     tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
@@ -195,7 +195,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     tv_bottom.text="For treeeeeee"
 
                     //색 변경
-                    cardview.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    cardview.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.back_java))
                     tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))     //내용변경
                     tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
                     tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
@@ -221,7 +221,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     tv_bottom.text="YOU&I"
 
                     //색 변경
-                    cardview.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    cardview.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.back_bengaltiger))
                     tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))     //내용변경
                     tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
                     tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))

@@ -47,7 +47,7 @@ class HomeFragment : Fragment() {
         val MyData:MutableList<MainCardData> = mutableListOf<MainCardData>(dump1, dump2, dump3, dump4)
 
         //MyData에 넘겨 받은 카드 개수에 맞춰 width 조절
-        var width = (MyData.size +1) * 697
+        var width = (MyData.size +1) * 743
         var layout = LinearLayout.LayoutParams(width,LinearLayout.LayoutParams.WRAP_CONTENT)
         main_card_list.layoutParams = layout
 
