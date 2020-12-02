@@ -10,7 +10,8 @@ import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home_card_more.*
 import kotlinx.android.synthetic.main.fragment_home_card_more.view.*
-import kotlinx.android.synthetic.main.fragment_past_card_more.*
+
+
 
 class HomeMoreFragment : Fragment() {
     override fun onCreateView(
@@ -72,23 +73,23 @@ class HomeMoreFragment : Fragment() {
         /*---------------------------------------------------상단바 커스텀------------------------------------------------*/
         if(No.homemoreitems[0].index === 0){
             home_more_card_topbar.setImageResource(R.drawable.ic_top_bar_guanicoe)
-            //home_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(context,R.color.stroke_guanicoe))
+            home_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(requireActivity(),R.color.stroke_guanicoe))
             home_more_card_back_btn_to_add_frag.setImageResource(R.drawable.ic_back_btn_guanicoe)
         }else if(No.homemoreitems[0].index === 1){
             home_more_card_topbar.setImageResource(R.drawable.ic_top_bar_illipika)
-            //home_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(parent.context, R.color.stroke_illipika))
+            home_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(requireActivity(), R.color.stroke_illipika))
             home_more_card_back_btn_to_add_frag.setImageResource(R.drawable.ic_back_btn_illipika)
         }else if(No.homemoreitems[0].index === 2){
             home_more_card_topbar.setImageResource(R.drawable.ic_top_bar_harpseal)
-            //home_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(parent.context, R.color.stroke_harpseal))
+            home_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(requireActivity(), R.color.stroke_harpseal))
             home_more_card_back_btn_to_add_frag.setImageResource(R.drawable.ic_back_btn_harpseal)
         }else if(No.homemoreitems[0].index === 3){
             home_more_card_topbar.setImageResource(R.drawable.ic_top_bar_javahornhawk)
-            //home_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(parent.context, R.color.stroke_java))
+            home_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(requireActivity(), R.color.stroke_java))
             home_more_card_back_btn_to_add_frag.setImageResource(R.drawable.ic_back_btn_java)
         }else{
             home_more_card_topbar.setImageResource(R.drawable.ic_top_bar_bengaltiger)
-            //home_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(parent.context, R.color.stroke_bengaltiger))
+            home_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(requireActivity(), R.color.stroke_bengaltiger))
             home_more_card_back_btn_to_add_frag.setImageResource(R.drawable.ic_back_btn_bengal)
         }
 
