@@ -27,10 +27,9 @@ class HomeMoreFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //카드 유형에 맞게 상단바 색 바꿔야 함
+        //카드 유형에 맞게 상단바 색 바꿔야 함 앞 화면에서 클릭된 아이템의 index를 어떻게 받아오지?!
 
-
-        var dump1 = HomeMoreCardData(4, "뭔디", true, 7, success_flag = true)
+        var dump1 = HomeMoreCardData(4, "뭔디", true, 7, true)
         val MyData:MutableList<HomeMoreCardData> = mutableListOf<HomeMoreCardData>(dump1)
         val No = HomeMoreCardAdapter()
         home_more_card_front.adapter = No

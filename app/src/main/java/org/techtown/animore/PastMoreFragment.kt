@@ -26,6 +26,8 @@ class PastMoreFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //카드 유형에 맞게 상단바 색 바꿔야 함 앞 화면에서 클릭된 아이템의 index를 어떻게 받아오지?!
+
         var dump1 = PastMoreCardData(4, false)
         val MyData:MutableList<PastMoreCardData> = mutableListOf<PastMoreCardData>(dump1)
         val No = PastMoreCardAdapter(requireContext(), MyData)

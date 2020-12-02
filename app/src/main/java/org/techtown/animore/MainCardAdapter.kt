@@ -28,7 +28,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
 
     inner class Holder(itemView: View):RecyclerView.ViewHolder(itemView) {
 
-        //캘린더
+        /*-------------------------------------------------캘린더-------------------------------------------------------*/
         val calendarView: RecyclerView = itemView.findViewById(R.id.maincard_calendar_normalcard_layout)
         val calendarRvAdapter = CalendarAdapter()
 
@@ -62,7 +62,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
             calendarView.adapter = calendarRvAdapter
         }
 
-        //사용할 변수 선언
+        /*-------------------------------------------사용할 변수 선언-----------------------------------------------*/
         val cardview = itemView.findViewById<CardView>(R.id.maincard_view)
 
         val tv_mission_name = itemView.findViewById<TextView>(R.id.maincard_tv_mission_name)

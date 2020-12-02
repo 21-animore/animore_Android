@@ -18,6 +18,7 @@ class PastFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_past, container, false)
+
         return view
     }
 
@@ -31,16 +32,16 @@ class PastFragment : Fragment() {
         
         //서버에서 과거 카드 정보 받아와서 넣기
 
-        var dump1 = PastCardData(0, true, "성공카드")
-        var dump2 = PastCardData(1, true, "실패카드")
-        var dump3 = PastCardData(2, true, "성공카드")
-        var dump4 = PastCardData(3, true, "성공카드")
-        var dump5 = PastCardData(4, true, "실패카드")
-        var dump6 = PastCardData(0, false, "실패카드")
-        var dump7 = PastCardData(1, false, "실패카드")
-        var dump8 = PastCardData(2, false, "실패카드")
-        var dump9 = PastCardData(3, false, "실패카드")
-        var dump10 = PastCardData(4, false, "실패카드")
+        var dump1 = PastCardData(0, true, "성공카드", 7)
+        var dump2 = PastCardData(1, true, "실패카드", 14)
+        var dump3 = PastCardData(2, true, "성공카드", 21)
+        var dump4 = PastCardData(3, true, "성공카드", 7)
+        var dump5 = PastCardData(4, true, "실패카드", 14)
+        var dump6 = PastCardData(0, false, "실패카드", 21)
+        var dump7 = PastCardData(1, false, "실패카드", 7)
+        var dump8 = PastCardData(2, false, "실패카드", 14)
+        var dump9 = PastCardData(3, false, "실패카드", 21)
+        var dump10 = PastCardData(4, false, "실패카드", 7)
 
         val No = PastCardAdapter()
         No.datas.add(dump1)

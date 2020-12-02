@@ -47,7 +47,21 @@ class PastCardAdapter : RecyclerView.Adapter<PastCardAdapter.Holder>(){
         val tv_totalCount = itemView.findViewById<TextView>(R.id.pastcard_tv_totalCount)
         val tv_period = itemView.findViewById<TextView>(R.id.pastcard_tv_period)
 
+        val tv_continue_count = itemView.findViewById<TextView>(R.id.pastcard_tv_continuecount)
+
         fun bind(PastCardData: PastCardData) {
+
+            //연속 여부에 따라 뒷 배경 글자 바꿈
+            if(PastCardData.duringday === 7){
+                tv_continue_count.text = "7"
+            }else if(PastCardData.duringday === 14){
+                tv_continue_count.text = "14"
+            }else if(PastCardData.duringday === 21){
+                tv_continue_count.text = "21"
+            }else{
+                tv_continue_count.text = ""
+            }
+
             if(PastCardData.success_flag === true){
                 //성공 카드일 경우
                 successful_flag.text = "COMPLETE"
@@ -62,6 +76,7 @@ class PastCardAdapter : RecyclerView.Adapter<PastCardAdapter.Holder>(){
                     tv_achieveCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                     tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                     tv_period.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
+                    tv_continue_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.blur_guanicoe))
                 }else if(PastCardData.index === 1){
                     back.setImageResource(R.drawable.ic_pastcard_back_illipika)
                     successful_flag.setTextColor(ContextCompat.getColor(itemView.context, R.color.complete_illipika))
@@ -71,6 +86,7 @@ class PastCardAdapter : RecyclerView.Adapter<PastCardAdapter.Holder>(){
                     tv_achieveCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
                     tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
                     tv_period.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    tv_continue_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.blur_illipika))
                 }else if(PastCardData.index === 2){
                     back.setImageResource(R.drawable.ic_pastcard_back_harpseal)
                     successful_flag.setTextColor(ContextCompat.getColor(itemView.context, R.color.complete_harpseal))
@@ -80,6 +96,7 @@ class PastCardAdapter : RecyclerView.Adapter<PastCardAdapter.Holder>(){
                     tv_achieveCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
                     tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
                     tv_period.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    tv_continue_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.blur_harpseal))
                 }else if(PastCardData.index === 3){
                     back.setImageResource(R.drawable.ic_pastcard_back_java)
                     successful_flag.setTextColor(ContextCompat.getColor(itemView.context, R.color.complete_java))
@@ -89,6 +106,7 @@ class PastCardAdapter : RecyclerView.Adapter<PastCardAdapter.Holder>(){
                     tv_achieveCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
                     tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
                     tv_period.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    tv_continue_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.blur_java))
                 }else if(PastCardData.index === 4){
                     back.setImageResource(R.drawable.ic_pastcard_back_bengal)
                     successful_flag.setTextColor(ContextCompat.getColor(itemView.context, R.color.complete_bengaltiger))
@@ -98,6 +116,7 @@ class PastCardAdapter : RecyclerView.Adapter<PastCardAdapter.Holder>(){
                     tv_achieveCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
                     tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
                     tv_period.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    tv_continue_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.blur_bengal))
                 }
 
             }else{
@@ -112,6 +131,7 @@ class PastCardAdapter : RecyclerView.Adapter<PastCardAdapter.Holder>(){
                     tv_achieveCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                     tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                     tv_period.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
+                    tv_continue_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.blur_guanicoe))
                 }else if(PastCardData.index === 1){
                     back.setImageResource(R.drawable.ic_pastcard_back_illipika)
                     img.setImageResource(R.drawable.ic_past_card_illipika)
@@ -119,6 +139,7 @@ class PastCardAdapter : RecyclerView.Adapter<PastCardAdapter.Holder>(){
                     tv_achieveCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
                     tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
                     tv_period.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    tv_continue_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.blur_illipika))
                 }else if(PastCardData.index === 2){
                     back.setImageResource(R.drawable.ic_pastcard_back_harpseal)
                     img.setImageResource(R.drawable.ic_past_card_harpseal)
@@ -126,6 +147,7 @@ class PastCardAdapter : RecyclerView.Adapter<PastCardAdapter.Holder>(){
                     tv_achieveCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
                     tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
                     tv_period.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    tv_continue_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.blur_harpseal))
                 }else if(PastCardData.index === 3){
                     back.setImageResource(R.drawable.ic_pastcard_back_java)
                     img.setImageResource(R.drawable.ic_past_card_java)
@@ -133,6 +155,7 @@ class PastCardAdapter : RecyclerView.Adapter<PastCardAdapter.Holder>(){
                     tv_achieveCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
                     tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
                     tv_period.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    tv_continue_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.blur_java))
                 }else if(PastCardData.index === 4){
                     back.setImageResource(R.drawable.ic_pastcard_back_bengal)
                     img.setImageResource(R.drawable.ic_past_card_bengaltiger)
@@ -140,6 +163,7 @@ class PastCardAdapter : RecyclerView.Adapter<PastCardAdapter.Holder>(){
                     tv_achieveCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
                     tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
                     tv_period.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    tv_continue_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.blur_bengal))
                 }
             }
         }

@@ -6,9 +6,9 @@
     android:layout_height="409dp"
     android:id="@+id/maincard_view"
     android:layout_margin="5dp"
-    card_view:cardCornerRadius="12dp"
     card_view:cardElevation="3dp"
     xmlns:tools="http://schemas.android.com/tools"
+    card_view:cardCornerRadius="12dp"
     >
 
     <RelativeLayout
@@ -26,7 +26,7 @@
             android:layout_marginLeft="15dp"
             android:fontFamily="@font/notosanskr_bold"
             android:includeFontPadding="false"
-            android:text="중고마켓 이용하기"
+            android:text="환경보호하기"
             android:textColor="@color/stroke_bengaltiger"
             android:textSize="42sp" />
 

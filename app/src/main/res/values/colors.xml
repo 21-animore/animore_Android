@@ -24,6 +24,12 @@
     <color name="complete_harpseal">#61448E</color>
     <color name="complete_java">#E8771C</color>
 
+    <color name="blur_bengal">#1AAB2220</color>
+    <color name="blur_guanicoe">#1A1F3146</color>
+    <color name="blur_illipika">#1AFFC5BB</color>
+    <color name="blur_harpseal">#1A035874</color>
+    <color name="blur_java">#1A61448E</color>
+
     <color name="teal_200">#1F1F1F</color>
     <color name="purple_700">#1F1F1F</color>
     <color name="purple_200">#1F1F1F</color>

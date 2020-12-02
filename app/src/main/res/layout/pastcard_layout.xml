@@ -46,17 +46,34 @@
             android:layout_alignParentTop="true"
             card_view:srcCompat="@drawable/ic_pastcard_back_bengal" />
 
-      <TextView
-        android:id="@+id/pastcard_tv_successFlag"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-          android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:fontFamily="@font/montserrat_bold"
-        android:text="COMPELETE"
-        android:textSize="12sp" />
+        <TextView
+            android:id="@+id/pastcard_tv_continuecount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_extrabold"
+            android:includeFontPadding="false"
+            android:text="7"
+            android:textColor="@color/blur_bengal"
+            android:textSize="72sp" />
+
+          <TextView
+            android:id="@+id/pastcard_tv_successFlag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+              android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="COMPELETE"
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/pastcard_tv_cardName"
