@@ -116,9 +116,24 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     tv_mission_category_eng.text="Spending Habit"
                     tv_mission_category_kor.text="소비 습관 개선"
                     tv_bottom.text="Think one more"
-                    
-                    //색 변경
 
+                    //색 변경
+                    cardview.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.back_guanicoe))
+                    tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))     //내용변경
+                    tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
+                    tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
+                    tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
+                    tv_bottom.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
+                    mon.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
+                    tue.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
+                    wed.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
+                    thu.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
+                    fri.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
+                    sat.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
+                    sun.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
+                    dailyCheckBtn.setImageResource(R.drawable.ic_checkbtn_guanicoe)
+
+                    //나중에 캘린더 점선 실선 글씨 색 바꾸기
 
                 } else if(MainCardData.index==1){
 
@@ -126,6 +141,24 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     tv_mission_category_eng.text="Saving Electricity"
                     tv_mission_category_kor.text="전기 절약"
                     tv_bottom.text="Not yours, Ours"
+
+                    //색 변경
+                    cardview.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))     //내용변경
+                    tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    tv_bottom.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    mon.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    tue.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    wed.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    thu.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    fri.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    sat.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    sun.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    dailyCheckBtn.setImageResource(R.drawable.ic_checkbtn_illipika)
+
+                    //나중에 캘린더 점선 실선 글씨 색 바꾸기
 
 
                 } else if(MainCardData.index==2){
@@ -135,6 +168,24 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     tv_mission_category_kor.text="쓰레기 배출량 감소"
                     tv_bottom.text="Our Planet"
 
+                    //색 변경
+                    cardview.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))     //내용변경
+                    tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    tv_bottom.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    mon.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    tue.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    wed.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    thu.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    fri.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    sat.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    sun.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    dailyCheckBtn.setImageResource(R.drawable.ic_checkbtn_harpseal)
+
+                    //나중에 캘린더 점선 실선 글씨 색 바꾸기
+
 
                 }else if(MainCardData.index==3){
 
@@ -143,6 +194,24 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     tv_mission_category_kor.text="페이퍼리스"
                     tv_bottom.text="For treeeeeee"
 
+                    //색 변경
+                    cardview.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))     //내용변경
+                    tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    tv_bottom.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    mon.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    tue.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    wed.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    thu.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    fri.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    sat.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    sun.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    dailyCheckBtn.setImageResource(R.drawable.ic_checkbtn_java)
+
+                    //나중에 캘린더 점선 실선 글씨 색 바꾸기
+
 
                 }else if(MainCardData.index==4){
 
@@ -150,6 +219,24 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     tv_mission_category_eng.text="Living Habit"
                     tv_mission_category_kor.text="생활 습관 개선"
                     tv_bottom.text="YOU&I"
+
+                    //색 변경
+                    cardview.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))     //내용변경
+                    tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    tv_bottom.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    mon.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    tue.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    wed.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    thu.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    fri.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    sat.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    sun.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    dailyCheckBtn.setImageResource(R.drawable.ic_checkbtn_bengal)
+
+                    //나중에 캘린더 점선 실선 글씨 색 바꾸기
 
                 }
 
@@ -256,7 +343,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))     //내용변경
                     tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                     tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
-                    tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
+                    tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                     tv_achieve_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))   //내용변경
                     tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                     tv_index_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_guanicoe))  //내용변경
@@ -282,7 +369,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))     //내용변경
                     tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
                     tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
-                    tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
                     tv_achieve_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))   //내용변경
                     tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
                     tv_index_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_illipika))  //내용변경
@@ -308,7 +395,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))     //내용변경
                     tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
                     tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
-                    tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
                     tv_achieve_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))   //내용변경
                     tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
                     tv_index_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_harpseal))  //내용변경
@@ -334,7 +421,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))     //내용변경
                     tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
                     tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
-                    tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
                     tv_achieve_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))   //내용변경
                     tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
                     tv_index_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_java))  //내용변경
@@ -360,7 +447,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))     //내용변경
                     tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
                     tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
-                    tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
                     tv_achieve_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))   //내용변경
                     tv_totalCount.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
                     tv_index_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_bengaltiger))  //내용변경
