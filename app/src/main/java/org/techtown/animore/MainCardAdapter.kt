@@ -28,6 +28,10 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
 
     inner class Holder(itemView: View):RecyclerView.ViewHolder(itemView) {
 
+        /*-------------------------------------------------선생님-------------------------------------------------------*/
+
+
+
         /*-------------------------------------------------캘린더-------------------------------------------------------*/
         val calendarView: RecyclerView = itemView.findViewById(R.id.maincard_calendar_normalcard_layout)
         val calendarRvAdapter = CalendarAdapter()
@@ -107,6 +111,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
 
                 //캘린더 그리기
                 createCalendar(MainCardData.dayDuring)
+                //draw_cal(MainCardData.dayDuring)
 
                 /*----------------------------------연속 카드 일수별로 다른 요소 변경--------------------------------------------*/
                 
