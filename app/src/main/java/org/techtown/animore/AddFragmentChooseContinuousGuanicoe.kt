@@ -8,10 +8,7 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TableLayout
-import android.widget.TableRow
-import android.widget.TextView
+import android.widget.*
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
@@ -29,6 +26,13 @@ class AddFragmentChooseContinuousGuanicoe : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_choose_option_continuous_guanicoe, container, false)
 
+        view.findViewById<Button>(R.id.choose_option_continuous_tv_normal_guanicoe).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_add_choose_continuous_guanicoe_to_add_choose_normal_guanicoe)
+        }
+
+        view.findViewById<Button>(R.id.choose_option_continuous_btn_to_get_randomcard_guanicoe).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_add_choose_continuous_guanicoe_to_add_final_guanicoe_fragment)
+        }
 
         return view;
     }

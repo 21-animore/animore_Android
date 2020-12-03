@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import androidx.navigation.Navigation
 
 class AddFragment : Fragment() {
@@ -18,6 +19,10 @@ class AddFragment : Fragment() {
         // Inflate the layout for this fragment
 
         val view = inflater.inflate(R.layout.fragment_add, container, false)
+
+        view.findViewById<ImageButton>(R.id.add_btn_to_add_animal_guanicoe).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_add_fragment_to_add_animal_guanicoe)
+        }
 
         return view
     }

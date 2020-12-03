@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
@@ -19,6 +21,10 @@ class AddFragmentFinalGuanicoe : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_final_add_guanicoe, container, false)
+
+        view.findViewById<Button>(R.id.final_animal_card_btn_to_get_maincard_guanicoe).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_add_final_guanicoe_fragment_to_home_fragment)
+        }
 
         return view;
     }
