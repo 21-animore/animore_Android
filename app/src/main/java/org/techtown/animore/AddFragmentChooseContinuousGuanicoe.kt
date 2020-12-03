@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.provider.Settings.Global.putString
 import android.provider.Settings.Secure.putString
+import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -26,12 +27,17 @@ class AddFragmentChooseContinuousGuanicoe : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_choose_option_continuous_guanicoe, container, false)
 
+        val mission_name_guanicoe = arguments?.getString("mission_name_guanicoe").toString()
+        val index = arguments?.getString("index").toString()
+        val bundle = bundleOf("mission_name_guanicoe" to mission_name_guanicoe, "index" to index)
+        Log.d("찍어본다", "name:"+mission_name_guanicoe.toString()+", index:"+index)
+
         view.findViewById<Button>(R.id.choose_option_continuous_tv_normal_guanicoe).setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_add_choose_continuous_guanicoe_to_add_choose_normal_guanicoe)
+            Navigation.findNavController(view).navigate(R.id.action_add_choose_continuous_guanicoe_to_add_choose_normal_guanicoe, bundle)
         }
 
         view.findViewById<Button>(R.id.choose_option_continuous_btn_to_get_randomcard_guanicoe).setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_add_choose_continuous_guanicoe_to_add_final_guanicoe_fragment)
+            Navigation.findNavController(view).navigate(R.id.action_add_choose_continuous_guanicoe_to_add_final_guanicoe_fragment, bundle)
         }
 
         return view;

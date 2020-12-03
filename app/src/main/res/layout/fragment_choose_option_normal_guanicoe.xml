@@ -207,5 +207,16 @@
         app:layout_constraintStart_toStartOf="@+id/choose_option_normal_btn_to_get_final_guanicoe"
         app:layout_constraintTop_toTopOf="@+id/choose_option_normal_btn_to_get_final_guanicoe"/>
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_normal_card_dialog_stroke"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_option_normal_tv_month_guanicoe"
+        android:layout_marginTop="6dp"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

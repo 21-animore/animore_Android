@@ -1,6 +1,7 @@
 package org.techtown.animore
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,25 +33,15 @@ class AddFragmentFinalGuanicoe : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val mission_name_guanicoe = arguments?.getString("mission_name_guanicoe").toString()
+        val index = arguments?.getString("index").toString()
+        Log.d("찍어본다", "name:"+mission_name_guanicoe.toString()+", index:"+index)
 
-        /*
-            var dump1 = MainCardData(0, true, 7, "이건 또 뭐람")
-            val No = MainCardAdapter()
-            No.datas.add(dump1)
-            final_add_bengal_cardview.adapter = No
-        */
 
-        /*
-        val title = tv_mission_name.text.toString()
-        val index = 0;
-        //bundle에 HomeFragment로 전달하고자 하는 text를 넣는다
-        val bundle = bundleOf("title" to title, "index" to index)
-
-        view.findViewById<Button>(R.id.btn_to_get_randomcard_guanicoe).setOnClickListener {
-            //fragment 전환 시 bundle을 포함해서 보낸다
-            Navigation.findNavController(view).navigate(R.id.action_add_final_normal_guanicoe_fragment_to_home_fragment, bundle)
-        }
-         */
+        var dump1 = MainCardData(index = index.toInt(), false, 0, mission_name = mission_name_guanicoe)
+        val No = MainCardAdapter()
+        No.datas.add(dump1)
+        final_add_guanicoe_cardview.adapter = No
 
     }
 }

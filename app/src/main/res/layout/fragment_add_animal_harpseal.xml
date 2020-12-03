@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/notosanskr_bold"
-        android:text="벵갈호랑이 구출하기"
+        android:text="하프물범 구출하기"
         android:textColor="@color/stroke_harpseal"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/intro_animal_card_topbar_harpseal"
