@@ -1,5 +1,6 @@
 package org.techtown.animore
 
+import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
 import android.provider.Settings.Global.putString
@@ -16,6 +17,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import kotlinx.android.synthetic.main.fragment_final_add_guanicoe.*
+import java.util.*
 
 class AddFragmentChooseNormalGuanicoe : Fragment() {
     override fun onCreateView(
@@ -38,5 +40,21 @@ class AddFragmentChooseNormalGuanicoe : Fragment() {
             Navigation.findNavController(view).navigate(R.id.action_add_choose_normal_guanicoe_to_add_choose_continuous_guanicoe, bundle)
         }
         return view;
+    }
+
+    fun showDatePickerDialog() {
+        val calendar: Calendar = Calendar.getInstance()
+        DatePickerDialog(
+                requireActivity(),
+                R.style.NumberPicker,
+                DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
+                    val currentDate = Calendar.getInstance().apply { set(year, monthOfYear, dayOfMonth) }
+                },
+                calendar.get(Calendar.YEAR),
+                calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_MONTH)
+        ).apply {
+            datePicker.minDate = System.currentTimeMillis()
+        }.show()
     }
 }

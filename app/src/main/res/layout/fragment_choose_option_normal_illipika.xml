@@ -170,12 +170,20 @@
         android:calendarViewShown="false"
         android:datePickerMode="spinner"
         android:theme="@style/NumberPicker"
-        android:calendarTextColor="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/choose_option_normal_tv_month_illipika" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_normal_card_dialog_stroke"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_option_normal_tv_month_illipika"
+        android:layout_marginTop="6dp" />
     <Button
         android:id="@+id/choose_option_normal_btn_to_get_final_illipika"
         style="@null"

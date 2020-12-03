@@ -14,18 +14,13 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="NumberPicker" parent="Theme.ANIMORE">
-        <!--<item name="selectionDivider">@color/white</item>-->
-        <item name="android:textColor">@color/white</item>
-        <item name="colorPrimary">@color/colorAccent</item>
-        <item name="colorControlNormal">@color/colorAccent</item>
-        <item name ="fontFamily">@font/montserrat_bold</item>
-        <item name="android:textColorPrimaryInverse">@color/colorAccent</item>
-        <item name="android:headerBackground">@android:color/transparent</item>
-        <item name="android:colorControlNormal">@color/colorAccent</item>
-        <item name="android:colorControlHighlight">@color/colorAccent</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColorSecondaryInverse">@color/colorAccent</item>
+    <style name="NumberPicker" parent="android:Widget.Material.Light.DatePicker">
+        <item name="colorControlNormal">#00ffffff</item>
+        <item name="android:textColorPrimary">@color/colorAccent</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:minDate">12/17/2020</item>
+        <item name="android:yearListSelectorColor">@color/white</item>
     </style>
 
 </resources>
