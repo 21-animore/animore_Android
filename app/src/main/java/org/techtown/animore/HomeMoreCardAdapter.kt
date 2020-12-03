@@ -36,6 +36,8 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
 
         fun bind(HomeMoreCardData: HomeMoreCardData, context: Context) {
 
+            /*-----------------------------------------뒤집는 애니메이션------------------------------------------*/
+
             backcard.visibility=View.GONE;
 
             frontcard.setOnClickListener {
@@ -74,6 +76,8 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
             }else if(HomeMoreCardData.index === 4){
 
             }
+
+            //다른 바뀌는 정보들은 앞 카드에서 받아와서 바꾸면 되나??
         }
     }
 }

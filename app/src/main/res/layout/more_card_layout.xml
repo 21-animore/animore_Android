@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
-
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -18,7 +16,7 @@
         android:id="@+id/more_card_view_front">
 
         <ImageView
-            android:id="@+id/background_front"
+            android:id="@+id/more_card_front_backgroundimg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -26,41 +24,27 @@
             card_view:srcCompat="@drawable/ic_test" />
 
         <ImageView
-            android:id="@+id/stroke"
+            android:id="@+id/more_card_front_stroke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            card_view:srcCompat="@drawable/ic_home_more_card_stroke_bengal" />
+
+        <ImageView
+            android:id="@+id/more_card_front_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginTop="12dp"
             android:layout_marginLeft="10dp"
-            card_view:srcCompat="@drawable/ic_pastcard_more_stroke_bengaltiger" />
-
-        <ImageView
-            android:id="@+id/img"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="25dp"
-            card_view:srcCompat="@drawable/ic_pastcard_more_bengaltiger" />
+            card_view:srcCompat="@drawable/ic_home_more_card_front_7_bengal" />
 
         <TextView
-            android:id="@+id/tv_count_num_behind"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="125dp"
-            android:layout_marginTop="278dp"
-            android:fontFamily="@font/montserrat_bold"
-            android:includeFontPadding="false"
-            android:text="21"
-            android:textColor="#22AB2220"
-            android:textSize="96sp" />
-
-        <TextView
-            android:id="@+id/tv_mission_name"
+            android:id="@+id/more_card_front_tv_mission_name"
             android:layout_width="129dp"
             android:layout_height="113dp"
             android:layout_alignParentLeft="true"
@@ -75,13 +59,13 @@
             android:textSize="42sp" />
 
         <TextView
-            android:id="@+id/tv_mission_total_count"
+            android:id="@+id/more_card_front_tv_mission_total_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="73dp"
-            android:layout_marginRight="62dp"
+            android:layout_marginTop="83dp"
+            android:layout_marginRight="36dp"
             android:fontFamily="@font/montserrat_bold"
             android:includeFontPadding="false"
             android:text="21"
@@ -89,7 +73,7 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/tv_mission_category_eng"
+            android:id="@+id/more_card_front_tv_mission_category_eng"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -102,7 +86,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tv_mission_category_kor"
+            android:id="@+id/more_card_front_tv_mission_category_kor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -116,7 +100,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tv_achieve_count"
+            android:id="@+id/more_card_front_tv_achieve_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -130,7 +114,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tv_start_date_title"
+            android:id="@+id/more_card_front_tv_start_date_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -144,7 +128,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tv_end_date_title"
+            android:id="@+id/more_card_front_tv_end_date_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -158,7 +142,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tv_achieve_count_num"
+            android:id="@+id/more_card_front_tv_achieve_count_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -172,12 +156,12 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tv_times"
+            android:id="@+id/more_card_front_tv_times"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginTop="170dp"
-            android:layout_toEndOf="@+id/tv_achieve_count_num"
+            android:layout_toEndOf="@+id/more_card_front_tv_achieve_count_num"
             android:fontFamily="@font/montserrat_medium"
             android:includeFontPadding="false"
             android:text=" times"
@@ -185,7 +169,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tv_start_date"
+            android:id="@+id/more_card_front_tv_start_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -199,7 +183,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tv_end_date"
+            android:id="@+id/more_card_front_tv_end_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -213,7 +197,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tv_process"
+            android:id="@+id/more_card_front_tv_process"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -227,12 +211,12 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tv_process_count"
+            android:id="@+id/more_card_front_tv_process_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="195dp"
             android:layout_marginRight="2dp"
-            android:layout_toStartOf="@+id/tv_count_slash"
+            android:layout_toStartOf="@+id/more_card_front_tv_count_slash"
             android:fontFamily="@font/notosanskr_bold"
             android:includeFontPadding="false"
             android:text="10"
@@ -240,12 +224,12 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tv_count_slash"
+            android:id="@+id/more_card_front_tv_count_slash"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:layout_toStartOf="@+id/tv_total_count"
+            android:layout_toStartOf="@+id/more_card_front_tv_total_count"
             android:layout_marginTop="195dp"
             android:layout_marginRight="47dp"
             android:fontFamily="@font/notosanskr_bold"
@@ -255,7 +239,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tv_total_count"
+            android:id="@+id/more_card_front_tv_total_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -269,20 +253,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tv_mission_content"
-            android:layout_width="290dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="260dp"
-            android:fontFamily="@font/notosanskr_medium"
-            android:includeFontPadding="false"
-            android:lineSpacingExtra="2sp"
-            android:text="온라인에서 영상을 30분 재생할 때 무려 1.6kg의 이산화탄소가 발생한다고 합니다. 차로 6.3km로 운전했을 때 발생하는 이산화탄소와 같은 양입니다. 온라인 상에서 데이터를 전송하고 저장하는 시설에서 전력이 소비되면서 냉방에도 사용이 되고 있습니다. 21일 동안, 동영상의 시청을 줄이고 주위에 관심을 가져보는 건 어떨까요?"
-            android:textColor="#AB2220"
-            android:textSize="12sp" />
-
-        <TextView
-            android:id="@+id/tv_bottom_sentence"
+            android:id="@+id/more_card_front_tv_bottom_sentence"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -294,6 +265,306 @@
             android:textColor="#AB2220"
             android:textSize="12sp" />
 
+        <ImageView
+            android:id="@+id/more_card_front_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:srcCompat="@drawable/ic_progressbar_default"
+            android:layout_below="@+id/more_card_front_tv_process"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="30dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="349dp"
+        android:layout_height="502dp"
+        android:id="@+id/more_card_view_back">
+
+        <ImageView
+            android:id="@+id/more_card_back_backgroundimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            card_view:srcCompat="@drawable/ic_test" />
+
+        <ImageView
+            android:id="@+id/more_card_back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="10dp"
+            card_view:srcCompat="@drawable/ic_home_more_card_back_7_bengal" />
+
+        <ImageView
+            android:id="@+id/more_card_back_stroke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            card_view:srcCompat="@drawable/ic_home_more_card_stroke_bengal" />
+
+        <TextView
+            android:id="@+id/more_card_back_tv_count_num_behind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="268dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:includeFontPadding="false"
+            android:text="21"
+            android:textColor="#22AB2220"
+            android:textSize="96sp" />
+
+        <TextView
+            android:id="@+id/more_card_back_tv_mission_name"
+            android:layout_width="129dp"
+            android:layout_height="113dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:lineSpacingExtra ="-12dp"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            android:text="동영상 덜 보기"
+            android:textColor="#AB2220"
+            android:textSize="42sp" />
+
+        <TextView
+            android:id="@+id/more_card_back_tv_mission_total_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="83dp"
+            android:layout_marginRight="36dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:includeFontPadding="false"
+            android:text="21"
+            android:textColor="@color/back_bengaltiger"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/more_card_back_tv_mission_category_eng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="124dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:includeFontPadding="false"
+            android:text="Living Habit"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/more_card_back_tv_mission_category_kor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="124dp"
+            android:layout_marginRight="30dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:includeFontPadding="false"
+            android:text="생활 습관 개선"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/more_card_back_tv_achieve_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="145dp"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            android:text="횟수"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/more_card_back_tv_start_date_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="145dp"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            android:text="시작"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/more_card_back_tv_end_date_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="210dp"
+            android:layout_marginTop="145dp"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            android:text="끝"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/more_card_back_tv_achieve_count_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="170dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:includeFontPadding="false"
+            android:text="10"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/more_card_back_tv_times"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="170dp"
+            android:layout_toEndOf="@+id/more_card_back_tv_achieve_count_num"
+            android:fontFamily="@font/montserrat_medium"
+            android:includeFontPadding="false"
+            android:text=" times"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/more_card_back_tv_start_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="170dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:includeFontPadding="false"
+            android:text="2020.10.01"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/more_card_back_tv_end_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="210dp"
+            android:layout_marginTop="170dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:includeFontPadding="false"
+            android:text="2020.10.21"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/more_card_back_tv_process"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="195dp"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            android:text="진행 사항"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/more_card_back_tv_process_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="195dp"
+            android:layout_marginRight="2dp"
+            android:layout_toStartOf="@+id/more_card_back_tv_count_slash"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            android:text="10"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/more_card_back_tv_count_slash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_toStartOf="@+id/more_card_back_tv_total_count"
+            android:layout_marginTop="195dp"
+            android:layout_marginRight="47dp"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            android:text="/"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/more_card_back_tv_total_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="195dp"
+            android:layout_marginRight="30dp"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            android:text="21"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/more_card_back_tv_mission_content"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="250dp"
+            android:fontFamily="@font/notosanskr_medium"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="2sp"
+            android:text="온라인에서 영상을 30분 재생할 때 무려 1.6kg의 이산화탄소가 발생한다고 합니다. 차로 6.3km로 운전했을 때 발생하는 이산화탄소와 같은 양입니다. 온라인 상에서 데이터를 전송하고 저장하는 시설에서 전력이 소비되면서 냉방에도 사용이 되고 있습니다. 21일 동안, 동영상의 시청을 줄이고 주위에 관심을 가져보는 건 어떨까요?"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/more_card_back_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:srcCompat="@drawable/ic_progressbar_default"
+            android:layout_below="@+id/more_card_back_tv_process"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="30dp"/>
+
+        <TextView
+            android:id="@+id/more_card_back_tv_bottom_sentence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:includeFontPadding="false"
+            android:text="you&amp;I"
+            android:textColor="#AB2220"
+            android:textSize="12sp" />
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

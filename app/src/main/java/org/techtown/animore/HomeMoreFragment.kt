@@ -68,7 +68,7 @@ class HomeMoreFragment : Fragment() {
 
         //앞 화면에서 클릭된 아이템의 정보를 어떻게 받아오지?!
         
-        var dump1 = HomeMoreCardData(2, "뭔디", true, 7, true)
+        var dump1 = HomeMoreCardData(4, "뭔디", true, 7, true)
         val No = HomeMoreCardAdapter(requireContext())
         No.homemoreitems.add(dump1)
 

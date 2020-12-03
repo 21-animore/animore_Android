@@ -45,7 +45,7 @@
         android:id="@+id/home_more_card_reallydelete"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/ic_pastcard_more_reallydelete"
+        android:src="@drawable/ic_more_reallydelete"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +72,7 @@
         android:layout_marginTop="155dp"
         android:layout_marginEnd="19dp"
         android:background="@null"
-        android:src="@drawable/ic_pastcard_more_btn_giveup"
+        android:src="@drawable/ic_more_btn_giveup"
         app:layout_constraintTop_toBottomOf="@+id/home_more_card_tv_reallydelete"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="81dp"/>
@@ -84,7 +84,7 @@
         android:layout_marginTop="155dp"
         android:layout_marginEnd="81dp"
         android:background="@null"
-        android:src="@drawable/ic_pastcard_more_btn_cancle"
+        android:src="@drawable/ic_more_btn_cancle"
         app:layout_constraintTop_toBottomOf="@+id/home_more_card_tv_reallydelete"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="81dp"/>
