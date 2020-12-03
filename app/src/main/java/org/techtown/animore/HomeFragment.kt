@@ -14,6 +14,14 @@ import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
 
+    var bundle_mission_name = ""
+    var bundle_index = ""
+    var bundle_count = ""
+    var bundle_total_count = ""
+    var bundle_start_date = ""
+    var bundle_end_date = ""
+    var bundle_mission_expression = ""
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -23,14 +31,9 @@ class HomeFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
         //임시로 테스트
-        view.findViewById<ImageView>(R.id.main_logo).setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_home_fragment_to_home_more_card_fragment)
-        }
         view.findViewById<TextView>(R.id.main_title).setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_home_fragment_to_test_fragment)
         }
-
-        //카드를 클릭할 때 넘어가게 하려면 어떤 아이디를 줘야되나??
         
         return view
     }
@@ -42,6 +45,8 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        //서버로부터 정보를 받아와서 넣어주겠지?
 
         var dump1 = MainCardData(0, false, 0, "연속7일")
         var dump2 = MainCardData(1, false, 0, "연속14일")

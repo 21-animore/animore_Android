@@ -62,7 +62,21 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                 backcard.setCameraDistance(scale)
             }
 
-            /*-------------------------------------------여기까지!-------------------------------------------------*/
+
+            /*----------------------------------미션마다 다른 정보 우선 배정--------------------------------------------*/
+
+            //HomeMoreCardData.어쩌구로 아래들에 대입(아마 뒷장도 있어서 더 많이 필요할 것)
+            /*
+            tv_mission_name.text = ""
+            tv_achieve_count.text = ""
+            tv_totalCount.text = ""
+            tv_index_count_num.text = ""
+            tv_start_date.text = ""
+            tv_end_date.text = ""
+             */
+
+            /*----------------------------------타입마다 다른 정보 나중 배정--------------------------------------------*/
+
 
             //유형별 달라지는 부분
             if(HomeMoreCardData.index === 0){

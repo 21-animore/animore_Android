@@ -25,8 +25,6 @@ class AddFragementMissionGuanicoe : Fragment() {
 
         val mission_name_guanicoe = "미션 이름 적기"
         val index = "0";
-
-        //bundle에 HomeFragment로 전달하고자 하는 text를 넣는다
         val bundle = bundleOf("mission_name_guanicoe" to mission_name_guanicoe, "index" to index)
         Log.d("찍어본다", "name:"+mission_name_guanicoe.toString()+", index:"+index)
 

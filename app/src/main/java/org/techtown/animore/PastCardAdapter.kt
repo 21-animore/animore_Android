@@ -13,6 +13,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
+import androidx.core.os.bundleOf
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.pastcard_layout.view.*
 
@@ -49,7 +51,38 @@ class PastCardAdapter : RecyclerView.Adapter<PastCardAdapter.Holder>(){
 
         val tv_continue_count = itemView.findViewById<TextView>(R.id.pastcard_tv_continuecount)
 
+
+
+
         fun bind(PastCardData: PastCardData) {
+
+            /*----------------------------------데이터 바인딩 부분--------------------------------------------*/
+            //MainCardData.어쩌구로 아래들에 대입
+            var bundle_mission_name = ""   //미션 이름
+            var bundle_index = ""   //인덱스(유형 구분)
+            var bundle_count = ""   //카운트(달성 횟수)
+            var bundle_total_count = "" //총 횟수(7,14,21)
+            var bundle_start_date = ""  //시작 날짜
+            var bundle_end_date = ""    //끝 날짜
+            var bundle_mission_expression = "" //미션별 소개 글
+            var bundle_success_flag = ""    //성공 여부
+
+
+
+            /*----------------------------------미션마다 다른 정보 우선 배정--------------------------------------------*/
+
+            //PastCardData.어쩌구로 아래들에 대입
+            /*
+            tv_mission_name.text = ""
+            tv_achieve_count.text = ""
+            tv_totalCount.text = ""
+            tv_index_count_num.text = ""
+            tv_start_date.text = ""
+            tv_end_date.text = ""
+             */
+
+            /*----------------------------------타입마다 다른 정보 나중 배정--------------------------------------------*/
+
 
             //연속 여부에 따라 뒷 배경 글자 바꿈
             if(PastCardData.duringday === 7){
@@ -166,6 +199,21 @@ class PastCardAdapter : RecyclerView.Adapter<PastCardAdapter.Holder>(){
                     tv_continue_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.blur_bengal))
                 }
             }
+
+            //클릭한 카드의 데이터 상세 뷰로 보내기
+            val bundle = bundleOf(
+                    "bundle_mission_name" to bundle_mission_name,
+                    "bundle_index" to bundle_index,
+                    "bundle_count" to bundle_count,
+                    "bundle_total_count" to bundle_total_count,
+                    "bundle_start_date" to bundle_start_date,
+                    "bundle_end_date" to bundle_end_date,
+                    "bundle_mission_expression" to bundle_mission_expression,
+                    "bundle_success_flag" to bundle_success_flag)
+            cardview.setOnClickListener {
+                Navigation.findNavController(cardview).navigate(R.id.action_past_fragment_to_pastmore_fragment, bundle)
+            }
+
         }
     }
 

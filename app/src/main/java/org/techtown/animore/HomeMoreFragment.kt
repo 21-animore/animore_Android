@@ -1,11 +1,13 @@
 package org.techtown.animore
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.GONE
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -13,8 +15,16 @@ import kotlinx.android.synthetic.main.fragment_home_card_more.*
 import kotlinx.android.synthetic.main.fragment_home_card_more.view.*
 
 
-
 class HomeMoreFragment : Fragment() {
+
+    var bundle_mission_name = ""
+    var bundle_index = ""
+    var bundle_count = ""
+    var bundle_total_count = ""
+    var bundle_start_date = ""
+    var bundle_end_date = ""
+    var bundle_mission_expression = ""
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,6 +32,19 @@ class HomeMoreFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home_card_more, container, false)
+
+
+        /*--------------------------------받아온 하나의 정보로 카드 1개 그림--------------------------------*/
+        bundle_mission_name = arguments?.getString("bundle_mission_name").toString()
+        bundle_index = arguments?.getString("bundle_index").toString()
+        bundle_count = arguments?.getString("bundle_count").toString()
+        bundle_total_count = arguments?.getString("bundle_total_count").toString()
+        bundle_start_date = arguments?.getString("bundle_start_date").toString()
+        bundle_end_date = arguments?.getString("bundle_end_date").toString()
+        bundle_mission_expression = arguments?.getString("bundle_mission_expression").toString()
+        Log.d("찍어본다", "name:"+bundle_mission_name.toString()+", index:"+bundle_index)
+        /*-----------------------------------------------------------------------------------------------*/
+
 
         view.home_more_card_btn_giveup.setOnClickListener { view ->
             home_more_card_btn_cancle.visibility = View.VISIBLE;
@@ -66,9 +89,10 @@ class HomeMoreFragment : Fragment() {
         home_more_card_tv_reallydelete.visibility = GONE;
         home_more_card_reallydelete.visibility = GONE;
 
-        //앞 화면에서 클릭된 아이템의 정보를 어떻게 받아오지?!
+
+
         
-        var dump1 = HomeMoreCardData(4, "뭔디", true, 7, true)
+        var dump1 = HomeMoreCardData(index = bundle_index.toInt(), "뭔디", true, 7, true)
         val No = HomeMoreCardAdapter(requireContext())
         No.homemoreitems.add(dump1)
 
@@ -79,7 +103,7 @@ class HomeMoreFragment : Fragment() {
         home_more_card.adapter = No
         No.notifyDataSetChanged()
 
-        //var my_data = mutableListOf<MyDATA>((MyDATA(1,"에헷",false)),(MyDATA(2,"이런",false)),(MyDATA(3,"어머!",false)))
+
 
         /*---------------------------------------------------상단바 커스텀------------------------------------------------*/
         if(No.homemoreitems[0].index === 0){
