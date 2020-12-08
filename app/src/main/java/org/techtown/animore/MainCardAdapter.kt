@@ -37,12 +37,11 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
         /*-------------------------------------------------선생님-------------------------------------------------------*/
         var view_count = 0  // 더한 tablerow 갯수 셀려는 변수
 
-        fun draw_cal(index: Int, type:Int) {
+        fun draw_cal(index: Int, type:Int, todaydate:String) {
             var today = Calendar.getInstance()
 
-            var sampleday: LocalDate = LocalDate.now()
-            var inputday = sampleday.toString()
-            var ind = inputday.split("-")  //text를 -를 기준으로 자름
+            var sampleday = todaydate
+            var ind = sampleday.split("-")  //text를 -를 기준으로 자름
 
             var year = ind[0].toInt()
             var month = ind[1].toInt() - 1
@@ -342,7 +341,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
         val dailyCheckBtn = itemView.findViewById<ImageButton>(R.id.maincard_dailyCheckBtn)
 
         val normal_index = itemView.findViewById<ImageView>(R.id.maincard_normal_index)
-        val progressbar = itemView.findViewById<ImageView>(R.id.maincard_progressbar)
+        val progressbar_stroke = itemView.findViewById<ImageView>(R.id.maincard_progressbar_stroke)
         val bottom_img = itemView.findViewById<ImageView>(R.id.maincard_bottom_img)
 
         val myTable = itemView.findViewById<TableLayout>(R.id.myTable)
@@ -356,8 +355,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
         val sun = itemView.findViewById<TextView>(R.id.maincard_tv_day_sun)
 
         val stroke21 = itemView.findViewById<ImageView>(R.id.maincard_continue_21_stroke)
-
-
+        val progressbar = itemView.findViewById<ProgressBar>(R.id.maincard_progressbar)
 
 
 
@@ -387,6 +385,10 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
             tv_start_date.text = MainCardData.start_date
             tv_end_date.text = MainCardData.end_date
 
+            var count_for_progressbar = MainCardData.count.toFloat()/MainCardData.dayDuring*100
+            var int = count_for_progressbar.toInt()
+            progressbar.progress = int
+
             /*----------------------------------타입마다 다른 정보 나중 배정--------------------------------------------*/
 
             if(MainCardData.flag){
@@ -394,6 +396,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                 
                 //일반 카드 요소들 숨기기
                 progressbar.visibility = View.GONE
+                progressbar_stroke.visibility = View.GONE
                 tv_totalCount.visibility = View.GONE;
                 tv_achieve_count.visibility = View.GONE;
                 normal_index.visibility = View.GONE;
@@ -402,7 +405,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                 tv_end_date.visibility = View.GONE;
 
                 //캘린더 그리기
-                draw_cal(MainCardData.dayDuring, MainCardData.index)
+                draw_cal(MainCardData.dayDuring, MainCardData.index, MainCardData.start_date)
 
                 /*----------------------------------연속 카드 일수별로 다른 요소 변경--------------------------------------------*/
                 
@@ -475,6 +478,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     sun.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
                     dailyCheckBtn.setImageResource(R.drawable.ic_checkbtn_harpseal)
 
+
                 }else if(MainCardData.index==3){
 
                     //유형 변경
@@ -497,6 +501,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     sat.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
                     sun.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
                     dailyCheckBtn.setImageResource(R.drawable.ic_checkbtn_java)
+
 
                 }else if(MainCardData.index==4){
 
@@ -638,8 +643,10 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     //이미지 변경
                     dailyCheckBtn.setImageResource(R.drawable.ic_checkbtn_guanicoe)
                     normal_index.setImageResource(R.drawable.ic_normal_index_guanicoe)
-                    progressbar.setImageResource(R.drawable.ic_progressbar_stroke_guanicoe)
+                    progressbar_stroke.setImageResource(R.drawable.ic_progressbar_stroke_guanicoe)
                     bottom_img.setImageResource(R.drawable.ic_maincard_img_normal_guanicoe)
+
+                    progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.main_progressbar_guanicoe))
 
                 } else if(MainCardData.index==1){
 
@@ -664,8 +671,10 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     //이미지 변경
                     dailyCheckBtn.setImageResource(R.drawable.ic_checkbtn_illipika)
                     normal_index.setImageResource(R.drawable.ic_normal_index_illipika)
-                    progressbar.setImageResource(R.drawable.ic_progressbar_stroke_illipika)
+                    progressbar_stroke.setImageResource(R.drawable.ic_progressbar_stroke_illipika)
                     bottom_img.setImageResource(R.drawable.ic_maincard_img_normal_illipika)
+
+                    progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.main_progressbar_illipika))
 
                 } else if(MainCardData.index==2){
 
@@ -690,8 +699,10 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     //이미지 변경
                     dailyCheckBtn.setImageResource(R.drawable.ic_checkbtn_harpseal)
                     normal_index.setImageResource(R.drawable.ic_normal_index_harpseal)
-                    progressbar.setImageResource(R.drawable.ic_progressbar_stroke_harpseal)
+                    progressbar_stroke.setImageResource(R.drawable.ic_progressbar_stroke_harpseal)
                     bottom_img.setImageResource(R.drawable.ic_maincard_img_normal_harpseal)
+
+                    progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.main_progressbar_harpseal))
 
                 }else if(MainCardData.index==3){
 
@@ -716,8 +727,10 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     //이미지 변경
                     dailyCheckBtn.setImageResource(R.drawable.ic_checkbtn_java)
                     normal_index.setImageResource(R.drawable.ic_normal_index_java)
-                    progressbar.setImageResource(R.drawable.ic_progressbar_stroke_java)
+                    progressbar_stroke.setImageResource(R.drawable.ic_progressbar_stroke_java)
                     bottom_img.setImageResource(R.drawable.ic_maincard_img_normal_java)
+
+                    progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.main_progressbar_java))
 
                 }else if(MainCardData.index==4){
 
@@ -742,8 +755,10 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     //이미지 변경
                     dailyCheckBtn.setImageResource(R.drawable.ic_checkbtn_bengal)
                     normal_index.setImageResource(R.drawable.ic_normal_index_bengaltiger)
-                    progressbar.setImageResource(R.drawable.ic_progressbar_stroke_bengaltiger)
+                    progressbar_stroke.setImageResource(R.drawable.ic_progressbar_stroke_bengaltiger)
                     bottom_img.setImageResource(R.drawable.ic_maincard_img_normal_bengal)
+
+                    progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.main_progressbar_bengal))
                 }
             }
 

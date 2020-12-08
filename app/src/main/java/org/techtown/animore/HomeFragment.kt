@@ -9,8 +9,13 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
+import kotlinx.android.synthetic.main.fragment_choose_option_continuous_guanicoe.view.*
+import kotlinx.android.synthetic.main.fragment_choose_option_continuous_guanicoe.view.choose_option_continuous_button_7_guanicoe
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.maincard_layout.view.*
+import java.util.*
 
 class HomeFragment : Fragment() {
 
@@ -29,7 +34,7 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
-        
+
         return view
     }
 
@@ -41,11 +46,11 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var maincard1 = MainCardData(0, false, 21, "2020-11-26", "2020-12-24", 5, "미션이름입니다", "")
-        var maincard2 = MainCardData(1, true, 7, "2020-11-26", "2020-12-24", 2, "미션이름입니다", "")
+        var maincard1 = MainCardData(0, true, 7, "2020-11-23", "2020-12-24", 5, "미션이름입니다", "")
+        var maincard2 = MainCardData(1, true, 14, "2020-11-25", "2020-12-24", 2, "미션이름입니다", "")
         var maincard3 = MainCardData(2, true, 14, "2020-11-26", "2020-12-24", 13, "미션이름입니다", "")
-        var maincard4 = MainCardData(3, true, 21, "2020-11-26", "2020-12-24", 14, "미션이름입니다", "")
-        var maincard5 = MainCardData(4, false, 21, "2020-11-26", "2020-12-24", 10, "미션이름입니다", "")
+        var maincard4 = MainCardData(3, true, 21, "2020-11-27", "2020-12-24", 14, "미션이름입니다", "")
+        var maincard5 = MainCardData(4, true, 21, "2020-11-28", "2020-12-24", 10, "미션이름입니다", "")
 
         val Adapter = MainCardAdapter()
         Adapter.datas.add(maincard1)

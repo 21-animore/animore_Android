@@ -315,14 +315,16 @@
                     android:textColor="#AB2220"
                     android:textSize="12sp" />
 
-                <ImageView
-                    android:id="@+id/past_card_moreimageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    card_view:srcCompat="@drawable/ic_progressbar_default"
-                    android:layout_below="@+id/past_card_more_tv_process"
+                <ProgressBar
+                    android:id="@+id/past_card_more_progressbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:progressDrawable="@drawable/progressbar_bengal"
+                    android:layout_width="290dp"
+                    android:layout_height="9dp"
                     android:layout_marginTop="6dp"
-                    android:layout_marginLeft="30dp"/>
+                    android:layout_alignLeft="@+id/past_card_more_tv_process"
+                    android:layout_below="@+id/past_card_more_tv_process"
+                    android:progress="10" />
 
                 <TextView
                     android:id="@+id/past_card_more_tv_bottom_sentence"

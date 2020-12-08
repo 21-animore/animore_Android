@@ -102,10 +102,10 @@
             android:id="@+id/maincard_normal_index"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
             card_view:srcCompat="@drawable/ic_normal_index_bengaltiger"
+            android:layout_alignRight="@+id/maincard_progressbar"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="160dp" />
+            android:layout_marginTop="170dp" />
 
         <TextView
             android:id="@+id/maincard_tv_index_count_num"
@@ -131,7 +131,7 @@
             android:layout_below="@+id/maincard_progressbar"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="25dp"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="5dp"
             android:layout_marginRight="20dp"
             android:fontFamily="@font/montserrat_medium"
             android:includeFontPadding="false"
@@ -146,7 +146,7 @@
             android:layout_below="@+id/maincard_progressbar"
             android:layout_alignParentRight="true"
             android:layout_marginRight="25dp"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="5dp"
             android:fontFamily="@font/montserrat_medium"
             android:includeFontPadding="false"
             android:text="2020. 11. 09"
@@ -154,7 +154,7 @@
             android:textSize="12sp" />
 
         <ImageView
-            android:id="@+id/maincard_progressbar"
+            android:id="@+id/maincard_progressbar_stroke"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/maincard_normal_index"
@@ -162,6 +162,17 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentStart="true"
             card_view:srcCompat="@drawable/ic_progressbar_stroke_bengaltiger" />
+
+        <ProgressBar
+            android:id="@+id/maincard_progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/main_progressbar_bengal"
+            android:layout_width="195dp"
+            android:layout_height="7dp"
+            android:layout_below="@+id/maincard_normal_index"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="30dp"
+            android:progress="0" />
 
         <TextView
             android:id="@+id/maincard_tv_day_mon"

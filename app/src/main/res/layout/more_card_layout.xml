@@ -734,14 +734,17 @@
             android:textColor="#AB2220"
             android:textSize="12sp" />
 
-        <ImageView
-            android:id="@+id/more_card_back_imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            card_view:srcCompat="@drawable/ic_progressbar_default"
-            android:layout_below="@+id/more_card_back_tv_process"
+        <ProgressBar
+            android:id="@+id/more_card_back_progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/progressbar_bengal"
+            android:layout_width="290dp"
+            android:layout_height="9dp"
             android:layout_marginTop="6dp"
-            android:layout_marginLeft="30dp"/>
+            android:indeterminateTint="@color/colorAccent"
+            android:layout_alignLeft="@+id/more_card_back_tv_process"
+            android:layout_below="@+id/more_card_back_tv_process"
+            android:progress="10" />
 
         <TextView
             android:id="@+id/more_card_back_tv_bottom_sentence"

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
@@ -57,7 +58,7 @@ class PastMoreCardAdapter() : RecyclerView.Adapter<PastMoreCardAdapter.Holder>()
         val tv_mission_content = itemView.findViewById<TextView>(R.id.past_card_more_tv_mission_content)
         val tv_bottom_sentence = itemView.findViewById<TextView>(R.id.past_card_more_tv_bottom_sentence)
 
-
+        val progressbar = itemView.findViewById<ProgressBar>(R.id.past_card_more_progressbar)
 
 
         fun bind(PastMoreCardData: PastMoreCardData) {
@@ -73,6 +74,10 @@ class PastMoreCardAdapter() : RecyclerView.Adapter<PastMoreCardAdapter.Holder>()
             tv_total_count.text = PastMoreCardData.dayDuring.toString()
             tv_mission_content.text = PastMoreCardData.mission_expression
             tv_count_num_behind.text = PastMoreCardData.dayDuring.toString()
+
+            var count_for_progressbar = PastMoreCardData.count.toFloat()/PastMoreCardData.dayDuring*100
+            var int = count_for_progressbar.toInt()
+            progressbar.progress = int
 
 
             if(PastMoreCardData.success_flag === true){
@@ -109,6 +114,8 @@ class PastMoreCardAdapter() : RecyclerView.Adapter<PastMoreCardAdapter.Holder>()
                 tv_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                 tv_mission_content.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                 tv_bottom_sentence.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
+
+                progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.progressbar_guanicoe))
 
                 if(PastMoreCardData.flag === true) {
                     if(PastMoreCardData.dayDuring === 7) {
@@ -160,6 +167,8 @@ class PastMoreCardAdapter() : RecyclerView.Adapter<PastMoreCardAdapter.Holder>()
                 tv_mission_content.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
                 tv_bottom_sentence.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
 
+                progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.progressbar_illipika))
+
                 if(PastMoreCardData.flag === true) {
                     if(PastMoreCardData.dayDuring === 7) {
                         img.setImageResource(R.drawable.ic_home_more_card_back_7_illipika)
@@ -208,6 +217,8 @@ class PastMoreCardAdapter() : RecyclerView.Adapter<PastMoreCardAdapter.Holder>()
                 tv_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
                 tv_mission_content.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
                 tv_bottom_sentence.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+
+                progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.progressbar_harpseal))
 
                 if(PastMoreCardData.flag === true) {
                     if(PastMoreCardData.dayDuring === 7) {
@@ -258,6 +269,8 @@ class PastMoreCardAdapter() : RecyclerView.Adapter<PastMoreCardAdapter.Holder>()
                 tv_mission_content.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
                 tv_bottom_sentence.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
 
+                progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.progressbar_java))
+
                 if(PastMoreCardData.flag === true) {
                     if(PastMoreCardData.dayDuring === 7) {
                         img.setImageResource(R.drawable.ic_home_more_card_back_7_java)
@@ -305,6 +318,8 @@ class PastMoreCardAdapter() : RecyclerView.Adapter<PastMoreCardAdapter.Holder>()
                 tv_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
                 tv_mission_content.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
                 tv_bottom_sentence.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+
+                progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.progressbar_bengal))
 
                 if(PastMoreCardData.flag === true) {
                     if(PastMoreCardData.dayDuring === 7) {
