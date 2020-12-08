@@ -406,8 +406,6 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
 
 
 
-
-
         fun bind(HomeMoreCardData: HomeMoreCardData, context: Context) {
 
             /*-----------------------------------------뒤집는 애니메이션------------------------------------------*/
@@ -457,6 +455,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
             back_tv_total_count.text = HomeMoreCardData.dayDuring.toString()
             back_tv_mission_content.text = HomeMoreCardData.mission_expression
             back_tv_count_num_behind.text = HomeMoreCardData.dayDuring.toString()
+
 
             /*----------------------------------타입마다 다른 정보 나중 배정--------------------------------------------*/
 

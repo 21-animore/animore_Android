@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.View.GONE
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
@@ -111,6 +112,8 @@ class HomeMoreFragment : Fragment() {
 
 
         /*---------------------------------------------------상단바 커스텀------------------------------------------------*/
+        home_more_card_tv_mission_name.text = bundle_mission_name;
+
         if(Adapter.homemoreitems[0].index === 0){
             home_more_card_topbar.setImageResource(R.drawable.ic_top_bar_guanicoe)
             home_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(requireActivity(),R.color.stroke_guanicoe))

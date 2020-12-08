@@ -77,7 +77,7 @@
 
         <TextView
             android:id="@+id/pastcard_tv_cardName"
-            android:layout_width="59dp"
+            android:layout_width="80dp"
             android:layout_height="55dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
@@ -119,10 +119,9 @@
             android:id="@+id/pastcard_tv_totalCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginLeft="17.5dp"
             android:layout_marginBottom="28dp"
+            android:layout_toEndOf="@+id/pastcard_tv_achieveCount"
             android:fontFamily="@font/montserrat_medium"
             android:includeFontPadding="false"
             android:text="/21"

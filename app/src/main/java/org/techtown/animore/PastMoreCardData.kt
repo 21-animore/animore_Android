@@ -3,16 +3,28 @@ package org.techtown.animore
 import java.util.*
 
 data class PastMoreCardData(
-    val index: Int,
-    val success_flag : Boolean
-        /*
-    val tv_cardName : String,
-    val card_success_flag : Int,
-    val card_name : String,
-    val achieve_count : Int,
-    val total_count : Int,
-    val start_date : Date,
-    val end_date : Date,
-    val card_category : Int
-    */
+        //유형 파악용
+        val index: Int,
+
+        //캘린더 or 일반 파악용
+        val flag: Boolean,
+
+        //연속일 경우 캘린더 기간 파악 용
+        val dayDuring: Int,
+
+        //시작날짜 끝날짜
+        val start_date: String,
+        val end_date: String,
+
+        //몇번수행했는가
+        val count: Int,
+
+        //미션이름
+        val mission_name : String,
+
+        //미션 부가 설명
+        val mission_expression : String,
+
+        //성공 여부
+        val success_flag : Boolean
 )

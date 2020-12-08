@@ -41,11 +41,11 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var maincard1 = MainCardData(0, false, 21, "2020-11-26", "2020-12-24", 5, "미션이름입니다")
-        var maincard2 = MainCardData(1, true, 7, "2020-11-26", "2020-12-24", 2, "미션이름입니다")
-        var maincard3 = MainCardData(2, true, 14, "2020-11-26", "2020-12-24", 13, "미션이름입니다")
-        var maincard4 = MainCardData(3, true, 21, "2020-11-26", "2020-12-24", 14, "미션이름입니다")
-        var maincard5 = MainCardData(4, false, 21, "2020-11-26", "2020-12-24", 10, "미션이름입니다")
+        var maincard1 = MainCardData(0, false, 21, "2020-11-26", "2020-12-24", 5, "미션이름입니다", "")
+        var maincard2 = MainCardData(1, true, 7, "2020-11-26", "2020-12-24", 2, "미션이름입니다", "")
+        var maincard3 = MainCardData(2, true, 14, "2020-11-26", "2020-12-24", 13, "미션이름입니다", "")
+        var maincard4 = MainCardData(3, true, 21, "2020-11-26", "2020-12-24", 14, "미션이름입니다", "")
+        var maincard5 = MainCardData(4, false, 21, "2020-11-26", "2020-12-24", 10, "미션이름입니다", "")
 
         val Adapter = MainCardAdapter()
         Adapter.datas.add(maincard1)

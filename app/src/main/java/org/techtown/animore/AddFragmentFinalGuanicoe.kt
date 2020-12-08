@@ -42,7 +42,7 @@ class AddFragmentFinalGuanicoe : Fragment() {
         val index = "0"
         val count = "0"
 
-        var card = MainCardData(index = index.toInt(), flag = flag.toBoolean(), dayDuring = dayDuring.toInt(), mission_name = mission_name_guanicoe, start_date = start_date, end_date = end_date, count = count.toInt())
+        var card = MainCardData(index = index.toInt(), flag = flag.toBoolean(), dayDuring = dayDuring.toInt(), mission_name = mission_name_guanicoe, start_date = start_date, end_date = end_date, count = count.toInt(), mission_expression = "")
         val Adapter = MainCardAdapter()
         Adapter.datas.add(card)
         final_add_guanicoe_cardview.adapter = Adapter
