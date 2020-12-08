@@ -57,4 +57,5 @@ dependencies {
     implementation 'android.arch.navigation:navigation-fragment:1.0.0-alpha07'
     implementation 'android.arch.navigation:navigation-ui-ktx:1.0.0-alpha07'
     implementation 'com.wajahatkarim3.EasyFlipView:EasyFlipView:2.1.2'
+    implementation "com.airbnb.android:lottie:2.1.0"
 }

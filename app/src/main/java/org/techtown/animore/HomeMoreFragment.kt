@@ -92,7 +92,7 @@ class HomeMoreFragment : Fragment() {
 
 
         
-        var dump1 = HomeMoreCardData(index = bundle_index.toInt(), "뭔디", true, 7, true)
+        var dump1 = HomeMoreCardData(0, true, 21, "","", 8,"미션 이름이어요","")
         val No = HomeMoreCardAdapter(requireContext())
         No.homemoreitems.add(dump1)
 

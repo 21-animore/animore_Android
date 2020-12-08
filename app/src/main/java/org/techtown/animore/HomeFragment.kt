@@ -29,11 +29,6 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
-
-        //임시로 테스트
-        view.findViewById<TextView>(R.id.main_title).setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_home_fragment_to_test_fragment)
-        }
         
         return view
     }
@@ -48,21 +43,10 @@ class HomeFragment : Fragment() {
 
         //서버로부터 정보를 받아와서 넣어주겠지?
 
-        var dump1 = MainCardData(0, false, 0, "연속7일")
-        var dump2 = MainCardData(1, false, 0, "연속14일")
-        var dump3 = MainCardData(2, false, 0, "연속21일")
-        var dump4 = MainCardData(3, false, 0, "일반")
-        var dump5 = MainCardData(4, false, 0, "연속7일")
-
-        //val MyData:MutableList<NormalCardData> = mutableListOf<NormalCardData>(NormalCardData(title,))
-        //val MyData:MutableList<MainCardData> = mutableListOf<MainCardData>(dump1, dump2, dump3, dump4)
+        var dump1 = MainCardData(0, false, 21, "2020-11-26", "2020-12-24", 7, "미션이름입니다")
 
         val No = MainCardAdapter()
         No.datas.add(dump1)
-        No.datas.add(dump2)
-        No.datas.add(dump3)
-        No.datas.add(dump4)
-        No.datas.add(dump5)
         main_card_list.adapter = No
 
         //MyData에 넘겨 받은 카드 개수에 맞춰 width 조절
@@ -79,12 +63,6 @@ class HomeFragment : Fragment() {
             main_card_list.layoutParams = layout
         }
         //No.notifyDataSetChanged()
-
-/*
-        Log.d("title", arguments?.getString("title").toString())
-        //bundle에 담겨온 데이터를 title이라는 변수에 넣어준다
-        val title = arguments?.getString("title").toString()
- */
 
     }
 }

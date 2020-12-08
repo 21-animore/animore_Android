@@ -34,14 +34,21 @@ class AddFragmentFinalGuanicoe : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val mission_name_guanicoe = arguments?.getString("mission_name_guanicoe").toString()
-        val index = arguments?.getString("index").toString()
-        Log.d("찍어본다", "name:"+mission_name_guanicoe.toString()+", index:"+index)
+        val flag =  arguments?.getString("flag").toString()
+        val dayDuring = arguments?.getString("dayDuring").toString()
+        val start_date= arguments?.getString("start_date").toString()
+        var end_date= arguments?.getString("end_date").toString()
+        Log.d("나잡아봐라", mission_name_guanicoe+", "+flag+", "+dayDuring+", "+start_date+", "+end_date)
+        val index = "0"
+        val count = "0"
+
+        var card = MainCardData(index = index.toInt(), flag = flag.toBoolean(), dayDuring = dayDuring.toInt(), mission_name = mission_name_guanicoe, start_date = start_date, end_date = end_date, count = count.toInt())
+        val Adapter = MainCardAdapter()
+        Adapter.datas.add(card)
+        final_add_guanicoe_cardview.adapter = Adapter
 
 
-        var dump1 = MainCardData(index = index.toInt(), false, 0, mission_name = mission_name_guanicoe)
-        val No = MainCardAdapter()
-        No.datas.add(dump1)
-        final_add_guanicoe_cardview.adapter = No
+        /*이 정보들 모두 서버에 POST 해야함*/
 
     }
 }
