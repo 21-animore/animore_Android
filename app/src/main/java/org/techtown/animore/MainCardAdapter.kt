@@ -369,6 +369,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
             //상세페이지 눌렀을 때 넘겨줄 수 있도록
             var bundle_mission_name = MainCardData.mission_name   //미션 이름
             var bundle_index = MainCardData.index.toString()   //인덱스(유형 구분)
+            val bundle_flag = MainCardData.flag.toString()
             var bundle_count = MainCardData.count.toString()   //카운트(달성 횟수)
             var bundle_total_count = MainCardData.dayDuring.toString() //총 횟수(7,14,21)
             var bundle_start_date = MainCardData.start_date  //시작 날짜
@@ -750,6 +751,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
             val bundle = bundleOf(
                     "bundle_mission_name" to bundle_mission_name,
                     "bundle_index" to bundle_index,
+                    "bundle_flag" to bundle_flag,
                     "bundle_count" to bundle_count,
                     "bundle_total_count" to bundle_total_count,
                     "bundle_start_date" to bundle_start_date,

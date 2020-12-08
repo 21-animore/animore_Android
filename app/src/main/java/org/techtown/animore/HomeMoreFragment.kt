@@ -19,6 +19,7 @@ class HomeMoreFragment : Fragment() {
 
     var bundle_mission_name = ""
     var bundle_index = ""
+    var bundle_flag = ""
     var bundle_count = ""
     var bundle_total_count = ""
     var bundle_start_date = ""
@@ -37,12 +38,12 @@ class HomeMoreFragment : Fragment() {
         /*--------------------------------받아온 하나의 정보로 카드 1개 그림--------------------------------*/
         bundle_mission_name = arguments?.getString("bundle_mission_name").toString()
         bundle_index = arguments?.getString("bundle_index").toString()
+        bundle_flag = arguments?.getString("bundle_flag").toString()
         bundle_count = arguments?.getString("bundle_count").toString()
         bundle_total_count = arguments?.getString("bundle_total_count").toString()
         bundle_start_date = arguments?.getString("bundle_start_date").toString()
         bundle_end_date = arguments?.getString("bundle_end_date").toString()
         bundle_mission_expression = arguments?.getString("bundle_mission_expression").toString()
-        Log.d("찍어본다", "name:"+bundle_mission_name.toString()+", index:"+bundle_index)
         /*-----------------------------------------------------------------------------------------------*/
 
 
@@ -88,35 +89,41 @@ class HomeMoreFragment : Fragment() {
         home_more_card_btn_reallygiveup.visibility = GONE;
         home_more_card_tv_reallydelete.visibility = GONE;
         home_more_card_reallydelete.visibility = GONE;
-
         
-        var dump1 = HomeMoreCardData(0, false, 14, "","", 5,"미션 이름임요","")
-        val No = HomeMoreCardAdapter(requireContext())
-        No.homemoreitems.add(dump1)
+        var card = HomeMoreCardData(
+                index = bundle_index.toInt(),
+                flag = bundle_flag.toBoolean(),
+                dayDuring = bundle_total_count.toInt(),
+                start_date = bundle_start_date,
+                end_date = bundle_end_date,
+                count = bundle_count.toInt(),
+                mission_name = bundle_mission_name,
+                mission_expression = bundle_mission_expression)
+        val Adapter = HomeMoreCardAdapter(requireContext())
+        Adapter.homemoreitems.add(card)
 
         /*---------------------------------------------------이것저것 적용중------------------------------------------------*/
         var HorizontalLayout2 = LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL,false)
         home_more_card.layoutManager = HorizontalLayout2
 
-        home_more_card.adapter = No
-        No.notifyDataSetChanged()
-
+        home_more_card.adapter = Adapter
+        Adapter.notifyDataSetChanged()
 
 
         /*---------------------------------------------------상단바 커스텀------------------------------------------------*/
-        if(No.homemoreitems[0].index === 0){
+        if(Adapter.homemoreitems[0].index === 0){
             home_more_card_topbar.setImageResource(R.drawable.ic_top_bar_guanicoe)
             home_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(requireActivity(),R.color.stroke_guanicoe))
             home_more_card_back_btn_to_add_frag.setImageResource(R.drawable.ic_back_btn_guanicoe)
-        }else if(No.homemoreitems[0].index === 1){
+        }else if(Adapter.homemoreitems[0].index === 1){
             home_more_card_topbar.setImageResource(R.drawable.ic_top_bar_illipika)
             home_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(requireActivity(), R.color.stroke_illipika))
             home_more_card_back_btn_to_add_frag.setImageResource(R.drawable.ic_back_btn_illipika)
-        }else if(No.homemoreitems[0].index === 2){
+        }else if(Adapter.homemoreitems[0].index === 2){
             home_more_card_topbar.setImageResource(R.drawable.ic_top_bar_harpseal)
             home_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(requireActivity(), R.color.stroke_harpseal))
             home_more_card_back_btn_to_add_frag.setImageResource(R.drawable.ic_back_btn_harpseal)
-        }else if(No.homemoreitems[0].index === 3){
+        }else if(Adapter.homemoreitems[0].index === 3){
             home_more_card_topbar.setImageResource(R.drawable.ic_top_bar_javahornhawk)
             home_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(requireActivity(), R.color.stroke_java))
             home_more_card_back_btn_to_add_frag.setImageResource(R.drawable.ic_back_btn_java)

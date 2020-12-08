@@ -446,6 +446,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
             front_tv_achieve_count_num.text = HomeMoreCardData.count.toString()
             front_tv_process_count.text = HomeMoreCardData.count.toString()
             front_tv_total_count.text = HomeMoreCardData.dayDuring.toString()
+            front_tv_index_count_num.text = HomeMoreCardData.count.toString()
 
             back_tv_mission_name.text = HomeMoreCardData.mission_name
             back_tv_mission_total_count.text = HomeMoreCardData.dayDuring.toString()
@@ -459,7 +460,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
 
             /*----------------------------------타입마다 다른 정보 나중 배정--------------------------------------------*/
 
-            if(HomeMoreCardData.flag === true){
+            if(HomeMoreCardData.flag === false){
                 //원 스탬프 그리기
                 createCircle(HomeMoreCardData.count, HomeMoreCardData.index)
 
@@ -471,8 +472,9 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                 front_tv_day_fir.visibility = View.GONE
                 front_tv_day_sat.visibility = View.GONE
                 front_tv_day_sun.visibility = View.GONE
+                back_tv_count_num_behind.visibility = View.GONE
 
-            }else if(HomeMoreCardData.flag === false){
+            }else if(HomeMoreCardData.flag === true){
                 //캘린더 그리기
                 draw_cal(HomeMoreCardData.dayDuring, HomeMoreCardData.index)
 
@@ -537,7 +539,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                 front_background_img.setImageResource(R.drawable.ic_more_card_background_guanicoe)
                 back_background_img.setImageResource(R.drawable.ic_more_card_background_guanicoe)
 
-                if(HomeMoreCardData.flag === false){
+                if(HomeMoreCardData.flag === true){
                     front_tv_day_mon.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                     front_tv_day_tue.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                     front_tv_day_wed.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
@@ -572,7 +574,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                         back_tv_top_category.text = "연속 21일"
                     }
 
-                } else if(HomeMoreCardData.flag === true){
+                } else if(HomeMoreCardData.flag === false){
                     front_img.setImageResource(R.drawable.ic_home_more_card_front_7_guanicoe)
                     front_stroke.visibility = View.GONE
                     front_tv_top_category.text = "일반"
@@ -589,15 +591,415 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
 
             }else if(HomeMoreCardData.index === 1){
 
+                //유형 변경
+                front_tv_mission_category_eng.text="Saving Electricity"
+                front_tv_mission_category_kor.text="전기 절약"
+                front_tv_bottom_sentence.text="Not yours, Ours"
+                back_tv_mission_category_eng.text="Saving Electricity"
+                back_tv_mission_category_kor.text="전기 절약"
+                back_tv_bottom_sentence.text="Not yours, Ours"
+
+                //색 변경
+                front_tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                front_tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                front_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_illipika))
+                front_tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                front_tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                front_tv_achieve_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                front_tv_times.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                front_tv_start_date_title.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                front_tv_end_date_title.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                front_tv_start_date.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                front_tv_end_date.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                front_tv_achieve_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                front_tv_process.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                front_tv_process_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                front_tv_count_slash.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                front_tv_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                front_tv_bottom_sentence.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+
+                back_tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                back_tv_count_num_behind.setTextColor(ContextCompat.getColor(itemView.context, R.color.blur_illipika))
+                back_tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                back_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_illipika))
+                back_tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                back_tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                back_tv_achieve_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                back_tv_start_date_title.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                back_tv_end_date_title.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                back_tv_achieve_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                back_tv_times.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                back_tv_start_date.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                back_tv_end_date.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                back_tv_process.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                back_tv_process_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                back_tv_count_slash.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                back_tv_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                back_tv_mission_content.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                back_tv_bottom_sentence.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+
+                //이미지 변경
+                front_background_img.setImageResource(R.drawable.ic_more_card_background_illipika)
+                back_background_img.setImageResource(R.drawable.ic_more_card_background_illipika)
+
+                if(HomeMoreCardData.flag === true){
+                    front_tv_day_mon.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    front_tv_day_tue.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    front_tv_day_wed.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    front_tv_day_thu.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    front_tv_day_fir.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    front_tv_day_sat.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                    front_tv_day_sun.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+
+                    if(HomeMoreCardData.dayDuring === 7){
+                        front_img.setImageResource(R.drawable.ic_home_more_card_front_7_illipika)
+                        front_stroke.visibility = View.GONE
+                        front_tv_top_category.text = "연속 7일"
+
+                        back_img.setImageResource(R.drawable.ic_home_more_card_back_7_illipika)
+                        back_stroke.visibility = View.GONE
+                        back_tv_top_category.text = "연속 7일"
+                    }else if(HomeMoreCardData.dayDuring === 14){
+                        front_img.setImageResource(R.drawable.ic_home_more_card_front_14_illipika)
+                        front_stroke.visibility = View.GONE
+                        front_tv_top_category.text = "연속 14일"
+
+                        back_img.setImageResource(R.drawable.ic_home_more_card_back_14_illipika)
+                        back_stroke.visibility = View.GONE
+                        back_tv_top_category.text = "연속 14일"
+                    }else if(HomeMoreCardData.dayDuring === 21){
+                        front_img.setImageResource(R.drawable.ic_home_more_card_front_21_illipika)
+                        front_stroke.setImageResource(R.drawable.ic_home_more_card_stroke_illipika)
+                        front_tv_top_category.text = "연속 21일"
+
+                        back_img.setImageResource(R.drawable.ic_home_more_card_back_21_illipika)
+                        back_stroke.setImageResource(R.drawable.ic_home_more_card_stroke_illipika)
+                        back_tv_top_category.text = "연속 21일"
+                    }
+
+                } else if(HomeMoreCardData.flag === false){
+                    front_img.setImageResource(R.drawable.ic_home_more_card_front_7_illipika)
+                    front_stroke.visibility = View.GONE
+                    front_tv_top_category.text = "일반"
+                    front_tv_mission_total_count.text=""
+                    front_normal_index.setImageResource(R.drawable.ic_normal_index_illipika)
+                    front_tv_index_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_illipika))
+                    front_progressbar_normal.setImageResource(R.drawable.ic_home_more_card_progressbar_illipika)
+
+                    back_img.setImageResource(R.drawable.ic_home_more_card_back_0_illipika)
+                    back_stroke.visibility = View.GONE
+                    back_tv_top_category.text = "일반"
+                    back_tv_mission_total_count.text=""
+                }
+
             }else if(HomeMoreCardData.index === 2){
+
+                //유형 변경
+                front_tv_mission_category_eng.text="Reduce Trash"
+                front_tv_mission_category_kor.text="쓰레기 배출량 감소"
+                front_tv_bottom_sentence.text="Our Planet"
+                back_tv_mission_category_eng.text="Reduce Trash"
+                back_tv_mission_category_kor.text="쓰레기 배출량 감소"
+                back_tv_bottom_sentence.text="Our Planet"
+
+                //색 변경
+                front_tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                front_tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                front_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_harpseal))
+                front_tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                front_tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                front_tv_achieve_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                front_tv_times.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                front_tv_start_date_title.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                front_tv_end_date_title.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                front_tv_start_date.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                front_tv_end_date.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                front_tv_achieve_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                front_tv_process.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                front_tv_process_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                front_tv_count_slash.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                front_tv_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                front_tv_bottom_sentence.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+
+                back_tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                back_tv_count_num_behind.setTextColor(ContextCompat.getColor(itemView.context, R.color.blur_harpseal))
+                back_tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                back_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_harpseal))
+                back_tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                back_tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                back_tv_achieve_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                back_tv_start_date_title.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                back_tv_end_date_title.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                back_tv_achieve_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                back_tv_times.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                back_tv_start_date.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                back_tv_end_date.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                back_tv_process.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                back_tv_process_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                back_tv_count_slash.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                back_tv_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                back_tv_mission_content.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                back_tv_bottom_sentence.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+
+                //이미지 변경
+                front_background_img.setImageResource(R.drawable.ic_more_card_background_harpseal)
+                back_background_img.setImageResource(R.drawable.ic_more_card_background_harpseal)
+
+                if(HomeMoreCardData.flag === true){
+                    front_tv_day_mon.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    front_tv_day_tue.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    front_tv_day_wed.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    front_tv_day_thu.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    front_tv_day_fir.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    front_tv_day_sat.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                    front_tv_day_sun.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+
+                    if(HomeMoreCardData.dayDuring === 7){
+                        front_img.setImageResource(R.drawable.ic_home_more_card_front_7_harpseal)
+                        front_stroke.visibility = View.GONE
+                        front_tv_top_category.text = "연속 7일"
+
+                        back_img.setImageResource(R.drawable.ic_home_more_card_back_7_harpseal)
+                        back_stroke.visibility = View.GONE
+                        back_tv_top_category.text = "연속 7일"
+                    }else if(HomeMoreCardData.dayDuring === 14){
+                        front_img.setImageResource(R.drawable.ic_home_more_card_front_14_harpseal)
+                        front_stroke.visibility = View.GONE
+                        front_tv_top_category.text = "연속 14일"
+
+                        back_img.setImageResource(R.drawable.ic_home_more_card_back_14_harpseal)
+                        back_stroke.visibility = View.GONE
+                        back_tv_top_category.text = "연속 14일"
+                    }else if(HomeMoreCardData.dayDuring === 21){
+                        front_img.setImageResource(R.drawable.ic_home_more_card_front_21_harpseal)
+                        front_stroke.setImageResource(R.drawable.ic_home_more_card_stroke_harpseal)
+                        front_tv_top_category.text = "연속 21일"
+
+                        back_img.setImageResource(R.drawable.ic_home_more_card_back_21_harpseal)
+                        back_stroke.setImageResource(R.drawable.ic_home_more_card_stroke_harpseal)
+                        back_tv_top_category.text = "연속 21일"
+                    }
+
+                } else if(HomeMoreCardData.flag === false){
+                    front_img.setImageResource(R.drawable.ic_home_more_card_front_7_harpseal)
+                    front_stroke.visibility = View.GONE
+                    front_tv_top_category.text = "일반"
+                    front_tv_mission_total_count.text=""
+                    front_normal_index.setImageResource(R.drawable.ic_normal_index_harpseal)
+                    front_tv_index_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_harpseal))
+                    front_progressbar_normal.setImageResource(R.drawable.ic_home_more_card_progressbar_harpseal)
+
+                    back_img.setImageResource(R.drawable.ic_home_more_card_back_0_harpseal)
+                    back_stroke.visibility = View.GONE
+                    back_tv_top_category.text = "일반"
+                    back_tv_mission_total_count.text=""
+                }
 
             }else if(HomeMoreCardData.index === 3){
 
+                //유형 변경
+                front_tv_mission_category_eng.text="Paperless"
+                front_tv_mission_category_kor.text="페이퍼리스"
+                front_tv_bottom_sentence.text="For treeeeeee"
+                back_tv_mission_category_eng.text="Paperless"
+                back_tv_mission_category_kor.text="페이퍼리스"
+                back_tv_bottom_sentence.text="For treeeeeee"
+
+                //색 변경
+                front_tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                front_tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                front_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_java))
+                front_tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                front_tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                front_tv_achieve_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                front_tv_times.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                front_tv_start_date_title.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                front_tv_end_date_title.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                front_tv_start_date.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                front_tv_end_date.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                front_tv_achieve_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                front_tv_process.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                front_tv_process_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                front_tv_count_slash.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                front_tv_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                front_tv_bottom_sentence.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+
+                back_tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                back_tv_count_num_behind.setTextColor(ContextCompat.getColor(itemView.context, R.color.blur_java))
+                back_tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                back_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_java))
+                back_tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                back_tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                back_tv_achieve_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                back_tv_start_date_title.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                back_tv_end_date_title.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                back_tv_achieve_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                back_tv_times.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                back_tv_start_date.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                back_tv_end_date.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                back_tv_process.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                back_tv_process_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                back_tv_count_slash.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                back_tv_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                back_tv_mission_content.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                back_tv_bottom_sentence.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+
+                //이미지 변경
+                front_background_img.setImageResource(R.drawable.ic_more_card_background_java)
+                back_background_img.setImageResource(R.drawable.ic_more_card_background_java)
+
+                if(HomeMoreCardData.flag === true){
+                    front_tv_day_mon.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    front_tv_day_tue.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    front_tv_day_wed.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    front_tv_day_thu.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    front_tv_day_fir.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    front_tv_day_sat.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+                    front_tv_day_sun.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
+
+                    if(HomeMoreCardData.dayDuring === 7){
+                        front_img.setImageResource(R.drawable.ic_home_more_card_front_7_java)
+                        front_stroke.visibility = View.GONE
+                        front_tv_top_category.text = "연속 7일"
+
+                        back_img.setImageResource(R.drawable.ic_home_more_card_back_7_java)
+                        back_stroke.visibility = View.GONE
+                        back_tv_top_category.text = "연속 7일"
+                    }else if(HomeMoreCardData.dayDuring === 14){
+                        front_img.setImageResource(R.drawable.ic_home_more_card_front_14_java)
+                        front_stroke.visibility = View.GONE
+                        front_tv_top_category.text = "연속 14일"
+
+                        back_img.setImageResource(R.drawable.ic_home_more_card_back_14_java)
+                        back_stroke.visibility = View.GONE
+                        back_tv_top_category.text = "연속 14일"
+                    }else if(HomeMoreCardData.dayDuring === 21){
+                        front_img.setImageResource(R.drawable.ic_home_more_card_front_21_java)
+                        front_stroke.setImageResource(R.drawable.ic_home_more_card_stroke_java)
+                        front_tv_top_category.text = "연속 21일"
+
+                        back_img.setImageResource(R.drawable.ic_home_more_card_back_21_java)
+                        back_stroke.setImageResource(R.drawable.ic_home_more_card_stroke_java)
+                        back_tv_top_category.text = "연속 21일"
+                    }
+
+                } else if(HomeMoreCardData.flag === false){
+                    front_img.setImageResource(R.drawable.ic_home_more_card_front_7_java)
+                    front_stroke.visibility = View.GONE
+                    front_tv_top_category.text = "일반"
+                    front_tv_mission_total_count.text=""
+                    front_normal_index.setImageResource(R.drawable.ic_normal_index_java)
+                    front_tv_index_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_java))
+                    front_progressbar_normal.setImageResource(R.drawable.ic_home_more_card_progressbar_java)
+
+                    back_img.setImageResource(R.drawable.ic_home_more_card_back_0_java)
+                    back_stroke.visibility = View.GONE
+                    back_tv_top_category.text = "일반"
+                    back_tv_mission_total_count.text=""
+                }
+
             }else if(HomeMoreCardData.index === 4){
+                //유형 변경
+                front_tv_mission_category_eng.text="Living Habit"
+                front_tv_mission_category_kor.text="생활 습관 개선"
+                front_tv_bottom_sentence.text="YOU&I"
+                back_tv_mission_category_eng.text="Living Habit"
+                back_tv_mission_category_kor.text="생활 습관 개선"
+                back_tv_bottom_sentence.text="YOU&I"
 
+                //색 변경
+                front_tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                front_tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                front_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_bengaltiger))
+                front_tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                front_tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                front_tv_achieve_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                front_tv_times.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                front_tv_start_date_title.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                front_tv_end_date_title.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                front_tv_start_date.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                front_tv_end_date.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                front_tv_achieve_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                front_tv_process.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                front_tv_process_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                front_tv_count_slash.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                front_tv_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                front_tv_bottom_sentence.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+
+                back_tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                back_tv_count_num_behind.setTextColor(ContextCompat.getColor(itemView.context, R.color.blur_bengal))
+                back_tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                back_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_bengaltiger))
+                back_tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                back_tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                back_tv_achieve_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                back_tv_start_date_title.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                back_tv_end_date_title.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                back_tv_achieve_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                back_tv_times.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                back_tv_start_date.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                back_tv_end_date.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                back_tv_process.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                back_tv_process_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                back_tv_count_slash.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                back_tv_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                back_tv_mission_content.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                back_tv_bottom_sentence.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+
+                //이미지 변경
+                front_background_img.setImageResource(R.drawable.ic_more_card_background_bengal)
+                back_background_img.setImageResource(R.drawable.ic_more_card_background_bengal)
+
+                if(HomeMoreCardData.flag === true){
+                    front_tv_day_mon.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    front_tv_day_tue.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    front_tv_day_wed.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    front_tv_day_thu.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    front_tv_day_fir.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    front_tv_day_sat.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                    front_tv_day_sun.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+
+                    if(HomeMoreCardData.dayDuring === 7){
+                        front_img.setImageResource(R.drawable.ic_home_more_card_front_7_bengal)
+                        front_stroke.visibility = View.GONE
+                        front_tv_top_category.text = "연속 7일"
+
+                        back_img.setImageResource(R.drawable.ic_home_more_card_back_7_bengal)
+                        back_stroke.visibility = View.GONE
+                        back_tv_top_category.text = "연속 7일"
+                    }else if(HomeMoreCardData.dayDuring === 14){
+                        front_img.setImageResource(R.drawable.ic_home_more_card_front_14_bengal)
+                        front_stroke.visibility = View.GONE
+                        front_tv_top_category.text = "연속 14일"
+
+                        back_img.setImageResource(R.drawable.ic_home_more_card_back_14_bengal)
+                        back_stroke.visibility = View.GONE
+                        back_tv_top_category.text = "연속 14일"
+                    }else if(HomeMoreCardData.dayDuring === 21){
+                        front_img.setImageResource(R.drawable.ic_home_more_card_front_21_bengal)
+                        front_stroke.setImageResource(R.drawable.ic_home_more_card_stroke_bengal)
+                        front_tv_top_category.text = "연속 21일"
+
+                        back_img.setImageResource(R.drawable.ic_home_more_card_back_21_bengal)
+                        back_stroke.setImageResource(R.drawable.ic_home_more_card_stroke_bengal)
+                        back_tv_top_category.text = "연속 21일"
+                    }
+
+                } else if(HomeMoreCardData.flag === false){
+                    front_img.setImageResource(R.drawable.ic_home_more_card_front_7_bengal)
+                    front_stroke.visibility = View.GONE
+                    front_tv_top_category.text = "일반"
+                    front_tv_mission_total_count.text=""
+                    front_normal_index.setImageResource(R.drawable.ic_normal_index_bengaltiger)
+                    front_tv_index_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_bengaltiger))
+                    front_progressbar_normal.setImageResource(R.drawable.ic_home_more_card_progressbar_bengal)
+
+                    back_img.setImageResource(R.drawable.ic_home_more_card_back_0_bengal)
+                    back_stroke.visibility = View.GONE
+                    back_tv_top_category.text = "일반"
+                    back_tv_mission_total_count.text=""
+                }
             }
-
-            //다른 바뀌는 정보들은 앞 카드에서 받아와서 바꾸면 되나??
         }
     }
 }

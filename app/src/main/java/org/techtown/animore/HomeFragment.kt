@@ -41,22 +41,28 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //서버로부터 정보를 받아와서 넣어주겠지?
+        var maincard1 = MainCardData(0, false, 21, "2020-11-26", "2020-12-24", 5, "미션이름입니다")
+        var maincard2 = MainCardData(1, true, 7, "2020-11-26", "2020-12-24", 2, "미션이름입니다")
+        var maincard3 = MainCardData(2, true, 14, "2020-11-26", "2020-12-24", 13, "미션이름입니다")
+        var maincard4 = MainCardData(3, true, 21, "2020-11-26", "2020-12-24", 14, "미션이름입니다")
+        var maincard5 = MainCardData(4, false, 21, "2020-11-26", "2020-12-24", 10, "미션이름입니다")
 
-        var dump1 = MainCardData(0, false, 21, "2020-11-26", "2020-12-24", 7, "미션이름입니다")
-
-        val No = MainCardAdapter()
-        No.datas.add(dump1)
-        main_card_list.adapter = No
+        val Adapter = MainCardAdapter()
+        Adapter.datas.add(maincard1)
+        Adapter.datas.add(maincard2)
+        Adapter.datas.add(maincard3)
+        Adapter.datas.add(maincard4)
+        Adapter.datas.add(maincard5)
+        main_card_list.adapter = Adapter
 
         //MyData에 넘겨 받은 카드 개수에 맞춰 width 조절
-        if(No.datas.size === 3){
+        if(Adapter.datas.size === 3){
             var layout = LinearLayout.LayoutParams(2787,LinearLayout.LayoutParams.WRAP_CONTENT)
             main_card_list.layoutParams = layout
-        }else if(No.datas.size === 4){
+        }else if(Adapter.datas.size === 4){
             var layout = LinearLayout.LayoutParams(3715,LinearLayout.LayoutParams.WRAP_CONTENT)
             main_card_list.layoutParams = layout
-        }else if(No.datas.size === 5){
+        }else if(Adapter.datas.size === 5){
             //카드가 5개일 경우 디폴트 카드 삭제
             default_card.visibility = View.GONE;
             var layout = LinearLayout.LayoutParams(4645,LinearLayout.LayoutParams.WRAP_CONTENT)
