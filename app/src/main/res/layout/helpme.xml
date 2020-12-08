@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            card_view:srcCompat="@drawable/ic_test" />
+            card_view:srcCompat="@drawable/ic_more_card_background_bengal" />
 
         <ImageView
             android:id="@+id/more_card_front_stroke"

@@ -401,7 +401,6 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                 tv_end_date.visibility = View.GONE;
 
                 //캘린더 그리기
-                //createCalendar(MainCardData.dayDuring)
                 draw_cal(MainCardData.dayDuring, MainCardData.index)
 
                 /*----------------------------------연속 카드 일수별로 다른 요소 변경--------------------------------------------*/
