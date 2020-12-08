@@ -45,7 +45,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
         val calendarView: RecyclerView = itemView.findViewById(R.id.more_card_circle_recyclerview)
         val CircleAdapter = HomeMoreCardCircleAdapter()
 
-        fun createCircle(count: Int, type:Int, dayduring : Int){
+        fun createCircle(count: Int, type:Int){
 
             var int = 1;
             var typestring = "";
@@ -68,7 +68,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                 int ++;
             }
 
-            for(i in 1..dayduring-count){
+            for(i in 1..21-count){
                 CircleAdapter.items.add(""+typestring + (int+50).toString())
                 int ++;
             }
@@ -438,30 +438,30 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
 
 
             /*----------------------------------미션마다 다른 정보 우선 배정--------------------------------------------*/
-
-            //HomeMoreCardData.어쩌구로 아래들에 대입(아마 뒷장도 있어서 더 많이 필요할 것)
-            /*
             //카드에 보이게 되는 정보들
-            tv_mission_name.text = MainCardData.mission_name
-            tv_achieve_count.text = MainCardData.count.toString()
-            tv_totalCount.text = "/"+MainCardData.dayDuring.toString()
-            tv_index_count_num.text = MainCardData.count.toString()
-            tv_start_date.text = MainCardData.start_date
-            tv_end_date.text = MainCardData.end_date
+            front_tv_mission_name.text = HomeMoreCardData.mission_name
+            front_tv_mission_total_count.text = HomeMoreCardData.dayDuring.toString()
+            front_tv_start_date.text = HomeMoreCardData.start_date
+            front_tv_end_date.text = HomeMoreCardData.end_date
+            front_tv_achieve_count_num.text = HomeMoreCardData.count.toString()
+            front_tv_process_count.text = HomeMoreCardData.count.toString()
+            front_tv_total_count.text = HomeMoreCardData.dayDuring.toString()
 
-            tv_mission_name.text = ""
-            tv_achieve_count.text = ""
-            tv_totalCount.text = ""
-            tv_index_count_num.text = ""
-            tv_start_date.text = ""
-            tv_end_date.text = ""
-             */
+            back_tv_mission_name.text = HomeMoreCardData.mission_name
+            back_tv_mission_total_count.text = HomeMoreCardData.dayDuring.toString()
+            back_tv_start_date.text = HomeMoreCardData.start_date
+            back_tv_end_date.text = HomeMoreCardData.end_date
+            back_tv_achieve_count_num.text = HomeMoreCardData.count.toString()
+            back_tv_process_count.text = HomeMoreCardData.count.toString()
+            back_tv_total_count.text = HomeMoreCardData.dayDuring.toString()
+            back_tv_mission_content.text = HomeMoreCardData.mission_expression
+            back_tv_count_num_behind.text = HomeMoreCardData.dayDuring.toString()
 
             /*----------------------------------타입마다 다른 정보 나중 배정--------------------------------------------*/
 
             if(HomeMoreCardData.flag === true){
                 //원 스탬프 그리기
-                createCircle(HomeMoreCardData.count, HomeMoreCardData.index, HomeMoreCardData.dayDuring)
+                createCircle(HomeMoreCardData.count, HomeMoreCardData.index)
 
                 //연속 카드 요소 안 보이게
                 front_tv_day_mon.visibility = View.GONE
@@ -516,7 +516,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                 back_tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                 back_tv_count_num_behind.setTextColor(ContextCompat.getColor(itemView.context, R.color.blur_guanicoe))
                 back_tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
-                back_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
+                back_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_guanicoe))
                 back_tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                 back_tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                 back_tv_achieve_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))

@@ -89,10 +89,8 @@ class HomeMoreFragment : Fragment() {
         home_more_card_tv_reallydelete.visibility = GONE;
         home_more_card_reallydelete.visibility = GONE;
 
-
-
         
-        var dump1 = HomeMoreCardData(0, true, 14, "","", 5,"미션 이름이어요","")
+        var dump1 = HomeMoreCardData(0, false, 14, "","", 5,"미션 이름임요","")
         val No = HomeMoreCardAdapter(requireContext())
         No.homemoreitems.add(dump1)
 
