@@ -16,6 +16,8 @@ import retrofit2.Response
 
 class PastFragment : Fragment() {
     val retrofitClient = RetrofitClient.create(RequestCardInterface::class.java)
+    var card_count = 0;
+
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -31,6 +33,7 @@ class PastFragment : Fragment() {
     override fun onStart() {
         super.onStart()
         getPastCardSetting()
+        past_tv_title.text = "유해영님은 "+ card_count +"마리의 동물을 구했어요!"
     }
 
     fun getPastCardSetting(){
@@ -55,10 +58,12 @@ class PastFragment : Fragment() {
                         Log.d("Pastcard", "전체 데이터 : ${response.body()!!}")
 
                         val responseData = response.body()!!.data
-                        val Adapter = PastCardAdapter()
-                        Adapter.datas.addAll(responseData)
-                        past_card_list.adapter = Adapter
-
+                        card_count = responseData.size
+                        if(card_count != 0){
+                            val Adapter = PastCardAdapter()
+                            Adapter.datas.addAll(responseData)
+                            past_card_list.adapter = Adapter
+                        }
                     } else {
                         Log.d("Pastcard", "통신실패")
                     }

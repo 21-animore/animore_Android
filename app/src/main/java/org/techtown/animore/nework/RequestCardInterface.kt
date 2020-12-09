@@ -35,7 +35,7 @@ interface RequestCardInterface {
         @Field("mission_end_date") mission_end_date: String,
         @Field("mission_content") mission_content: String,
         @Field("continue_flag") continue_flag: Int
-    ): Call<SimpleDataResponse>
+    ): Call<AddNewCardData>
 
     @FormUrlEncoded
     @PUT("/card/addachievecount")

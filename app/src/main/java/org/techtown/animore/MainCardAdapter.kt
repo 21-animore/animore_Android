@@ -385,6 +385,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     if (response.isSuccessful) {
                         if (response.body()!!.success) {
                             Log.d("add Count", "전체 데이터 : ${response.body()!!}")
+
                         } else {
                             Log.d("add Count", "통신실패")
                         }

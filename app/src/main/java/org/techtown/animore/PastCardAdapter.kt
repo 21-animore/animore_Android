@@ -55,7 +55,7 @@ class PastCardAdapter : RecyclerView.Adapter<PastCardAdapter.Holder>(){
             var bundle_mission_name = PastCardData.mission_name   //미션 이름
             var bundle_mission_category = PastCardData.mission_category.toString()   //인덱스(유형 구분)
             var bundle_continue_flag = PastCardData.continue_flag.toString()   //연속/일반 구분
-            var bundle_mission_acheieve_count = PastCardData.mission_acheieve_count.toString()   //카운트(달성 횟수)
+            var bundle_mission_acheive_count = PastCardData.mission_acheive_count.toString()   //카운트(달성 횟수)
             var bundle_mission_period = PastCardData.mission_period.toString() //총 횟수(7,14,21)
             var bundle_mission_start_date = PastCardData.mission_start_date  //시작 날짜
             var bundle_mission_end_date = PastCardData.mission_end_date    //끝 날짜
@@ -67,7 +67,7 @@ class PastCardAdapter : RecyclerView.Adapter<PastCardAdapter.Holder>(){
             /*----------------------------------미션마다 다른 정보 우선 배정--------------------------------------------*/
 
             tv_mission_name.text = PastCardData.mission_name
-            tv_achieve_count.text = PastCardData.mission_acheieve_count.toString()
+            tv_achieve_count.text = PastCardData.mission_acheive_count.toString()
             tv_totalCount.text = "/"+PastCardData.mission_period.toString()
 
             var start_date = PastCardData.mission_start_date
@@ -209,7 +209,7 @@ class PastCardAdapter : RecyclerView.Adapter<PastCardAdapter.Holder>(){
                     "bundle_mission_name" to bundle_mission_name,
                     "bundle_mission_category" to bundle_mission_category,
                     "bundle_continue_flag" to bundle_continue_flag,
-                    "bundle_mission_acheieve_count" to bundle_mission_acheieve_count,
+                    "bundle_mission_acheive_count" to bundle_mission_acheive_count,
                     "bundle_mission_period" to bundle_mission_period,
                     "bundle_mission_start_date" to bundle_mission_start_date,
                     "bundle_mission_end_date" to bundle_mission_end_date,

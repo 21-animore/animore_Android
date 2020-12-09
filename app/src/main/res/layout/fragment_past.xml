@@ -51,7 +51,6 @@
                 android:gravity="bottom"
                 android:layout_marginBottom="15dp"
                 android:fontFamily="@font/notosanskr_bold"
-                android:text="유해영님은 10마리의 동물을 구했어요!"
                 android:textColor="@color/colorAccent"
                 android:textSize="40sp"
                 app:layout_constraintStart_toStartOf="parent"

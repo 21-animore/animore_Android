@@ -26,7 +26,7 @@
             android:layout_marginLeft="20dp"
             android:fontFamily="@font/notosanskr_bold"
             android:includeFontPadding="false"
-            android:text="환경보호하기"
+            android:text=""
             android:textColor="@color/stroke_bengaltiger"
             android:textSize="42sp" />
 
@@ -40,7 +40,7 @@
             android:layout_marginRight="20dp"
             android:fontFamily="@font/notosanskr_medium"
             android:includeFontPadding="false"
-            android:text="연속"
+            android:text=""
             android:textColor="@color/stroke_bengaltiger"
             android:textSize="12sp" />
 
@@ -53,7 +53,7 @@
             android:layout_marginLeft="20dp"
             android:fontFamily="@font/montserrat_medium"
             android:includeFontPadding="false"
-            android:text="Living Habit"
+            android:text=""
             android:textColor="@color/stroke_bengaltiger"
             android:textSize="12sp" />
 
@@ -67,7 +67,7 @@
             android:layout_marginRight="20dp"
             android:fontFamily="@font/notosanskr_medium"
             android:includeFontPadding="false"
-            android:text="생활 습관 개선"
+            android:text=""
             android:textColor="@color/stroke_bengaltiger"
             android:textSize="12sp" />
 
@@ -80,7 +80,7 @@
             android:layout_toStartOf="@+id/maincard_tv_totalCount"
             android:fontFamily="@font/montserrat_medium"
             android:includeFontPadding="false"
-            android:text="0"
+            android:text=""
             android:textColor="@color/stroke_bengaltiger"
             android:textSize="24sp" />
 
@@ -119,7 +119,7 @@
             android:layout_marginTop="45dp"
             android:layout_marginBottom="11dp"
             android:fontFamily="@font/montserrat_bold"
-            android:text="0"
+            android:text=""
             android:textAlignment="center"
             android:textColor="@color/back_bengaltiger"
             android:textSize="12sp" />
@@ -135,7 +135,7 @@
             android:layout_marginRight="20dp"
             android:fontFamily="@font/montserrat_medium"
             android:includeFontPadding="false"
-            android:text="2020. 10. 09"
+            android:text=""
             android:textColor="@color/stroke_bengaltiger"
             android:textSize="12sp" />
 
@@ -149,7 +149,7 @@
             android:layout_marginTop="5dp"
             android:fontFamily="@font/montserrat_medium"
             android:includeFontPadding="false"
-            android:text="2020. 11. 09"
+            android:text=""
             android:textColor="@color/stroke_bengaltiger"
             android:textSize="12sp" />
 
@@ -296,7 +296,7 @@
             android:fontFamily="@font/montserrat_bold"
             android:includeFontPadding="false"
             android:layout_marginLeft="25dp"
-            android:text="YOU&amp;I"
+            android:text=""
             android:textColor="@color/stroke_bengaltiger"
             android:textSize="12sp" />
 

@@ -45,8 +45,7 @@ class AddFragmentFinalGuanicoe : Fragment() {
         view.findViewById<Button>(R.id.final_animal_card_btn_to_get_maincard_guanicoe).setOnClickListener {
             postMainCard()
 
-            val intent = Intent(requireActivity(), SplashAddCardActivity::class.java)
-            startActivity(intent)
+
         }
 
         return view;
@@ -55,22 +54,24 @@ class AddFragmentFinalGuanicoe : Fragment() {
     fun postMainCard(){
 
         retrofitClient.postProductRequest(user_idx, mission_name, mission_category, mission_period, mission_start_date, mission_end_date, mission_content, continue_flag).enqueue(object :
-            Callback<SimpleDataResponse> {
-            override fun onFailure(call: Call<SimpleDataResponse>, t: Throwable) {
+            Callback<AddNewCardData> {
+            override fun onFailure(call: Call<AddNewCardData>, t: Throwable) {
                 if (t.message != null) {
                     Log.d("AddCard", t.message!!)
-
                 } else {
                     Log.d("AddCard", "통신실패")
                 }
             }
             override fun onResponse(
-                call: Call<SimpleDataResponse>,
-                response: Response<SimpleDataResponse>
+                call: Call<AddNewCardData>,
+                response: Response<AddNewCardData>
             ) {
                 if (response.isSuccessful) {
                     if (response.body()!!.success) {
                         Log.d("AddCard", "전체 데이터 : ${response.body()!!}")
+                        var intent = Intent(requireActivity(), SplashAddCardActivity::class.java)
+                        intent.putExtra("add_text", response.body()!!.data)
+                        startActivity(intent)
                     } else {
                         Log.d("AddCard", "통신실패")
                     }

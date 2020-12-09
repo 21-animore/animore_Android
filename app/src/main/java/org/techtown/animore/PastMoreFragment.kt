@@ -13,7 +13,7 @@ class PastMoreFragment : Fragment() {
     var bundle_mission_name = ""   //미션 이름
     var bundle_mission_category = ""   //인덱스(유형 구분)
     var bundle_continue_flag = "" //연속 카드 여부
-    var bundle_mission_acheieve_count = ""   //카운트(달성 횟수)
+    var bundle_mission_acheive_count = ""   //카운트(달성 횟수)
     var bundle_mission_period = "" //총 횟수(7,14,21)
     var bundle_mission_start_date = ""  //시작 날짜
     var bundle_mission_end_date = ""    //끝 날짜
@@ -31,7 +31,7 @@ class PastMoreFragment : Fragment() {
         bundle_mission_name = arguments?.getString("bundle_mission_name").toString()
         bundle_continue_flag = arguments?.getString("bundle_continue_flag").toString()
         bundle_mission_category = arguments?.getString("bundle_mission_category").toString()
-        bundle_mission_acheieve_count = arguments?.getString("bundle_mission_acheieve_count").toString()
+        bundle_mission_acheive_count = arguments?.getString("bundle_mission_acheive_count").toString()
         bundle_mission_period = arguments?.getString("bundle_mission_period").toString()
         bundle_mission_start_date = arguments?.getString("bundle_mission_start_date").toString()
         bundle_mission_end_date = arguments?.getString("bundle_mission_end_date").toString()
@@ -57,7 +57,7 @@ class PastMoreFragment : Fragment() {
                 dayDuring = bundle_mission_period.toInt(),
                 start_date = bundle_mission_start_date,
                 end_date = bundle_mission_end_date,
-                count = bundle_mission_acheieve_count.toInt(),
+                count = bundle_mission_acheive_count.toInt(),
                 mission_name = bundle_mission_name,
                 mission_expression = bundle_mission_content,
                 success_flag = bundle_success_flag.toInt())

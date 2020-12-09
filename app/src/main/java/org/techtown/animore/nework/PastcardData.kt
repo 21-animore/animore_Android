@@ -16,7 +16,7 @@ data class PastcardDataList (
     val mission_period : Int,
     val mission_start_date : String,
     val mission_end_date : String,
-    val mission_acheieve_count : Int,
+    val mission_acheive_count : Int,
     val mission_content : String,
     val success_flag : Int,
     val continue_flag : Int

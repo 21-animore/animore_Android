@@ -12,9 +12,13 @@ import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashAddCardActivity : AppCompatActivity() {
 
+    private lateinit var textData: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activitiy_splash_add)
+
+        textData = intent.getStringExtra("add_text")!!
+        challenge_setting_text.text = textData
 
         challenge_setting.playAnimation()
         challenge_setting.addAnimatorListener(object: Animator.AnimatorListener {

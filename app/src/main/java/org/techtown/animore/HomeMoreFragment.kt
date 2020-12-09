@@ -28,7 +28,7 @@ class HomeMoreFragment : Fragment() {
     var bundle_mission_name = ""
     var bundle_mission_category = ""
     var bundle_continue_flag = ""
-    var bundle_mission_acheieve_count = ""
+    var bundle_mission_acheive_count = ""
     var bundle_mission_period = ""
     var bundle_mission_start_date = ""
     var bundle_mission_end_date = ""
@@ -47,7 +47,7 @@ class HomeMoreFragment : Fragment() {
         bundle_mission_name = arguments?.getString("bundle_mission_name").toString()
         bundle_mission_category = arguments?.getString("bundle_mission_category").toString()
         bundle_continue_flag = arguments?.getString("bundle_continue_flag").toString()
-        bundle_mission_acheieve_count = arguments?.getString("bundle_mission_acheieve_count").toString()
+        bundle_mission_acheive_count = arguments?.getString("bundle_mission_acheive_count").toString()
         bundle_mission_period = arguments?.getString("bundle_mission_period").toString()
         bundle_mission_start_date = arguments?.getString("bundle_mission_start_date").toString()
         bundle_mission_end_date = arguments?.getString("bundle_mission_end_date").toString()
@@ -135,7 +135,7 @@ class HomeMoreFragment : Fragment() {
                 dayDuring = bundle_mission_period.toInt(),
                 start_date = bundle_mission_start_date,
                 end_date = bundle_mission_end_date,
-                count = bundle_mission_acheieve_count.toInt(),
+                count = bundle_mission_acheive_count.toInt(),
                 mission_name = bundle_mission_name,
                 mission_expression = bundle_mission_content)
         val Adapter = HomeMoreCardAdapter(requireContext())
