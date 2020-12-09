@@ -17,14 +17,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class HomeFragment : Fragment() {
-
-    var bundle_mission_name = ""
-    var bundle_index = ""
-    var bundle_count = ""
-    var bundle_total_count = ""
-    var bundle_start_date = ""
-    var bundle_end_date = ""
-    var bundle_mission_expression = ""
+    val retrofitClient = RetrofitClient.create(RequestCardInterface::class.java)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,9 +32,11 @@ class HomeFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
+        getCardSetting()
+        getRandomMainText()
+    }
 
-        val retrofitClient = RetrofitClient.create(RequestCardInterface::class.java)
-
+    fun getRandomMainText(){
         retrofitClient.responseRandomMainTextData().enqueue(object :
             Callback<HomeRandomTextData> {
             override fun onFailure(call: Call<HomeRandomTextData>, t: Throwable) {
@@ -69,7 +64,9 @@ class HomeFragment : Fragment() {
                 }
             }
         })
+    }
 
+    fun getCardSetting(){
         val user_idx = 1;
         retrofitClient.responseHomecardData(user_idx).enqueue(object :
             Callback<HomecardData> {
@@ -89,6 +86,25 @@ class HomeFragment : Fragment() {
                     if (response.body()!!.success) {
                         Log.d("Homecard", "전체 데이터 : ${response.body()!!}")
 
+                        val responseData = response.body()!!.data
+                        val Adapter = MainCardAdapter()
+                        Adapter.datas.addAll(responseData)
+                        main_card_list.adapter = Adapter
+
+                        //MyData에 넘겨 받은 카드 개수에 맞춰 width 조절
+                        if(Adapter.datas.size === 3){
+                            var layout = LinearLayout.LayoutParams(2787,LinearLayout.LayoutParams.WRAP_CONTENT)
+                            main_card_list.layoutParams = layout
+                        }else if(Adapter.datas.size === 4){
+                            var layout = LinearLayout.LayoutParams(3715,LinearLayout.LayoutParams.WRAP_CONTENT)
+                            main_card_list.layoutParams = layout
+                        }else if(Adapter.datas.size === 5){
+                            //카드가 5개일 경우 디폴트 카드 삭제
+                            default_card.visibility = View.GONE;
+                            var layout = LinearLayout.LayoutParams(4645,LinearLayout.LayoutParams.WRAP_CONTENT)
+                            main_card_list.layoutParams = layout
+                        }
+
                     } else {
                         Log.d("Homecard", "통신실패")
                     }
@@ -107,6 +123,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        /*
         var maincard1 = MainCardData(0, true, 7, "2020-11-23", "2020-12-24", 5, "미션이름입니다", "")
         var maincard2 = MainCardData(1, true, 14, "2020-11-25", "2020-12-24", 2, "미션이름입니다", "")
         var maincard3 = MainCardData(2, true, 14, "2020-11-26", "2020-12-24", 13, "미션이름입니다", "")
@@ -120,20 +137,10 @@ class HomeFragment : Fragment() {
         Adapter.datas.add(maincard4)
         Adapter.datas.add(maincard5)
         main_card_list.adapter = Adapter
+         */
 
-        //MyData에 넘겨 받은 카드 개수에 맞춰 width 조절
-        if(Adapter.datas.size === 3){
-            var layout = LinearLayout.LayoutParams(2787,LinearLayout.LayoutParams.WRAP_CONTENT)
-            main_card_list.layoutParams = layout
-        }else if(Adapter.datas.size === 4){
-            var layout = LinearLayout.LayoutParams(3715,LinearLayout.LayoutParams.WRAP_CONTENT)
-            main_card_list.layoutParams = layout
-        }else if(Adapter.datas.size === 5){
-            //카드가 5개일 경우 디폴트 카드 삭제
-            default_card.visibility = View.GONE;
-            var layout = LinearLayout.LayoutParams(4645,LinearLayout.LayoutParams.WRAP_CONTENT)
-            main_card_list.layoutParams = layout
-        }
+        //response 그대로 가져오면 될 것 같은데 다른 함수에 있어서 음 음 음
+
         //No.notifyDataSetChanged()
 
     }

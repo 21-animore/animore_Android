@@ -10,18 +10,15 @@ import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_past_card_more.*
 
 class PastMoreFragment : Fragment() {
-
     var bundle_mission_name = ""   //미션 이름
-    var bundle_index = ""   //인덱스(유형 구분)
-    var bundle_flag = "" //연속 카드 여부
-    var bundle_count = ""   //카운트(달성 횟수)
-    var bundle_total_count = "" //총 횟수(7,14,21)
-    var bundle_start_date = ""  //시작 날짜
-    var bundle_end_date = ""    //끝 날짜
-    var bundle_mission_expression = "" //미션별 소개 글
+    var bundle_mission_category = ""   //인덱스(유형 구분)
+    var bundle_continue_flag = "" //연속 카드 여부
+    var bundle_mission_acheieve_count = ""   //카운트(달성 횟수)
+    var bundle_mission_period = "" //총 횟수(7,14,21)
+    var bundle_mission_start_date = ""  //시작 날짜
+    var bundle_mission_end_date = ""    //끝 날짜
+    var bundle_mission_content = "" //미션별 소개 글
     var bundle_success_flag = ""    //성공 여부
-
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,15 +29,14 @@ class PastMoreFragment : Fragment() {
 
         /*--------------------------------받아온 하나의 정보로 카드 1개 그림--------------------------------*/
         bundle_mission_name = arguments?.getString("bundle_mission_name").toString()
-        bundle_flag = arguments?.getString("bundle_flag").toString()
-        bundle_index = arguments?.getString("bundle_index").toString()
-        bundle_count = arguments?.getString("bundle_count").toString()
-        bundle_total_count = arguments?.getString("bundle_total_count").toString()
-        bundle_start_date = arguments?.getString("bundle_start_date").toString()
-        bundle_end_date = arguments?.getString("bundle_end_date").toString()
-        bundle_mission_expression = arguments?.getString("bundle_mission_expression").toString()
+        bundle_continue_flag = arguments?.getString("bundle_continue_flag").toString()
+        bundle_mission_category = arguments?.getString("bundle_mission_category").toString()
+        bundle_mission_acheieve_count = arguments?.getString("bundle_mission_acheieve_count").toString()
+        bundle_mission_period = arguments?.getString("bundle_mission_period").toString()
+        bundle_mission_start_date = arguments?.getString("bundle_mission_start_date").toString()
+        bundle_mission_end_date = arguments?.getString("bundle_mission_end_date").toString()
+        bundle_mission_content = arguments?.getString("bundle_mission_content").toString()
         bundle_success_flag = arguments?.getString("bundle_success_flag").toString()
-        Log.d("찍어본다", "name:"+bundle_mission_name.toString()+", index:"+bundle_index)
         /*-----------------------------------------------------------------------------------------------*/
 
         return view;
@@ -56,15 +52,15 @@ class PastMoreFragment : Fragment() {
 
 
         var pastcard = PastMoreCardData(
-                index = bundle_index.toInt(),
-                flag = bundle_flag.toBoolean(),
-                dayDuring = bundle_total_count.toInt(),
-                start_date = bundle_start_date,
-                end_date = bundle_end_date,
-                count = bundle_count.toInt(),
+                index = bundle_mission_category.toInt(),
+                flag = bundle_continue_flag.toInt(),
+                dayDuring = bundle_mission_period.toInt(),
+                start_date = bundle_mission_start_date,
+                end_date = bundle_mission_end_date,
+                count = bundle_mission_acheieve_count.toInt(),
                 mission_name = bundle_mission_name,
-                mission_expression = bundle_mission_expression,
-                success_flag = bundle_success_flag.toBoolean())
+                mission_expression = bundle_mission_content,
+                success_flag = bundle_success_flag.toInt())
         val Adapter = PastMoreCardAdapter()
         Adapter.dataPasts.add(pastcard)
         pastcard_more.adapter = Adapter

@@ -4,7 +4,7 @@ data class PastcardData (
     val status : Int,
     val success : Boolean,
     val message : String,
-    val data :PastcardDataList
+    val data :List<PastcardDataList>
 )
 
 data class PastcardDataList (
@@ -18,5 +18,6 @@ data class PastcardDataList (
     val mission_end_date : String,
     val mission_acheieve_count : Int,
     val mission_content : String,
-    val success_flag : Int
+    val success_flag : Int,
+    val continue_flag : Int
 )

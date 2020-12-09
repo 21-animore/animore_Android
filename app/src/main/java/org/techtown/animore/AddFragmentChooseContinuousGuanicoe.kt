@@ -13,10 +13,10 @@ import java.time.LocalDate
 
 class AddFragmentChooseContinuousGuanicoe : Fragment() {
 
-    var dayDuring = "7"
+    var mission_period = "7"
     val today = LocalDate.now()
-    val start_date= today.toString()
-    var end_date= ""
+    val mission_start_date= today.toString()
+    var mission_end_date= ""
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -26,24 +26,25 @@ class AddFragmentChooseContinuousGuanicoe : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_choose_option_continuous_guanicoe, container, false)
 
-        val mission_name_guanicoe = arguments?.getString("mission_name_guanicoe").toString()
-        val flag = "true"
+        val mission_name = arguments?.getString("mission_name").toString()
+        val mission_content = arguments?.getString("mission_content").toString()
+        val continue_flag = "1"
 
-        var bundle = bundleOf("mission_name_guanicoe" to mission_name_guanicoe, "flag" to flag, "dayDuring" to dayDuring, "start_date" to start_date, "end_date" to end_date)
+        var bundle = bundleOf("mission_name" to mission_name, "mission_content" to mission_content, "continue_flag" to continue_flag, "mission_period" to mission_period, "mission_start_date" to mission_start_date, "end_date" to mission_end_date)
 
         view.choose_option_continuous_button_7_guanicoe.setOnClickListener { view ->
-            dayDuring = "7"
-            bundle = bundleOf("mission_name_guanicoe" to mission_name_guanicoe, "flag" to flag, "dayDuring" to dayDuring, "start_date" to start_date, "end_date" to end_date)
+            mission_period = "7"
+            bundle = bundleOf("mission_name" to mission_name, "mission_content" to mission_content, "continue_flag" to continue_flag, "mission_period" to mission_period, "mission_start_date" to mission_start_date, "end_date" to mission_end_date)
         }
 
         view.choose_option_continuous_button_14_guanicoe.setOnClickListener { view ->
-            dayDuring = "14"
-            bundle = bundleOf("mission_name_guanicoe" to mission_name_guanicoe, "flag" to flag, "dayDuring" to dayDuring, "start_date" to start_date, "end_date" to end_date)
+            mission_period = "14"
+            bundle = bundleOf("mission_name" to mission_name, "mission_content" to mission_content, "continue_flag" to continue_flag, "mission_period" to mission_period, "mission_start_date" to mission_start_date, "end_date" to mission_end_date)
         }
 
         view.choose_option_continuous_button_21_guanicoe.setOnClickListener { view ->
-            dayDuring = "21"
-            bundle = bundleOf("mission_name_guanicoe" to mission_name_guanicoe, "flag" to flag, "dayDuring" to dayDuring, "start_date" to start_date, "end_date" to end_date)
+            mission_period = "21"
+            bundle = bundleOf("mission_name" to mission_name, "mission_content" to mission_content, "continue_flag" to continue_flag, "mission_period" to mission_period, "mission_start_date" to mission_start_date, "end_date" to mission_end_date)
         }
 
         view.findViewById<Button>(R.id.choose_option_continuous_tv_normal_guanicoe).setOnClickListener {

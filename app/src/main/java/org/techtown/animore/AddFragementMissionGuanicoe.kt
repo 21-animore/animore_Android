@@ -22,6 +22,10 @@ class AddFragementMissionGuanicoe : Fragment() {
     val card_category_flag = 0;
     val retrofitClient = RetrofitClient.create(RequestCardInterface::class.java)
 
+    var mission_name = ""
+    var mission_content = ""
+    var bundle = bundleOf("mission_name" to mission_name, "mission_content" to mission_content)
+
     fun getRandomMission() {
         retrofitClient.responseRandomMisionData(card_category_flag).enqueue(object :
             Callback<AddRandomMissionData> {
@@ -42,6 +46,11 @@ class AddFragementMissionGuanicoe : Fragment() {
                         Log.d("getRandomMission - Guanicoe", "전체 데이터 : ${response.body()!!}")
                         ecocard_guanicoe_tv_mission_name.setText(response.body()!!.data.mission_name)
                         ecocard_guanicoe_tv_mission_content.setText(response.body()!!.data.mission_content)
+
+                        mission_name = response.body()!!.data.mission_name
+                        mission_content = response.body()!!.data.mission_content
+                        bundle = bundleOf("mission_name" to mission_name, "mission_content" to mission_content)
+
                     } else {
                         Log.d("getRandomMission - Guanicoe", "통신실패")
                     }
@@ -66,9 +75,6 @@ class AddFragementMissionGuanicoe : Fragment() {
         view.random_animal_card_btn_to_select_guanicoe_card_again.setOnClickListener { view ->
             getRandomMission()
         }
-
-        val mission_name_guanicoe = "미션 이름 적기"
-        val bundle = bundleOf("mission_name_guanicoe" to mission_name_guanicoe)
 
         view.findViewById<Button>(R.id.random_animal_card_btn_to_select_mode_guanicoe).setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_add_random_guanicoe_to_add_choose_normal_guanicoe, bundle)

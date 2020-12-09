@@ -79,7 +79,7 @@ class PastMoreCardAdapter() : RecyclerView.Adapter<PastMoreCardAdapter.Holder>()
             progressbar.progress = int
 
 
-            if(PastMoreCardData.success_flag === true){
+            if(PastMoreCardData.success_flag === 1){
                 //성공 카드일 경우
                 fail.setVisibility(View.GONE)
             }else{
@@ -116,7 +116,7 @@ class PastMoreCardAdapter() : RecyclerView.Adapter<PastMoreCardAdapter.Holder>()
 
                 progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.progressbar_guanicoe))
 
-                if(PastMoreCardData.flag === true) {
+                if(PastMoreCardData.flag === 1) {
                     if(PastMoreCardData.dayDuring === 7) {
                         img.setImageResource(R.drawable.ic_home_more_card_back_7_guanicoe)
                         stroke.visibility = View.GONE;
@@ -168,7 +168,7 @@ class PastMoreCardAdapter() : RecyclerView.Adapter<PastMoreCardAdapter.Holder>()
 
                 progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.progressbar_illipika))
 
-                if(PastMoreCardData.flag === true) {
+                if(PastMoreCardData.flag === 1) {
                     if(PastMoreCardData.dayDuring === 7) {
                         img.setImageResource(R.drawable.ic_home_more_card_back_7_illipika)
                         stroke.visibility = View.GONE;
@@ -219,7 +219,7 @@ class PastMoreCardAdapter() : RecyclerView.Adapter<PastMoreCardAdapter.Holder>()
 
                 progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.progressbar_harpseal))
 
-                if(PastMoreCardData.flag === true) {
+                if(PastMoreCardData.flag === 1) {
                     if(PastMoreCardData.dayDuring === 7) {
                         img.setImageResource(R.drawable.ic_home_more_card_back_7_harpseal)
                         stroke.visibility = View.GONE;
@@ -270,7 +270,7 @@ class PastMoreCardAdapter() : RecyclerView.Adapter<PastMoreCardAdapter.Holder>()
 
                 progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.progressbar_java))
 
-                if(PastMoreCardData.flag === true) {
+                if(PastMoreCardData.flag === 1) {
                     if(PastMoreCardData.dayDuring === 7) {
                         img.setImageResource(R.drawable.ic_home_more_card_back_7_java)
                         stroke.visibility = View.GONE;
@@ -320,7 +320,7 @@ class PastMoreCardAdapter() : RecyclerView.Adapter<PastMoreCardAdapter.Holder>()
 
                 progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.progressbar_bengal))
 
-                if(PastMoreCardData.flag === true) {
+                if(PastMoreCardData.flag === 1) {
                     if(PastMoreCardData.dayDuring === 7) {
                         img.setImageResource(R.drawable.ic_home_more_card_back_7_bengal)
                         stroke.visibility = View.GONE;

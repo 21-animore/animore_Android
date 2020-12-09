@@ -13,7 +13,7 @@ interface RequestCardInterface {
     //과거 뷰 접속시마다 - 카드 전체 출력
     @GET("/card/getallpastcards/{user_idx}")
     fun responsePastcardData(
-        @Path("user_idx") user_idx : Int) : Call<ArrayList<HomeRandomTextData>>
+        @Path("user_idx") user_idx : Int) : Call<PastcardData>
 
     //미션 받기 버튼 클릭 시마다 - 새로운 랜덤 미션 출력
     @GET("/card/showrandomcard/{card_category_flag}")
@@ -24,20 +24,32 @@ interface RequestCardInterface {
     @GET("/card/getrandomsentence")
     fun responseRandomMainTextData() : Call<HomeRandomTextData>
 
-    /*
-    //count 버튼 누를> +1
+    @FormUrlEncoded
+    @POST("/card/start")
+    fun postProductRequest(
+        @Field("user_idx") user_idx: Int,
+        @Field("mission_name") mission_name: String,
+        @Field("mission_category") mission_category: Int,
+        @Field("mission_period") mission_period: Int,
+        @Field("mission_start_date") mission_start_date: String,
+        @Field("mission_end_date") mission_end_date: String,
+        @Field("mission_content") mission_content: String,
+        @Field("continue_flag") continue_flag: Int
+    ): Call<SimpleDataResponse>
+
     @PUT("/card/addachievecount")
-    fun unScrapCard(
-        @Body cardMemoModel: CardMemoModel) : Call<SimpleResponse>
+    fun addCountRequest(
+        @Field("user_idx") user_idx: Int,
+        @Field("mission_name") mission_name: String,
+        @Field("mission_period") mission_period: Int,
+    ): Call<RandomCheerupData>
 
-    //새로운 카드 추가
-    @POST("/card/memo createMemo(
-        @Body cardMemoModel: CardMemoModel) : Call<SimpleResponse>
-
-    //도전 중인 카드 삭제
-    @PUT("/card/card/missionfail")
-    fun unScrapCard(
-        @Body cardMemoModel: CardMemoModel) : Call<SimpleResponse>
-    */
+    //도전 중인 카드 삭제 얘는 왜 풋으로 했을까 나...?
+    @FormUrlEncoded
+    @POST("/card/giveup")
+    fun deleteCardRequest(
+        @Field("user_idx") user_idx: Int,
+        @Field("mission_name") mission_name: String
+    ): Call<SimpleDataResponse>
 
 }

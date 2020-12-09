@@ -1,5 +1,6 @@
 package org.techtown.animore
 
+import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -11,10 +12,14 @@ import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
+import org.techtown.animore.nework.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.util.*
 
 class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
-    var datas = mutableListOf<MainCardData>()
+    var datas = mutableListOf<HomecardDataList>()
 
     override fun getItemCount(): Int {
         return datas.size
@@ -30,6 +35,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
     }
 
     inner class Holder(itemView: View):RecyclerView.ViewHolder(itemView) {
+
 
         /*-------------------------------------------------선생님-------------------------------------------------------*/
         var view_count = 0  // 더한 tablerow 갯수 셀려는 변수
@@ -355,40 +361,75 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
         val progressbar = itemView.findViewById<ProgressBar>(R.id.maincard_progressbar)
 
 
+        var user_idx = 1;
+        var mission_name=""
+        var mission_period = 0
+
+        fun addCount(){
+            val retrofitClient = RetrofitClient.create(RequestCardInterface::class.java)
+
+            retrofitClient.addCountRequest(user_idx, mission_name, mission_period).enqueue(object :
+                Callback<RandomCheerupData> {
+                override fun onFailure(call: Call<RandomCheerupData>, t: Throwable) {
+                    if (t.message != null) {
+                        Log.d("add Count", t.message!!)
+
+                    } else {
+                        Log.d("add Count", "통신실패")
+                    }
+                }
+                override fun onResponse(
+                    call: Call<RandomCheerupData>,
+                    response: Response<RandomCheerupData>
+                ) {
+                    if (response.isSuccessful) {
+                        if (response.body()!!.success) {
+                            Log.d("add Count", "전체 데이터 : ${response.body()!!}")
+                        } else {
+                            Log.d("add Count", "통신실패")
+                        }
+                    } else {
+                        Log.d("add Count", "${response.message()}, ${response.errorBody()}")
+                    }
+                }
+            })
+        }
 
 
+        fun bind(MainCardData: HomecardDataList) {
 
-        fun bind(MainCardData: MainCardData) {
+            mission_name = MainCardData.mission_name
+            mission_period = MainCardData.mission_period
 
             /*----------------------------------데이터 바인딩 부분--------------------------------------------*/
             //상세페이지 눌렀을 때 넘겨줄 수 있도록
             var bundle_mission_name = MainCardData.mission_name   //미션 이름
-            var bundle_index = MainCardData.index.toString()   //인덱스(유형 구분)
-            val bundle_flag = MainCardData.flag.toString()
-            var bundle_count = MainCardData.count.toString()   //카운트(달성 횟수)
-            var bundle_total_count = MainCardData.dayDuring.toString() //총 횟수(7,14,21)
-            var bundle_start_date = MainCardData.start_date  //시작 날짜
-            var bundle_end_date = MainCardData.end_date    //끝 날짜
-            var bundle_mission_expression = "" //미션별 소개 글
+            var bundle_mission_category = MainCardData.mission_category.toString()   //인덱스(유형 구분)
+            val bundle_continue_flag = MainCardData.continue_flag.toString()
+            var bundle_mission_acheieve_count = MainCardData.mission_acheieve_count.toString()   //카운트(달성 횟수)
+            var bundle_mission_period = MainCardData.mission_period.toString() //총 횟수(7,14,21)
+            var bundle_mission_start_date = MainCardData.mission_start_date  //시작 날짜
+            var bundle_mission_end_date = MainCardData.mission_end_date    //끝 날짜
+            var bundle_mission_content = MainCardData.mission_content //미션별 소개 글
 
 
             /*----------------------------------미션마다 다른 정보 우선 배정--------------------------------------------*/
 
             //카드에 보이게 되는 정보들
             tv_mission_name.text = MainCardData.mission_name
-            tv_achieve_count.text = MainCardData.count.toString()
-            tv_totalCount.text = "/"+MainCardData.dayDuring.toString()
-            tv_index_count_num.text = MainCardData.count.toString()
-            tv_start_date.text = MainCardData.start_date
-            tv_end_date.text = MainCardData.end_date
+            tv_achieve_count.text = MainCardData.mission_acheieve_count.toString()
+            tv_totalCount.text = "/"+MainCardData.mission_period.toString()
+            tv_index_count_num.text = MainCardData.mission_acheieve_count.toString()
+            tv_start_date.text = MainCardData.mission_start_date
+            tv_end_date.text = MainCardData.mission_end_date
 
-            var count_for_progressbar = MainCardData.count.toFloat()/MainCardData.dayDuring*100
+            var count_for_progressbar = MainCardData.mission_acheieve_count.toFloat()/MainCardData.mission_period*100
             var int = count_for_progressbar.toInt()
             progressbar.progress = int
 
             /*----------------------------------타입마다 다른 정보 나중 배정--------------------------------------------*/
 
-            if(MainCardData.flag){
+            if(MainCardData.continue_flag == 1){
                 //연속 카드라면
                 
                 //일반 카드 요소들 숨기기
@@ -402,11 +443,11 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                 tv_end_date.visibility = View.GONE;
 
                 //캘린더 그리기
-                draw_cal(MainCardData.dayDuring, MainCardData.index, MainCardData.start_date)
+                draw_cal(MainCardData.mission_period, MainCardData.mission_category, MainCardData.mission_start_date)
 
                 /*----------------------------------연속 카드 일수별로 다른 요소 변경--------------------------------------------*/
                 
-                if (MainCardData.index ==0) {
+                if (MainCardData.mission_category ==0) {
 
                     //유형 변경
                     tv_mission_category_eng.text="Spending Habit"
@@ -429,7 +470,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     sun.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                     dailyCheckBtn.setImageResource(R.drawable.ic_checkbtn_guanicoe)
 
-                } else if(MainCardData.index==1){
+                } else if(MainCardData.mission_category==1){
 
                     //유형 변경
                     tv_mission_category_eng.text="Saving Electricity"
@@ -452,7 +493,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     sun.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
                     dailyCheckBtn.setImageResource(R.drawable.ic_checkbtn_illipika)
 
-                } else if(MainCardData.index==2){
+                } else if(MainCardData.mission_category==2){
 
                     //유형 변경
                     tv_mission_category_eng.text="Reduce Trash"
@@ -476,7 +517,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     dailyCheckBtn.setImageResource(R.drawable.ic_checkbtn_harpseal)
 
 
-                }else if(MainCardData.index==3){
+                }else if(MainCardData.mission_category==3){
 
                     //유형 변경
                     tv_mission_category_eng.text="Paperless"
@@ -500,7 +541,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     dailyCheckBtn.setImageResource(R.drawable.ic_checkbtn_java)
 
 
-                }else if(MainCardData.index==4){
+                }else if(MainCardData.mission_category==4){
 
                     //유형 변경
                     tv_mission_category_eng.text="Living Habit"
@@ -527,7 +568,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
 
                 /*------------------------------------------일수별로 다른 요소 변경--------------------------------------------*/
 
-                if(MainCardData.dayDuring === 7){
+                if(MainCardData.mission_period === 7){
                     //7일이라면
 
                     //카테고리 7일로 변경
@@ -537,19 +578,19 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     stroke21.visibility = View.GONE
 
                     //유형별 분류
-                    if (MainCardData.index ==0) {
+                    if (MainCardData.mission_category ==0) {
                         bottom_img.setImageResource(R.drawable.ic_maincard_img_continue_7_guanicoe)
-                    } else if(MainCardData.index==1){
+                    } else if(MainCardData.mission_category==1){
                         bottom_img.setImageResource(R.drawable.ic_maincard_img_continue_7_illipika)
-                    } else if(MainCardData.index==2){
+                    } else if(MainCardData.mission_category==2){
                         bottom_img.setImageResource(R.drawable.ic_maincard_img_continue_7_harpseal)
-                    }else if(MainCardData.index==3){
+                    }else if(MainCardData.mission_category==3){
                         bottom_img.setImageResource(R.drawable.ic_maincard_img_continue_7_java)
-                    }else if(MainCardData.index==4){
+                    }else if(MainCardData.mission_category==4){
                         bottom_img.setImageResource(R.drawable.ic_maincard_img_continue_7_bengal)
                     }
 
-                }else if(MainCardData.dayDuring === 14){
+                }else if(MainCardData.mission_period === 14){
                     //14일이라면
 
                     //카테고리 14일로 변경
@@ -559,15 +600,15 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     stroke21.visibility = View.GONE
 
                     //유형별 분류
-                    if (MainCardData.index ==0) {
+                    if (MainCardData.mission_category ==0) {
                         bottom_img.setImageResource(R.drawable.ic_maincard_img_continue_14_guanicoe)
-                    } else if(MainCardData.index==1){
+                    } else if(MainCardData.mission_category==1){
                         bottom_img.setImageResource(R.drawable.ic_maincard_img_continue_14_illipika)
-                    } else if(MainCardData.index==2){
+                    } else if(MainCardData.mission_category==2){
                         bottom_img.setImageResource(R.drawable.ic_maincard_img_continue_14_harpseal)
-                    }else if(MainCardData.index==3){
+                    }else if(MainCardData.mission_category==3){
                         bottom_img.setImageResource(R.drawable.ic_maincard_img_continue_14_java)
-                    }else if(MainCardData.index==4){
+                    }else if(MainCardData.mission_category==4){
                         bottom_img.setImageResource(R.drawable.ic_maincard_img_continue_14_bengal)
                     }
 
@@ -578,19 +619,19 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     tv_top_category.text="연속 21일"
 
                     //유형별 분류
-                    if (MainCardData.index ==0) {
+                    if (MainCardData.mission_category ==0) {
                         stroke21.setImageResource(R.drawable.ic_maincard_stroke_continue_21_guanicoe)
                         bottom_img.setImageResource(R.drawable.ic_maincard_img_continue_21_guanicoe)
-                    } else if(MainCardData.index==1){
+                    } else if(MainCardData.mission_category==1){
                         stroke21.setImageResource(R.drawable.ic_maincard_stroke_continue_21_illipika)
                         bottom_img.setImageResource(R.drawable.ic_maincard_img_continue_21_illipika)
-                    } else if(MainCardData.index==2){
+                    } else if(MainCardData.mission_category==2){
                         stroke21.setImageResource(R.drawable.ic_maincard_stroke_continue_21_harpseal)
                         bottom_img.setImageResource(R.drawable.ic_maincard_img_continue_21_harpseal)
-                    }else if(MainCardData.index==3){
+                    }else if(MainCardData.mission_category==3){
                         stroke21.setImageResource(R.drawable.ic_maincard_stroke_continue_21_java)
                         bottom_img.setImageResource(R.drawable.ic_maincard_img_continue_21_java)
-                    }else if(MainCardData.index==4){
+                    }else if(MainCardData.mission_category==4){
                         stroke21.setImageResource(R.drawable.ic_maincard_stroke_continue_21_bengal)
                         bottom_img.setImageResource(R.drawable.ic_maincard_img_continue_21_bengal)
                     }
@@ -617,7 +658,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                 stroke21.visibility = View.GONE
 
                 //이후 유형별 이미지 및 글씨 바꿔주기
-                if (MainCardData.index ==0) {
+                if (MainCardData.mission_category ==0) {
 
                     //유형 변경
                     tv_mission_category_eng.text="Spending Habit"
@@ -645,7 +686,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
 
                     progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.main_progressbar_guanicoe))
 
-                } else if(MainCardData.index==1){
+                } else if(MainCardData.mission_category==1){
 
                     //유형 변경
                     tv_mission_category_eng.text="Saving Electricity"
@@ -673,7 +714,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
 
                     progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.main_progressbar_illipika))
 
-                } else if(MainCardData.index==2){
+                } else if(MainCardData.mission_category==2){
 
                     //유형 변경
                     tv_mission_category_eng.text="Reduce Trash"
@@ -701,7 +742,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
 
                     progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.main_progressbar_harpseal))
 
-                }else if(MainCardData.index==3){
+                }else if(MainCardData.mission_category==3){
 
                     //유형 변경
                     tv_mission_category_eng.text="Paperless"
@@ -729,7 +770,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
 
                     progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.main_progressbar_java))
 
-                }else if(MainCardData.index==4){
+                }else if(MainCardData.mission_category==4){
 
                     //유형 변경
                     tv_mission_category_eng.text="Living Habit"
@@ -762,17 +803,20 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
             //클릭한 카드의 데이터 상세 뷰로 보내기
             val bundle = bundleOf(
                     "bundle_mission_name" to bundle_mission_name,
-                    "bundle_index" to bundle_index,
-                    "bundle_flag" to bundle_flag,
-                    "bundle_count" to bundle_count,
-                    "bundle_total_count" to bundle_total_count,
-                    "bundle_start_date" to bundle_start_date,
-                    "bundle_end_date" to bundle_end_date,
-                    "bundle_mission_expression" to bundle_mission_expression)
+                    "bundle_mission_category" to bundle_mission_category,
+                    "bundle_continue_flag" to bundle_continue_flag,
+                    "bundle_mission_acheieve_count" to bundle_mission_acheieve_count,
+                    "bundle_mission_period" to bundle_mission_period,
+                    "bundle_mission_start_date" to bundle_mission_start_date,
+                    "bundle_mission_end_date" to bundle_mission_end_date,
+                    "bundle_mission_content" to bundle_mission_content)
             cardview.setOnClickListener {
                 Navigation.findNavController(cardview).navigate(R.id.action_home_fragment_to_home_more_card_fragment, bundle)
             }
 
+            dailyCheckBtn.setOnClickListener {
+                addCount()
+            }
         }
     }
 }
