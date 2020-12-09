@@ -1,7 +1,5 @@
 package org.techtown.animore
 
-import java.util.*
-
 class HomeMoreCardData (
         //유형 파악용
         val index: Int,

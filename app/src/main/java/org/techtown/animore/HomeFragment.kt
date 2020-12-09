@@ -6,16 +6,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.LinearLayout
-import android.widget.TextView
-import androidx.core.os.bundleOf
-import androidx.navigation.Navigation
-import kotlinx.android.synthetic.main.fragment_choose_option_continuous_guanicoe.view.*
-import kotlinx.android.synthetic.main.fragment_choose_option_continuous_guanicoe.view.choose_option_continuous_button_7_guanicoe
 import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.maincard_layout.view.*
-import java.util.*
+import org.techtown.animore.nework.HomecardData
+import org.techtown.animore.nework.RequestCardInterface
+import org.techtown.animore.nework.HomeRandomTextData
+import org.techtown.animore.nework.RetrofitClient
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class HomeFragment : Fragment() {
 
@@ -36,6 +35,68 @@ class HomeFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
         return view
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        val retrofitClient = RetrofitClient.create(RequestCardInterface::class.java)
+
+        retrofitClient.responseRandomMainTextData().enqueue(object :
+            Callback<HomeRandomTextData> {
+            override fun onFailure(call: Call<HomeRandomTextData>, t: Throwable) {
+                if (t.message != null) {
+                    Log.d("Main Random Text", t.message!!)
+
+                } else {
+                    Log.d("Main Random Text", "통신실패")
+                }
+            }
+            override fun onResponse(
+                call: Call<HomeRandomTextData>,
+                response: Response<HomeRandomTextData>
+            ) {
+                if (response.isSuccessful) {
+                    if (response.body()!!.success) {
+                        Log.d("Main Random Text", "전체 데이터 : ${response.body()!!}")
+                        home_randomText.setText(response.body()!!.data)
+
+                    } else {
+                        Log.d("Main Random Text", "통신실패")
+                    }
+                } else {
+                    Log.d("Main Random Text", "${response.message()}, ${response.errorBody()}")
+                }
+            }
+        })
+
+        val user_idx = 1;
+        retrofitClient.responseHomecardData(user_idx).enqueue(object :
+            Callback<HomecardData> {
+            override fun onFailure(call: Call<HomecardData>, t: Throwable) {
+                if (t.message != null) {
+                    Log.d("Homecard", t.message!!)
+
+                } else {
+                    Log.d("Homecard", "통신실패")
+                }
+            }
+            override fun onResponse(
+                call: Call<HomecardData>,
+                response: Response<HomecardData>
+            ) {
+                if (response.isSuccessful) {
+                    if (response.body()!!.success) {
+                        Log.d("Homecard", "전체 데이터 : ${response.body()!!}")
+
+                    } else {
+                        Log.d("Homecard", "통신실패")
+                    }
+                } else {
+                    Log.d("Homecard", "${response.message()}, ${response.errorBody()}")
+                }
+            }
+        })
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

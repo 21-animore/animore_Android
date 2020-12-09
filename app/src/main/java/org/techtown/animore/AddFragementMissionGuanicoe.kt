@@ -10,11 +10,48 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.eco_card_layout_guanicoe.*
-import kotlinx.android.synthetic.main.fragment_add_animal_guanicoe.view.*
-import kotlinx.android.synthetic.main.fragment_add_random_guanicoe.*
-import kotlinx.android.synthetic.main.maincard_layout.*
+import kotlinx.android.synthetic.main.fragment_add_random_guanicoe.view.*
+import org.techtown.animore.nework.AddRandomMissionData
+import org.techtown.animore.nework.RequestCardInterface
+import org.techtown.animore.nework.RetrofitClient
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class AddFragementMissionGuanicoe : Fragment() {
+    val card_category_flag = 0;
+    val retrofitClient = RetrofitClient.create(RequestCardInterface::class.java)
+
+    fun getRandomMission() {
+        retrofitClient.responseRandomMisionData(card_category_flag).enqueue(object :
+            Callback<AddRandomMissionData> {
+            override fun onFailure(call: Call<AddRandomMissionData>, t: Throwable) {
+                if (t.message != null) {
+                    Log.d("getRandomMission - Guanicoe", t.message!!)
+
+                } else {
+                    Log.d("getRandomMission - Guanicoe", "통신실패")
+                }
+            }
+            override fun onResponse(
+                call: Call<AddRandomMissionData>,
+                response: Response<AddRandomMissionData>
+            ) {
+                if (response.isSuccessful) {
+                    if (response.body()!!.success) {
+                        Log.d("getRandomMission - Guanicoe", "전체 데이터 : ${response.body()!!}")
+                        ecocard_guanicoe_tv_mission_name.setText(response.body()!!.data.mission_name)
+                        ecocard_guanicoe_tv_mission_content.setText(response.body()!!.data.mission_content)
+                    } else {
+                        Log.d("getRandomMission - Guanicoe", "통신실패")
+                    }
+                } else {
+                    Log.d("getRandomMission - Guanicoe", "${response.message()}, ${response.errorBody()}")
+                }
+            }
+        })
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -22,6 +59,13 @@ class AddFragementMissionGuanicoe : Fragment() {
         // Inflate the layout for this fragment
 
         val view = inflater.inflate(R.layout.fragment_add_random_guanicoe, container, false)
+
+        getRandomMission()  //화면에 들어올 때 실행
+
+        //이후 버튼을 누를 때마다 실행
+        view.random_animal_card_btn_to_select_guanicoe_card_again.setOnClickListener { view ->
+            getRandomMission()
+        }
 
         val mission_name_guanicoe = "미션 이름 적기"
         val bundle = bundleOf("mission_name_guanicoe" to mission_name_guanicoe)

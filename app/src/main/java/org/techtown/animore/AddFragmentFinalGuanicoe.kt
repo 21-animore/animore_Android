@@ -6,14 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.LinearLayout
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.fragment_final_add_guanicoe.*
-import kotlinx.android.synthetic.main.fragment_home.*
 
 class AddFragmentFinalGuanicoe : Fragment() {
     override fun onCreateView(

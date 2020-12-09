@@ -1,17 +1,13 @@
 package org.techtown.animore
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.GONE
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.core.content.ContextCompat
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home_card_more.*
 import kotlinx.android.synthetic.main.fragment_home_card_more.view.*
 
@@ -116,7 +112,7 @@ class HomeMoreFragment : Fragment() {
 
         if(Adapter.homemoreitems[0].index === 0){
             home_more_card_topbar.setImageResource(R.drawable.ic_top_bar_guanicoe)
-            home_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(requireActivity(),R.color.stroke_guanicoe))
+            home_more_card_tv_mission_name.setTextColor(ContextCompat.getColor(requireActivity(), R.color.stroke_guanicoe))
             home_more_card_back_btn_to_add_frag.setImageResource(R.drawable.ic_back_btn_guanicoe)
         }else if(Adapter.homemoreitems[0].index === 1){
             home_more_card_topbar.setImageResource(R.drawable.ic_top_bar_illipika)

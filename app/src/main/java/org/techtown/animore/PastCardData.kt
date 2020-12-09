@@ -1,7 +1,5 @@
 package org.techtown.animore
 
-import java.util.*
-
 data class PastCardData(
 
         //유형 파악용

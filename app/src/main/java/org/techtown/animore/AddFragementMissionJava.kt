@@ -4,9 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
+import org.techtown.animore.R
 
 class AddFragementMissionJava : Fragment() {
     override fun onCreateView(
@@ -15,9 +14,6 @@ class AddFragementMissionJava : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_add_random_java, container, false)
-
-
-
         return view;
     }
 }

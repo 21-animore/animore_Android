@@ -1,14 +1,8 @@
 package org.techtown.animore
 
-import android.content.Context
-import android.graphics.Color
-import android.media.Image
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
@@ -16,7 +10,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.pastcard_layout.view.*
 
 class PastCardAdapter : RecyclerView.Adapter<PastCardAdapter.Holder>(){
     var datas = mutableListOf<PastCardData>()
@@ -26,12 +19,12 @@ class PastCardAdapter : RecyclerView.Adapter<PastCardAdapter.Holder>(){
         return datas.size
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PastCardAdapter.Holder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.pastcard_layout, parent, false)
         return Holder(view)
     }
 
-    override fun onBindViewHolder(holder: PastCardAdapter.Holder, position: Int) {
+    override fun onBindViewHolder(holder: Holder, position: Int) {
         holder?.bind(datas[position])
         //Log.e("태그", position.toString())
     }

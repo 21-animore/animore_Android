@@ -1,6 +1,5 @@
 package org.techtown.animore
 
-import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -9,11 +8,9 @@ import android.widget.*
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
-import androidx.core.graphics.toColor
 import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
-import java.time.LocalDate
 import java.util.*
 
 class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {

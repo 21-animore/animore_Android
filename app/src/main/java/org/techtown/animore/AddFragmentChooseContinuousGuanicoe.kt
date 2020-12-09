@@ -1,11 +1,6 @@
 package org.techtown.animore
 
-import android.content.Intent
 import android.os.Bundle
-import android.provider.Settings.Global.putString
-import android.provider.Settings.Secure.putString
-import android.util.Log
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,16 +8,8 @@ import android.widget.*
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import androidx.navigation.findNavController
-import kotlinx.android.synthetic.main.fragment_choose_option_continuous_guanicoe.*
 import kotlinx.android.synthetic.main.fragment_choose_option_continuous_guanicoe.view.*
-import kotlinx.android.synthetic.main.fragment_final_add_guanicoe.*
-import kotlinx.android.synthetic.main.fragment_home_card_more.*
-import kotlinx.android.synthetic.main.fragment_home_card_more.view.*
-import kotlinx.android.synthetic.main.fragment_home_card_more.view.home_more_card_btn_giveup
 import java.time.LocalDate
-import java.time.format.DateTimeFormatter
-import java.util.*
 
 class AddFragmentChooseContinuousGuanicoe : Fragment() {
 

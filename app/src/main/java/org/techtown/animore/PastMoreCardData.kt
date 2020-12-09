@@ -1,7 +1,5 @@
 package org.techtown.animore
 
-import java.util.*
-
 data class PastMoreCardData(
         //유형 파악용
         val index: Int,

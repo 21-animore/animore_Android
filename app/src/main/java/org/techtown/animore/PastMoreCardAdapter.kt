@@ -1,6 +1,5 @@
 package org.techtown.animore
 
-import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -20,12 +19,12 @@ class PastMoreCardAdapter() : RecyclerView.Adapter<PastMoreCardAdapter.Holder>()
         return dataPasts.size
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PastMoreCardAdapter.Holder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.past_more_card_layout, parent, false)
         return Holder(view)
     }
 
-    override fun onBindViewHolder(holder: PastMoreCardAdapter.Holder, position: Int) {
+    override fun onBindViewHolder(holder: Holder, position: Int) {
         holder?.bind(dataPasts[position])
         //Log.e("태그", position.toString())
     }
