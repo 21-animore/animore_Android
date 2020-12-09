@@ -462,7 +462,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
 
             /*----------------------------------타입마다 다른 정보 나중 배정--------------------------------------------*/
 
-            if(HomeMoreCardData.flag === false){
+            if(HomeMoreCardData.flag === 0){
                 //원 스탬프 그리기
                 createCircle(HomeMoreCardData.count, HomeMoreCardData.index)
 
@@ -476,7 +476,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                 front_tv_day_sun.visibility = View.GONE
                 back_tv_count_num_behind.visibility = View.GONE
 
-            }else if(HomeMoreCardData.flag === true){
+            }else if(HomeMoreCardData.flag === 1){
                 //캘린더 그리기
                 draw_cal(HomeMoreCardData.dayDuring, HomeMoreCardData.index)
 
@@ -543,7 +543,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
 
                 progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.progressbar_guanicoe))
 
-                if(HomeMoreCardData.flag === true){
+                if(HomeMoreCardData.flag === 1){
                     front_tv_day_mon.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                     front_tv_day_tue.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                     front_tv_day_wed.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
@@ -578,7 +578,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                         back_tv_top_category.text = "연속 21일"
                     }
 
-                } else if(HomeMoreCardData.flag === false){
+                } else if(HomeMoreCardData.flag === 0){
                     front_img.setImageResource(R.drawable.ic_home_more_card_front_7_guanicoe)
                     front_stroke.visibility = View.GONE
                     front_tv_top_category.text = "일반"
@@ -648,7 +648,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
 
                 progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.progressbar_illipika))
 
-                if(HomeMoreCardData.flag === true){
+                if(HomeMoreCardData.flag === 1){
                     front_tv_day_mon.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
                     front_tv_day_tue.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
                     front_tv_day_wed.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
@@ -683,7 +683,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                         back_tv_top_category.text = "연속 21일"
                     }
 
-                } else if(HomeMoreCardData.flag === false){
+                } else if(HomeMoreCardData.flag === 0){
                     front_img.setImageResource(R.drawable.ic_home_more_card_front_7_illipika)
                     front_stroke.visibility = View.GONE
                     front_tv_top_category.text = "일반"
@@ -753,7 +753,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
 
                 progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.progressbar_harpseal))
 
-                if(HomeMoreCardData.flag === true){
+                if(HomeMoreCardData.flag === 1){
                     front_tv_day_mon.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
                     front_tv_day_tue.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
                     front_tv_day_wed.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
@@ -788,7 +788,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                         back_tv_top_category.text = "연속 21일"
                     }
 
-                } else if(HomeMoreCardData.flag === false){
+                } else if(HomeMoreCardData.flag === 0){
                     front_img.setImageResource(R.drawable.ic_home_more_card_front_7_harpseal)
                     front_stroke.visibility = View.GONE
                     front_tv_top_category.text = "일반"
@@ -858,7 +858,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
 
                 progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.progressbar_java))
 
-                if(HomeMoreCardData.flag === true){
+                if(HomeMoreCardData.flag === 1){
                     front_tv_day_mon.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
                     front_tv_day_tue.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
                     front_tv_day_wed.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
@@ -893,7 +893,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                         back_tv_top_category.text = "연속 21일"
                     }
 
-                } else if(HomeMoreCardData.flag === false){
+                } else if(HomeMoreCardData.flag === 0){
                     front_img.setImageResource(R.drawable.ic_home_more_card_front_7_java)
                     front_stroke.visibility = View.GONE
                     front_tv_top_category.text = "일반"
@@ -962,7 +962,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
 
                 progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.progressbar_bengal))
 
-                if(HomeMoreCardData.flag === true){
+                if(HomeMoreCardData.flag === 1){
                     front_tv_day_mon.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
                     front_tv_day_tue.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
                     front_tv_day_wed.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
@@ -997,7 +997,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                         back_tv_top_category.text = "연속 21일"
                     }
 
-                } else if(HomeMoreCardData.flag === false){
+                } else if(HomeMoreCardData.flag === 0){
                     front_img.setImageResource(R.drawable.ic_home_more_card_front_7_bengal)
                     front_stroke.visibility = View.GONE
                     front_tv_top_category.text = "일반"

@@ -5,7 +5,7 @@ class HomeMoreCardData (
         val index: Int,
 
         //캘린더 or 일반 파악용
-        val flag: Boolean,
+        val flag: Int,
 
         //연속일 경우 캘린더 기간 파악 용
         val dayDuring: Int,

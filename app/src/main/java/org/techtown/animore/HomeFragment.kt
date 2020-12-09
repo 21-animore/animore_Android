@@ -95,6 +95,14 @@ class HomeFragment : Fragment() {
                             default_card.visibility = View.GONE;
                             var layout = LinearLayout.LayoutParams(4645,LinearLayout.LayoutParams.WRAP_CONTENT)
                             main_card_list.layoutParams = layout
+                        }else if(Adapter.datas.size === 2){
+                            //너비 확인 필요
+                            var layout = LinearLayout.LayoutParams(1600,LinearLayout.LayoutParams.WRAP_CONTENT)
+                            main_card_list.layoutParams = layout
+                        }else if(Adapter.datas.size === 1){
+                            //너비 확인 필요
+                            var layout = LinearLayout.LayoutParams(800,LinearLayout.LayoutParams.WRAP_CONTENT)
+                            main_card_list.layoutParams = layout
                         }
 
                     } else {

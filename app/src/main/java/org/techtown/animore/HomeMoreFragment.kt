@@ -131,7 +131,7 @@ class HomeMoreFragment : Fragment() {
 
         var card = HomeMoreCardData(
                 index = bundle_mission_category.toInt(),
-                flag = bundle_continue_flag.toBoolean(),
+                flag = bundle_continue_flag.toInt(),
                 dayDuring = bundle_mission_period.toInt(),
                 start_date = bundle_mission_start_date,
                 end_date = bundle_mission_end_date,
