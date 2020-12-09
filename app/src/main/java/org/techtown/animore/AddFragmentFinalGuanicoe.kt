@@ -1,5 +1,6 @@
 package org.techtown.animore
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -30,7 +31,7 @@ class AddFragmentFinalGuanicoe : Fragment() {
     var mission_content = ""
     var continue_flag = 0
 
-    val mission_acheieve_count = 0
+    val mission_acheive_count = 0
     val index = 0;
 
     override fun onCreateView(
@@ -43,7 +44,9 @@ class AddFragmentFinalGuanicoe : Fragment() {
         //이후 버튼을 누르면 POST
         view.findViewById<Button>(R.id.final_animal_card_btn_to_get_maincard_guanicoe).setOnClickListener {
             postMainCard()
-            Navigation.findNavController(view).navigate(R.id.action_add_final_guanicoe_fragment_to_home_fragment)
+
+            val intent = Intent(requireActivity(), SplashAddCardActivity::class.java)
+            startActivity(intent)
         }
 
         return view;
@@ -99,7 +102,7 @@ class AddFragmentFinalGuanicoe : Fragment() {
             mission_name = mission_name,
             mission_start_date = mission_start_date,
             mission_end_date = mission_end_date,
-            mission_acheieve_count = mission_acheieve_count,
+            mission_acheive_count = mission_acheive_count,
             mission_content = mission_content,
             success_flag = 0)
 

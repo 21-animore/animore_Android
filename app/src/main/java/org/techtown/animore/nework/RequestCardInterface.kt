@@ -37,6 +37,7 @@ interface RequestCardInterface {
         @Field("continue_flag") continue_flag: Int
     ): Call<SimpleDataResponse>
 
+    @FormUrlEncoded
     @PUT("/card/addachievecount")
     fun addCountRequest(
         @Field("user_idx") user_idx: Int,
@@ -44,7 +45,6 @@ interface RequestCardInterface {
         @Field("mission_period") mission_period: Int,
     ): Call<RandomCheerupData>
 
-    //도전 중인 카드 삭제 얘는 왜 풋으로 했을까 나...?
     @FormUrlEncoded
     @POST("/card/giveup")
     fun deleteCardRequest(

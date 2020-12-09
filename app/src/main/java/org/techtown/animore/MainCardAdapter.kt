@@ -1,5 +1,6 @@
 package org.techtown.animore
 
+import android.content.Intent
 import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -373,7 +374,6 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                 override fun onFailure(call: Call<RandomCheerupData>, t: Throwable) {
                     if (t.message != null) {
                         Log.d("add Count", t.message!!)
-
                     } else {
                         Log.d("add Count", "통신실패")
                     }
@@ -406,24 +406,23 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
             var bundle_mission_name = MainCardData.mission_name   //미션 이름
             var bundle_mission_category = MainCardData.mission_category.toString()   //인덱스(유형 구분)
             val bundle_continue_flag = MainCardData.continue_flag.toString()
-            var bundle_mission_acheieve_count = MainCardData.mission_acheieve_count.toString()   //카운트(달성 횟수)
+            var bundle_mission_acheive_count = MainCardData.mission_acheive_count.toString()   //카운트(달성 횟수)
             var bundle_mission_period = MainCardData.mission_period.toString() //총 횟수(7,14,21)
             var bundle_mission_start_date = MainCardData.mission_start_date  //시작 날짜
             var bundle_mission_end_date = MainCardData.mission_end_date    //끝 날짜
             var bundle_mission_content = MainCardData.mission_content //미션별 소개 글
 
-
             /*----------------------------------미션마다 다른 정보 우선 배정--------------------------------------------*/
 
             //카드에 보이게 되는 정보들
             tv_mission_name.text = MainCardData.mission_name
-            tv_achieve_count.text = MainCardData.mission_acheieve_count.toString()
+            tv_achieve_count.text = MainCardData.mission_acheive_count.toString()
             tv_totalCount.text = "/"+MainCardData.mission_period.toString()
-            tv_index_count_num.text = MainCardData.mission_acheieve_count.toString()
+            tv_index_count_num.text = MainCardData.mission_acheive_count.toString()
             tv_start_date.text = MainCardData.mission_start_date
             tv_end_date.text = MainCardData.mission_end_date
 
-            var count_for_progressbar = MainCardData.mission_acheieve_count.toFloat()/MainCardData.mission_period*100
+            var count_for_progressbar = MainCardData.mission_acheive_count.toFloat()/MainCardData.mission_period*100
             var int = count_for_progressbar.toInt()
             progressbar.progress = int
 
@@ -805,7 +804,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     "bundle_mission_name" to bundle_mission_name,
                     "bundle_mission_category" to bundle_mission_category,
                     "bundle_continue_flag" to bundle_continue_flag,
-                    "bundle_mission_acheieve_count" to bundle_mission_acheieve_count,
+                    "bundle_mission_acheive_count" to bundle_mission_acheive_count,
                     "bundle_mission_period" to bundle_mission_period,
                     "bundle_mission_start_date" to bundle_mission_start_date,
                     "bundle_mission_end_date" to bundle_mission_end_date,
@@ -816,6 +815,10 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
 
             dailyCheckBtn.setOnClickListener {
                 addCount()
+                if((MainCardData.mission_acheive_count +1) == MainCardData.mission_period){
+                    val intent = Intent(itemView.context, SplashFinishActivity::class.java)
+                    itemView.context.startActivity(intent)
+                }
             }
         }
     }
