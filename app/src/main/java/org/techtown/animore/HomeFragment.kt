@@ -6,8 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.LinearLayout
+import androidx.cardview.widget.CardView
+import androidx.navigation.Navigation
+import kotlinx.android.synthetic.main.fragment_add_random_guanicoe.view.*
+import kotlinx.android.synthetic.main.fragment_add_random_guanicoe.view.random_animal_card_btn_to_select_guanicoe_card_again
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_home.view.*
 import org.techtown.animore.nework.HomecardData
 import org.techtown.animore.nework.RequestCardInterface
 import org.techtown.animore.nework.HomeRandomTextData
@@ -27,6 +33,22 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
+        view.findViewById<CardView>(R.id.default_card).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_home_fragment_to_add_fragment)
+        }
+
+        view.button_normal.setOnClickListener { view ->
+            getNormalCard()
+        }
+
+        view.button_continous.setOnClickListener { view ->
+            getCountinuousCard()
+        }
+
+        view.button_all.setOnClickListener { view ->
+            getCardSetting()
+        }
+
         return view
     }
 
@@ -34,6 +56,104 @@ class HomeFragment : Fragment() {
         super.onStart()
         getCardSetting()
         getRandomMainText()
+    }
+
+    fun getNormalCard(){
+        val user_idx = 1;
+        retrofitClient.responseHomecardNormalData(user_idx).enqueue(object :
+            Callback<HomecardData> {
+            override fun onFailure(call: Call<HomecardData>, t: Throwable) {
+                if (t.message != null) {
+                    Log.d("Homecard Normal", t.message!!)
+
+                } else {
+                    Log.d("Homecard Normal", "통신실패")
+                }
+            }
+            override fun onResponse(
+                call: Call<HomecardData>,
+                response: Response<HomecardData>
+            ) {
+                if (response.isSuccessful) {
+                    if (response.body()!!.success) {
+                        Log.d("Homecard Normal", "전체 데이터 : ${response.body()!!}")
+
+                        val responseData = response.body()!!.data
+                        val Adapter = MainCardAdapter()
+                        Adapter.datas.addAll(responseData)
+                        main_card_list.adapter = Adapter
+
+                        //MyData에 넘겨 받은 카드 개수에 맞춰 width 조절
+                        if(Adapter.datas.size === 3){
+                            var layout = LinearLayout.LayoutParams(2787,LinearLayout.LayoutParams.WRAP_CONTENT)
+                            main_card_list.layoutParams = layout
+                        }else if(Adapter.datas.size === 4){
+                            var layout = LinearLayout.LayoutParams(3715,LinearLayout.LayoutParams.WRAP_CONTENT)
+                            main_card_list.layoutParams = layout
+                        }else if(Adapter.datas.size === 5){
+                            //카드가 5개일 경우 디폴트 카드 삭제
+                            default_card.visibility = View.GONE;
+                            var layout = LinearLayout.LayoutParams(4645,LinearLayout.LayoutParams.WRAP_CONTENT)
+                            main_card_list.layoutParams = layout
+                        }
+
+                    } else {
+                        Log.d("Homecard Normal", "통신실패")
+                    }
+                } else {
+                    Log.d("Homecard Normal", "${response.message()}, ${response.errorBody()}")
+                }
+            }
+        })
+    }
+
+    fun getCountinuousCard(){
+        val user_idx = 1;
+        retrofitClient.responseHomecardContinuousData(user_idx).enqueue(object :
+            Callback<HomecardData> {
+            override fun onFailure(call: Call<HomecardData>, t: Throwable) {
+                if (t.message != null) {
+                    Log.d("Homecard Continuous", t.message!!)
+
+                } else {
+                    Log.d("Homecard Continuous", "통신실패")
+                }
+            }
+            override fun onResponse(
+                call: Call<HomecardData>,
+                response: Response<HomecardData>
+            ) {
+                if (response.isSuccessful) {
+                    if (response.body()!!.success) {
+                        Log.d("Homecard Continuous", "전체 데이터 : ${response.body()!!}")
+
+                        val responseData = response.body()!!.data
+                        val Adapter = MainCardAdapter()
+                        Adapter.datas.addAll(responseData)
+                        main_card_list.adapter = Adapter
+
+                        //MyData에 넘겨 받은 카드 개수에 맞춰 width 조절
+                        if(Adapter.datas.size === 3){
+                            var layout = LinearLayout.LayoutParams(2787,LinearLayout.LayoutParams.WRAP_CONTENT)
+                            main_card_list.layoutParams = layout
+                        }else if(Adapter.datas.size === 4){
+                            var layout = LinearLayout.LayoutParams(3715,LinearLayout.LayoutParams.WRAP_CONTENT)
+                            main_card_list.layoutParams = layout
+                        }else if(Adapter.datas.size === 5){
+                            //카드가 5개일 경우 디폴트 카드 삭제
+                            default_card.visibility = View.GONE;
+                            var layout = LinearLayout.LayoutParams(4645,LinearLayout.LayoutParams.WRAP_CONTENT)
+                            main_card_list.layoutParams = layout
+                        }
+
+                    } else {
+                        Log.d("Homecard Continuous", "통신실패")
+                    }
+                } else {
+                    Log.d("Homecard Continuous", "${response.message()}, ${response.errorBody()}")
+                }
+            }
+        })
     }
 
     fun getRandomMainText(){

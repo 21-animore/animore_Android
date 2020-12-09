@@ -18,6 +18,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.util.*
+import java.util.logging.Handler
 
 class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
     var datas = mutableListOf<HomecardDataList>()
@@ -362,6 +363,11 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
         val progressbar = itemView.findViewById<ProgressBar>(R.id.maincard_progressbar)
 
 
+        val black_screen = itemView.findViewById<ImageView>(R.id.maincard_success_black_screen)
+        val circle = itemView.findViewById<ImageView>(R.id.maincard_success_circle)
+        val balck_screen_text = itemView.findViewById<TextView>(R.id.maincard_success_black_screen_text)
+
+
         var user_idx = 1;
         var mission_name=""
         var mission_period = 0
@@ -385,7 +391,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     if (response.isSuccessful) {
                         if (response.body()!!.success) {
                             Log.d("add Count", "전체 데이터 : ${response.body()!!}")
-
+                            balck_screen_text.text = response.body()!!.data
                         } else {
                             Log.d("add Count", "통신실패")
                         }
@@ -819,6 +825,15 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                 if((MainCardData.mission_acheive_count +1) == MainCardData.mission_period){
                     val intent = Intent(itemView.context, SplashFinishActivity::class.java)
                     itemView.context.startActivity(intent)
+                }else{
+                    black_screen.visibility = View.VISIBLE
+                    circle.visibility = View.VISIBLE
+                    balck_screen_text.visibility = View.VISIBLE
+
+                    //3초 후에 이 세 조합이 다시 GONE이 되면서 버튼이 하루동안 비활성화 되어야 함
+                    //black_screen.visibility = View.GONE
+                    //circle.visibility = View.GONE
+                    //black_screen_text.visibility = View.GONE
                 }
             }
         }

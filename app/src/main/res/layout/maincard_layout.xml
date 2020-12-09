@@ -331,6 +331,42 @@
             android:layout_marginTop="10dp"
             card_view:srcCompat="@drawable/ic_maincard_stroke_continue_21_bengal" />
 
+        <ImageView
+            android:id="@+id/maincard_success_black_screen"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            card_view:srcCompat="@drawable/ic_main_card_add_count_blackscreen" />
+
+        <ImageView
+            android:id="@+id/maincard_success_circle"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:srcCompat="@drawable/ic_main_card_add_count_circle"
+            android:layout_marginLeft="51dp"
+            android:layout_marginTop="128dp"/>
+
+        <TextView
+            android:id="@+id/maincard_success_black_screen_text"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/maincard_success_circle"
+            android:layout_alignTop="@+id/maincard_success_circle"
+            android:layout_alignEnd="@+id/maincard_success_circle"
+            android:layout_alignBottom="@+id/maincard_success_circle"
+            android:fontFamily="@font/notosanskr_bold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text=""
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp" />
+
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

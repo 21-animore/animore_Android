@@ -10,6 +10,16 @@ interface RequestCardInterface {
     fun responseHomecardData(
         @Path("user_idx") user_idx : Int) : Call<HomecardData>
 
+    //버튼 클릭 시마다 - 일반 카드 전체 출력
+    @GET("/card/getcontinuouscards/{user_idx}")
+    fun responseHomecardContinuousData(
+        @Path("user_idx") user_idx : Int) : Call<HomecardData>
+
+    //버튼 클릭 시마다 - 연속 카드 전체 출력
+    @GET("/card/getnormalcards/{user_idx}")
+    fun responseHomecardNormalData(
+        @Path("user_idx") user_idx : Int) : Call<HomecardData>
+
     //과거 뷰 접속시마다 - 카드 전체 출력
     @GET("/card/getallpastcards/{user_idx}")
     fun responsePastcardData(

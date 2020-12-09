@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_home_fragment_to_test_fragment"
             app:destination="@id/test_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_add_fragment"
+            app:destination="@id/add_fragment" />
     </fragment>
 
     <fragment

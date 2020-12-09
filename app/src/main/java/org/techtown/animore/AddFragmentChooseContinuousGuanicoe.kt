@@ -16,7 +16,7 @@ class AddFragmentChooseContinuousGuanicoe : Fragment() {
     var mission_period = "7"
     val today = LocalDate.now()
     val mission_start_date= today.toString()
-    var mission_end_date= ""
+    var mission_end_date= "2020-12-20"  //여기서 날짜 계산해서 넘기는 방법 고민하기
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -30,21 +30,24 @@ class AddFragmentChooseContinuousGuanicoe : Fragment() {
         val mission_content = arguments?.getString("mission_content").toString()
         val continue_flag = "1"
 
-        var bundle = bundleOf("mission_name" to mission_name, "mission_content" to mission_content, "continue_flag" to continue_flag, "mission_period" to mission_period, "mission_start_date" to mission_start_date, "end_date" to mission_end_date)
+        var bundle = bundleOf("mission_name" to mission_name, "mission_content" to mission_content, "continue_flag" to continue_flag, "mission_period" to mission_period, "mission_start_date" to mission_start_date, "mission_end_date" to mission_end_date)
 
         view.choose_option_continuous_button_7_guanicoe.setOnClickListener { view ->
             mission_period = "7"
-            bundle = bundleOf("mission_name" to mission_name, "mission_content" to mission_content, "continue_flag" to continue_flag, "mission_period" to mission_period, "mission_start_date" to mission_start_date, "end_date" to mission_end_date)
+            mission_end_date= "2020-12-20"//7일 후 날짜로 바꾸기
+            bundle = bundleOf("mission_name" to mission_name, "mission_content" to mission_content, "continue_flag" to continue_flag, "mission_period" to mission_period, "mission_start_date" to mission_start_date, "mission_end_date" to mission_end_date)
         }
 
         view.choose_option_continuous_button_14_guanicoe.setOnClickListener { view ->
             mission_period = "14"
-            bundle = bundleOf("mission_name" to mission_name, "mission_content" to mission_content, "continue_flag" to continue_flag, "mission_period" to mission_period, "mission_start_date" to mission_start_date, "end_date" to mission_end_date)
+            mission_end_date= "2020-12-20"//14일 후 날짜로 바꾸기
+            bundle = bundleOf("mission_name" to mission_name, "mission_content" to mission_content, "continue_flag" to continue_flag, "mission_period" to mission_period, "mission_start_date" to mission_start_date, "mission_end_date" to mission_end_date)
         }
 
         view.choose_option_continuous_button_21_guanicoe.setOnClickListener { view ->
             mission_period = "21"
-            bundle = bundleOf("mission_name" to mission_name, "mission_content" to mission_content, "continue_flag" to continue_flag, "mission_period" to mission_period, "mission_start_date" to mission_start_date, "end_date" to mission_end_date)
+            mission_end_date= "2020-12-20"//21일 후 날짜로 바꾸기
+            bundle = bundleOf("mission_name" to mission_name, "mission_content" to mission_content, "continue_flag" to continue_flag, "mission_period" to mission_period, "mission_start_date" to mission_start_date, "mission_end_date" to mission_end_date)
         }
 
         view.findViewById<Button>(R.id.choose_option_continuous_tv_normal_guanicoe).setOnClickListener {

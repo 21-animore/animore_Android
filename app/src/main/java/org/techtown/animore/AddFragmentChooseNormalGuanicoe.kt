@@ -25,7 +25,7 @@ class AddFragmentChooseNormalGuanicoe : Fragment() {
         val mission_period = "21"
         val today = LocalDate.now()
         val mission_start_date= today.toString()
-        var mission_end_date= ""
+        var mission_end_date = "2020-12-20" //datepicker 날짜 받아오는 방법
         var bundle = bundleOf(
                 "mission_name" to mission_name,
                 "mission_content" to mission_content,
