@@ -374,6 +374,8 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
 
         val front_stroke = itemView.findViewById<ImageView>(R.id.more_card_front_stroke)
 
+        val progressbar_front = itemView.findViewById<ProgressBar>(R.id.more_card_front_progressbar)
+
         /*-------------------------------------------back-----------------------------------------------*/
 
         val back_background_img = itemView.findViewById<ImageView>(R.id.more_card_back_backgroundimg)
@@ -458,6 +460,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
             var count_for_progressbar = HomeMoreCardData.count.toFloat()/HomeMoreCardData.dayDuring*100
             var int = count_for_progressbar.toInt()
             progressbar.progress = int
+            progressbar_front.progress = int
 
 
             /*----------------------------------타입마다 다른 정보 나중 배정--------------------------------------------*/
@@ -481,6 +484,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                 draw_cal(HomeMoreCardData.dayDuring, HomeMoreCardData.index)
 
                 //일반 카드 요소 안 보이게
+                progressbar_front.visibility=View.GONE
                 front_normal_index.visibility = View.GONE
                 front_tv_index_count_num.visibility = View.GONE
                 front_progressbar_normal.visibility = View.GONE
@@ -542,6 +546,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                 back_background_img.setImageResource(R.drawable.ic_more_card_background_guanicoe)
 
                 progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.progressbar_guanicoe))
+                progressbar_front.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.main_progressbar_guanicoe))
 
                 if(HomeMoreCardData.flag === 1){
                     front_tv_day_mon.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
@@ -647,6 +652,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                 back_background_img.setImageResource(R.drawable.ic_more_card_background_illipika)
 
                 progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.progressbar_illipika))
+                progressbar_front.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.main_progressbar_illipika))
 
                 if(HomeMoreCardData.flag === 1){
                     front_tv_day_mon.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
@@ -752,6 +758,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                 back_background_img.setImageResource(R.drawable.ic_more_card_background_harpseal)
 
                 progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.progressbar_harpseal))
+                progressbar_front.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.main_progressbar_harpseal))
 
                 if(HomeMoreCardData.flag === 1){
                     front_tv_day_mon.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
@@ -857,6 +864,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                 back_background_img.setImageResource(R.drawable.ic_more_card_background_java)
 
                 progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.progressbar_java))
+                progressbar_front.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.main_progressbar_java))
 
                 if(HomeMoreCardData.flag === 1){
                     front_tv_day_mon.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
@@ -961,6 +969,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                 back_background_img.setImageResource(R.drawable.ic_more_card_background_bengal)
 
                 progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.progressbar_bengal))
+                progressbar_front.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.main_progressbar_bengal))
 
                 if(HomeMoreCardData.flag === 1){
                     front_tv_day_mon.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))

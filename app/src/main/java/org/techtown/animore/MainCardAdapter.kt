@@ -266,6 +266,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     }
 
                     tv1.layoutParams = t_par
+                   // tv1.setTextColor()
                     tv1.gravity = Gravity.CENTER
 
                     //숫자가 있을 경우에

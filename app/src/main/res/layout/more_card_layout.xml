@@ -324,6 +324,17 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="6dp"/>
 
+        <ProgressBar
+            android:id="@+id/more_card_front_progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/main_progressbar_bengal"
+            android:layout_width="289dp"
+            android:layout_height="9dp"
+            android:layout_below="@+id/more_card_front_normal_index"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="35dp"
+            android:progress="0" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/more_card_circle_recyclerview"
             android:layout_width="299dp"
@@ -447,8 +458,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
         </TableLayout>
-
     </RelativeLayout>
+
 
     <RelativeLayout
         android:layout_width="349dp"
@@ -759,6 +770,4 @@
             android:textColor="#AB2220"
             android:textSize="12sp" />
     </RelativeLayout>
-
-
 </androidx.cardview.widget.CardView>

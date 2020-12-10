@@ -365,8 +365,7 @@
             android:includeFontPadding="false"
             android:text=""
             android:textColor="@color/colorAccent"
-            android:textSize="20sp" />
-
+            android:textSize="20sp" />=
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
