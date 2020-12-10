@@ -17,10 +17,12 @@ class SplashAddCardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activitiy_splash_add)
 
+        challenge_setting.playAnimation()
+
+        //애니메이션 시작 후 1초 후에 등장해야
         textData = intent.getStringExtra("add_text")!!
         challenge_setting_text.text = textData
 
-        challenge_setting.playAnimation()
         challenge_setting.addAnimatorListener(object: Animator.AnimatorListener {
             override fun onAnimationRepeat(animation: Animator?) {
             }

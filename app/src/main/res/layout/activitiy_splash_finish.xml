@@ -16,4 +16,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/finish_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="21 ani more"
+        android:fontFamily="@font/montserrat_bold"
+        android:textSize="26dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="320dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/finish_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/notosanskr_bold"
+        android:text="당신의 습관이\n지구를 지켰습니다 :)"
+        android:textAlignment="center"
+        android:textSize="26dp"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/finish_title" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

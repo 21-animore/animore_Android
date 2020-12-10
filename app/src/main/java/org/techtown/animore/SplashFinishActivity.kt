@@ -15,6 +15,12 @@ class SplashFinishActivity : AppCompatActivity() {
         setContentView(R.layout.activitiy_splash_finish)
 
         finish_splash.playAnimation()
+
+        //애니메이션 시작 후 글자가 1초 후에 등장해야
+        finish_title
+        finish_text
+
+
         finish_splash.addAnimatorListener(object: Animator.AnimatorListener {
             override fun onAnimationRepeat(animation: Animator?) {
             }

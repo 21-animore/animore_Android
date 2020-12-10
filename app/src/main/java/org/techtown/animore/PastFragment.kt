@@ -33,7 +33,6 @@ class PastFragment : Fragment() {
     override fun onStart() {
         super.onStart()
         getPastCardSetting()
-        past_tv_title.text = "유해영님은 "+ card_count +"마리의 동물을 구했어요!"
     }
 
     fun getPastCardSetting(){
@@ -64,6 +63,7 @@ class PastFragment : Fragment() {
                             Adapter.datas.addAll(responseData)
                             past_card_list.adapter = Adapter
                         }
+                        past_tv_title.text = "유해영님은 "+ card_count +"마리의 동물을 구했어요!"
                     } else {
                         Log.d("Pastcard", "통신실패")
                     }
