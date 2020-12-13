@@ -433,11 +433,11 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
         }
 
         fun getPos(count : Int){
-            normal_index.x = 0F
-            tv_index_count_num.x = 0F
-            
-            normal_index.x += (50 + 32*count)
-            tv_index_count_num.x += (50 + 32*count)
+            normal_index.x = 50F
+            tv_index_count_num.x = 50F
+
+            normal_index.x += 32*count
+            tv_index_count_num.x += 32*count
         }
 
 

@@ -333,31 +333,20 @@ class MainCardAddAdapter : RecyclerView.Adapter<MainCardAddAdapter.Holder>() {
         val stroke21 = itemView.findViewById<ImageView>(R.id.maincard_continue_21_stroke)
         val progressbar = itemView.findViewById<ProgressBar>(R.id.maincard_progressbar)
 
-        val black_screen = itemView.findViewById<ImageView>(R.id.maincard_success_black_screen)
-        val circle = itemView.findViewById<ImageView>(R.id.maincard_success_circle)
-        val balck_screen_text = itemView.findViewById<TextView>(R.id.maincard_success_black_screen_text)
-
         var user_idx = 1;
         var mission_name=""
         var mission_period = 0
         val click_date = LocalDate.now().toString()
 
+        fun getPos(){
+            normal_index.x = 50F
+            tv_index_count_num.x = 50F
+        }
 
         fun bind(MainCardData: HomecardDataList) {
 
             mission_name = MainCardData.mission_name
             mission_period = MainCardData.mission_period
-
-            /*----------------------------------데이터 바인딩 부분--------------------------------------------*/
-            //상세페이지 눌렀을 때 넘겨줄 수 있도록
-            var bundle_mission_name = MainCardData.mission_name   //미션 이름
-            var bundle_mission_category = MainCardData.mission_category.toString()   //인덱스(유형 구분)
-            val bundle_continue_flag = MainCardData.continue_flag.toString()
-            var bundle_mission_acheive_count = MainCardData.mission_acheive_count.toString()   //카운트(달성 횟수)
-            var bundle_mission_period = MainCardData.mission_period.toString() //총 횟수(7,14,21)
-            var bundle_mission_start_date = MainCardData.mission_start_date  //시작 날짜
-            var bundle_mission_end_date = MainCardData.mission_end_date    //끝 날짜
-            var bundle_mission_content = MainCardData.mission_content //미션별 소개 글
 
             /*----------------------------------미션마다 다른 정보 우선 배정--------------------------------------------*/
 
@@ -604,6 +593,9 @@ class MainCardAddAdapter : RecyclerView.Adapter<MainCardAddAdapter.Holder>() {
 
                 //테두리 가리기
                 stroke21.visibility = View.GONE
+
+                //프로그레스바 인디케이터 위치 옮기기
+                getPos()
 
                 //이후 유형별 이미지 및 글씨 바꿔주기
                 if (MainCardData.mission_category ==0) {
