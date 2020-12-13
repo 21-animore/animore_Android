@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.fragment_add_random_guanicoe.view.random_a
 import kotlinx.android.synthetic.main.fragment_final_add_guanicoe.*
 import kotlinx.android.synthetic.main.fragment_final_add_guanicoe.view.*
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.maincard_layout.*
 import org.techtown.animore.nework.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -106,11 +107,13 @@ class AddFragmentFinalGuanicoe : Fragment() {
             mission_end_date = mission_end_date,
             mission_acheive_count = mission_acheive_count,
             mission_content = mission_content,
-            success_flag = 0)
+            success_flag = 0,
+            click_date = "")
 
-        val Adapter = MainCardAdapter()
+        val Adapter = MainCardAddAdapter()
         Adapter.datas.add(card)
         final_add_guanicoe_cardview.adapter = Adapter
+
 
     }
 }

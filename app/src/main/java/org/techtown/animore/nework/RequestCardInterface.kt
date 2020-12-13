@@ -25,6 +25,11 @@ interface RequestCardInterface {
     fun responsePastcardData(
         @Path("user_idx") user_idx : Int) : Call<PastcardData>
 
+    //과거 뷰 접속시마다 - 성공 카드 수 출력
+    @GET("/card/getallpastcards/count/{user_idx}")
+    fun responsePastcardcountData(
+        @Path("user_idx") user_idx : Int) : Call<PastSuccessCardCount>
+
     //미션 받기 버튼 클릭 시마다 - 새로운 랜덤 미션 출력
     @GET("/card/showrandomcard/{card_category_flag}")
     fun responseRandomMisionData(
@@ -53,6 +58,7 @@ interface RequestCardInterface {
         @Field("user_idx") user_idx: Int,
         @Field("mission_name") mission_name: String,
         @Field("mission_period") mission_period: Int,
+        @Field("click_date") click_date: String
     ): Call<RandomCheerupData>
 
     @FormUrlEncoded

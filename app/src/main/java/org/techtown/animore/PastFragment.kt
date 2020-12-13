@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_past.*
+import org.techtown.animore.nework.PastSuccessCardCount
 import org.techtown.animore.nework.PastcardData
 import org.techtown.animore.nework.RequestCardInterface
 import org.techtown.animore.nework.RetrofitClient
@@ -33,6 +34,7 @@ class PastFragment : Fragment() {
     override fun onStart() {
         super.onStart()
         getPastCardSetting()
+        getPastCardCount()
     }
 
     fun getPastCardSetting(){
@@ -63,12 +65,43 @@ class PastFragment : Fragment() {
                             Adapter.datas.addAll(responseData)
                             past_card_list.adapter = Adapter
                         }
-                        past_tv_title.text = "유해영님은 "+ card_count +"마리의 동물을 구했어요!"
                     } else {
                         Log.d("Pastcard", "통신실패")
                     }
                 } else {
                     Log.d("Pastcard", "${response.message()}, ${response.errorBody()}")
+                }
+            }
+        })
+    }
+
+    fun getPastCardCount(){
+        val user_idx = 1;
+
+        retrofitClient.responsePastcardcountData(user_idx).enqueue(object :
+            Callback<PastSuccessCardCount> {
+            override fun onFailure(call: Call<PastSuccessCardCount>, t: Throwable) {
+                if (t.message != null) {
+                    Log.d("Pastcard Count", t.message!!)
+
+                } else {
+                    Log.d("Pastcard Count", "통신실패")
+                }
+            }
+            override fun onResponse(
+                call: Call<PastSuccessCardCount>,
+                response: Response<PastSuccessCardCount>
+            ) {
+                if (response.isSuccessful) {
+                    if (response.body()!!.success) {
+                        Log.d("Pastcard Count", "전체 데이터 : ${response.body()!!}")
+                        val responseData = response.body()!!.data.toString()
+                        past_tv_title.text = "유해영님은 "+ responseData +"마리의 동물을 구했어요!"
+                    } else {
+                        Log.d("Pastcard Count", "통신실패")
+                    }
+                } else {
+                    Log.d("Pastcard Count", "${response.message()}, ${response.errorBody()}")
                 }
             }
         })

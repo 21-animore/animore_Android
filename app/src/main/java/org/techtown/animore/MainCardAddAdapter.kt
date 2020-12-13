@@ -22,9 +22,8 @@ import java.time.LocalDate
 import java.util.*
 import java.util.logging.Handler
 
-class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
+class MainCardAddAdapter : RecyclerView.Adapter<MainCardAddAdapter.Holder>() {
     var datas = mutableListOf<HomecardDataList>()
-    var dateforbtn = Calendar.getInstance()
 
     override fun getItemCount(): Int {
         return datas.size
@@ -302,42 +301,6 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
 
         }
 
-
-        /*-------------------------------------------------캘린더-------------------------------------------------------
-        val calendarView: RecyclerView = itemView.findViewById(R.id.maincard_calendar_normalcard_layout)
-        val calendarRvAdapter = CalendarAdapter()
-
-        fun createCalendar(dayDuring: Int){
-            val calendar = Calendar.getInstance()
-            var date = calendar.get(Calendar.DATE)
-            //해당 월 마지막 날
-            val day = calendar.getActualMaximum(Calendar.DAY_OF_MONTH)
-            val dayday = calendar.get(Calendar.DAY_OF_WEEK).toString()
-            Log.d("오늘은", date.toString() +"일입니다! 마지막날:"+ day.toString() +"데이데이" + dayday)
-
-            var count = 0
-
-            for(i in 1 until dayday.toInt()){
-                calendarRvAdapter.items.add(0)
-                count++
-            }
-
-            //총 입력받은 기간 수(7/14/21) 번 반복해야 함
-            for(i in 1..dayDuring){
-                calendarRvAdapter.items.add(date)
-                date += 1
-                if(date > day){
-                    date = 1
-                }
-            }
-
-            for(i in 1..7-count){
-                calendarRvAdapter.items.add(0)
-            }
-            calendarView.adapter = calendarRvAdapter
-        }
-         */
-
         /*-------------------------------------------사용할 변수 선언-----------------------------------------------*/
         val cardview = itemView.findViewById<CardView>(R.id.maincard_view)
 
@@ -379,36 +342,6 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
         var mission_period = 0
         val click_date = LocalDate.now().toString()
 
-        fun addCount(){
-            val retrofitClient = RetrofitClient.create(RequestCardInterface::class.java)
-
-            retrofitClient.addCountRequest(user_idx, mission_name, mission_period, click_date).enqueue(object :
-                Callback<RandomCheerupData> {
-                override fun onFailure(call: Call<RandomCheerupData>, t: Throwable) {
-                    if (t.message != null) {
-                        Log.d("add Count", t.message!!)
-                    } else {
-                        Log.d("add Count", "통신실패")
-                    }
-                }
-                override fun onResponse(
-                    call: Call<RandomCheerupData>,
-                    response: Response<RandomCheerupData>
-                ) {
-                    if (response.isSuccessful) {
-                        if (response.body()!!.success) {
-                            Log.d("add Count", "전체 데이터 : ${response.body()!!}")
-                            balck_screen_text.text = response.body()!!.data
-                        } else {
-                            Log.d("add Count", "통신실패")
-                        }
-                    } else {
-                        Log.d("add Count", "${response.message()}, ${response.errorBody()}")
-                    }
-                }
-            })
-        }
-
 
         fun bind(MainCardData: HomecardDataList) {
 
@@ -440,17 +373,9 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
             var int = count_for_progressbar.toInt()
             progressbar.progress = int
 
-            /*----------------------------------타입마다 다른 정보 나중 배정--------------------------------------------*/
+            dailyCheckBtn.visibility = View.GONE;
 
-            //그리고 여기서 오늘 날짜 === 저장된 날짜 같은지 확인하고
-            if(MainCardData.click_date == LocalDate.now().toString()) {
-                //같으면 계속 보이게 설정
-                black_screen.visibility = View.VISIBLE
-                circle.visibility = View.VISIBLE
-                balck_screen_text.visibility = View.VISIBLE
-                balck_screen_text.setText("오늘 성공한 미션")
-                dailyCheckBtn.setEnabled(false);
-            }
+            /*----------------------------------타입마다 다른 정보 나중 배정--------------------------------------------*/
 
             if(MainCardData.continue_flag == 1){
                 //연속 카드라면
@@ -820,43 +745,6 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     bottom_img.setImageResource(R.drawable.ic_maincard_img_normal_bengal)
 
                     progressbar.setProgressDrawableTiled(ContextCompat.getDrawable(itemView.context, R.drawable.main_progressbar_bengal))
-                }
-            }
-
-            //클릭한 카드의 데이터 상세 뷰로 보내기
-            val bundle = bundleOf(
-                    "bundle_mission_name" to bundle_mission_name,
-                    "bundle_mission_category" to bundle_mission_category,
-                    "bundle_continue_flag" to bundle_continue_flag,
-                    "bundle_mission_acheive_count" to bundle_mission_acheive_count,
-                    "bundle_mission_period" to bundle_mission_period,
-                    "bundle_mission_start_date" to bundle_mission_start_date,
-                    "bundle_mission_end_date" to bundle_mission_end_date,
-                    "bundle_mission_content" to bundle_mission_content)
-            cardview.setOnClickListener {
-                Navigation.findNavController(cardview).navigate(R.id.action_home_fragment_to_home_more_card_fragment, bundle)
-            }
-
-            dailyCheckBtn.setOnClickListener {
-                addCount()
-                if((MainCardData.mission_acheive_count +1) == MainCardData.mission_period){
-                    val intent = Intent(itemView.context, SplashFinishActivity::class.java)
-                    itemView.context.startActivity(intent)
-                }else{
-                    black_screen.visibility = View.VISIBLE
-                    circle.visibility = View.VISIBLE
-                    balck_screen_text.visibility = View.VISIBLE
-                    dailyCheckBtn.setEnabled(false);
-
-                    //뒷 배경 바꾸기(일반)
-                    tv_achieve_count.text = (MainCardData.mission_acheive_count + 1).toString()
-                    tv_index_count_num.text = (MainCardData.mission_acheive_count + 1).toString()
-                    var after_click_count_for_progressbar = (MainCardData.mission_acheive_count + 1).toFloat()/MainCardData.mission_period*100
-                    var after_click_int = after_click_count_for_progressbar.toInt()
-                    progressbar.progress = after_click_int
-
-                    //뒷 배경 바꾸기(연속)
-                    //누른 칸 칠해져야 되는데 흠
                 }
             }
         }

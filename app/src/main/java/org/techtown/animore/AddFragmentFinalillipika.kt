@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.fragment_final_add_guanicoe.*
 import kotlinx.android.synthetic.main.fragment_final_add_illipika.*
+import kotlinx.android.synthetic.main.maincard_layout.*
 import org.techtown.animore.R
 import org.techtown.animore.nework.AddNewCardData
 import org.techtown.animore.nework.HomecardDataList
@@ -109,10 +110,12 @@ class AddFragmentFinalillipika : Fragment() {
             mission_end_date = mission_end_date,
             mission_acheive_count = mission_acheive_count,
             mission_content = mission_content,
-            success_flag = 0)
+            success_flag = 0,
+            click_date = "")
 
-        val Adapter = MainCardAdapter()
+        val Adapter = MainCardAddAdapter()
         Adapter.datas.add(card)
         final_add_illipika_cardview.adapter = Adapter
+
     }
 }

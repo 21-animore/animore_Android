@@ -19,5 +19,6 @@ data class HomecardDataList(
     val mission_acheive_count : Int,
     val mission_content : String,
     val success_flag : Int,
-    val continue_flag : Int
+    val continue_flag : Int,
+    val click_date : String
 )
