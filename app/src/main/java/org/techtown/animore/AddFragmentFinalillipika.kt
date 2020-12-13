@@ -98,6 +98,8 @@ class AddFragmentFinalillipika : Fragment() {
         mission_start_date= arguments?.getString("mission_start_date").toString()
         mission_end_date= arguments?.getString("mission_end_date").toString()
 
+        final_animal_card_tv_mission_name_illipika.text = mission_name
+
         var card = HomecardDataList(
             card_idx = 0,
             user_idx = user_idx,

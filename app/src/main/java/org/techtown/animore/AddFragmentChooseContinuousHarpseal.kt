@@ -9,16 +9,19 @@ import android.widget.ImageButton
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import kotlinx.android.synthetic.main.fragment_choose_option_continuous_bengal.*
 import kotlinx.android.synthetic.main.fragment_choose_option_continuous_guanicoe.view.*
 import kotlinx.android.synthetic.main.fragment_choose_option_continuous_guanicoe.view.choose_option_continuous_button_14_guanicoe
 import kotlinx.android.synthetic.main.fragment_choose_option_continuous_guanicoe.view.choose_option_continuous_button_21_guanicoe
 import kotlinx.android.synthetic.main.fragment_choose_option_continuous_guanicoe.view.choose_option_continuous_button_7_guanicoe
+import kotlinx.android.synthetic.main.fragment_choose_option_continuous_harpseal.*
 import kotlinx.android.synthetic.main.fragment_choose_option_continuous_harpseal.view.*
 import org.techtown.animore.R
 import java.time.LocalDate
 
 class AddFragmentChooseContinuousHarpseal : Fragment() {
 
+    var mission_name = ""
     var mission_period = "7"
     val today = LocalDate.now()
     val mission_start_date= today.toString()
@@ -31,7 +34,7 @@ class AddFragmentChooseContinuousHarpseal : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_choose_option_continuous_harpseal, container, false)
 
-        val mission_name = arguments?.getString("mission_name").toString()
+        mission_name = arguments?.getString("mission_name").toString()
         val mission_content = arguments?.getString("mission_content").toString()
         val continue_flag = "1"
 
@@ -68,5 +71,11 @@ class AddFragmentChooseContinuousHarpseal : Fragment() {
         }
 
         return view;
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        choose_option_continuous_tv_mission_name_harpseal.text = mission_name
     }
 }

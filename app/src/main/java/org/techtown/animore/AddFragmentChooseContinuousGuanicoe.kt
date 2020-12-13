@@ -1,6 +1,7 @@
 package org.techtown.animore
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,11 +9,15 @@ import android.widget.*
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import kotlinx.android.synthetic.main.fragment_choose_option_continuous_guanicoe.*
 import kotlinx.android.synthetic.main.fragment_choose_option_continuous_guanicoe.view.*
+import kotlinx.android.synthetic.main.fragment_choose_option_normal_guanicoe.*
+import kotlinx.android.synthetic.main.fragment_choose_option_normal_guanicoe.choose_option_normal_tv_mission_name_guanicoe
 import java.time.LocalDate
 
 class AddFragmentChooseContinuousGuanicoe : Fragment() {
 
+    var mission_name = ""
     var mission_period = "7"
     val today = LocalDate.now()
     val mission_start_date= today.toString()
@@ -26,7 +31,7 @@ class AddFragmentChooseContinuousGuanicoe : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_choose_option_continuous_guanicoe, container, false)
 
-        val mission_name = arguments?.getString("mission_name").toString()
+        mission_name = arguments?.getString("mission_name").toString()
         val mission_content = arguments?.getString("mission_content").toString()
         val continue_flag = "1"
 
@@ -63,5 +68,11 @@ class AddFragmentChooseContinuousGuanicoe : Fragment() {
         }
 
         return view;
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        choose_option_continuous_tv_mission_name_guanicoe.text = mission_name
     }
 }
