@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.fragment_add_random_guanicoe.view.*
@@ -32,7 +33,6 @@ class AddFragmentFinalGuanicoe : Fragment() {
     var continue_flag = 0
 
     val mission_acheive_count = 0
-    val index = 0;
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -44,15 +44,16 @@ class AddFragmentFinalGuanicoe : Fragment() {
         //이후 버튼을 누르면 POST
         view.findViewById<Button>(R.id.final_animal_card_btn_to_get_maincard_guanicoe).setOnClickListener {
             postMainCard()
+        }
 
-
+        view.findViewById<ImageButton>(R.id.final_animal_card_back_btn_to_add_frag_guanicoe).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_add_final_guanicoe_fragment_to_add_random_guanicoe)
         }
 
         return view;
     }
 
     fun postMainCard(){
-
         retrofitClient.postProductRequest(user_idx, mission_name, mission_category, mission_period, mission_start_date, mission_end_date, mission_content, continue_flag).enqueue(object :
             Callback<AddNewCardData> {
             override fun onFailure(call: Call<AddNewCardData>, t: Throwable) {
@@ -97,7 +98,7 @@ class AddFragmentFinalGuanicoe : Fragment() {
             card_idx = 0,
             user_idx = user_idx,
             now_flag = 1,
-            mission_category = index,
+            mission_category = mission_category,
             continue_flag = continue_flag,
             mission_period = mission_period,
             mission_name = mission_name,

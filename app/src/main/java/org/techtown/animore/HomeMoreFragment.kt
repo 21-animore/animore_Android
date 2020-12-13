@@ -6,8 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.View.GONE
 import android.view.ViewGroup
+import android.widget.ImageButton
+import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home_card_more.*
@@ -80,6 +83,11 @@ class HomeMoreFragment : Fragment() {
             deleteCard()
             //3초 후에 메인 뷰로 돌아가게 하고 싶은데 그건 어떻게 해결할까??
         }
+
+        view.findViewById<ImageButton>(R.id.home_more_card_back_btn_to_add_frag).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.home_more_card_fragment_to_home_fragment)
+        }
+
         return view;
     }
 

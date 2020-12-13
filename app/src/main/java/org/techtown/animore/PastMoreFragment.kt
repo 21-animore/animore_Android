@@ -5,8 +5,10 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.fragment_past_card_more.*
 
 class PastMoreFragment : Fragment() {
@@ -38,6 +40,10 @@ class PastMoreFragment : Fragment() {
         bundle_mission_content = arguments?.getString("bundle_mission_content").toString()
         bundle_success_flag = arguments?.getString("bundle_success_flag").toString()
         /*-----------------------------------------------------------------------------------------------*/
+
+        view.findViewById<ImageButton>(R.id.past_more_card_back_btn_to_add_frag).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_pastmore_fragment_to_past_fragment)
+        }
 
         return view;
     }

@@ -10,6 +10,7 @@ import android.widget.*
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
@@ -17,11 +18,13 @@ import org.techtown.animore.nework.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.time.LocalDate
 import java.util.*
 import java.util.logging.Handler
 
 class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
     var datas = mutableListOf<HomecardDataList>()
+    var dateforbtn = Calendar.getInstance()
 
     override fun getItemCount(): Int {
         return datas.size
@@ -104,6 +107,10 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     }
 
                     if (start == true) {
+
+                        var myfont = ResourcesCompat.getFont(itemView.context,R.font.montserrat_bold)
+                        tv1.setTypeface(myfont)
+                        //tv1.setTextSize(14)
 
                         //날짜 text
                         tv1.text = today.get(Calendar.DATE).toString()
@@ -363,11 +370,9 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
         val stroke21 = itemView.findViewById<ImageView>(R.id.maincard_continue_21_stroke)
         val progressbar = itemView.findViewById<ProgressBar>(R.id.maincard_progressbar)
 
-
         val black_screen = itemView.findViewById<ImageView>(R.id.maincard_success_black_screen)
         val circle = itemView.findViewById<ImageView>(R.id.maincard_success_circle)
         val balck_screen_text = itemView.findViewById<TextView>(R.id.maincard_success_black_screen_text)
-
 
         var user_idx = 1;
         var mission_name=""
@@ -827,14 +832,24 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     val intent = Intent(itemView.context, SplashFinishActivity::class.java)
                     itemView.context.startActivity(intent)
                 }else{
+                    //버튼을 누르면 카드의 오늘 날짜 저장
+
+                    //그리고 여기서 그냥 오늘 날짜 === 저장된 날짜 같은지 확인하고
+                    //같으면 계속 보이게 설정
                     black_screen.visibility = View.VISIBLE
                     circle.visibility = View.VISIBLE
                     balck_screen_text.visibility = View.VISIBLE
+                    dailyCheckBtn.setEnabled(false);
 
-                    //3초 후에 이 세 조합이 다시 GONE이 되면서 버튼이 하루동안 비활성화 되어야 함
-                    //black_screen.visibility = View.GONE
-                    //circle.visibility = View.GONE
-                    //black_screen_text.visibility = View.GONE
+                    //뒷 배경 바꾸기(일반)
+                    tv_achieve_count.text = (MainCardData.mission_acheive_count + 1).toString()
+                    tv_index_count_num.text = (MainCardData.mission_acheive_count + 1).toString()
+                    var after_click_count_for_progressbar = (MainCardData.mission_acheive_count + 1).toFloat()/MainCardData.mission_period*100
+                    var after_click_int = after_click_count_for_progressbar.toInt()
+                    progressbar.progress = after_click_int
+
+                    //뒷 배경 바꾸기(연속)
+                    //누른 칸 칠해져야 되는데 흠
                 }
             }
         }

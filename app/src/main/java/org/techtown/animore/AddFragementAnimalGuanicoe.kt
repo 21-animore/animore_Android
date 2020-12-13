@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import org.techtown.animore.R
@@ -19,6 +20,10 @@ class AddFragementAnimalGuanicoe : Fragment() {
 
         view.findViewById<Button>(R.id.intro_animal_card_btn_to_get_randomcard_guanicoe).setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_add_animal_guanicoe_to_add_random_guanicoe)
+        }
+
+        view.findViewById<ImageButton>(R.id.intro_animal_card_back_btn_to_add_frag_guanicoe).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_add_animal_guanicoe_to_add_fragment)
         }
 
         return view;

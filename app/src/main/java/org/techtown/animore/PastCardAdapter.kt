@@ -77,7 +77,7 @@ class PastCardAdapter : RecyclerView.Adapter<PastCardAdapter.Holder>(){
             val a = WkwmdskwlsWk1[1]
             val b = WkwmdskwlsWk1[2]
             val c = WkwmdskwlsWk2[1]
-            val d = WkwmdskwlsWk2[1]
+            val d = WkwmdskwlsWk2[2]
             val result = a+"/"+b+"~"+c+"/"+d
 
             tv_period.text=result

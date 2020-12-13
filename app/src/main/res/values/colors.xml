@@ -30,6 +30,8 @@
     <color name="blur_harpseal">#1A035874</color>
     <color name="blur_java">#1A61448E</color>
 
+    <color name="transparent">#00000000</color>
+
     <color name="teal_200">#1F1F1F</color>
     <color name="purple_700">#1F1F1F</color>
     <color name="purple_200">#1F1F1F</color>

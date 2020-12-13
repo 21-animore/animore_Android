@@ -24,7 +24,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".SplashFinishActivity"/>
-        <activity android:name=".SplashAddCardActivity"/>
+        <activity android:name=".SplashFinishActivity"
+                  android:theme="@style/Transparent"/>
+        <activity android:name=".SplashAddCardActivity"
+                  android:theme="@style/Transparent"/>
     </application>
 </manifest>

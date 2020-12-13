@@ -241,6 +241,15 @@ class HomeFragment : Fragment() {
                             default_card.visibility = View.GONE;
                             var layout = LinearLayout.LayoutParams(4645,LinearLayout.LayoutParams.WRAP_CONTENT)
                             main_card_list.layoutParams = layout
+                        }else if(Adapter.datas.size === 2){
+                            var layout = LinearLayout.LayoutParams(1855,LinearLayout.LayoutParams.WRAP_CONTENT)
+                            main_card_list.layoutParams = layout
+                        }else if(Adapter.datas.size === 1){
+                            var layout = LinearLayout.LayoutParams(930,LinearLayout.LayoutParams.WRAP_CONTENT)
+                            main_card_list.layoutParams = layout
+                        }else if(Adapter.datas.size === 0){
+                            var layout = LinearLayout.LayoutParams(0,LinearLayout.LayoutParams.WRAP_CONTENT)
+                            main_card_list.layoutParams = layout
                         }
 
                     } else {

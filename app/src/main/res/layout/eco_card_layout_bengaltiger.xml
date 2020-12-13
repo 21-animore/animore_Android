@@ -29,7 +29,7 @@
 
         <TextView
             android:id="@+id/ecocard_bengal_tv_mission_name"
-            android:layout_width="158dp"
+            android:layout_width="190dp"
             android:layout_height="106dp"
             android:layout_marginTop="-2dp"
             android:layout_marginLeft="1dp"

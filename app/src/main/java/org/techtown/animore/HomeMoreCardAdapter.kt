@@ -341,7 +341,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
         val front_img = itemView.findViewById<ImageView>(R.id.more_card_front_img)
         val front_tv_mission_name = itemView.findViewById<TextView>(R.id.more_card_front_tv_mission_name)
         val front_tv_top_category = itemView.findViewById<TextView>(R.id.more_card_front_tv_top_category)
-        val front_tv_mission_total_count = itemView.findViewById<TextView>(R.id.more_card_front_tv_mission_total_count)
+        //val front_tv_mission_total_count = itemView.findViewById<TextView>(R.id.more_card_front_tv_mission_total_count)
         val front_tv_mission_category_eng = itemView.findViewById<TextView>(R.id.more_card_front_tv_mission_category_eng)
         val front_tv_mission_category_kor = itemView.findViewById<TextView>(R.id.more_card_front_tv_mission_category_kor)
         val front_tv_achieve_count = itemView.findViewById<TextView>(R.id.more_card_front_tv_achieve_count_title)
@@ -356,7 +356,6 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
         val front_tv_count_slash = itemView.findViewById<TextView>(R.id.more_card_front_tv_count_slash)
         val front_tv_total_count = itemView.findViewById<TextView>(R.id.more_card_front_tv_total_count)
         val front_tv_bottom_sentence = itemView.findViewById<TextView>(R.id.more_card_front_tv_bottom_sentence)
-
 
         val front_normal_index = itemView.findViewById<ImageView>(R.id.more_card_front_normal_index)
         val front_tv_index_count_num = itemView.findViewById<TextView>(R.id.more_card_front_tv_index_count_num)
@@ -386,7 +385,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
         val back_tv_top_category = itemView.findViewById<TextView>(R.id.more_card_back_tv_top_category)
         val back_tv_count_num_behind = itemView.findViewById<TextView>(R.id.more_card_back_tv_count_num_behind)
         val back_tv_mission_name = itemView.findViewById<TextView>(R.id.more_card_back_tv_mission_name)
-        val back_tv_mission_total_count = itemView.findViewById<TextView>(R.id.more_card_back_tv_mission_total_count)
+        //val back_tv_mission_total_count = itemView.findViewById<TextView>(R.id.more_card_back_tv_mission_total_count)
         val back_tv_mission_category_eng = itemView.findViewById<TextView>(R.id.more_card_back_tv_mission_category_eng)
         val back_tv_mission_category_kor = itemView.findViewById<TextView>(R.id.more_card_back_tv_mission_category_kor)
         val back_tv_achieve_count = itemView.findViewById<TextView>(R.id.more_card_back_tv_achieve_count)
@@ -439,7 +438,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
             /*----------------------------------미션마다 다른 정보 우선 배정--------------------------------------------*/
             //카드에 보이게 되는 정보들
             front_tv_mission_name.text = HomeMoreCardData.mission_name
-            front_tv_mission_total_count.text = HomeMoreCardData.dayDuring.toString()
+            //front_tv_mission_total_count.text = HomeMoreCardData.dayDuring.toString()
             front_tv_start_date.text = HomeMoreCardData.start_date
             front_tv_end_date.text = HomeMoreCardData.end_date
             front_tv_achieve_count_num.text = HomeMoreCardData.count.toString()
@@ -448,7 +447,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
             front_tv_index_count_num.text = HomeMoreCardData.count.toString()
 
             back_tv_mission_name.text = HomeMoreCardData.mission_name
-            back_tv_mission_total_count.text = HomeMoreCardData.dayDuring.toString()
+            //back_tv_mission_total_count.text = HomeMoreCardData.dayDuring.toString()
             back_tv_start_date.text = HomeMoreCardData.start_date
             back_tv_end_date.text = HomeMoreCardData.end_date
             back_tv_achieve_count_num.text = HomeMoreCardData.count.toString()
@@ -505,7 +504,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                 //색 변경
                 front_tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                 front_tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
-                front_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_guanicoe))
+                //front_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_guanicoe))
                 front_tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                 front_tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                 front_tv_achieve_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
@@ -524,7 +523,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                 back_tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                 back_tv_count_num_behind.setTextColor(ContextCompat.getColor(itemView.context, R.color.blur_guanicoe))
                 back_tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
-                back_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_guanicoe))
+                //back_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_guanicoe))
                 back_tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                 back_tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
                 back_tv_achieve_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
@@ -587,7 +586,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                     front_img.setImageResource(R.drawable.ic_home_more_card_front_7_guanicoe)
                     front_stroke.visibility = View.GONE
                     front_tv_top_category.text = "일반"
-                    front_tv_mission_total_count.text=""
+                    //front_tv_mission_total_count.text=""
                     front_normal_index.setImageResource(R.drawable.ic_normal_index_guanicoe)
                     front_tv_index_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_guanicoe))
                     front_progressbar_normal.setImageResource(R.drawable.ic_home_more_card_progressbar_guanicoe)
@@ -595,7 +594,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                     back_img.setImageResource(R.drawable.ic_home_more_card_back_0_guanicoe)
                     back_stroke.visibility = View.GONE
                     back_tv_top_category.text = "일반"
-                    back_tv_mission_total_count.text=""
+                    //back_tv_mission_total_count.text=""
                 }
 
             }else if(HomeMoreCardData.index === 1){
@@ -611,7 +610,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                 //색 변경
                 front_tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
                 front_tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
-                front_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_illipika))
+                //front_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_illipika))
                 front_tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
                 front_tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
                 front_tv_achieve_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
@@ -630,7 +629,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                 back_tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
                 back_tv_count_num_behind.setTextColor(ContextCompat.getColor(itemView.context, R.color.blur_illipika))
                 back_tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
-                back_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_illipika))
+                //back_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_illipika))
                 back_tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
                 back_tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
                 back_tv_achieve_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
@@ -693,7 +692,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                     front_img.setImageResource(R.drawable.ic_home_more_card_front_7_illipika)
                     front_stroke.visibility = View.GONE
                     front_tv_top_category.text = "일반"
-                    front_tv_mission_total_count.text=""
+                    //front_tv_mission_total_count.text=""
                     front_normal_index.setImageResource(R.drawable.ic_normal_index_illipika)
                     front_tv_index_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_illipika))
                     front_progressbar_normal.setImageResource(R.drawable.ic_home_more_card_progressbar_illipika)
@@ -701,7 +700,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                     back_img.setImageResource(R.drawable.ic_home_more_card_back_0_illipika)
                     back_stroke.visibility = View.GONE
                     back_tv_top_category.text = "일반"
-                    back_tv_mission_total_count.text=""
+                    //back_tv_mission_total_count.text=""
                 }
 
             }else if(HomeMoreCardData.index === 2){
@@ -717,7 +716,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                 //색 변경
                 front_tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
                 front_tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
-                front_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_harpseal))
+                //front_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_harpseal))
                 front_tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
                 front_tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
                 front_tv_achieve_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
@@ -736,7 +735,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                 back_tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
                 back_tv_count_num_behind.setTextColor(ContextCompat.getColor(itemView.context, R.color.blur_harpseal))
                 back_tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
-                back_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_harpseal))
+                //back_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_harpseal))
                 back_tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
                 back_tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
                 back_tv_achieve_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
@@ -799,7 +798,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                     front_img.setImageResource(R.drawable.ic_home_more_card_front_7_harpseal)
                     front_stroke.visibility = View.GONE
                     front_tv_top_category.text = "일반"
-                    front_tv_mission_total_count.text=""
+                    //front_tv_mission_total_count.text=""
                     front_normal_index.setImageResource(R.drawable.ic_normal_index_harpseal)
                     front_tv_index_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_harpseal))
                     front_progressbar_normal.setImageResource(R.drawable.ic_home_more_card_progressbar_harpseal)
@@ -807,7 +806,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                     back_img.setImageResource(R.drawable.ic_home_more_card_back_0_harpseal)
                     back_stroke.visibility = View.GONE
                     back_tv_top_category.text = "일반"
-                    back_tv_mission_total_count.text=""
+                    //back_tv_mission_total_count.text=""
                 }
 
             }else if(HomeMoreCardData.index === 3){
@@ -823,7 +822,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                 //색 변경
                 front_tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
                 front_tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
-                front_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_java))
+                //front_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_java))
                 front_tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
                 front_tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
                 front_tv_achieve_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
@@ -842,7 +841,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                 back_tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
                 back_tv_count_num_behind.setTextColor(ContextCompat.getColor(itemView.context, R.color.blur_java))
                 back_tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
-                back_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_java))
+                //back_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_java))
                 back_tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
                 back_tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
                 back_tv_achieve_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
@@ -905,7 +904,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                     front_img.setImageResource(R.drawable.ic_home_more_card_front_7_java)
                     front_stroke.visibility = View.GONE
                     front_tv_top_category.text = "일반"
-                    front_tv_mission_total_count.text=""
+                    //front_tv_mission_total_count.text=""
                     front_normal_index.setImageResource(R.drawable.ic_normal_index_java)
                     front_tv_index_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_java))
                     front_progressbar_normal.setImageResource(R.drawable.ic_home_more_card_progressbar_java)
@@ -913,7 +912,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                     back_img.setImageResource(R.drawable.ic_home_more_card_back_0_java)
                     back_stroke.visibility = View.GONE
                     back_tv_top_category.text = "일반"
-                    back_tv_mission_total_count.text=""
+                    //back_tv_mission_total_count.text=""
                 }
 
             }else if(HomeMoreCardData.index === 4){
@@ -928,7 +927,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                 //색 변경
                 front_tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
                 front_tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
-                front_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_bengaltiger))
+                //front_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_bengaltiger))
                 front_tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
                 front_tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
                 front_tv_achieve_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
@@ -947,7 +946,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                 back_tv_top_category.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
                 back_tv_count_num_behind.setTextColor(ContextCompat.getColor(itemView.context, R.color.blur_bengal))
                 back_tv_mission_name.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
-                back_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_bengaltiger))
+                //back_tv_mission_total_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_bengaltiger))
                 back_tv_mission_category_eng.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
                 back_tv_mission_category_kor.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
                 back_tv_achieve_count.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
@@ -1010,7 +1009,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                     front_img.setImageResource(R.drawable.ic_home_more_card_front_7_bengal)
                     front_stroke.visibility = View.GONE
                     front_tv_top_category.text = "일반"
-                    front_tv_mission_total_count.text=""
+                    //front_tv_mission_total_count.text=""
                     front_normal_index.setImageResource(R.drawable.ic_normal_index_bengaltiger)
                     front_tv_index_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_bengaltiger))
                     front_progressbar_normal.setImageResource(R.drawable.ic_home_more_card_progressbar_bengal)
@@ -1018,7 +1017,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                     back_img.setImageResource(R.drawable.ic_home_more_card_back_0_bengal)
                     back_stroke.visibility = View.GONE
                     back_tv_top_category.text = "일반"
-                    back_tv_mission_total_count.text=""
+                    //back_tv_mission_total_count.text=""
                 }
             }
         }

@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/notosanskr_bold"
-        android:text="중고마켓 이용하기"
+        android:text=""
         android:textColor="@color/stroke_harpseal"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/random_animal_card_topbar_harpseal"

@@ -6,10 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.eco_card_layout_guanicoe.*
+import kotlinx.android.synthetic.main.fragment_add_random_guanicoe.*
 import kotlinx.android.synthetic.main.fragment_add_random_guanicoe.view.*
 import org.techtown.animore.nework.AddRandomMissionData
 import org.techtown.animore.nework.RequestCardInterface
@@ -44,8 +46,10 @@ class AddFragementMissionGuanicoe : Fragment() {
                 if (response.isSuccessful) {
                     if (response.body()!!.success) {
                         Log.d("getRandomMission - Guanicoe", "전체 데이터 : ${response.body()!!}")
+                        random_animal_card_tv_mission_name_guanicoe.setText(response.body()!!.data.mission_name)
                         ecocard_guanicoe_tv_mission_name.setText(response.body()!!.data.mission_name)
                         ecocard_guanicoe_tv_mission_content.setText(response.body()!!.data.mission_content)
+
 
                         mission_name = response.body()!!.data.mission_name
                         mission_content = response.body()!!.data.mission_content
@@ -78,6 +82,10 @@ class AddFragementMissionGuanicoe : Fragment() {
 
         view.findViewById<Button>(R.id.random_animal_card_btn_to_select_mode_guanicoe).setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_add_random_guanicoe_to_add_choose_normal_guanicoe, bundle)
+        }
+
+        view.findViewById<ImageButton>(R.id.random_animal_card_back_btn_to_add_frag_guanicoe).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_add_random_guanicoe_to_add_animal_guanicoe)
         }
 
         return view;
