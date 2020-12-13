@@ -12,10 +12,14 @@
 
         <action
             android:id="@+id/action_home_fragment_to_home_more_card_fragment"
-            app:destination="@id/home_more_card_fragment" />
+            app:destination="@id/home_more_card_fragment"
+            app:enterAnim="@animator/up_ani"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_home_fragment_to_add_fragment"
-            app:destination="@id/add_fragment" />
+            app:destination="@id/add_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
     </fragment>
 
     <fragment
@@ -25,7 +29,9 @@
 
         <action
             android:id="@+id/home_more_card_fragment_to_home_fragment"
-            app:destination="@id/home_fragment" />
+            app:destination="@id/home_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@animator/down_ani"/>
     </fragment>
 
     <fragment
@@ -35,19 +41,29 @@
 
         <action
             android:id="@+id/action_add_fragment_to_add_animal_guanicoe"
-            app:destination="@id/add_animal_guanicoe" />
+            app:destination="@id/add_animal_guanicoe"
+            app:enterAnim="@animator/up_ani"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_fragment_to_add_animal_bengal"
-            app:destination="@id/add_animal_bengal" />
+            app:destination="@id/add_animal_bengal"
+            app:enterAnim="@animator/up_ani"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_fragment_to_add_animal_java"
-            app:destination="@id/add_animal_java" />
+            app:destination="@id/add_animal_java"
+            app:enterAnim="@animator/up_ani"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_fragment_to_add_animal_illipika"
-            app:destination="@id/add_animal_illipika" />
+            app:destination="@id/add_animal_illipika"
+            app:enterAnim="@animator/up_ani"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_fragment_to_add_animal_harpseal"
-            app:destination="@id/add_animal_harpseal" />
+            app:destination="@id/add_animal_harpseal"
+            app:enterAnim="@animator/up_ani"
+            app:exitAnim="@android:anim/fade_out"/>
     </fragment>
 
     <fragment
@@ -57,10 +73,14 @@
 
         <action
             android:id="@+id/action_add_animal_guanicoe_to_add_random_guanicoe"
-            app:destination="@id/add_random_guanicoe" />
+            app:destination="@id/add_random_guanicoe"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_animal_guanicoe_to_add_fragment"
-            app:destination="@id/add_fragment" />
+            app:destination="@id/add_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@animator/down_ani"/>
     </fragment>
 
     <fragment
@@ -70,10 +90,14 @@
 
         <action
             android:id="@+id/action_add_animal_bengal_to_add_random_bengal"
-            app:destination="@id/add_random_bengal" />
+            app:destination="@id/add_random_bengal"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_animal_bengal_to_add_fragment"
-            app:destination="@id/add_fragment" />
+            app:destination="@id/add_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@animator/down_ani"/>
     </fragment>
 
     <fragment
@@ -83,10 +107,14 @@
 
         <action
             android:id="@+id/action_add_animal_java_to_add_random_java"
-            app:destination="@id/add_random_java" />
+            app:destination="@id/add_random_java"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_animal_java_to_add_fragment"
-            app:destination="@id/add_fragment" />
+            app:destination="@id/add_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@animator/down_ani"/>
     </fragment>
 
     <fragment
@@ -96,10 +124,14 @@
 
         <action
             android:id="@+id/action_add_animal_illipika_to_add_random_illipika"
-            app:destination="@id/add_random_illipika" />
+            app:destination="@id/add_random_illipika"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_animal_illipika_to_add_fragment"
-            app:destination="@id/add_fragment" />
+            app:destination="@id/add_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@animator/down_ani"/>
     </fragment>
 
     <fragment
@@ -109,10 +141,14 @@
 
         <action
             android:id="@+id/action_add_animal_harpseal_to_add_random_harpseal"
-            app:destination="@id/add_random_harpseal" />
+            app:destination="@id/add_random_harpseal"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_animal_harpseal_to_add_fragment"
-            app:destination="@id/add_fragment" />
+            app:destination="@id/add_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@animator/down_ani"/>
     </fragment>
 
     <fragment
@@ -122,10 +158,14 @@
 
         <action
             android:id="@+id/action_add_random_guanicoe_to_add_choose_normal_guanicoe"
-            app:destination="@id/add_choose_normal_guanicoe" />
+            app:destination="@id/add_choose_normal_guanicoe"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_random_guanicoe_to_add_animal_guanicoe"
-            app:destination="@id/add_animal_guanicoe" />
+            app:destination="@id/add_animal_guanicoe"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
     </fragment>
 
     <fragment
@@ -135,10 +175,14 @@
 
         <action
             android:id="@+id/action_add_random_bengal_to_add_choose_normal_bengal"
-            app:destination="@id/add_choose_normal_bengal" />
+            app:destination="@id/add_choose_normal_bengal"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_random_bengal_to_add_animal_bengal"
-            app:destination="@id/add_animal_bengal" />
+            app:destination="@id/add_animal_bengal"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
     </fragment>
 
     <fragment
@@ -148,10 +192,14 @@
 
         <action
             android:id="@+id/action_add_random_harpseal_to_add_choose_normal_harpseal"
-            app:destination="@id/add_choose_normal_harpseal" />
+            app:destination="@id/add_choose_normal_harpseal"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_random_harpseal_to_add_animal_harpseal"
-            app:destination="@id/add_animal_harpseal" />
+            app:destination="@id/add_animal_harpseal"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
     </fragment>
 
     <fragment
@@ -161,10 +209,14 @@
 
         <action
             android:id="@+id/action_add_random_illipika_to_add_choose_normal_illipika"
-            app:destination="@id/add_choose_normal_illipika" />
+            app:destination="@id/add_choose_normal_illipika"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_random_illipika_to_add_animal_illipika"
-            app:destination="@id/add_animal_illipika" />
+            app:destination="@id/add_animal_illipika"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
     </fragment>
 
     <fragment
@@ -174,10 +226,14 @@
 
         <action
             android:id="@+id/action_add_random_java_to_add_choose_normal_java"
-            app:destination="@id/add_choose_normal_java" />
+            app:destination="@id/add_choose_normal_java"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_random_java_to_add_animal_java"
-            app:destination="@id/add_animal_java" />
+            app:destination="@id/add_animal_java"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
     </fragment>
 
     <fragment
@@ -186,13 +242,19 @@
         tools:layout="@layout/fragment_choose_option_normal_guanicoe">
         <action
             android:id="@+id/action_add_choose_normal_guanicoe_to_add_choose_continuous_guanicoe"
-            app:destination="@id/add_choose_continuous_guanicoe" />
+            app:destination="@id/add_choose_continuous_guanicoe"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_choose_normal_guanicoe_to_add_final_guanicoe_fragment"
-            app:destination="@id/add_final_guanicoe_fragment" />
+            app:destination="@id/add_final_guanicoe_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_choose_normal_guanicoe_to_add_random_guanicoe"
-            app:destination="@id/add_random_guanicoe" />
+            app:destination="@id/add_random_guanicoe"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
     </fragment>
 
     <fragment
@@ -201,13 +263,19 @@
         tools:layout="@layout/fragment_choose_option_normal_bengal">
         <action
             android:id="@+id/action_add_choose_normal_bengal_to_add_choose_continuous_bengal"
-            app:destination="@id/add_choose_continuous_bengal" />
+            app:destination="@id/add_choose_continuous_bengal"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_choose_normal_bengal_to_add_final_bengal_fragment"
-            app:destination="@id/add_final_bengal_fragment" />
+            app:destination="@id/add_final_bengal_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_choose_normal_bengal_to_add_random_bengal"
-            app:destination="@id/add_random_bengal" />
+            app:destination="@id/add_random_bengal"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
     </fragment>
 
 
@@ -217,13 +285,19 @@
         tools:layout="@layout/fragment_choose_option_normal_java">
         <action
             android:id="@+id/action_add_choose_normal_java_to_add_choose_continuous_java"
-            app:destination="@id/add_choose_continuous_java" />
+            app:destination="@id/add_choose_continuous_java"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_choose_normal_java_to_add_final_java_fragment"
-            app:destination="@id/add_final_java_fragment" />
+            app:destination="@id/add_final_java_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_choose_normal_java_to_add_random_java"
-            app:destination="@id/add_random_java" />
+            app:destination="@id/add_random_java"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
     </fragment>
 
     <fragment
@@ -232,13 +306,19 @@
         tools:layout="@layout/fragment_choose_option_normal_illipika">
         <action
             android:id="@+id/action_add_choose_normal_illipika_to_add_choose_continuous_illipika"
-            app:destination="@id/add_choose_continuous_illipika" />
+            app:destination="@id/add_choose_continuous_illipika"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_choose_normal_illipika_to_add_final_illipika_fragment"
-            app:destination="@id/add_final_illipika_fragment" />
+            app:destination="@id/add_final_illipika_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_choose_normal_illipika_to_add_random_illipika"
-            app:destination="@id/add_random_illipika" />
+            app:destination="@id/add_random_illipika"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
     </fragment>
 
     <fragment
@@ -247,13 +327,19 @@
         tools:layout="@layout/fragment_choose_option_normal_harpseal">
         <action
             android:id="@+id/action_add_choose_normal_harpseal_to_add_choose_continuous_harpseal"
-            app:destination="@id/add_choose_continuous_harpseal" />
+            app:destination="@id/add_choose_continuous_harpseal"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_choose_normal_harpseal_to_add_final_harpseal_fragment"
-            app:destination="@id/add_final_harpseal_fragment" />
+            app:destination="@id/add_final_harpseal_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_choose_normal_harpseal_to_add_random_harpseal"
-            app:destination="@id/add_random_harpseal" />
+            app:destination="@id/add_random_harpseal"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
     </fragment>
 
 
@@ -263,13 +349,19 @@
         tools:layout="@layout/fragment_choose_option_continuous_guanicoe">
         <action
             android:id="@+id/action_add_choose_continuous_guanicoe_to_add_choose_normal_guanicoe"
-            app:destination="@id/add_choose_normal_guanicoe" />
+            app:destination="@id/add_choose_normal_guanicoe"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_choose_continuous_guanicoe_to_add_final_guanicoe_fragment"
-            app:destination="@id/add_final_guanicoe_fragment" />
+            app:destination="@id/add_final_guanicoe_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_choose_continuous_guanicoe_to_add_random_guanicoe"
-            app:destination="@id/add_random_guanicoe" />
+            app:destination="@id/add_random_guanicoe"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
     </fragment>
 
     <fragment
@@ -278,13 +370,19 @@
         tools:layout="@layout/fragment_choose_option_continuous_bengal">
         <action
             android:id="@+id/action_add_choose_continuous_bengal_to_add_choose_normal_bengal"
-            app:destination="@id/add_choose_normal_bengal" />
+            app:destination="@id/add_choose_normal_bengal"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_choose_continuous_bengal_to_add_final_bengal_fragment"
-            app:destination="@id/add_final_bengal_fragment" />
+            app:destination="@id/add_final_bengal_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_choose_continuous_bengal_to_add_random_bengal"
-            app:destination="@id/add_random_bengal" />
+            app:destination="@id/add_random_bengal"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
     </fragment>
 
     <fragment
@@ -293,13 +391,19 @@
         tools:layout="@layout/fragment_choose_option_continuous_java">
         <action
             android:id="@+id/action_add_choose_continuous_java_to_add_choose_normal_java"
-            app:destination="@id/add_choose_normal_java" />
+            app:destination="@id/add_choose_normal_java"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_choose_continuous_java_to_add_final_java_fragment"
-            app:destination="@id/add_final_java_fragment" />
+            app:destination="@id/add_final_java_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_choose_continuous_java_to_add_random_java"
-            app:destination="@id/add_random_java" />
+            app:destination="@id/add_random_java"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
     </fragment>
 
     <fragment
@@ -308,13 +412,19 @@
         tools:layout="@layout/fragment_choose_option_continuous_illipika">
         <action
             android:id="@+id/action_add_choose_continuous_illipika_to_add_choose_normal_illipika"
-            app:destination="@id/add_choose_normal_illipika" />
+            app:destination="@id/add_choose_normal_illipika"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_choose_continuous_illipika_to_add_final_illipika_fragment"
-            app:destination="@id/add_final_illipika_fragment" />
+            app:destination="@id/add_final_illipika_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_choose_continuous_illipika_to_add_random_illipika"
-            app:destination="@id/add_random_illipika" />
+            app:destination="@id/add_random_illipika"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
     </fragment>
 
     <fragment
@@ -323,13 +433,19 @@
         tools:layout="@layout/fragment_choose_option_continuous_harpseal">
         <action
             android:id="@+id/action_add_choose_continuous_harpseal_to_add_choose_normal_harpseal"
-            app:destination="@id/add_choose_normal_harpseal" />
+            app:destination="@id/add_choose_normal_harpseal"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_choose_continuous_harpseal_to_add_final_harpseal_fragment"
-            app:destination="@id/add_final_harpseal_fragment" />
+            app:destination="@id/add_final_harpseal_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_choose_continuous_harpseal_to_add_random_harpseal"
-            app:destination="@id/add_random_harpseal" />
+            app:destination="@id/add_random_harpseal"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
     </fragment>
 
     <fragment
@@ -338,10 +454,14 @@
         tools:layout="@layout/fragment_final_add_guanicoe">
         <action
             android:id="@+id/action_add_final_guanicoe_fragment_to_home_fragment"
-            app:destination="@id/home_fragment" />
+            app:destination="@id/home_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_final_guanicoe_fragment_to_add_random_guanicoe"
-            app:destination="@id/add_random_guanicoe" />
+            app:destination="@id/add_random_guanicoe"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
     </fragment>
 
     <fragment
@@ -350,10 +470,14 @@
         tools:layout="@layout/fragment_final_add_bengal">
         <action
             android:id="@+id/action_add_final_bengal_fragment_to_home_fragment"
-            app:destination="@id/home_fragment" />
+            app:destination="@id/home_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_final_bengal_fragment_to_add_random_bengal"
-            app:destination="@id/add_random_bengal" />
+            app:destination="@id/add_random_bengal"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
     </fragment>
 
     <fragment
@@ -362,10 +486,14 @@
         tools:layout="@layout/fragment_final_add_java">
         <action
             android:id="@+id/action_add_final_java_fragment_to_home_fragment"
-            app:destination="@id/home_fragment" />
+            app:destination="@id/home_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_final_java_fragment_to_add_random_java"
-            app:destination="@id/add_random_java" />
+            app:destination="@id/add_random_java"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
     </fragment>
 
     <fragment
@@ -374,10 +502,14 @@
         tools:layout="@layout/fragment_final_add_illipika">
         <action
             android:id="@+id/action_add_final_illipika_fragment_to_home_fragment"
-            app:destination="@id/home_fragment" />
+            app:destination="@id/home_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_final_illipika_fragment_to_add_random_illipika"
-            app:destination="@id/add_random_illipika" />
+            app:destination="@id/add_random_illipika"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
     </fragment>
 
     <fragment
@@ -386,10 +518,14 @@
         tools:layout="@layout/fragment_final_add_harpseal">
         <action
             android:id="@+id/action_add_final_harpseal_fragment_to_home_fragment"
-            app:destination="@id/home_fragment" />
+            app:destination="@id/home_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_add_final_harpseal_fragment_to_add_random_harpseal"
-            app:destination="@id/add_random_harpseal" />
+            app:destination="@id/add_random_harpseal"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
     </fragment>
 
     <fragment
@@ -398,7 +534,9 @@
         tools:layout="@layout/fragment_past">
         <action
             android:id="@+id/action_past_fragment_to_pastmore_fragment"
-            app:destination="@id/pastmore_fragment" />
+            app:destination="@id/pastmore_fragment"
+            app:enterAnim="@animator/up_ani"
+            app:exitAnim="@android:anim/fade_out"/>
     </fragment>
 
     <fragment
@@ -407,7 +545,9 @@
         tools:layout="@layout/fragment_past_card_more">
         <action
             android:id="@+id/action_pastmore_fragment_to_past_fragment"
-            app:destination="@id/past_fragment" />
+            app:destination="@id/past_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@animator/down_ani"/>
     </fragment>
 
 </navigation>
