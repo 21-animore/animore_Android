@@ -337,11 +337,11 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/more_card_circle_recyclerview"
-            android:layout_width="299dp"
+            android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/more_card_front_progressbar_normal"
             android:layout_marginTop="6dp"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="35dp"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             android:orientation="vertical"
             app:spanCount="7"
@@ -459,7 +459,6 @@
                 android:layout_height="match_parent"/>
         </TableLayout>
     </RelativeLayout>
-
 
     <RelativeLayout
         android:layout_width="349dp"
@@ -770,4 +769,5 @@
             android:textColor="#AB2220"
             android:textSize="12sp" />
     </RelativeLayout>
+
 </androidx.cardview.widget.CardView>

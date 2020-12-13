@@ -45,7 +45,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
         /*-------------------------------------------------선생님-------------------------------------------------------*/
         var view_count = 0  // 더한 tablerow 갯수 셀려는 변수
 
-        fun draw_cal(index: Int, type:Int, todaydate:String) {
+        fun draw_cal(index: Int, type:Int, todaydate:String, success_count:Int) {
             var today = Calendar.getInstance()
 
             var sampleday = todaydate
@@ -70,6 +70,8 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
             var start = false
             // 끝난 날을 체크하는 count
             var count = 0
+            //달성 횟수만큼만 배경 채우기 위함
+            var checknum = 1;
 
             var table_body : TableLayout = itemView.findViewById(R.id.myTable)
 
@@ -82,22 +84,22 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
 
             // table row params
             val rowParams = TableLayout.LayoutParams(
-                    TableLayout.LayoutParams.WRAP_CONTENT,
-                    TableLayout.LayoutParams.WRAP_CONTENT
+                TableLayout.LayoutParams.WRAP_CONTENT,
+                TableLayout.LayoutParams.WRAP_CONTENT
             )
 
             for (i in 0..week) {
                 var tbrow = TableRow(itemView.context)
                 tbrow.layoutParams = rowParams
-                for (j in 0..6) {  //일주일은 7일이니...
+                for (j in 0..6) {  //일주일
 
                     var tv1 = TextView(itemView.context)
                     var t_par = TableRow.LayoutParams(
-                            TableRow.LayoutParams.MATCH_PARENT,
-                            TableRow.LayoutParams.WRAP_CONTENT,
-                            1f
+                        TableRow.LayoutParams.MATCH_PARENT,
+                        TableRow.LayoutParams.WRAP_CONTENT,
+                        1f
                     )
-                    //시작 날ㅉㅏ 체크
+                    //시작 날짜 체크
                     if (j == day) {
                         start = true
                     }
@@ -110,87 +112,113 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
 
                         var myfont = ResourcesCompat.getFont(itemView.context,R.font.montserrat_bold)
                         tv1.setTypeface(myfont)
-                        //tv1.setTextSize(14)
-
-                        //날짜 text
-                        tv1.text = today.get(Calendar.DATE).toString()
+                        tv1.text = today.get(Calendar.DATE).toString()  //날짜 text
 
                         //실선
                         //drawable 색 동적으로 바꾸는 방법 찾아보기
-                        if(type === 0){
-                            tv1.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
-                            if (i == week) {
-                                if (j % 7 == 0) {
-                                    tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_1_guanicoe)
+                        if(type == 0){
+                            if(checknum >= 1 && checknum <= success_count){
+                                tv1.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_guanicoe))
+                                tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_square_guanicoe)
+                                checknum += 1
+                            }else if(checknum > success_count){
+                                tv1.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_guanicoe))
+                                if (i == week) {
+                                    if (j % 7 == 0) {
+                                        tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_1_guanicoe)
+                                    } else {
+                                        tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_4_guanicoe)
+                                    }
                                 } else {
-                                    tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_4_guanicoe)
-                                }
-                            } else {
-                                if (j % 7 == 0) {
-                                    tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_2_guanicoe)
-                                } else {
-                                    tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_3_guanicoe)
-                                }
-                            }
-                        }else if(type === 1){
-                            tv1.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
-                            if (i == week) {
-                                if (j % 7 == 0) {
-                                    tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_1_illipika)
-                                } else {
-                                    tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_4_illipika)
-                                }
-                            } else {
-                                if (j % 7 == 0) {
-                                    tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_2_illipika)
-                                } else {
-                                    tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_3_illipika)
+                                    if (j % 7 == 0) {
+                                        tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_2_guanicoe)
+                                    } else {
+                                        tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_3_guanicoe)
+                                    }
                                 }
                             }
-                        }else if(type === 2){
-                            tv1.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
-                            if (i == week) {
-                                if (j % 7 == 0) {
-                                    tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_1_harpseal)
+                        }else if(type == 1){
+                            if(checknum >= 1 && checknum <= success_count){
+                                tv1.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_illipika))
+                                tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_square_illipika)
+                                checknum += 1
+                            }else if(checknum > success_count){
+                                tv1.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_illipika))
+                                if (i == week) {
+                                    if (j % 7 == 0) {
+                                        tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_1_illipika)
+                                    } else {
+                                        tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_4_illipika)
+                                    }
                                 } else {
-                                    tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_4_harpseal)
-                                }
-                            } else {
-                                if (j % 7 == 0) {
-                                    tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_2_harpseal)
-                                } else {
-                                    tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_3_harpseal)
+                                    if (j % 7 == 0) {
+                                        tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_2_illipika)
+                                    } else {
+                                        tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_3_illipika)
+                                    }
                                 }
                             }
-                        }else if(type === 3){
-                            tv1.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
-                            if (i == week) {
-                                if (j % 7 == 0) {
-                                    tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_1_java)
+                        }else if(type == 2){
+                            if(checknum >= 1 && checknum <= success_count){
+                                tv1.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_harpseal))
+                                tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_square_harpseal)
+                                checknum += 1
+                            }else if(checknum > success_count){
+                                tv1.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_harpseal))
+                                if (i == week) {
+                                    if (j % 7 == 0) {
+                                        tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_1_harpseal)
+                                    } else {
+                                        tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_4_harpseal)
+                                    }
                                 } else {
-                                    tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_4_java)
+                                    if (j % 7 == 0) {
+                                        tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_2_harpseal)
+                                    } else {
+                                        tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_3_harpseal)
+                                    }
                                 }
-                            } else {
+                            }
+                        }else if(type == 3){
+                            if(checknum >= 1 && checknum <= success_count){
+                                tv1.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_java))
+                                tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_square_java)
+                                checknum += 1
+                            }else if(checknum > success_count){
                                 tv1.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_java))
-                                if (j % 7 == 0) {
-                                    tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_2_java)
+                                if (i == week) {
+                                    if (j % 7 == 0) {
+                                        tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_1_java)
+                                    } else {
+                                        tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_4_java)
+                                    }
                                 } else {
-                                    tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_3_java)
+                                    if (j % 7 == 0) {
+                                        tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_2_java)
+                                    } else {
+                                        tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_3_java)
+                                    }
                                 }
                             }
-                        }else if(type === 4){
-                            tv1.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
-                            if (i == week) {
-                                if (j % 7 == 0) {
-                                    tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_1_bengal)
+                        }else if(type == 4){
+                            if(checknum >= 1 && checknum <= success_count){
+                                tv1.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_bengaltiger))
+                                tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_square_bengal)
+                                checknum += 1
+                            }else if(checknum > success_count){
+                                tv1.setTextColor(ContextCompat.getColor(itemView.context, R.color.stroke_bengaltiger))
+                                if (i == week) {
+                                    if (j % 7 == 0) {
+                                        tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_1_bengal)
+                                    } else {
+                                        tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_4_bengal)
+                                    }
                                 } else {
-                                    tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_4_bengal)
-                                }
-                            } else {
-                                if (j % 7 == 0) {
-                                    tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_2_bengal)
-                                } else {
-                                    tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_3_bengal)
+                                    if (j % 7 == 0) {
+                                        tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_2_bengal)
+                                    } else {
+                                        tv1.background = AppCompatResources.getDrawable(itemView.context, R.drawable.draw_solid_line_3_bengal)
+                                    }
                                 }
                             }
                         }
@@ -273,7 +301,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     }
 
                     tv1.layoutParams = t_par
-                   // tv1.setTextColor()
+                    // tv1.setTextColor()
                     tv1.gravity = Gravity.CENTER
 
                     //숫자가 있을 경우에
@@ -288,18 +316,13 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     }else{
                         tv1.setPadding(23, 23, 23, 23)
                     }
-
-                    //폰트를 어떻게 바꾸지?
-                    
                     //textviw 추가
                     tbrow.addView(tv1)
-
                 }
                 //tablerow 추가
                 table_body.addView(tbrow)
                 view_count += 1
             }
-
         }
 
 
@@ -466,7 +489,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                 tv_end_date.visibility = View.GONE;
 
                 //캘린더 그리기
-                draw_cal(MainCardData.mission_period, MainCardData.mission_category, MainCardData.mission_start_date)
+                draw_cal(MainCardData.mission_period, MainCardData.mission_category, MainCardData.mission_start_date, MainCardData.mission_acheive_count)
 
                 /*----------------------------------연속 카드 일수별로 다른 요소 변경--------------------------------------------*/
                 
@@ -824,7 +847,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
             }
 
             //클릭한 카드의 데이터 상세 뷰로 보내기
-            val bundle = bundleOf(
+            var bundle = bundleOf(
                     "bundle_mission_name" to bundle_mission_name,
                     "bundle_mission_category" to bundle_mission_category,
                     "bundle_continue_flag" to bundle_continue_flag,
@@ -848,15 +871,27 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     balck_screen_text.visibility = View.VISIBLE
                     dailyCheckBtn.setEnabled(false);
 
+                    bundle_mission_acheive_count = (bundle_mission_acheive_count.toInt() + 1).toString()
+
                     //뒷 배경 바꾸기(일반)
-                    tv_achieve_count.text = (MainCardData.mission_acheive_count + 1).toString()
-                    tv_index_count_num.text = (MainCardData.mission_acheive_count + 1).toString()
-                    var after_click_count_for_progressbar = (MainCardData.mission_acheive_count + 1).toFloat()/MainCardData.mission_period*100
+                    tv_achieve_count.text = bundle_mission_acheive_count
+                    tv_index_count_num.text = bundle_mission_acheive_count
+                    var after_click_count_for_progressbar = bundle_mission_acheive_count.toFloat()/MainCardData.mission_period*100
                     var after_click_int = after_click_count_for_progressbar.toInt()
                     progressbar.progress = after_click_int
 
                     //뒷 배경 바꾸기(연속)
-                    //누른 칸 칠해져야 되는데 흠
+                    draw_cal(MainCardData.mission_period, MainCardData.mission_category, MainCardData.mission_start_date, bundle_mission_acheive_count.toInt())
+
+                    bundle = bundleOf(
+                        "bundle_mission_name" to bundle_mission_name,
+                        "bundle_mission_category" to bundle_mission_category,
+                        "bundle_continue_flag" to bundle_continue_flag,
+                        "bundle_mission_acheive_count" to bundle_mission_acheive_count,
+                        "bundle_mission_period" to bundle_mission_period,
+                        "bundle_mission_start_date" to bundle_mission_start_date,
+                        "bundle_mission_end_date" to bundle_mission_end_date,
+                        "bundle_mission_content" to bundle_mission_content)
                 }
             }
         }
