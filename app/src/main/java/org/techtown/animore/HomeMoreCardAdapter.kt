@@ -431,7 +431,13 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
 
         val progressbar = itemView.findViewById<ProgressBar>(R.id.more_card_back_progressbar)
 
+        fun getPos(count : Int){
+            front_normal_index.x = 70F
+            front_tv_index_count_num.x = 70F
 
+            front_normal_index.x += 48*count
+            front_tv_index_count_num.x += 48*count
+        }
 
         fun bind(HomeMoreCardData: HomeMoreCardData, context: Context) {
 
@@ -494,6 +500,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
             if(HomeMoreCardData.flag === 0){
                 //원 스탬프 그리기
                 createCircle(HomeMoreCardData.count, HomeMoreCardData.index)
+                getPos(HomeMoreCardData.count)
 
                 //연속 카드 요소 안 보이게
                 front_tv_day_mon.visibility = View.GONE

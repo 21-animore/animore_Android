@@ -432,6 +432,14 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
             })
         }
 
+        fun getPos(count : Int){
+            normal_index.x = 0F
+            tv_index_count_num.x = 0F
+            
+            normal_index.x += (50 + 32*count)
+            tv_index_count_num.x += (50 + 32*count)
+        }
+
 
         fun bind(MainCardData: HomecardDataList) {
 
@@ -703,6 +711,9 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                 //테두리 가리기
                 stroke21.visibility = View.GONE
 
+                //프로그레스바 인디케이터 위치 옮기기
+                getPos(MainCardData.mission_acheive_count)
+
                 //이후 유형별 이미지 및 글씨 바꿔주기
                 if (MainCardData.mission_category ==0) {
 
@@ -873,15 +884,18 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
 
                     bundle_mission_acheive_count = (bundle_mission_acheive_count.toInt() + 1).toString()
 
-                    //뒷 배경 바꾸기(일반)
-                    tv_achieve_count.text = bundle_mission_acheive_count
-                    tv_index_count_num.text = bundle_mission_acheive_count
-                    var after_click_count_for_progressbar = bundle_mission_acheive_count.toFloat()/MainCardData.mission_period*100
-                    var after_click_int = after_click_count_for_progressbar.toInt()
-                    progressbar.progress = after_click_int
-
-                    //뒷 배경 바꾸기(연속)
-                    draw_cal(MainCardData.mission_period, MainCardData.mission_category, MainCardData.mission_start_date, bundle_mission_acheive_count.toInt())
+                    if(MainCardData.continue_flag == 1){
+                        //뒷 배경 바꾸기(연속)
+                        draw_cal(MainCardData.mission_period, MainCardData.mission_category, MainCardData.mission_start_date, bundle_mission_acheive_count.toInt())
+                    }else{
+                        //뒷 배경 바꾸기(일반)
+                        tv_achieve_count.text = bundle_mission_acheive_count
+                        tv_index_count_num.text = bundle_mission_acheive_count
+                        var after_click_count_for_progressbar = bundle_mission_acheive_count.toFloat()/MainCardData.mission_period*100
+                        var after_click_int = after_click_count_for_progressbar.toInt()
+                        progressbar.progress = after_click_int
+                        getPos(bundle_mission_acheive_count.toInt())
+                    }
 
                     bundle = bundleOf(
                         "bundle_mission_name" to bundle_mission_name,

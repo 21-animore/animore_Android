@@ -293,7 +293,6 @@
             android:id="@+id/more_card_front_normal_index"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
             card_view:srcCompat="@drawable/ic_normal_index_bengaltiger"
             android:layout_below="@id/more_card_front_tv_total_count"
             android:layout_marginTop="6dp"/>
@@ -337,11 +336,11 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/more_card_circle_recyclerview"
-            android:layout_width="290dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/more_card_front_progressbar_normal"
             android:layout_marginTop="6dp"
-            android:layout_marginLeft="35dp"
+            android:layout_marginLeft="30dp"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             android:orientation="vertical"
             app:spanCount="7"
@@ -447,12 +446,12 @@
 
         <TableLayout
             android:id="@+id/myTable"
-            android:layout_width="300dp"
+            android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
             android:layout_below="@+id/more_card_front_tv_day_sun"
             android:layout_marginStart="24dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="30dp"
             android:layout_marginRight="20dp">
             <TableRow
                 android:layout_width="match_parent"

@@ -19,7 +19,7 @@
         <item name="android:textColorPrimary">@color/colorAccent</item>
         <item name="android:textSize">18sp</item>
         <item name="android:fontFamily">@font/montserrat_bold</item>
-        <item name="android:minDate">12/17/2020</item>
+        <item name="android:minDate">01/07/2021</item>
         <item name="android:yearListSelectorColor">@color/white</item>
     </style>
 

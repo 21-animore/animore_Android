@@ -102,7 +102,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             card_view:srcCompat="@drawable/ic_normal_index_bengaltiger"
-            android:layout_alignRight="@+id/maincard_progressbar"
             android:layout_alignParentTop="true"
             android:layout_marginTop="170dp" />
 
@@ -114,7 +113,6 @@
             android:layout_alignTop="@+id/maincard_normal_index"
             android:layout_alignEnd="@+id/maincard_normal_index"
             android:layout_alignBottom="@+id/maincard_normal_index"
-            android:layout_marginStart="0dp"
             android:layout_marginTop="45dp"
             android:layout_marginBottom="11dp"
             android:fontFamily="@font/montserrat_bold"
