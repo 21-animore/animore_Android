@@ -20,7 +20,7 @@ class SplashActivity : AppCompatActivity() {
 
             override fun onAnimationEnd(animation: Animator?) {
                 //splash 애니메이션이 종료되면 loginActivity로 넘어감
-                val intent = Intent(this@SplashActivity, MainActivity::class.java)
+                val intent = Intent(this@SplashActivity, LoginActivity::class.java)
                 startActivity(intent)
                 finish()
             }
