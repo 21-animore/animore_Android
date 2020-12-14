@@ -593,33 +593,33 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                     if(HomeMoreCardData.dayDuring === 7){
                         front_img.setImageResource(R.drawable.ic_home_more_card_front_7_guanicoe)
                         front_stroke.visibility = View.GONE
-                        front_tv_top_category.text = "연속 7일"
+                        front_tv_top_category.text = "모어 7일"
 
                         back_img.setImageResource(R.drawable.ic_home_more_card_back_7_guanicoe)
                         back_stroke.visibility = View.GONE
-                        back_tv_top_category.text = "연속 7일"
+                        back_tv_top_category.text = "모어 7일"
                     }else if(HomeMoreCardData.dayDuring === 14){
                         front_img.setImageResource(R.drawable.ic_home_more_card_front_14_guanicoe)
                         front_stroke.visibility = View.GONE
-                        front_tv_top_category.text = "연속 14일"
+                        front_tv_top_category.text = "모어 14일"
 
                         back_img.setImageResource(R.drawable.ic_home_more_card_back_14_guanicoe)
                         back_stroke.visibility = View.GONE
-                        back_tv_top_category.text = "연속 14일"
+                        back_tv_top_category.text = "모어 14일"
                     }else if(HomeMoreCardData.dayDuring === 21){
                         front_img.setImageResource(R.drawable.ic_home_more_card_front_21_guanicoe)
                         front_stroke.setImageResource(R.drawable.ic_home_more_card_stroke_guanicoe)
-                        front_tv_top_category.text = "연속 21일"
+                        front_tv_top_category.text = "모어 21일"
 
                         back_img.setImageResource(R.drawable.ic_home_more_card_back_21_guanicoe)
                         back_stroke.setImageResource(R.drawable.ic_home_more_card_stroke_guanicoe)
-                        back_tv_top_category.text = "연속 21일"
+                        back_tv_top_category.text = "모어 21일"
                     }
 
                 } else if(HomeMoreCardData.flag === 0){
                     front_img.setImageResource(R.drawable.ic_home_more_card_front_7_guanicoe)
                     front_stroke.visibility = View.GONE
-                    front_tv_top_category.text = "일반"
+                    front_tv_top_category.text = "애니"
                     //front_tv_mission_total_count.text=""
                     front_normal_index.setImageResource(R.drawable.ic_normal_index_guanicoe)
                     front_tv_index_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_guanicoe))
@@ -627,7 +627,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
 
                     back_img.setImageResource(R.drawable.ic_home_more_card_back_0_guanicoe)
                     back_stroke.visibility = View.GONE
-                    back_tv_top_category.text = "일반"
+                    back_tv_top_category.text = "애니"
                     //back_tv_mission_total_count.text=""
                 }
 
@@ -699,33 +699,33 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                     if(HomeMoreCardData.dayDuring === 7){
                         front_img.setImageResource(R.drawable.ic_home_more_card_front_7_illipika)
                         front_stroke.visibility = View.GONE
-                        front_tv_top_category.text = "연속 7일"
+                        front_tv_top_category.text = "모어 7일"
 
                         back_img.setImageResource(R.drawable.ic_home_more_card_back_7_illipika)
                         back_stroke.visibility = View.GONE
-                        back_tv_top_category.text = "연속 7일"
+                        back_tv_top_category.text = "모어 7일"
                     }else if(HomeMoreCardData.dayDuring === 14){
                         front_img.setImageResource(R.drawable.ic_home_more_card_front_14_illipika)
                         front_stroke.visibility = View.GONE
-                        front_tv_top_category.text = "연속 14일"
+                        front_tv_top_category.text = "모어 14일"
 
                         back_img.setImageResource(R.drawable.ic_home_more_card_back_14_illipika)
                         back_stroke.visibility = View.GONE
-                        back_tv_top_category.text = "연속 14일"
+                        back_tv_top_category.text = "모어 14일"
                     }else if(HomeMoreCardData.dayDuring === 21){
                         front_img.setImageResource(R.drawable.ic_home_more_card_front_21_illipika)
                         front_stroke.setImageResource(R.drawable.ic_home_more_card_stroke_illipika)
-                        front_tv_top_category.text = "연속 21일"
+                        front_tv_top_category.text = "모어 21일"
 
                         back_img.setImageResource(R.drawable.ic_home_more_card_back_21_illipika)
                         back_stroke.setImageResource(R.drawable.ic_home_more_card_stroke_illipika)
-                        back_tv_top_category.text = "연속 21일"
+                        back_tv_top_category.text = "모어 21일"
                     }
 
                 } else if(HomeMoreCardData.flag === 0){
                     front_img.setImageResource(R.drawable.ic_home_more_card_front_7_illipika)
                     front_stroke.visibility = View.GONE
-                    front_tv_top_category.text = "일반"
+                    front_tv_top_category.text = "애니"
                     //front_tv_mission_total_count.text=""
                     front_normal_index.setImageResource(R.drawable.ic_normal_index_illipika)
                     front_tv_index_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_illipika))
@@ -733,7 +733,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
 
                     back_img.setImageResource(R.drawable.ic_home_more_card_back_0_illipika)
                     back_stroke.visibility = View.GONE
-                    back_tv_top_category.text = "일반"
+                    back_tv_top_category.text = "애니"
                     //back_tv_mission_total_count.text=""
                 }
 
@@ -805,33 +805,33 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                     if(HomeMoreCardData.dayDuring === 7){
                         front_img.setImageResource(R.drawable.ic_home_more_card_front_7_harpseal)
                         front_stroke.visibility = View.GONE
-                        front_tv_top_category.text = "연속 7일"
+                        front_tv_top_category.text = "모어 7일"
 
                         back_img.setImageResource(R.drawable.ic_home_more_card_back_7_harpseal)
                         back_stroke.visibility = View.GONE
-                        back_tv_top_category.text = "연속 7일"
+                        back_tv_top_category.text = "모어 7일"
                     }else if(HomeMoreCardData.dayDuring === 14){
                         front_img.setImageResource(R.drawable.ic_home_more_card_front_14_harpseal)
                         front_stroke.visibility = View.GONE
-                        front_tv_top_category.text = "연속 14일"
+                        front_tv_top_category.text = "모어 14일"
 
                         back_img.setImageResource(R.drawable.ic_home_more_card_back_14_harpseal)
                         back_stroke.visibility = View.GONE
-                        back_tv_top_category.text = "연속 14일"
+                        back_tv_top_category.text = "모어 14일"
                     }else if(HomeMoreCardData.dayDuring === 21){
                         front_img.setImageResource(R.drawable.ic_home_more_card_front_21_harpseal)
                         front_stroke.setImageResource(R.drawable.ic_home_more_card_stroke_harpseal)
-                        front_tv_top_category.text = "연속 21일"
+                        front_tv_top_category.text = "모어 21일"
 
                         back_img.setImageResource(R.drawable.ic_home_more_card_back_21_harpseal)
                         back_stroke.setImageResource(R.drawable.ic_home_more_card_stroke_harpseal)
-                        back_tv_top_category.text = "연속 21일"
+                        back_tv_top_category.text = "모어 21일"
                     }
 
                 } else if(HomeMoreCardData.flag === 0){
                     front_img.setImageResource(R.drawable.ic_home_more_card_front_7_harpseal)
                     front_stroke.visibility = View.GONE
-                    front_tv_top_category.text = "일반"
+                    front_tv_top_category.text = "애니"
                     //front_tv_mission_total_count.text=""
                     front_normal_index.setImageResource(R.drawable.ic_normal_index_harpseal)
                     front_tv_index_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_harpseal))
@@ -839,7 +839,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
 
                     back_img.setImageResource(R.drawable.ic_home_more_card_back_0_harpseal)
                     back_stroke.visibility = View.GONE
-                    back_tv_top_category.text = "일반"
+                    back_tv_top_category.text = "애니"
                     //back_tv_mission_total_count.text=""
                 }
 
@@ -911,33 +911,33 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                     if(HomeMoreCardData.dayDuring === 7){
                         front_img.setImageResource(R.drawable.ic_home_more_card_front_7_java)
                         front_stroke.visibility = View.GONE
-                        front_tv_top_category.text = "연속 7일"
+                        front_tv_top_category.text = "모어 7일"
 
                         back_img.setImageResource(R.drawable.ic_home_more_card_back_7_java)
                         back_stroke.visibility = View.GONE
-                        back_tv_top_category.text = "연속 7일"
+                        back_tv_top_category.text = "모어 7일"
                     }else if(HomeMoreCardData.dayDuring === 14){
                         front_img.setImageResource(R.drawable.ic_home_more_card_front_14_java)
                         front_stroke.visibility = View.GONE
-                        front_tv_top_category.text = "연속 14일"
+                        front_tv_top_category.text = "모어 14일"
 
                         back_img.setImageResource(R.drawable.ic_home_more_card_back_14_java)
                         back_stroke.visibility = View.GONE
-                        back_tv_top_category.text = "연속 14일"
+                        back_tv_top_category.text = "모어 14일"
                     }else if(HomeMoreCardData.dayDuring === 21){
                         front_img.setImageResource(R.drawable.ic_home_more_card_front_21_java)
                         front_stroke.setImageResource(R.drawable.ic_home_more_card_stroke_java)
-                        front_tv_top_category.text = "연속 21일"
+                        front_tv_top_category.text = "모어 21일"
 
                         back_img.setImageResource(R.drawable.ic_home_more_card_back_21_java)
                         back_stroke.setImageResource(R.drawable.ic_home_more_card_stroke_java)
-                        back_tv_top_category.text = "연속 21일"
+                        back_tv_top_category.text = "모어 21일"
                     }
 
                 } else if(HomeMoreCardData.flag === 0){
                     front_img.setImageResource(R.drawable.ic_home_more_card_front_7_java)
                     front_stroke.visibility = View.GONE
-                    front_tv_top_category.text = "일반"
+                    front_tv_top_category.text = "애니"
                     //front_tv_mission_total_count.text=""
                     front_normal_index.setImageResource(R.drawable.ic_normal_index_java)
                     front_tv_index_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_java))
@@ -945,7 +945,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
 
                     back_img.setImageResource(R.drawable.ic_home_more_card_back_0_java)
                     back_stroke.visibility = View.GONE
-                    back_tv_top_category.text = "일반"
+                    back_tv_top_category.text = "애니"
                     //back_tv_mission_total_count.text=""
                 }
 
@@ -1016,33 +1016,33 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
                     if(HomeMoreCardData.dayDuring === 7){
                         front_img.setImageResource(R.drawable.ic_home_more_card_front_7_bengal)
                         front_stroke.visibility = View.GONE
-                        front_tv_top_category.text = "연속 7일"
+                        front_tv_top_category.text = "모어 7일"
 
                         back_img.setImageResource(R.drawable.ic_home_more_card_back_7_bengal)
                         back_stroke.visibility = View.GONE
-                        back_tv_top_category.text = "연속 7일"
+                        back_tv_top_category.text = "모어 7일"
                     }else if(HomeMoreCardData.dayDuring === 14){
                         front_img.setImageResource(R.drawable.ic_home_more_card_front_14_bengal)
                         front_stroke.visibility = View.GONE
-                        front_tv_top_category.text = "연속 14일"
+                        front_tv_top_category.text = "모어 14일"
 
                         back_img.setImageResource(R.drawable.ic_home_more_card_back_14_bengal)
                         back_stroke.visibility = View.GONE
-                        back_tv_top_category.text = "연속 14일"
+                        back_tv_top_category.text = "모어 14일"
                     }else if(HomeMoreCardData.dayDuring === 21){
                         front_img.setImageResource(R.drawable.ic_home_more_card_front_21_bengal)
                         front_stroke.setImageResource(R.drawable.ic_home_more_card_stroke_bengal)
-                        front_tv_top_category.text = "연속 21일"
+                        front_tv_top_category.text = "모어 21일"
 
                         back_img.setImageResource(R.drawable.ic_home_more_card_back_21_bengal)
                         back_stroke.setImageResource(R.drawable.ic_home_more_card_stroke_bengal)
-                        back_tv_top_category.text = "연속 21일"
+                        back_tv_top_category.text = "모어 21일"
                     }
 
                 } else if(HomeMoreCardData.flag === 0){
                     front_img.setImageResource(R.drawable.ic_home_more_card_front_7_bengal)
                     front_stroke.visibility = View.GONE
-                    front_tv_top_category.text = "일반"
+                    front_tv_top_category.text = "애니"
                     //front_tv_mission_total_count.text=""
                     front_normal_index.setImageResource(R.drawable.ic_normal_index_bengaltiger)
                     front_tv_index_count_num.setTextColor(ContextCompat.getColor(itemView.context, R.color.back_bengaltiger))
@@ -1050,7 +1050,7 @@ class HomeMoreCardAdapter(val context: Context): RecyclerView.Adapter<HomeMoreCa
 
                     back_img.setImageResource(R.drawable.ic_home_more_card_back_0_bengal)
                     back_stroke.visibility = View.GONE
-                    back_tv_top_category.text = "일반"
+                    back_tv_top_category.text = "애니"
                     //back_tv_mission_total_count.text=""
                 }
             }

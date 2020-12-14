@@ -421,7 +421,9 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     if (response.isSuccessful) {
                         if (response.body()!!.success) {
                             Log.d("add Count", "전체 데이터 : ${response.body()!!}")
-                            balck_screen_text.text = response.body()!!.data
+                            var text = response.body()!!.data
+                            text = text.replace("\n", System.getProperty("line.separator")!!)
+                            balck_screen_text.text = text
                         } else {
                             Log.d("add Count", "통신실패")
                         }
@@ -626,7 +628,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     //7일이라면
 
                     //카테고리 7일로 변경
-                    tv_top_category.text="연속 7일"
+                    tv_top_category.text="모어 7일"
 
                     //테두리 가리기
                     stroke21.visibility = View.GONE
@@ -648,7 +650,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     //14일이라면
 
                     //카테고리 14일로 변경
-                    tv_top_category.text="연속 14일"
+                    tv_top_category.text="모어 14일"
 
                     //테두리 가리기
                     stroke21.visibility = View.GONE
@@ -670,7 +672,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                     //21일이라면
 
                     //카테고리 21일로 변경
-                    tv_top_category.text="연속 21일"
+                    tv_top_category.text="모어 21일"
 
                     //유형별 분류
                     if (MainCardData.mission_category ==0) {
@@ -706,7 +708,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                 myTable.visibility = View.GONE;
 
                 //카테고리 일반으로 변경
-                tv_top_category.text="일반"
+                tv_top_category.text="애니"
 
                 //테두리 가리기
                 stroke21.visibility = View.GONE

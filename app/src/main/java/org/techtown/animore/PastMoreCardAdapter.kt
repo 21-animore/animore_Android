@@ -120,20 +120,20 @@ class PastMoreCardAdapter() : RecyclerView.Adapter<PastMoreCardAdapter.Holder>()
                     if(PastMoreCardData.dayDuring === 7) {
                         img.setImageResource(R.drawable.ic_home_more_card_back_7_guanicoe)
                         stroke.visibility = View.GONE;
-                        tv_top_category.text = "연속 7일"
+                        tv_top_category.text = "모어 7일"
                     }else if(PastMoreCardData.dayDuring === 14) {
                         img.setImageResource(R.drawable.ic_home_more_card_back_14_guanicoe)
                         stroke.visibility = View.GONE;
-                        tv_top_category.text = "연속 14일"
+                        tv_top_category.text = "모어 14일"
                     }else if(PastMoreCardData.dayDuring === 21) {
                         img.setImageResource(R.drawable.ic_home_more_card_back_21_guanicoe)
                         stroke.setImageResource(R.drawable.ic_home_more_card_stroke_guanicoe)
-                        tv_top_category.text = "연속 21일"
+                        tv_top_category.text = "모어 21일"
                     }
                 }else {
                     img.setImageResource(R.drawable.ic_home_more_card_back_0_guanicoe)
                     stroke.visibility = View.GONE;
-                    tv_top_category.text = "일반"
+                    tv_top_category.text = "애니"
                     tv_count_num_behind.visibility = View.GONE;
                 }
 
@@ -172,20 +172,20 @@ class PastMoreCardAdapter() : RecyclerView.Adapter<PastMoreCardAdapter.Holder>()
                     if(PastMoreCardData.dayDuring === 7) {
                         img.setImageResource(R.drawable.ic_home_more_card_back_7_illipika)
                         stroke.visibility = View.GONE;
-                        tv_top_category.text = "연속 7일"
+                        tv_top_category.text = "모어 7일"
                     }else if(PastMoreCardData.dayDuring === 14) {
                         img.setImageResource(R.drawable.ic_home_more_card_back_14_illipika)
                         stroke.visibility = View.GONE;
-                        tv_top_category.text = "연속 14일"
+                        tv_top_category.text = "모어 14일"
                     }else if(PastMoreCardData.dayDuring === 21) {
                         img.setImageResource(R.drawable.ic_home_more_card_back_21_illipika)
                         stroke.setImageResource(R.drawable.ic_home_more_card_stroke_illipika)
-                        tv_top_category.text = "연속 21일"
+                        tv_top_category.text = "모어 21일"
                     }
                 }else {
                     img.setImageResource(R.drawable.ic_home_more_card_back_0_illipika)
                     stroke.visibility = View.GONE;
-                    tv_top_category.text = "일반"
+                    tv_top_category.text = "애니"
                     tv_count_num_behind.visibility = View.GONE;
                 }
 
@@ -223,20 +223,20 @@ class PastMoreCardAdapter() : RecyclerView.Adapter<PastMoreCardAdapter.Holder>()
                     if(PastMoreCardData.dayDuring === 7) {
                         img.setImageResource(R.drawable.ic_home_more_card_back_7_harpseal)
                         stroke.visibility = View.GONE;
-                        tv_top_category.text = "연속 7일"
+                        tv_top_category.text = "모어 7일"
                     }else if(PastMoreCardData.dayDuring === 14) {
                         img.setImageResource(R.drawable.ic_home_more_card_back_14_harpseal)
                         stroke.visibility = View.GONE;
-                        tv_top_category.text = "연속 14일"
+                        tv_top_category.text = "모어 14일"
                     }else if(PastMoreCardData.dayDuring === 21) {
                         img.setImageResource(R.drawable.ic_home_more_card_back_21_harpseal)
                         stroke.setImageResource(R.drawable.ic_home_more_card_stroke_harpseal)
-                        tv_top_category.text = "연속 21일"
+                        tv_top_category.text = "모어 21일"
                     }
                 }else {
                     img.setImageResource(R.drawable.ic_home_more_card_back_0_harpseal)
                     stroke.visibility = View.GONE;
-                    tv_top_category.text = "일반"
+                    tv_top_category.text = "애니"
                     tv_count_num_behind.visibility = View.GONE;
                 }
 
@@ -274,20 +274,20 @@ class PastMoreCardAdapter() : RecyclerView.Adapter<PastMoreCardAdapter.Holder>()
                     if(PastMoreCardData.dayDuring === 7) {
                         img.setImageResource(R.drawable.ic_home_more_card_back_7_java)
                         stroke.visibility = View.GONE;
-                        tv_top_category.text = "연속 7일"
+                        tv_top_category.text = "모어 7일"
                     }else if(PastMoreCardData.dayDuring === 14) {
                         img.setImageResource(R.drawable.ic_home_more_card_back_14_java)
                         stroke.visibility = View.GONE;
-                        tv_top_category.text = "연속 14일"
+                        tv_top_category.text = "모어 14일"
                     }else if(PastMoreCardData.dayDuring === 21) {
                         img.setImageResource(R.drawable.ic_home_more_card_back_21_java)
                         stroke.setImageResource(R.drawable.ic_home_more_card_stroke_java)
-                        tv_top_category.text = "연속 21일"
+                        tv_top_category.text = "모어 21일"
                     }
                 }else {
                     img.setImageResource(R.drawable.ic_home_more_card_back_0_java)
                     stroke.visibility = View.GONE;
-                    tv_top_category.text = "일반"
+                    tv_top_category.text = "애니"
                     tv_count_num_behind.visibility = View.GONE;
                 }
 
@@ -324,20 +324,20 @@ class PastMoreCardAdapter() : RecyclerView.Adapter<PastMoreCardAdapter.Holder>()
                     if(PastMoreCardData.dayDuring === 7) {
                         img.setImageResource(R.drawable.ic_home_more_card_back_7_bengal)
                         stroke.visibility = View.GONE;
-                        tv_top_category.text = "연속 7일"
+                        tv_top_category.text = "모어 7일"
                     }else if(PastMoreCardData.dayDuring === 14) {
                         img.setImageResource(R.drawable.ic_home_more_card_back_14_bengal)
                         stroke.visibility = View.GONE;
-                        tv_top_category.text = "연속 14일"
+                        tv_top_category.text = "모어 14일"
                     }else if(PastMoreCardData.dayDuring === 21) {
                         img.setImageResource(R.drawable.ic_home_more_card_back_21_bengal)
                         stroke.setImageResource(R.drawable.ic_home_more_card_stroke_bengal)
-                        tv_top_category.text = "연속 21일"
+                        tv_top_category.text = "모어 21일"
                     }
                 }else {
                     img.setImageResource(R.drawable.ic_home_more_card_back_0_bengal)
                     stroke.visibility = View.GONE;
-                    tv_top_category.text = "일반"
+                    tv_top_category.text = "애니"
                     tv_count_num_behind.visibility = View.GONE;
                 }
             }

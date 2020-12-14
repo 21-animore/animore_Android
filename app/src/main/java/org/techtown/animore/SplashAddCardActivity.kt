@@ -46,6 +46,7 @@ class SplashAddCardActivity : AppCompatActivity() {
 
         challenge_setting.playAnimation()
         textData = intent.getStringExtra("add_text")!!
+        textData = textData.replace("\n", System.getProperty("line.separator")!!)
         go_timer()//애니메이션 시작 후 글자가 1초 후에 등장해야
 
         challenge_setting.addAnimatorListener(object: Animator.AnimatorListener {
