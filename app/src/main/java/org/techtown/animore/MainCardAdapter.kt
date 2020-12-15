@@ -422,7 +422,7 @@ class MainCardAdapter : RecyclerView.Adapter<MainCardAdapter.Holder>() {
                         if (response.body()!!.success) {
                             Log.d("add Count", "전체 데이터 : ${response.body()!!}")
                             var text = response.body()!!.data
-                            text = text.replace("\n", System.getProperty("line.separator")!!)
+                            text =text.replace("n","\n")
                             balck_screen_text.text = text
                         } else {
                             Log.d("add Count", "통신실패")
